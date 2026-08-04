@@ -1,0 +1,260 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* For Tomorrow — design system
+ * Brand: white, deep green, warm orange, warm greys.
+ * All colors defined as tokens; use semantic utilities everywhere.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 20px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand tokens */
+  --color-leaf: var(--leaf);
+  --color-leaf-soft: var(--leaf-soft);
+  --color-forest: var(--forest);
+  --color-ember: var(--ember);
+  --color-clay: var(--clay);
+  --color-sand: var(--sand);
+  --color-cream: var(--cream);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --shadow-soft: 0 20px 60px -30px color-mix(in oklab, var(--ink) 25%, transparent);
+  --shadow-lift: 0 30px 80px -40px color-mix(in oklab, var(--forest) 40%, transparent);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Neutrals */
+  --background: oklch(0.99 0.008 95);
+  --foreground: oklch(0.22 0.02 60);
+  --ink: oklch(0.18 0.02 60);
+  --cream: oklch(0.985 0.015 90);
+  --mist: oklch(0.955 0.012 90);
+  --sand: oklch(0.9 0.03 85);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+
+  /* Brand */
+  --leaf: oklch(0.65 0.13 128); /* #84994f */
+  --leaf-soft: oklch(0.85 0.08 128); /* #b5c99a */
+  --forest: oklch(0.45 0.09 135);
+  --ember: oklch(0.72 0.17 62); /* #fcb53b */
+  --clay: oklch(0.55 0.17 40); /* #d06224 */
+  --rust: oklch(0.45 0.16 35); /* #862b0d / #ae431e */
+
+  --primary: var(--forest);
+  --primary-foreground: oklch(0.985 0.005 90);
+  --secondary: var(--mist);
+  --secondary-foreground: var(--ink);
+  --muted: var(--mist);
+  --muted-foreground: oklch(0.5 0.02 70);
+  --accent: oklch(0.94 0.04 90);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.2 30);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.015 85);
+  --input: oklch(0.92 0.012 85);
+  --ring: var(--leaf);
+
+  --chart-1: var(--leaf);
+  --chart-2: var(--ember);
+  --chart-3: var(--clay);
+  --chart-4: var(--forest);
+  --chart-5: var(--leaf-soft);
+}
+
+/* Fonts */
+@layer base {
+  @font-face {
+    font-family: "Instrument Serif";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizDREVItHgc8qDIbSTKq4XKVnRUcw.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "Instrument Serif";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizBREVItHgc8qDIbSTKq4XkRiUa6zUTiw.woff2")
+      format("woff2");
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--leaf) 40%, transparent);
+    color: var(--ink);
+  }
+}
+
+/* Utilities */
+@utility text-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+@utility glass {
+  background: color-mix(in oklab, white 65%, transparent);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid color-mix(in oklab, white 60%, transparent);
+}
+
+@utility glass-dark {
+  background: color-mix(in oklab, var(--ink) 70%, transparent);
+  backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid color-mix(in oklab, white 15%, transparent);
+}
+
+@utility grain {
+  position: relative;
+}
+
+/* Animations */
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+@keyframes flow {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 6s ease-in-out infinite;
+}
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+.animate-orbit-slow {
+  animation: orbit 60s linear infinite;
+}
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Gradient text */
+@utility text-gradient-brand {
+  background-image: linear-gradient(
+    100deg,
+    var(--forest) 0%,
+    var(--leaf) 45%,
+    var(--ember) 85%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* No-select helper for interactive canvases */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
