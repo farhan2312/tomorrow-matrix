@@ -1,0 +1,4344 @@
+{
+  "scientist": {
+    "tagline": "You investigate and communicate climate science — ecological systems, data, and evidence-based solutions.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "Carbon dioxide is the only greenhouse gas that contributes to climate change.",
+        "correct": false,
+        "explanation": "methane, nitrous oxide, and others also contribute.",
+        "phase": 1,
+        "num": 1,
+        "id": "scientist-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Ocean acidification is caused by oceans absorbing excess CO2 from the atmosphere.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "scientist-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Biodiversity loss only affects animal species, not plants.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "scientist-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "A \"tipping point\" refers to a threshold beyond which a change becomes self-perpetuating or hard to reverse.",
+        "correct": true,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "scientist-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is albedo?",
+        "options": [
+          "The rate of ocean current flow",
+          "The reflectivity of a surface",
+          "A unit of carbon emissions",
+          "A type of greenhouse gas"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 5,
+        "id": "scientist-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which of these gases has the highest global warming potential per molecule over 100 years?",
+        "options": [
+          "CO2",
+          "Methane",
+          "Nitrous oxide",
+          "Water vapor"
+        ],
+        "correctIndex": 2,
+        "phase": 1,
+        "num": 6,
+        "id": "scientist-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"carbon sequestration\" mean?",
+        "options": [
+          "Releasing carbon into the atmosphere",
+          "Capturing and storing carbon",
+          "Measuring carbon emissions",
+          "Trading carbon credits"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 7,
+        "id": "scientist-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which of these is NOT a renewable energy source?",
+        "options": [
+          "Solar",
+          "Wind",
+          "Natural gas",
+          "Geothermal"
+        ],
+        "correctIndex": 2,
+        "phase": 1,
+        "num": 8,
+        "id": "scientist-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"keystone species\"?",
+        "options": [
+          "The most abundant species in an ecosystem",
+          "A species whose impact on its environment is disproportionately large relative to its population",
+          "An endangered species",
+          "A species introduced from elsewhere"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 9,
+        "id": "scientist-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does IPCC stand for?",
+        "options": [
+          "International Panel on Climate Control",
+          "Intergovernmental Panel on Climate Change",
+          "International Program for Carbon Capture",
+          "Institute of Planetary Climate Coordination"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 10,
+        "id": "scientist-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which layer of the atmosphere is most associated with the ozone layer?",
+        "options": [
+          "Troposphere",
+          "Stratosphere",
+          "Mesosphere",
+          "Thermosphere"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 11,
+        "id": "scientist-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the primary tool scientists use to measure historical CO2 levels from thousands of years ago?",
+        "options": [
+          "Satellite imagery",
+          "Ice cores",
+          "Weather balloons",
+          "Ocean buoys"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 12,
+        "id": "scientist-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which best describes a \"positive feedback loop\" in climate systems?",
+        "options": [
+          "A loop that improves ecosystem health",
+          "A process that amplifies an initial change, making it larger",
+          "A neutral process with no long-term effect",
+          "A loop that always leads to cooling"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 13,
+        "id": "scientist-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Coral bleaching primarily occurs due to:",
+        "options": [
+          "Cold water temperatures",
+          "Prolonged heat stress causing coral to expel symbiotic algae",
+          "Overfishing",
+          "Excess rainfall"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 14,
+        "id": "scientist-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which indicator would a scientist most likely use to track ecosystem health?",
+        "options": [
+          "Stock market index",
+          "Species population trends",
+          "Consumer price index",
+          "Employment rate"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 15,
+        "id": "scientist-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"citizen science\" refer to?",
+        "options": [
+          "Government-funded research only",
+          "Public participation in scientific data collection and research",
+          "Science taught in citizenship classes",
+          "Research conducted only by professional scientists"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 16,
+        "id": "scientist-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "A \"baseline\" measurement in climate research is used to:",
+        "options": [
+          "Predict stock prices",
+          "Provide a reference point to compare future changes against",
+          "Calculate carbon tax rates",
+          "Determine species migration routes"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 17,
+        "id": "scientist-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which best describes \"biomagnification\"?",
+        "options": [
+          "Species becoming larger over time",
+          "Increasing concentration of toxins in organisms higher up the food chain",
+          "Magnifying images of biological cells",
+          "Rapid population growth of biodiversity"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "scientist-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The gradual increase in Earth's average surface temperature is called global ______.",
+        "accept": [
+          "warming"
+        ],
+        "answerText": "warming",
+        "phase": 2,
+        "num": 19,
+        "id": "scientist-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A group of interacting organisms and their physical environment is called an ______.",
+        "accept": [
+          "ecosystem"
+        ],
+        "answerText": "ecosystem",
+        "phase": 2,
+        "num": 20,
+        "id": "scientist-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The scientific study of the distribution and abundance of living organisms is called ______.",
+        "accept": [
+          "ecology # matching"
+        ],
+        "answerText": "ecology # Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "scientist-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Mitigation",
+            "def": "Actions that reduce greenhouse gas emissions"
+          },
+          {
+            "term": "Adaptation",
+            "def": "Adjusting to actual or expected climate effects"
+          },
+          {
+            "term": "Resilience",
+            "def": "Capacity to recover from shocks"
+          },
+          {
+            "term": "Vulnerability",
+            "def": "Susceptibility to harm from climate impacts"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "scientist-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each ecosystem to its primary climate threat.",
+        "pairs": [
+          {
+            "term": "Coral reefs",
+            "def": "Deforestation"
+          },
+          {
+            "term": "Arctic sea ice",
+            "def": "Warming ocean temperatures / bleaching"
+          },
+          {
+            "term": "Rainforests",
+            "def": "Drainage for agriculture"
+          },
+          {
+            "term": "Wetlands",
+            "def": "Rising temperatures / melting"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "scientist-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each tool to what it measures.",
+        "pairs": [
+          {
+            "term": "Ice core",
+            "def": "Historical CO2/temperature record"
+          },
+          {
+            "term": "Tree ring",
+            "def": "Past growth conditions and age"
+          },
+          {
+            "term": "Satellite",
+            "def": "Land cover change and emissions"
+          },
+          {
+            "term": "Seismograph",
+            "def": "Earthquake activity"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "scientist-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A research team observes that a lake's fish population has dropped 40% over five years, alongside rising water temperatures. What is the most scientifically sound first step?",
+        "options": [
+          "Immediately conclude climate change is the sole cause",
+          "Gather additional data on other variables (pollution, overfishing, invasive species) before attributing cause",
+          "Ignore the data since it's only one lake",
+          "Assume it's a natural cycle and take no action"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 25,
+        "id": "scientist-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Long-term monitoring shows a wetland's carbon storage capacity declining even though vegetation cover looks visually unchanged. What does this best illustrate?",
+        "options": [
+          "Visual inspection alone can miss underlying ecological changes",
+          "Wetlands cannot store carbon",
+          "Carbon storage is unrelated to vegetation",
+          "The data must be an error"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 26,
+        "id": "scientist-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A scientist wants to determine whether a new fertilizer is causing algal blooms downstream. What is the most rigorous method to test this?",
+        "options": [
+          "Ask local farmers for their opinion",
+          "Conduct a controlled study comparing water quality with and without fertilizer use",
+          "Assume causation because the timing lines up",
+          "Rely on media reports alone"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 27,
+        "id": "scientist-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Which is the best example of using multiple lines of evidence to support a conclusion about climate change?",
+        "options": [
+          "One temperature reading from one city",
+          "Combining satellite data, ice core records, and ocean temperature measurements",
+          "A single computer model with no historical validation",
+          "Public opinion polls"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 28,
+        "id": "scientist-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A community asks a scientist why extreme weather feels more frequent. What is the most accurate response?",
+        "options": [
+          "Say there is no connection to climate at all",
+          "Explain that some events show a clearer statistical link to climate change than others, and share the relevant evidence",
+          "Say all weather events are now caused by climate change",
+          "Avoid answering because it's too complex"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 29,
+        "id": "scientist-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Two studies on the same ecosystem reach different conclusions. What is the best next step?",
+        "options": [
+          "Pick whichever study supports your existing view",
+          "Examine differences in methodology, sample size, and time period",
+          "Discard both studies",
+          "Average the two conclusions"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "scientist-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of the following are greenhouse gases?",
+        "options": [
+          "Carbon dioxide",
+          "Methane",
+          "Nitrogen",
+          "Nitrous oxide",
+          "Oxygen"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "scientist-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of the following are valid methods for measuring past climate conditions?",
+        "options": [
+          "Ice cores",
+          "Tree rings",
+          "Coral growth bands",
+          "Social media posts",
+          "Sediment layers"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "scientist-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of the following are considered indicators of ecosystem health?",
+        "options": [
+          "Species diversity",
+          "Water clarity",
+          "Stock market performance",
+          "Soil microbial activity",
+          "Population growth of native species"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "scientist-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Put the steps of the scientific method in order.",
+        "options": [
+          "Analyze data",
+          "Form a hypothesis",
+          "Make an observation",
+          "Conduct an experiment",
+          "Draw conclusions"
+        ],
+        "correctOrder": [
+          2,
+          1,
+          3,
+          0,
+          4
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "scientist-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order the typical sequence of coral bleaching.",
+        "options": [
+          "Coral turns white/pale",
+          "Prolonged ocean heat stress",
+          "Coral expels symbiotic algae (zooxanthellae)",
+          "Coral becomes vulnerable to disease and death"
+        ],
+        "correctOrder": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "scientist-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these from smallest to largest scale of ecological study.",
+        "options": [
+          "Population",
+          "Organism",
+          "Biosphere",
+          "Ecosystem",
+          "Community"
+        ],
+        "correctOrder": [
+          1,
+          0,
+          4,
+          3,
+          2
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "scientist-36"
+      }
+    ]
+  },
+  "farmer": {
+    "tagline": "You manage land and crops — your world is food systems, water access, and soil health.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "Crop rotation can help maintain soil fertility over time.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "farmer-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Monoculture farming (growing only one crop) increases a farm's resilience to pests and disease.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "farmer-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Drip irrigation generally uses less water than flood irrigation.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "farmer-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Soil erosion has no long-term effect on crop yields.",
+        "correct": false,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "farmer-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"crop rotation\"?",
+        "options": [
+          "Growing the same crop every season",
+          "Growing different crops in a planned sequence on the same land",
+          "Rotating farm equipment between fields",
+          "Harvesting crops at different times of day"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 5,
+        "id": "farmer-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which of these practices helps improve soil health?",
+        "options": [
+          "Leaving soil bare between plantings",
+          "Cover cropping",
+          "Excessive tilling",
+          "Continuous monocropping"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 6,
+        "id": "farmer-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does a \"drought-resistant\" seed variety mean?",
+        "options": [
+          "A seed that requires no water at all",
+          "A seed bred to survive with less water than standard varieties",
+          "A seed that grows only in winter",
+          "A seed that cannot be replanted"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 7,
+        "id": "farmer-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the main purpose of a seed bank?",
+        "options": [
+          "To sell seeds at a profit",
+          "To preserve genetic diversity of crop seeds for future use",
+          "To store seeds only for decoration",
+          "To combine all seed varieties into one type"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 8,
+        "id": "farmer-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"sustainable agriculture\" aim to balance?",
+        "options": [
+          "Only profit",
+          "Only crop yield",
+          "Environmental health, economic viability, and social equity",
+          "Only reducing labor costs"
+        ],
+        "correctIndex": 2,
+        "phase": 1,
+        "num": 9,
+        "id": "farmer-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which of these is a natural method of pest control?",
+        "options": [
+          "Introducing beneficial insects like ladybugs",
+          "Increasing pesticide use",
+          "Removing all insects from a field",
+          "Planting only one crop species"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 10,
+        "id": "farmer-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"agroforestry\"?",
+        "options": [
+          "Growing crops indoors",
+          "Combining trees and shrubs with crops or livestock on the same land",
+          "Cutting down forests for farmland",
+          "A type of greenhouse"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 11,
+        "id": "farmer-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why is soil organic matter important for farming?",
+        "options": [
+          "It has no real effect on soil",
+          "It improves water retention, nutrient availability, and soil structure",
+          "It only affects soil color",
+          "It reduces crop yields"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 12,
+        "id": "farmer-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"regenerative agriculture\" primarily focused on?",
+        "options": [
+          "Maximizing short-term yield regardless of soil impact",
+          "Restoring and improving soil health and ecosystem function over time",
+          "Eliminating all livestock farming",
+          "Only growing genetically modified crops"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 13,
+        "id": "farmer-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Groundwater over-extraction can lead to:",
+        "options": [
+          "Increased water availability",
+          "Land subsidence and long-term water scarcity",
+          "Improved soil fertility",
+          "No noticeable effects"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 14,
+        "id": "farmer-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which practice helps farms adapt to more frequent heatwaves?",
+        "options": [
+          "Removing all shade structures",
+          "Selecting heat-tolerant crop varieties and adjusting planting schedules",
+          "Ignoring weather forecasts",
+          "Increasing water use without monitoring"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 15,
+        "id": "farmer-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the main benefit of diversifying crops on a farm?",
+        "options": [
+          "Reduces risk from pests, disease, and market price swings",
+          "Guarantees higher profit always",
+          "Requires no additional planning",
+          "Eliminates the need for irrigation"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 16,
+        "id": "farmer-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Indigenous and traditional farming knowledge is valuable because it often:",
+        "options": [
+          "Ignores local conditions",
+          "Reflects generations of adaptation to local soil, climate, and ecology",
+          "Is outdated and irrelevant",
+          "Only applies to non-food crops"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 17,
+        "id": "farmer-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"food security\" mean at a community level?",
+        "options": [
+          "Locking food storage facilities",
+          "Consistent access to sufficient, safe, and nutritious food",
+          "Only growing enough food for export",
+          "Producing only one type of food crop"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "farmer-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The layer of loose material covering Earth's surface where plants grow is called ______.",
+        "accept": [
+          "soil"
+        ],
+        "answerText": "soil",
+        "phase": 2,
+        "num": 19,
+        "id": "farmer-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A farming method that avoids or minimizes synthetic pesticides and fertilizers is called ______ farming.",
+        "accept": [
+          "organic"
+        ],
+        "answerText": "organic",
+        "phase": 2,
+        "num": 20,
+        "id": "farmer-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The process of plants losing water vapor through their leaves is called ______.",
+        "accept": [
+          "transpiration ### matching"
+        ],
+        "answerText": "transpiration ### Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "farmer-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each practice to its main benefit.",
+        "pairs": [
+          {
+            "term": "Cover cropping",
+            "def": "Reduces soil erosion and adds nutrients"
+          },
+          {
+            "term": "Drip irrigation",
+            "def": "Delivers water directly to roots, saving water"
+          },
+          {
+            "term": "Crop rotation",
+            "def": "Breaks pest and disease cycles"
+          },
+          {
+            "term": "Agroforestry",
+            "def": "Combines trees with crops for shade and biodiversity"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "farmer-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each resource pressure to its farming impact.",
+        "pairs": [
+          {
+            "term": "Water scarcity",
+            "def": "Reduced irrigation availability"
+          },
+          {
+            "term": "Soil degradation",
+            "def": "Lower soil fertility and yield"
+          },
+          {
+            "term": "Extreme heat",
+            "def": "Heat stress on crops and livestock"
+          },
+          {
+            "term": "Pest outbreaks",
+            "def": "Crop damage and yield loss"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "farmer-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Yield",
+            "def": "Amount of crop produced per unit area"
+          },
+          {
+            "term": "Fallow",
+            "def": "Leaving land unplanted to recover fertility"
+          },
+          {
+            "term": "Irrigation",
+            "def": "Supplying water to land or crops"
+          },
+          {
+            "term": "Biodiversity",
+            "def": "Variety of life in an area"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "farmer-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A farmer notices declining yields despite using more fertilizer each year. What is the most likely underlying issue?",
+        "options": [
+          "The seeds are defective",
+          "Soil health may be degrading, reducing the soil's natural ability to support crops",
+          "The farmer needs to farm a larger area",
+          "Fertilizer never affects yield"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 25,
+        "id": "farmer-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "After several dry seasons, a region's groundwater table has dropped significantly. What is the most sustainable response for local farmers?",
+        "options": [
+          "Drill deeper wells and continue extracting at the same rate",
+          "Adopt water-efficient irrigation and diversify to less water-intensive crops",
+          "Ignore the trend since rain will eventually return",
+          "Stop farming entirely"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 26,
+        "id": "farmer-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A farming community wants to reduce vulnerability to a single crop failure wiping out their income. What strategy addresses this best?",
+        "options": [
+          "Planting only the highest-value crop",
+          "Diversifying crops and income sources",
+          "Increasing debt to expand the same crop",
+          "Reducing land under cultivation to zero"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 27,
+        "id": "farmer-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A new pest is damaging crops, and farmers are tempted to sharply increase pesticide use. What is a more sustainable first step?",
+        "options": [
+          "Immediately apply maximum pesticide across all fields",
+          "Identify natural predators or resistant varieties before increasing chemical use",
+          "Abandon the affected crop permanently",
+          "Ignore the pest and hope it disappears"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 28,
+        "id": "farmer-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A region's traditional knowledge about drought-resistant crop varieties is at risk of being lost as younger generations move to cities. What is the best way to preserve it?",
+        "options": [
+          "Let it disappear naturally",
+          "Document and integrate it into agricultural extension programs and seed banks",
+          "Only rely on imported seed varieties",
+          "Discourage elders from sharing farming methods"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 29,
+        "id": "farmer-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A cooperative of farmers wants to reduce their collective exposure to volatile market prices. What approach helps most?",
+        "options": [
+          "All farmers grow the identical single crop",
+          "Diversifying crops across the cooperative and exploring direct-to-market or contract sales",
+          "Relying solely on a single buyer with no contract",
+          "Avoiding any planning ahead"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "farmer-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these practices improve soil health?",
+        "options": [
+          "Cover cropping",
+          "Excessive tilling",
+          "Crop rotation",
+          "Adding organic compost",
+          "Leaving fields bare for years"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "farmer-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are climate risks that directly affect farming?",
+        "options": [
+          "Drought",
+          "Extreme heat",
+          "Currency exchange rates",
+          "Flooding",
+          "Shifting pest ranges"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "farmer-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are examples of sustainable water management on farms?",
+        "options": [
+          "Drip irrigation",
+          "Rainwater harvesting",
+          "Flood irrigation with no monitoring",
+          "Soil moisture sensors",
+          "Ignoring irrigation scheduling"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "farmer-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps in setting up a drip irrigation system.",
+        "options": [
+          "Test water pressure and flow",
+          "Lay main and lateral pipe lines",
+          "Plan the layout based on crop needs",
+          "Install emitters near plant roots"
+        ],
+        "correctOrder": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "farmer-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these irrigation methods from least to most water-intensive.",
+        "options": [
+          "Drip irrigation",
+          "Sprinkler irrigation",
+          "Flood irrigation"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "farmer-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these soil degradation stages from earliest to most severe.",
+        "options": [
+          "Reduced organic matter",
+          "Healthy topsoil",
+          "Visible erosion / topsoil loss",
+          "Land becomes unproductive"
+        ],
+        "correctOrder": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "farmer-36"
+      }
+    ]
+  },
+  "planner": {
+    "tagline": "You design urban environments — infrastructure, urban ecology, and liveable cities.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "Urban green spaces can help reduce the \"urban heat island\" effect.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "planner-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Increasing the number of paved surfaces in a city generally helps it absorb rainwater more effectively.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "planner-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Public transportation investment can help reduce a city's overall carbon emissions from transport.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "planner-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Urban sprawl typically reduces the distance people need to travel for daily needs.",
+        "correct": false,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "planner-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the \"urban heat island effect\"?",
+        "options": [
+          "Islands built for heat storage",
+          "Urban areas being significantly warmer than surrounding rural areas due to human activity and infrastructure",
+          "A natural cooling phenomenon in cities",
+          "A type of renewable energy"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 5,
+        "id": "planner-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"green infrastructure\" in urban planning?",
+        "options": [
+          "Buildings painted green",
+          "Natural or engineered systems (parks, green roofs, wetlands) that provide environmental benefits",
+          "Infrastructure only for golf courses",
+          "Any infrastructure project regardless of environmental impact"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 6,
+        "id": "planner-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"mixed-use development\" mean?",
+        "options": [
+          "Combining residential, commercial, and other uses within the same area",
+          "Using mixed construction materials only",
+          "Zoning that allows only industrial use",
+          "Random, unplanned development"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 7,
+        "id": "planner-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why are permeable pavements used in city design?",
+        "options": [
+          "To look more attractive",
+          "To allow rainwater to soak through and reduce runoff/flooding",
+          "To increase heat absorption",
+          "To reduce the cost of construction only"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 8,
+        "id": "planner-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"urban sprawl\"?",
+        "options": [
+          "Compact, walkable city design",
+          "The uncontrolled, low-density expansion of a city into surrounding areas",
+          "A type of public park",
+          "A traffic management system"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 9,
+        "id": "planner-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a key benefit of urban tree canopy cover?",
+        "options": [
+          "Increases air pollution",
+          "Provides shade, reduces heat, and improves air quality",
+          "Blocks all sunlight from cities",
+          "Has no impact on temperature"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 10,
+        "id": "planner-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"transit-oriented development\" prioritize?",
+        "options": [
+          "Development that discourages public transport use",
+          "Building dense, walkable neighborhoods around public transit stations",
+          "Highways only",
+          "Suburban single-family housing exclusively"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 11,
+        "id": "planner-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which of these best reduces a city's dependency on cars?",
+        "options": [
+          "Wider highways only",
+          "Reliable public transit, cycling infrastructure, and walkable design",
+          "More parking lots",
+          "Removing all sidewalks"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 12,
+        "id": "planner-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"15-minute city\" concept?",
+        "options": [
+          "A city that can be built in 15 minutes",
+          "An urban design goal where most daily needs can be met within a 15-minute walk or bike ride",
+          "A city with only 15 minutes of daylight",
+          "A traffic rule limiting driving time"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 13,
+        "id": "planner-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why do city planners consider floodplain zoning important?",
+        "options": [
+          "To encourage building in flood-prone areas without restriction",
+          "To restrict or guide development away from areas at high risk of flooding",
+          "It has no effect on flood risk",
+          "To increase property values in flood zones"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 14,
+        "id": "planner-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the purpose of a stormwater management system in cities?",
+        "options": [
+          "To increase flooding",
+          "To capture, direct, and manage rainwater to reduce flood risk and pollution",
+          "To dry out wetlands",
+          "To remove all water from the city permanently"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 15,
+        "id": "planner-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might a city invest in \"urban rewilding\" projects?",
+        "options": [
+          "To eliminate all green space",
+          "To restore natural habitats and biodiversity within the urban environment",
+          "To increase concrete surfaces",
+          "To reduce transit access"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 16,
+        "id": "planner-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"urban biodiversity loss\" typically result from?",
+        "options": [
+          "Habitat fragmentation and loss of green space due to development",
+          "Too many parks",
+          "Reduced construction activity",
+          "Excessive rainfall"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 17,
+        "id": "planner-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is one common cause of \"urban food deserts\"?",
+        "options": [
+          "Overabundance of grocery stores",
+          "Limited access to affordable, healthy food due to lack of nearby grocery stores",
+          "Too many community gardens",
+          "Excess farmland within the city"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "planner-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Land use planning that separates or organizes areas by function (residential, commercial, industrial) is called __________.",
+        "accept": [
+          "zoning"
+        ],
+        "answerText": "zoning",
+        "phase": 2,
+        "num": 19,
+        "id": "planner-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A rise in water overflowing onto normally dry land is called __________.",
+        "accept": [
+          "flooding"
+        ],
+        "answerText": "flooding",
+        "phase": 2,
+        "num": 20,
+        "id": "planner-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The relocation of people and infrastructure away from high-risk areas (like coastlines) is known as managed __________.",
+        "accept": [
+          "retreat ### matching"
+        ],
+        "answerText": "retreat ### Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "planner-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each urban feature to its main function.",
+        "pairs": [
+          {
+            "term": "Green roof",
+            "def": "Insulates buildings and absorbs rainwater"
+          },
+          {
+            "term": "Permeable pavement",
+            "def": "Lets rainwater soak through instead of running off"
+          },
+          {
+            "term": "Flood barrier",
+            "def": "Protects against floodwater intrusion"
+          },
+          {
+            "term": "Bike lane",
+            "def": "Supports low-carbon transport"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "planner-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each urban challenge to a planning solution.",
+        "pairs": [
+          {
+            "term": "Urban heat island",
+            "def": "Tree canopy and green space"
+          },
+          {
+            "term": "Traffic congestion",
+            "def": "Public transit investment"
+          },
+          {
+            "term": "Flood risk",
+            "def": "Stormwater infrastructure and wetland buffers"
+          },
+          {
+            "term": "Air pollution",
+            "def": "Emission standards and low-emission zones"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "planner-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Density",
+            "def": "Amount of population/buildings per unit area"
+          },
+          {
+            "term": "Zoning",
+            "def": "Regulation of land use by area"
+          },
+          {
+            "term": "Resilience",
+            "def": "Capacity to withstand and recover from shocks"
+          },
+          {
+            "term": "Sprawl",
+            "def": "Low-density outward city expansion"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "planner-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A city experiences flash flooding more often after new housing developments replaced wetlands. What is the most likely cause?",
+        "options": [
+          "Wetlands had no role in water management",
+          "Wetlands previously absorbed excess rainwater; their loss reduced the area's natural flood buffer",
+          "Flooding is unrelated to land use",
+          "The new houses caused less rain to fall"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 25,
+        "id": "planner-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A neighborhood has few grocery stores and residents must travel long distances for fresh food. What planning intervention would help most directly?",
+        "options": [
+          "Build more highways",
+          "Incentivize grocery stores or support community gardens/urban farms in the area",
+          "Remove public transit routes",
+          "Increase industrial zoning only"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 26,
+        "id": "planner-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A city's downtown regularly reaches significantly higher temperatures than nearby rural areas. What combination of interventions would most directly help?",
+        "options": [
+          "Increase paved parking lots",
+          "Expand tree canopy, add green roofs, and use reflective/cool pavement materials",
+          "Remove all public parks",
+          "Add more asphalt roads"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 27,
+        "id": "planner-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Residents complain that a new highway expansion increased traffic instead of reducing congestion. What planning concept explains this?",
+        "options": [
+          "Induced demand — more road capacity can encourage more driving over time",
+          "Roads always reduce traffic permanently",
+          "This effect is impossible",
+          "Public transit caused this issue"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 28,
+        "id": "planner-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A coastal city faces rising sea levels threatening a low-lying neighborhood. Which long-term approach directly addresses relocation of people and structures away from that risk?",
+        "options": [
+          "Ignoring the risk",
+          "Managed retreat combined with community engagement",
+          "Building taller buildings only",
+          "Removing all zoning laws"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 29,
+        "id": "planner-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A city wants to reduce car dependency in a new development. Which combination of design choices best supports this goal?",
+        "options": [
+          "Wide roads, no sidewalks, distant transit stops",
+          "Mixed-use zoning, walkable streets, and transit-oriented design",
+          "Large single-use zones far from amenities",
+          "Minimal cycling infrastructure"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "planner-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these help reduce urban flood risk?",
+        "options": [
+          "Wetland restoration",
+          "Permeable pavements",
+          "Removing all green space",
+          "Stormwater retention systems",
+          "Paving over floodplains"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "planner-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of the following support car-independent city design?",
+        "options": [
+          "Bike lanes",
+          "Reliable public transit",
+          "Single-use zoning far from housing",
+          "Walkable mixed-use neighborhoods",
+          "Minimal sidewalks"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "planner-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are examples of green infrastructure?",
+        "options": [
+          "Green roofs",
+          "Urban wetlands",
+          "Coal power plants",
+          "Street trees",
+          "Rain gardens"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "planner-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order the typical progression of urban heat island formation from least to most severe.",
+        "options": [
+          "Some tree loss and increased paving",
+          "Fully vegetated natural landscape",
+          "Widespread heat-related health impacts",
+          "Extensive paving with minimal green space"
+        ],
+        "correctOrder": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "planner-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps in planning a new transit-oriented development.",
+        "options": [
+          "Design walkable streets and mixed-use buildings around it",
+          "Assess population density and transit demand",
+          "Select station location",
+          "Build and connect transit line"
+        ],
+        "correctOrder": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "planner-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order from smallest to largest scale of urban planning.",
+        "options": [
+          "Building",
+          "Neighborhood",
+          "City",
+          "Region"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "planner-36"
+      }
+    ]
+  },
+  "student": {
+    "tagline": "You are the next generation — your world is awareness, education, future systems, and youth power.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "Recycling alone can fully solve the problem of climate change.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "student-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Learning about sustainability in school can influence lifelong habits and career choices.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "student-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "All countries produce the same amount of greenhouse gas emissions per person.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "student-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Youth-led movements have played a role in raising awareness about climate change globally.",
+        "correct": true,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "student-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"carbon footprint\"?",
+        "options": [
+          "A footprint made of carbon material",
+          "The total amount of greenhouse gases produced by an individual, organization, or activity",
+          "A type of shoe",
+          "A measurement of soil carbon only"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 5,
+        "id": "student-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"sustainability\" mean?",
+        "options": [
+          "Using resources in a way that meets today's needs without compromising future generations' ability to meet theirs",
+          "Using as many resources as possible right now",
+          "Avoiding all use of natural resources",
+          "Only about recycling"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 6,
+        "id": "student-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the main cause of human-driven climate change?",
+        "options": [
+          "Solar flares",
+          "Increased greenhouse gas emissions primarily from burning fossil fuels",
+          "Volcanic eruptions alone",
+          "Ocean currents naturally shifting"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 7,
+        "id": "student-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"renewable energy\" mean?",
+        "options": [
+          "Energy sources that run out permanently once used",
+          "Energy from sources that naturally replenish, like sun, wind, and water",
+          "Energy generated only from coal",
+          "Energy that cannot be reused"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 8,
+        "id": "student-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"climate misinformation\"?",
+        "options": [
+          "Verified scientific consensus",
+          "False or misleading claims about climate change spread to confuse or mislead people",
+          "Government climate reports",
+          "Peer-reviewed scientific studies"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 9,
+        "id": "student-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Which of these best describes \"climate education\"?",
+        "options": [
+          "Teaching only about weather forecasting",
+          "Learning about climate systems, causes, impacts, and solutions to climate change",
+          "A single one-time school assembly",
+          "Only relevant to science students"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 10,
+        "id": "student-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is meant by \"youth climate advocacy\"?",
+        "options": [
+          "Young people ignoring climate issues",
+          "Young people organizing, campaigning, or speaking out for climate action",
+          "A government policy restricting youth involvement",
+          "A type of renewable energy"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 11,
+        "id": "student-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"energy access inequality\" refer to?",
+        "options": [
+          "Equal access to energy for everyone",
+          "Disparities in who has reliable, affordable access to energy",
+          "A surplus of energy in all regions",
+          "A tax on renewable energy"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 12,
+        "id": "student-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might climate change contribute to feelings of anxiety among some young people?",
+        "options": [
+          "Because it has no real-world impact",
+          "Concern about future impacts and uncertainty about solutions can create genuine emotional stress",
+          "Because young people don't care about the environment",
+          "It is unrelated to mental wellbeing"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 13,
+        "id": "student-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What role can schools play in closing the \"climate education gap\"?",
+        "options": [
+          "Avoid teaching about climate topics entirely",
+          "Integrate climate science and solutions consistently across the curriculum",
+          "Only mention it once a year",
+          "Leave it entirely to students to research alone"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 14,
+        "id": "student-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why is media literacy important when learning about climate change?",
+        "options": [
+          "It helps people identify credible sources and spot misinformation",
+          "It has nothing to do with climate topics",
+          "It only applies to social media influencers",
+          "It replaces the need for science education"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 15,
+        "id": "student-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is one way individual actions and systemic/policy changes both matter for climate solutions?",
+        "options": [
+          "Only individual actions matter",
+          "Only large-scale policy matters",
+          "Both individual habits and larger systemic changes contribute to overall progress",
+          "Neither has any impact"
+        ],
+        "correctIndex": 2,
+        "phase": 2,
+        "num": 16,
+        "id": "student-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"intergenerational equity\" mean in a climate context?",
+        "options": [
+          "Fairness between different age groups regarding today's actions and future consequences",
+          "Equal test scores across grades",
+          "A type of renewable energy policy",
+          "A tax rate for young workers"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 17,
+        "id": "student-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why do youth-led climate movements often focus on holding leaders accountable?",
+        "options": [
+          "Because leaders have no role in climate policy",
+          "Because government and corporate decisions significantly shape the scale and pace of climate action",
+          "Because youth cannot vote",
+          "Because it's unrelated to their future"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "student-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The layer of gases surrounding Earth that traps heat is called the ______.",
+        "accept": [
+          "atmosphere"
+        ],
+        "answerText": "atmosphere",
+        "phase": 2,
+        "num": 19,
+        "id": "student-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Reducing, reusing, and ______ are three common ways to manage waste sustainably.",
+        "accept": [
+          "recycling"
+        ],
+        "answerText": "recycling",
+        "phase": 2,
+        "num": 20,
+        "id": "student-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A group of people organizing around a shared cause, like climate change, is often called a ______ movement.",
+        "accept": [
+          "grassroots (or"
+        ],
+        "answerText": "grassroots (or",
+        "phase": 2,
+        "num": 21,
+        "id": "student-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Mitigation",
+            "def": "Speaking up or campaigning for a cause"
+          },
+          {
+            "term": "Adaptation",
+            "def": "Understanding and recognizing an issue"
+          },
+          {
+            "term": "Advocacy",
+            "def": "Reducing the causes of climate change"
+          },
+          {
+            "term": "Awareness",
+            "def": "Adjusting to the effects of climate change"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "student-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each daily action to its sustainability category.",
+        "pairs": [
+          {
+            "term": "Turning off unused lights",
+            "def": "Energy conservation"
+          },
+          {
+            "term": "Composting food scraps",
+            "def": "Waste reduction"
+          },
+          {
+            "term": "Walking or biking instead of driving",
+            "def": "Transport emissions reduction"
+          },
+          {
+            "term": "Choosing reusable water bottles",
+            "def": "Reducing single-use plastic"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "student-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each concept to an example.",
+        "pairs": [
+          {
+            "term": "Renewable energy",
+            "def": "Solar power"
+          },
+          {
+            "term": "Fossil fuel",
+            "def": "Coal"
+          },
+          {
+            "term": "Greenhouse gas",
+            "def": "Methane"
+          },
+          {
+            "term": "Carbon footprint",
+            "def": "Total emissions from a school event"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "student-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A classmate shares a viral post claiming climate change isn't real because it snowed heavily last winter. What is the best response?",
+        "options": [
+          "Agree immediately since it snowed",
+          "Explain the difference between short-term weather and long-term climate trends, and point to credible sources",
+          "Ignore the topic entirely",
+          "Share the post further without checking it"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 25,
+        "id": "student-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A student wants to start a climate awareness campaign at school but has a limited budget. What is the most effective first step?",
+        "options": [
+          "Wait until unlimited funding is available",
+          "Start with low-cost actions like a discussion group, educational materials, or a social media page",
+          "Give up on the idea",
+          "Only rely on the school administration to act"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 26,
+        "id": "student-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Research shows students who learn about both problems and solutions report more hope and engagement than those who only learn about problems. What does this suggest about teaching the topic?",
+        "options": [
+          "Focus only on doom and worst-case scenarios",
+          "Balance information about challenges with concrete, actionable solutions",
+          "Avoid mentioning climate change entirely",
+          "Teach only success stories with no context"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 27,
+        "id": "student-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A youth group wants to influence local policy on renewable energy access. What is the most effective long-term strategy?",
+        "options": [
+          "A single social media post",
+          "Sustained engagement — organizing, building coalitions, and engaging with decision-makers over time",
+          "Waiting passively for change",
+          "Avoiding any contact with policymakers"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 28,
+        "id": "student-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A student notices that low-income neighborhoods in their city have far less tree cover and more heat exposure than wealthier ones. What concept does this best illustrate?",
+        "options": [
+          "Random chance with no pattern",
+          "Environmental/climate inequity — the uneven distribution of environmental burdens and benefits",
+          "A coincidence unrelated to city planning",
+          "Equal treatment of all neighborhoods"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 29,
+        "id": "student-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A student is asked to fact-check the claim \"there's nothing an individual can do about climate change.\"",
+        "options": [
+          "Fully agree — individuals are powerless",
+          "Individual actions matter and add up, but systemic change is also essential for large-scale impact",
+          "Deny that any collective action matters",
+          "Say only governments can act, individuals should not try"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "student-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are examples of credible sources for climate information?",
+        "options": [
+          "Peer-reviewed scientific journals",
+          "Government climate agencies (e.g. IPCC reports)",
+          "Anonymous social media posts with no sources",
+          "Established science education organizations",
+          "A meme with no citation"
+        ],
+        "correctIndices": [
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "student-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are common youth-led climate action strategies?",
+        "options": [
+          "School and community awareness campaigns",
+          "Organizing petitions or public demonstrations",
+          "Ignoring the issue completely",
+          "Engaging with local policymakers",
+          "Peer-to-peer education"
+        ],
+        "correctIndices": [
+          4
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "student-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these reflect signs of credible climate reporting?",
+        "options": [
+          "Cites data sources and scientific studies",
+          "Uses only emotional language with no evidence",
+          "Distinguishes between weather and climate",
+          "Comes from a recognized, accountable news or research organization",
+          "Makes sweeping claims with no attribution"
+        ],
+        "correctIndices": [
+          3
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "student-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps for starting a school sustainability project.",
+        "options": [
+          "Launch and promote the project",
+          "Identify a specific problem to address",
+          "Gather a small team of interested students",
+          "Plan concrete action steps"
+        ],
+        "correctOrder": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "student-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these from smallest to largest scale of climate action.",
+        "options": [
+          "Individual habit change",
+          "School/community project",
+          "City or national policy",
+          "International agreement"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "student-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order the typical stages of a piece of misinformation going viral online.",
+        "options": [
+          "Original claim posted",
+          "Fact-checkers and experts respond",
+          "Content shared widely without verification",
+          "Public awareness of the actual facts increases"
+        ],
+        "correctOrder": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "student-36"
+      }
+    ]
+  },
+  "policymaker": {
+    "tagline": "You hold power to create regulation and policy — governance, systemic change, and intervention.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "A carbon tax puts a price on greenhouse gas emissions to discourage their release.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "policymaker-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "International climate agreements are legally identical in every country that signs them, with no room for national variation.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "policymaker-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Subsidies can be used by governments to encourage the adoption of renewable energy.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "policymaker-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Policy inaction has no measurable effect on the pace of climate change response.",
+        "correct": false,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "policymaker-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"carbon tax\"?",
+        "options": [
+          "A tax on all vehicles regardless of emissions",
+          "A fee imposed on the carbon content of fuels or on greenhouse gas emissions",
+          "A subsidy for fossil fuel companies",
+          "A tax exclusively on individuals, not businesses"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 5,
+        "id": "policymaker-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"cap-and-trade\" (emissions trading) refer to?",
+        "options": [
+          "A system that bans all emissions immediately",
+          "A market-based system that sets a limit on total emissions and allows trading of emission allowances",
+          "A tax with no limit on emissions",
+          "A voluntary system with no enforcement"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 6,
+        "id": "policymaker-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the purpose of \"renewable portfolio standards\"?",
+        "options": [
+          "To ban renewable energy",
+          "To require utilities to source a certain percentage of energy from renewable sources",
+          "To subsidize coal production",
+          "To limit solar panel installation"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 7,
+        "id": "policymaker-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"just transition\" mean in climate policy?",
+        "options": [
+          "Moving to clean energy without considering workers or communities",
+          "Shifting to a low-carbon economy in a way that is fair to affected workers and communities",
+          "A transition that only benefits large corporations",
+          "Avoiding any economic transition"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 8,
+        "id": "policymaker-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the main function of an environmental regulatory agency?",
+        "options": [
+          "Promoting unregulated industrial growth",
+          "Setting and enforcing rules to protect environmental and public health",
+          "Eliminating all industry",
+          "Managing only foreign policy"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 9,
+        "id": "policymaker-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"subsidy\" mean in an energy policy context?",
+        "options": [
+          "A tax penalty",
+          "Financial support given by government to encourage a particular activity or industry",
+          "A type of pollution",
+          "A ban on an industry"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 10,
+        "id": "policymaker-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is an \"international climate agreement\" designed to do?",
+        "options": [
+          "Have no measurable goals",
+          "Coordinate commitments between countries to address climate change collectively",
+          "Only apply to one country",
+          "Focus solely on trade tariffs"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 11,
+        "id": "policymaker-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"environmental impact assessment\" mean?",
+        "options": [
+          "A study evaluating the potential environmental effects of a proposed project before it proceeds",
+          "A tax on environmental damage after the fact",
+          "A public opinion poll",
+          "A marketing report"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 12,
+        "id": "policymaker-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might policymakers use a mix of regulations, incentives, and public investment rather than a single tool?",
+        "options": [
+          "Because using multiple tools is illegal",
+          "Because different tools can address different barriers more effectively together",
+          "Because it looks better in reports",
+          "Because a single tool always works best"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 13,
+        "id": "policymaker-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a common criticism of relying solely on voluntary corporate climate commitments without regulation?",
+        "options": [
+          "They are always fully enforced",
+          "Without enforcement mechanisms, commitments may not be met consistently or verifiably",
+          "They guarantee immediate results",
+          "They eliminate the need for any policy"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 14,
+        "id": "policymaker-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why do policymakers consider \"citizens' assemblies\" as part of climate governance?",
+        "options": [
+          "They replace the need for elected government",
+          "They give a representative group of citizens a structured role in providing input on complex policy questions",
+          "They have no real influence",
+          "They are only symbolic with no purpose"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 15,
+        "id": "policymaker-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the purpose of \"carbon disclosure\" requirements for businesses?",
+        "options": [
+          "To hide emissions data",
+          "To require companies to publicly report their greenhouse gas emissions and climate risks",
+          "To ban all businesses from operating",
+          "To increase emissions secretly"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 16,
+        "id": "policymaker-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might \"indigenous land rights\" be a relevant consideration in climate and conservation policy?",
+        "options": [
+          "Indigenous communities have no connection to land management",
+          "Indigenous communities often have long-standing knowledge and stewardship practices tied to their land",
+          "It is entirely unrelated to climate policy",
+          "Only applies to unrelated legal matters"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 17,
+        "id": "policymaker-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"policy inaction\" typically lead to over time in the context of a worsening environmental issue?",
+        "options": [
+          "Issues are automatically resolved without effort",
+          "Problems may compound and become more costly or difficult to address later",
+          "No change occurs either way",
+          "The issue disappears"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "policymaker-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A formal agreement between multiple nations to address a shared issue is called an international ________.",
+        "accept": [
+          "agreement (or treaty)"
+        ],
+        "answerText": "agreement (or treaty)",
+        "phase": 2,
+        "num": 19,
+        "id": "policymaker-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Government funding provided to support a specific industry or activity is called a ________.",
+        "accept": [
+          "subsidy"
+        ],
+        "answerText": "subsidy",
+        "phase": 2,
+        "num": 20,
+        "id": "policymaker-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Rules created and enforced by government bodies to manage behavior or industry are called ________.",
+        "accept": [
+          "regulations ### matching"
+        ],
+        "answerText": "regulations ### Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "policymaker-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each policy tool to its mechanism.",
+        "pairs": [
+          {
+            "term": "Carbon tax",
+            "def": "Sets legal limits or requirements"
+          },
+          {
+            "term": "Subsidy",
+            "def": "Financial support to encourage an activity"
+          },
+          {
+            "term": "Regulation",
+            "def": "Puts a direct price on emissions"
+          },
+          {
+            "term": "Cap-and-trade",
+            "def": "Sets an emissions limit and allows trading of allowances"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "policymaker-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Governance",
+            "def": "The system by which decisions and rules are made and applied"
+          },
+          {
+            "term": "Accountability",
+            "def": "Being answerable for actions and outcomes"
+          },
+          {
+            "term": "Transparency",
+            "def": "Openness about decisions and data"
+          },
+          {
+            "term": "Enforcement",
+            "def": "Ensuring compliance with rules"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "policymaker-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each policy area to an example instrument.",
+        "pairs": [
+          {
+            "term": "Energy transition",
+            "def": "Feed-in tariffs"
+          },
+          {
+            "term": "Water management",
+            "def": "Water pricing/metering"
+          },
+          {
+            "term": "Land use",
+            "def": "Zoning laws"
+          },
+          {
+            "term": "Corporate accountability",
+            "def": "ESG reporting mandates"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "policymaker-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A country wants to reduce emissions but is concerned about job losses in the fossil fuel sector. What policy approach best balances both goals?",
+        "options": [
+          "Ignore worker impacts entirely",
+          "A \"just transition\" plan combining emissions reduction with retraining and support for affected workers",
+          "Abandon emissions reduction goals",
+          "Only focus on job protection with no climate action"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 25,
+        "id": "policymaker-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A government sets ambitious climate targets but provides no funding or enforcement mechanism. What is the most likely outcome?",
+        "options": [
+          "Targets will be met automatically",
+          "Targets are less likely to be achieved without adequate resources, monitoring, and accountability",
+          "This approach guarantees success",
+          "No policy tool is needed to meet targets"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 26,
+        "id": "policymaker-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Businesses resist a proposed carbon tax, citing cost concerns. What compromise approach is commonly used by policymakers to ease the transition?",
+        "options": [
+          "Immediately implement the full tax with no phase-in",
+          "Phase in the tax gradually and/or return revenue through rebates or investment in affected sectors",
+          "Cancel any carbon pricing indefinitely",
+          "Apply the tax only to individuals, not businesses"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 27,
+        "id": "policymaker-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Two neighboring regions share a river, but one now consumes far more water than before, causing downstream shortages. What policy tool addresses this cross-border issue?",
+        "options": [
+          "A local-only regulation with no cross-border coordination",
+          "A transboundary water treaty or agreement between the affected regions",
+          "Ignoring the issue since it's not one region's fault alone",
+          "Banning all water use upstream"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 28,
+        "id": "policymaker-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A city wants to encourage renewable energy adoption among homeowners who cannot afford the upfront cost. What policy tool would help most directly?",
+        "options": [
+          "A tax specifically on renewable energy",
+          "Subsidies, tax credits, or low-interest financing programs for renewable installations",
+          "No policy intervention",
+          "A ban on renewable energy for homeowners"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 29,
+        "id": "policymaker-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A proposed policy would benefit the environment but disproportionately raise costs for lower-income households. What principle should guide policymakers in designing it?",
+        "options": [
+          "Ignore the unequal impact entirely",
+          "Design the policy with equity considerations, such as targeted rebates or exemptions for lower-income groups",
+          "Cancel the policy regardless of its environmental benefit",
+          "Apply the policy only to lower-income households"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 30,
+        "id": "policymaker-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are examples of market-based climate policy tools?",
+        "options": [
+          "Carbon tax",
+          "Cap-and-trade",
+          "Building height restrictions",
+          "Feed-in tariffs",
+          "Public holidays"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "policymaker-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are typical goals of environmental regulation?",
+        "options": [
+          "Protecting public health",
+          "Increasing unregulated pollution",
+          "Setting emission or pollution limits",
+          "Ensuring corporate accountability",
+          "Eliminating all industry"
+        ],
+        "correctIndices": [
+          0,
+          3
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "policymaker-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are components of effective climate governance?",
+        "options": [
+          "Transparency in reporting",
+          "Enforcement mechanisms",
+          "No public input",
+          "Clear accountability structures",
+          "Stakeholder engagement"
+        ],
+        "correctIndices": [
+          1,
+          3,
+          4
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "policymaker-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order the typical stages of policy development.",
+        "options": [
+          "Implementation and enforcement",
+          "Problem identification",
+          "Policy design and drafting",
+          "Evaluation and review",
+          "Stakeholder consultation"
+        ],
+        "correctOrder": [
+          1,
+          4,
+          2,
+          0,
+          3
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "policymaker-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order the following from local to global scope.",
+        "options": [
+          "City ordinance",
+          "National law",
+          "Regional/state regulation",
+          "International treaty"
+        ],
+        "correctOrder": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "policymaker-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps in passing new environmental legislation.",
+        "options": [
+          "Bill introduced in legislature",
+          "Public comment/consultation period",
+          "Committee review and amendments",
+          "Final vote and enactment"
+        ],
+        "correctOrder": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "policymaker-36"
+      }
+    ]
+  },
+  "business": {
+    "tagline": "You lead organisations and shape markets — corporate responsibility, supply chains, and green economy.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "ESG stands for Environmental, Social, and Governance.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "business-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "A company's supply chain has no relevance to its overall environmental impact.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "business-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Circular economy models aim to minimize waste by reusing and recycling materials.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "business-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Green finance refers exclusively to physical currency printed on recycled paper.",
+        "correct": false,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "business-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"ESG\" stand for?",
+        "options": [
+          "Economic, Social, Global",
+          "Environmental, Social, Governance",
+          "Energy, Sustainability, Growth",
+          "Ecological, Systemic, Green"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 5,
+        "id": "business-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"supply chain\" in a business context?",
+        "options": [
+          "A single supplier only",
+          "The full network of processes and organizations involved in producing and delivering a product",
+          "Only the shipping process",
+          "A company's internal management structure"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 6,
+        "id": "business-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"circular economy\" mean?",
+        "options": [
+          "An economy that only sells circular products",
+          "An economic model focused on eliminating waste through reuse, repair, and recycling of materials",
+          "A model with no recycling at all",
+          "An economy based only on raw material extraction"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 7,
+        "id": "business-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"green finance\"?",
+        "options": [
+          "Money printed with green ink",
+          "Financial investments and products that support environmentally sustainable projects",
+          "A tax on all financial transactions",
+          "A ban on investing in any industry"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 8,
+        "id": "business-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"carbon disclosure\" mean for a company?",
+        "options": [
+          "Hiding emissions data from regulators",
+          "Publicly reporting a company's greenhouse gas emissions and climate-related risks",
+          "A marketing slogan with no real data",
+          "A tax paid instead of reporting"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 9,
+        "id": "business-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"extended producer responsibility\"?",
+        "options": [
+          "A policy requiring producers to have no responsibility after selling a product",
+          "A policy making producers responsible for the end-of-life management of their products",
+          "A rule that only applies to consumers",
+          "A tax exemption for manufacturers"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 10,
+        "id": "business-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"right to repair\" legislation typically support?",
+        "options": [
+          "Preventing consumers from repairing their own devices",
+          "Making it easier for consumers/independent repair shops to fix products instead of replacing them",
+          "Banning all product repairs",
+          "Forcing manufacturers to stop making spare parts"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 11,
+        "id": "business-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"just transition\" from a business perspective?",
+        "options": [
+          "Ignoring worker impacts during a shift to sustainable practices",
+          "Managing the shift toward sustainable operations in a way that considers workers and communities affected",
+          "Firing all employees during sustainability transitions",
+          "A transition with no planning"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 12,
+        "id": "business-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might a company adopt \"sustainable supply chain\" practices?",
+        "options": [
+          "To increase pollution",
+          "To reduce environmental impact, improve resilience, and meet stakeholder/regulatory expectations",
+          "It has no business benefit",
+          "To avoid all supplier relationships"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 13,
+        "id": "business-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the primary purpose of \"ESG reporting mandates\"?",
+        "options": [
+          "To require companies to disclose environmental, social, and governance performance to stakeholders",
+          "To ban ESG investing",
+          "To eliminate financial reporting entirely",
+          "To replace all other business regulations"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 14,
+        "id": "business-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why do some investors consider \"climate risk\" when evaluating a company?",
+        "options": [
+          "Climate risk has no financial relevance",
+          "Physical and regulatory climate risks can affect a company's assets, operations, and long-term value",
+          "It only matters for energy companies",
+          "Investors are legally barred from considering it"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 15,
+        "id": "business-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the benefit of a company transitioning to a \"circular business model\"?",
+        "options": [
+          "Increased waste and resource use",
+          "Reduced resource dependency, potential cost savings, and lower environmental impact",
+          "Guaranteed short-term profit only",
+          "No measurable benefit"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 16,
+        "id": "business-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"slow fashion\" promote, in contrast to \"fast fashion\"?",
+        "options": [
+          "Rapid, disposable clothing production",
+          "Durable, ethically produced clothing with a focus on longevity over rapid trend cycles",
+          "Increased textile waste",
+          "Cheaper synthetic materials only"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 17,
+        "id": "business-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might a business pursue \"local production\" as part of its sustainability strategy?",
+        "options": [
+          "To increase shipping emissions",
+          "To reduce transportation-related emissions and strengthen supply chain resilience",
+          "It has no effect on emissions",
+          "To avoid all quality control"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "business-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The practice of a business considering its impact on people, planet, and profit is sometimes called the triple __________.",
+        "accept": [
+          "bottom line"
+        ],
+        "answerText": "bottom line",
+        "phase": 2,
+        "num": 19,
+        "id": "business-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Materials or products designed to be reused, repaired, or recycled rather than discarded support a __________ economy.",
+        "accept": [
+          "circular"
+        ],
+        "answerText": "circular",
+        "phase": 2,
+        "num": 20,
+        "id": "business-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A business's plan for managing financial exposure to climate-related risks is called climate risk __________.",
+        "accept": [
+          "management (or pricing) ### matching"
+        ],
+        "answerText": "management (or pricing) ### Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "business-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "ESG",
+            "def": "Reporting a company's emissions and climate risk"
+          },
+          {
+            "term": "Supply chain",
+            "def": "Network of processes delivering a product to market"
+          },
+          {
+            "term": "Circular economy",
+            "def": "Economic model minimizing waste through reuse/recycling"
+          },
+          {
+            "term": "Carbon disclosure",
+            "def": "Framework covering environmental, social, governance performance"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "business-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each business practice to its sustainability category.",
+        "pairs": [
+          {
+            "term": "Extended producer responsibility",
+            "def": "Making producers responsible for product end-of-life"
+          },
+          {
+            "term": "Green finance",
+            "def": "Funding sustainable projects"
+          },
+          {
+            "term": "Just transition",
+            "def": "Supporting workers through change to sustainable operations"
+          },
+          {
+            "term": "Right to repair",
+            "def": "Enabling product repair over replacement"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "business-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each industry challenge to a business response.",
+        "pairs": [
+          {
+            "term": "E-waste accumulation",
+            "def": "Circular electronics/take-back programs"
+          },
+          {
+            "term": "Fast fashion waste",
+            "def": "Slow fashion and textile take-back"
+          },
+          {
+            "term": "Plastic pollution",
+            "def": "Plastic bans/extended producer responsibility"
+          },
+          {
+            "term": "Deforestation-linked sourcing",
+            "def": "Deforestation-free supply chain commitments"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "business-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A company discovers a key supplier is linked to significant deforestation. What is the most responsible course of action?",
+        "options": [
+          "Ignore the issue since it's the supplier's responsibility",
+          "Investigate the claim, engage the supplier on remediation, and consider sourcing changes if issues persist",
+          "Immediately deny any connection publicly",
+          "Continue business as usual with no review"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 25,
+        "id": "business-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A business wants to reduce e-waste from its products. What approach best reflects circular economy principles?",
+        "options": [
+          "Design products to be difficult to repair, encouraging replacement",
+          "Design for durability, repairability, and implement a take-back/recycling program",
+          "Increase planned obsolescence",
+          "Avoid any consideration of product lifecycle"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 26,
+        "id": "business-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Investors increasingly ask a company to disclose its climate-related financial risks. What does this reflect about current market expectations?",
+        "options": [
+          "Climate risk is irrelevant to financial decisions",
+          "Climate-related risks are increasingly viewed as material to a company's long-term financial performance",
+          "This is a purely symbolic request with no real impact",
+          "Only environmental regulators care about this data"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 27,
+        "id": "business-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A fashion brand wants to shift away from a fast-fashion model. What set of changes would most align with \"slow fashion\" principles?",
+        "options": [
+          "Increase production speed and lower prices further",
+          "Focus on durable materials, ethical labor practices, and reduced production volume",
+          "Maximize disposable, trend-driven items",
+          "Eliminate any concern for garment lifespan"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 28,
+        "id": "business-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A company's supply chain spans multiple countries with varying labor and environmental standards. What is the most responsible approach to managing this?",
+        "options": [
+          "Apply no oversight beyond minimum legal requirements in the weakest jurisdiction",
+          "Establish company-wide standards for labor and environmental practices, monitored across all supplier locations",
+          "Ignore supply chain conditions entirely",
+          "Only monitor practices in the company's home country"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 29,
+        "id": "business-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A business is evaluating whether to invest in renewable energy for its operations despite higher upfront costs. What factor is most relevant to a sound long-term decision?",
+        "options": [
+          "Only the upfront cost, ignoring future savings or risk",
+          "Total cost of ownership, including long-term energy savings, regulatory trends, and reputational/risk factors",
+          "The decision has no financial dimension",
+          "Renewable energy has no operational benefits"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "business-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these fall under the \"E\" (Environmental) pillar of ESG?",
+        "options": [
+          "Carbon emissions",
+          "Employee wages",
+          "Water usage",
+          "Board diversity",
+          "Waste management"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          4
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "business-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these support circular economy goals?",
+        "options": [
+          "Product take-back programs",
+          "Planned obsolescence",
+          "Recycling infrastructure",
+          "Repairable product design",
+          "Single-use packaging with no alternatives"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "business-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are examples of supply chain sustainability practices?",
+        "options": [
+          "Supplier audits for environmental/labor standards",
+          "Ignoring supplier practices entirely",
+          "Local/regional sourcing where feasible",
+          "Deforestation-free sourcing commitments",
+          "Prioritizing lowest cost regardless of practices"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "business-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these stages of a product's circular lifecycle.",
+        "options": [
+          "Recycling / material recovery",
+          "Design",
+          "Use by consumer",
+          "Manufacturing",
+          "Repair or resale"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          2,
+          4,
+          0
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "business-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order from smallest to largest scope of business sustainability reporting.",
+        "options": [
+          "Single facility report",
+          "Company-wide ESG report",
+          "Supply chain-wide sustainability audit",
+          "Industry-wide sustainability standard"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "business-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps a business typically takes to adopt ESG reporting for the first time.",
+        "options": [
+          "Set targets and improvement plans",
+          "Publish the ESG report",
+          "Collect data on environmental, social, and governance metrics",
+          "Identify material ESG issues relevant to the business"
+        ],
+        "correctOrder": [
+          3,
+          2,
+          0,
+          1
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "business-36"
+      }
+    ]
+  },
+  "citizen": {
+    "tagline": "1. Climate change impacts are felt equally by all communities regardless of income or location.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "Climate change impacts are felt equally by all communities regardless of income or location.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "citizen-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Community resilience refers to a community's ability to withstand and recover from shocks and stresses.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "citizen-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Outdoor workers are generally at no greater risk from extreme heat than office workers.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "citizen-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Local knowledge and lived experience can be valuable input for designing effective community programs.",
+        "correct": true,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "citizen-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"community resilience\"?",
+        "options": [
+          "A community's ability to avoid all change",
+          "A community's capacity to prepare for, withstand, and recover from shocks and stresses",
+          "A type of infrastructure material",
+          "A government tax program"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 5,
+        "id": "citizen-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"environmental justice\" refer to?",
+        "options": [
+          "Equal legal punishment for environmental crimes only",
+          "Fair treatment and meaningful involvement of all people in environmental decision-making, regardless of race or income",
+          "A law banning all industrial activity",
+          "A tax on environmental damage"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 6,
+        "id": "citizen-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"food desert\"?",
+        "options": [
+          "A literal desert with no food grown",
+          "An area, often urban, with limited access to affordable, healthy food",
+          "A place with too much food",
+          "A farming region with excess produce"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 7,
+        "id": "citizen-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why are outdoor workers particularly vulnerable to extreme heat?",
+        "options": [
+          "They have no vulnerability at all",
+          "Prolonged outdoor physical labor during high heat increases risk of heat-related illness",
+          "Heat only affects indoor workers",
+          "Their vulnerability is unrelated to working conditions"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 8,
+        "id": "citizen-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"energy access inequality\" mean?",
+        "options": [
+          "Everyone has equal access to reliable energy",
+          "Disparities in who has affordable, reliable access to energy services",
+          "A surplus of energy for all",
+          "A ban on energy usage"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 9,
+        "id": "citizen-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"community garden\"?",
+        "options": [
+          "A private garden closed to the public",
+          "A shared plot of land where community members grow food or plants together",
+          "A garden owned solely by the government",
+          "A garden used only for decoration"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 10,
+        "id": "citizen-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"indigenous land rights\" refer to?",
+        "options": [
+          "The legal and customary rights of indigenous peoples to their traditional lands and resources",
+          "A tax benefit for landowners",
+          "A type of agricultural subsidy",
+          "A rule banning indigenous communities from land use"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 11,
+        "id": "citizen-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the purpose of community engagement in local planning decisions?",
+        "options": [
+          "To exclude residents from decisions that affect them",
+          "To ensure decisions reflect the needs, concerns, and knowledge of those affected",
+          "To slow down all projects indefinitely",
+          "It serves no real purpose"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 12,
+        "id": "citizen-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might lower-income neighborhoods experience more severe urban heat compared to wealthier areas?",
+        "options": [
+          "Heat exposure is random and unrelated to neighborhood conditions",
+          "These areas often have less tree cover and green space, and more paved surfaces, increasing heat exposure",
+          "All neighborhoods have identical tree cover",
+          "Wealthier areas always have more heat"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 13,
+        "id": "citizen-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a common barrier to energy access in underserved communities?",
+        "options": [
+          "Excess of affordable energy options",
+          "High upfront costs, lack of infrastructure, or limited financing options for reliable energy",
+          "Too much government support",
+          "No barriers exist"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 14,
+        "id": "citizen-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why is it important to include community voices when designing climate adaptation programs?",
+        "options": [
+          "Community input has no practical value",
+          "Programs are more effective and equitable when they reflect the specific needs and lived experience of affected residents",
+          "It only delays project implementation",
+          "Communities have no relevant knowledge to contribute"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 15,
+        "id": "citizen-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"worker heat stress\" typically result from?",
+        "options": [
+          "Cold indoor environments",
+          "Prolonged exposure to high temperatures during physical labor, especially without adequate breaks, shade, or hydration",
+          "Office air conditioning",
+          "Working night shifts only"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 16,
+        "id": "citizen-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might urban food deserts disproportionately affect low-income communities?",
+        "options": [
+          "Grocery stores are equally distributed regardless of income",
+          "Limited grocery investment and access to transportation can concentrate poor food access in lower-income areas",
+          "Low-income areas always have more grocery stores",
+          "Food deserts only occur in rural areas"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 17,
+        "id": "citizen-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is one practical benefit of a community-led disaster preparedness plan?",
+        "options": [
+          "It removes the need for any professional emergency services",
+          "It reflects local knowledge, priorities, and vulnerabilities, improving response effectiveness",
+          "It only applies to wealthy communities",
+          "It slows down emergency response"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "citizen-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "The fair treatment and inclusion of all people, regardless of income or background, in environmental decisions is called environmental ________.",
+        "accept": [
+          "justice (or equity)"
+        ],
+        "answerText": "justice (or equity)",
+        "phase": 2,
+        "num": 19,
+        "id": "citizen-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A community's ability to bounce back from a disaster or stress is called ________.",
+        "accept": [
+          "resilience"
+        ],
+        "answerText": "resilience",
+        "phase": 2,
+        "num": 20,
+        "id": "citizen-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Traditional rights held by indigenous communities over their ancestral lands are called indigenous land ________.",
+        "accept": [
+          "rights ### matching"
+        ],
+        "answerText": "rights ### Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "citizen-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each community challenge to a contributing factor.",
+        "pairs": [
+          {
+            "term": "Urban food desert",
+            "def": "Lack of nearby grocery access"
+          },
+          {
+            "term": "Energy access inequality",
+            "def": "Limited affordable/reliable energy infrastructure"
+          },
+          {
+            "term": "Worker heat stress",
+            "def": "Inadequate heat protections for outdoor labor"
+          },
+          {
+            "term": "Housing vulnerability to flooding",
+            "def": "Low-lying or poorly protected housing locations"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "citizen-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Equity",
+            "def": "Fairness in distribution of resources and burdens"
+          },
+          {
+            "term": "Vulnerability",
+            "def": "Susceptibility to harm from a hazard"
+          },
+          {
+            "term": "Advocacy",
+            "def": "Speaking up for a cause or group"
+          },
+          {
+            "term": "Resilience",
+            "def": "Capacity to recover from shocks"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "citizen-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each community intervention to its main benefit.",
+        "pairs": [
+          {
+            "term": "Community gardens",
+            "def": "Local, resilient food access"
+          },
+          {
+            "term": "Off-grid solar",
+            "def": "Independent energy access without grid connection"
+          },
+          {
+            "term": "Early warning systems",
+            "def": "Advance notice of hazards like floods or heatwaves"
+          },
+          {
+            "term": "Community microgrids",
+            "def": "Localized, resilient energy supply"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "citizen-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A city plans a new flood protection project but has not consulted the low-income neighborhood most at risk.",
+        "options": [
+          "There is no concern; consultation is unnecessary",
+          "The project may fail to address the community's actual needs and could overlook local knowledge about flood patterns",
+          "Consultation always slows down necessary projects with no benefit",
+          "Only engineers' opinions matter for such projects"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 25,
+        "id": "citizen-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A community representative notices outdoor construction workers collapsing from heat exhaustion during a heatwave. What actions would best address this?",
+        "options": [
+          "Ignore the issue since it's the employer's sole responsibility",
+          "Advocate for mandatory heat safety protocols (breaks, shade, hydration) and longer-term policy change",
+          "Tell workers to work faster to finish before it gets hot",
+          "Take no action since heat exposure cannot be managed"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 26,
+        "id": "citizen-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Two neighborhoods experience the same heatwave, but one has significantly higher hospitalization rates.",
+        "options": [
+          "Random chance with no underlying cause",
+          "Differences in green space, housing quality, and access to cooling resources between neighborhoods",
+          "One neighborhood experienced hotter temperatures literally next door",
+          "Hospitalization rates are unrelated to neighborhood conditions"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 27,
+        "id": "citizen-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A community wants to establish a local food resilience program in a food desert area. What combination of steps would be most effective?",
+        "options": [
+          "Wait for a large supermarket chain to open a store",
+          "Combine community gardens, farmers' markets, and transportation support to a grocery store",
+          "Do nothing and accept current access levels",
+          "Focus solely on advertising unhealthy food options"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 28,
+        "id": "citizen-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "Indigenous communities report that a proposed land development would affect areas important to their traditional practices. What is the most appropriate response from decision-makers?",
+        "options": [
+          "Proceed without any consultation",
+          "Engage in meaningful consultation and consider indigenous land rights and knowledge in decision-making",
+          "Dismiss the concerns as irrelevant",
+          "Only inform the community after the project is complete"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 29,
+        "id": "citizen-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A neighborhood wants to reduce its vulnerability to both flooding and heat at the same time with limited funding. What type of intervention would address both issues efficiently?",
+        "options": [
+          "A single-purpose flood wall only",
+          "Green infrastructure like urban wetlands and expanded tree canopy, which can reduce both flood risk and heat exposure",
+          "No intervention is possible for multiple hazards",
+          "Removing all vegetation to simplify maintenance"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "citizen-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are examples of climate vulnerability factors for a community?",
+        "options": [
+          "Low income",
+          "Limited access to healthcare",
+          "High tree canopy coverage",
+          "Substandard housing",
+          "Strong social support networks"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "citizen-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these interventions can improve community resilience to heat?",
+        "options": [
+          "Expanded tree canopy",
+          "Cooling centers",
+          "Removing all shaded areas",
+          "Heat safety regulations for workers",
+          "Shade structures in public spaces"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "citizen-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these reflect meaningful community engagement in decision-making?",
+        "options": [
+          "Public consultations before project approval",
+          "Ignoring community feedback after collection",
+          "Incorporating local knowledge into planning",
+          "Transparent communication of project impacts",
+          "Deciding everything without any public input"
+        ],
+        "correctIndices": [
+          2
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "citizen-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps in setting up a community disaster preparedness plan.",
+        "options": [
+          "Identify local hazards and vulnerabilities",
+          "Communicate the plan to residents",
+          "Engage community members and local organizations",
+          "Draft response protocols and resource lists"
+        ],
+        "correctOrder": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "citizen-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order from least to most severe community impact of an unaddressed urban food desert over time.",
+        "options": [
+          "Reduced access to fresh produce",
+          "Grocery store closes in the area",
+          "Long-term diet-related health issues emerge",
+          "Residents travel further for basic food needs"
+        ],
+        "correctOrder": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "citizen-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these stages of building community resilience to climate hazards.",
+        "options": [
+          "Long-term recovery and rebuilding",
+          "Risk assessment and hazard identification",
+          "Preparedness planning and resource building",
+          "Immediate emergency response"
+        ],
+        "correctOrder": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "citizen-36"
+      }
+    ]
+  },
+  "activist": {
+    "tagline": "You mobilise communities and push for change — advocacy, justice, resistance, and transformation.",
+    "questions": [
+      {
+        "kind": "tf",
+        "prompt": "Advocacy campaigns can help influence public opinion and policy on climate issues.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 1,
+        "id": "activist-1"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Peaceful protest is one historical method used by movements to draw attention to a cause.",
+        "correct": true,
+        "explanation": "",
+        "phase": 1,
+        "num": 2,
+        "id": "activist-2"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Climate misinformation has no effect on public support for climate policy.",
+        "correct": false,
+        "explanation": "",
+        "phase": 1,
+        "num": 3,
+        "id": "activist-3"
+      },
+      {
+        "kind": "tf",
+        "prompt": "Grassroots movements always require large budgets to be effective.",
+        "correct": false,
+        "explanation": "### Multiple Choice",
+        "phase": 1,
+        "num": 4,
+        "id": "activist-4"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"grassroots organizing\"?",
+        "options": [
+          "Organizing led entirely by governments",
+          "A form of collective action built from local, community-level participation rather than top-down direction",
+          "A type of gardening technique",
+          "A corporate marketing strategy"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 5,
+        "id": "activist-5"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"climate justice\" emphasize?",
+        "options": [
+          "Punishing individuals for personal carbon footprints only",
+          "The fair distribution of climate change's causes, impacts, and responses across different groups and generations",
+          "A legal ban on all industry",
+          "A tax exclusively on developing countries"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 6,
+        "id": "activist-6"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is a \"coalition\" in advocacy work?",
+        "options": [
+          "A single organization acting alone",
+          "A group of organizations or individuals working together toward a shared goal",
+          "A government agency",
+          "A type of protest sign"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 7,
+        "id": "activist-7"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does a \"public awareness campaign\" aim to do?",
+        "options": [
+          "Hide information from the public",
+          "Inform and engage the public about an issue to encourage understanding or action",
+          "Confuse the public deliberately",
+          "Replace the need for policy change entirely"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 8,
+        "id": "activist-8"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is \"climate misinformation\"?",
+        "options": [
+          "Verified scientific data",
+          "False or misleading claims about climate change intended to confuse or mislead",
+          "A government climate report",
+          "An official scientific consensus statement"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 9,
+        "id": "activist-9"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"divestment\" mean in a climate advocacy context?",
+        "options": [
+          "Investing more heavily in fossil fuels",
+          "Withdrawing investment from industries (like fossil fuels) considered harmful to a cause",
+          "A government subsidy program",
+          "A type of tax credit"
+        ],
+        "correctIndex": 1,
+        "phase": 1,
+        "num": 10,
+        "id": "activist-10"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the purpose of a \"petition\" in advocacy?",
+        "options": [
+          "A legally binding contract",
+          "A formal written request signed by many people to demonstrate support for a cause to decision-makers",
+          "A private diary entry",
+          "A type of scientific study"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 11,
+        "id": "activist-11"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"indigenous land rights\" advocacy typically focus on?",
+        "options": [
+          "Removing indigenous communities from decision-making",
+          "Protecting the legal and customary rights of indigenous peoples over their traditional lands",
+          "Increasing industrial development without consultation",
+          "A tax policy unrelated to land"
+        ],
+        "correctIndex": 0,
+        "phase": 1,
+        "num": 12,
+        "id": "activist-12"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why do advocacy campaigns often use storytelling and personal testimony?",
+        "options": [
+          "It has no persuasive value",
+          "Personal stories can make complex issues relatable and emotionally resonant, helping build public support",
+          "It replaces the need for any factual evidence",
+          "It only appeals to activists themselves"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 13,
+        "id": "activist-13"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What role does \"media literacy\" play in countering climate misinformation?",
+        "options": [
+          "It has no role",
+          "It helps people evaluate the credibility of sources and identify manipulated or false claims",
+          "It only applies to journalists",
+          "It discourages any public engagement"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 14,
+        "id": "activist-14"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why might an activist movement build \"coalitions\" with other groups?",
+        "options": [
+          "Coalitions weaken a movement's message",
+          "Combining resources, networks, and expertise from multiple groups can amplify impact and reach",
+          "It has no strategic benefit",
+          "It's illegal to collaborate across organizations"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 15,
+        "id": "activist-15"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What is the purpose of \"fact-checking networks\" in public discourse?",
+        "options": [
+          "To spread unverified claims",
+          "To verify claims and provide accurate information to counter misinformation",
+          "To suppress all public commentary",
+          "To replace scientific research entirely"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 16,
+        "id": "activist-16"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "Why is \"youth climate anxiety\" an important consideration for advocacy movements?",
+        "options": [
+          "It has no relevance to movement strategy",
+          "Recognizing this emotional impact can shape how movements communicate hope alongside urgency and support participants' wellbeing",
+          "It should be dismissed entirely",
+          "It only affects adults"
+        ],
+        "correctIndex": 0,
+        "phase": 2,
+        "num": 17,
+        "id": "activist-17"
+      },
+      {
+        "kind": "mcq",
+        "prompt": "What does \"loss of indigenous land rights\" often result from?",
+        "options": [
+          "Indigenous communities voluntarily giving up land with no external pressure",
+          "Development, resource extraction, or policy decisions that override indigenous communities' traditional claims",
+          "A natural, unavoidable process with no policy dimension",
+          "Indigenous communities' own choice with full consent in all cases"
+        ],
+        "correctIndex": 1,
+        "phase": 2,
+        "num": 18,
+        "id": "activist-18"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A public event where people gather to express support or opposition to an issue is called a ______.",
+        "accept": [
+          "protest (or demonstration)"
+        ],
+        "answerText": "protest (or demonstration)",
+        "phase": 2,
+        "num": 19,
+        "id": "activist-19"
+      },
+      {
+        "kind": "fill",
+        "prompt": "Withdrawing financial investment from an industry as a form of protest is called ______.",
+        "accept": [
+          "divestment"
+        ],
+        "answerText": "divestment",
+        "phase": 2,
+        "num": 20,
+        "id": "activist-20"
+      },
+      {
+        "kind": "fill",
+        "prompt": "A shared campaign or cause that unites individuals and organizations toward common goals is often called a",
+        "accept": [
+          "social (or grassroots) matching"
+        ],
+        "answerText": "social (or grassroots) Matching",
+        "phase": 2,
+        "num": 21,
+        "id": "activist-21"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each advocacy tactic to its purpose.",
+        "pairs": [
+          {
+            "term": "Petition",
+            "def": "Demonstrating collective public support for an ask"
+          },
+          {
+            "term": "Public awareness campaign",
+            "def": "Informing and engaging the public on an issue"
+          },
+          {
+            "term": "Coalition-building",
+            "def": "Combining groups' resources for greater impact"
+          },
+          {
+            "term": "Fact-checking",
+            "def": "Verifying the accuracy of public claims"
+          }
+        ],
+        "phase": 2,
+        "num": 22,
+        "id": "activist-22"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each term to its definition.",
+        "pairs": [
+          {
+            "term": "Climate justice",
+            "def": "Fairness in climate causes/impacts across groups"
+          },
+          {
+            "term": "Divestment",
+            "def": "Withdrawing investment from harmful industries"
+          },
+          {
+            "term": "Grassroots organizing",
+            "def": "Community-driven collective action"
+          },
+          {
+            "term": "Advocacy",
+            "def": "Speaking up or campaigning for a cause"
+          }
+        ],
+        "phase": 2,
+        "num": 23,
+        "id": "activist-23"
+      },
+      {
+        "kind": "match",
+        "prompt": "Match each challenge to a typical activist response.",
+        "pairs": [
+          {
+            "term": "Climate misinformation",
+            "def": "Science communication and fact-checking"
+          },
+          {
+            "term": "Youth climate anxiety",
+            "def": "Mental health support and hope-based messaging"
+          },
+          {
+            "term": "Indigenous land rights loss",
+            "def": "Legal advocacy and land rights campaigns"
+          },
+          {
+            "term": "Policy inaction",
+            "def": "Public pressure campaigns and policy lobbying"
+          }
+        ],
+        "phase": 2,
+        "num": 24,
+        "id": "activist-24"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A misinformation campaign is spreading false claims about a climate policy right before a public vote. What is the most effective activist response?",
+        "options": [
+          "Ignore it and hope it has no effect",
+          "Rapidly share fact-checked, credible information through trusted messengers and channels",
+          "Spread an equally exaggerated counter-claim",
+          "Wait until after the vote to respond"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 25,
+        "id": "activist-25"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A grassroots movement has limited funding but wants to influence a national policy decision. What strategy is most likely to be effective?",
+        "options": [
+          "Give up due to lack of funds",
+          "Build broad coalitions, leverage media attention, and mobilize public pressure through low-cost organizing",
+          "Only rely on paid advertising",
+          "Avoid engaging with any media"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 26,
+        "id": "activist-26"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "An activist group notices its messaging focuses only on crisis and doom, and participant engagement is dropping. What adjustment would likely help?",
+        "options": [
+          "Increase only the fear-based messaging further",
+          "Balance urgency with hope, concrete solutions, and stories of progress to sustain engagement",
+          "Stop communicating with supporters entirely",
+          "Remove all data and evidence from messaging"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 27,
+        "id": "activist-27"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A community's indigenous land rights are threatened by a new development project. What combined approach would activists likely pursue?",
+        "options": [
+          "No action, since the outcome is predetermined",
+          "Legal advocacy, public awareness campaigns, and coalition-building with affected communities",
+          "Only private negotiations with no public visibility",
+          "Ignoring the affected community's own voice in the campaign"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 28,
+        "id": "activist-28"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "An activist wants to counter a well-funded misinformation campaign about climate science. What is the most effective long-term approach?",
+        "options": [
+          "A single rebuttal post with no follow-up",
+          "Sustained public education, partnerships with credible scientific voices, and accessible fact-checking resources",
+          "Avoiding any engagement with the topic",
+          "Relying solely on one viral video"
+        ],
+        "correctIndex": 0,
+        "phase": 3,
+        "num": 29,
+        "id": "activist-29"
+      },
+      {
+        "kind": "scenario",
+        "prompt": "A youth-led climate group wants to keep members engaged over the long term without causing burnout or anxiety. What approach best supports this?",
+        "options": [
+          "Focus solely on worst-case scenarios in every communication",
+          "Combine clear action steps, community support, and periodic acknowledgment of progress alongside honest information",
+          "Avoid discussing the issue's seriousness entirely",
+          "Push members toward constant activity with no rest"
+        ],
+        "correctIndex": 1,
+        "phase": 3,
+        "num": 30,
+        "id": "activist-30"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these are common tools used in climate advocacy?",
+        "options": [
+          "Petitions",
+          "Public awareness campaigns",
+          "Ignoring public opinion",
+          "Coalition-building",
+          "Fact-checking and media literacy programs"
+        ],
+        "correctIndices": [
+          0,
+          1,
+          3
+        ],
+        "phase": 3,
+        "num": 31,
+        "id": "activist-31"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these can help counter climate misinformation?",
+        "options": [
+          "Media literacy education",
+          "Amplifying unverified claims further",
+          "Fact-checking networks",
+          "Science communication training",
+          "Ignoring all misinformation"
+        ],
+        "correctIndices": [
+          0,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 32,
+        "id": "activist-32"
+      },
+      {
+        "kind": "multi",
+        "prompt": "Which of these reflect climate justice principles?",
+        "options": [
+          "Considering how climate impacts disproportionately affect vulnerable groups",
+          "Ignoring the historical responsibility of high-emitting nations",
+          "Ensuring affected communities have a voice in decisions",
+          "Recognizing intergenerational impacts of climate change",
+          "Applying policies uniformly with no regard for differing vulnerability"
+        ],
+        "correctIndices": [
+          3
+        ],
+        "phase": 3,
+        "num": 33,
+        "id": "activist-33"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these typical stages of a grassroots advocacy campaign.",
+        "options": [
+          "Mobilize public pressure/actions",
+          "Identify the issue and goal",
+          "Build a coalition and messaging strategy",
+          "Achieve or negotiate policy change"
+        ],
+        "correctOrder": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "phase": 3,
+        "num": 34,
+        "id": "activist-34"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order from smallest to largest scale of activist impact.",
+        "options": [
+          "Individual conversation",
+          "Local community campaign",
+          "National advocacy movement",
+          "International coalition/agreement"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 35,
+        "id": "activist-35"
+      },
+      {
+        "kind": "order",
+        "prompt": "Order these steps in responding to a viral misinformation post.",
+        "options": [
+          "Verify facts with credible sources",
+          "Notice the misleading claim spreading",
+          "Share accurate information through trusted channels",
+          "Monitor whether corrected information is reaching the same audience"
+        ],
+        "correctOrder": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "phase": 3,
+        "num": 36,
+        "id": "activist-36"
+      }
+    ]
+  }
+}

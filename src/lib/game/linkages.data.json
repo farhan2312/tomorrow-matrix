@@ -1,0 +1,1429 @@
+[
+  {
+    "from": "M01",
+    "to": "M02",
+    "toName": "Extreme Heatwave",
+    "kind": "cascade",
+    "chain": [
+      "Arctic Ice Loss",
+      "Extreme Heatwave"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Arctic Ice Loss \u2192 Extreme Heatwave. In story terms, an unresolved (or failed) Arctic Ice Loss doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Extreme Heatwave. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M01",
+    "to": "M34",
+    "toName": "Glacier Retreat",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Arctic Ice Loss is tagged in the game data as a direct upstream driver of Glacier Retreat. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Arctic Ice Loss run unresolved removes a buffer that was holding Glacier Retreat back, pulling it onto the board sooner. Resolving Arctic Ice Loss well delays or softens Glacier Retreat's arrival."
+  },
+  {
+    "from": "M01",
+    "to": "M62",
+    "toName": "Ocean Circulation Disruption",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Arctic Ice Loss is tagged in the game data as a direct upstream driver of Ocean Circulation Disruption. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Arctic Ice Loss run unresolved removes a buffer that was holding Ocean Circulation Disruption back, pulling it onto the board sooner. Resolving Arctic Ice Loss well delays or softens Ocean Circulation Disruption's arrival."
+  },
+  {
+    "from": "M02",
+    "to": "M07",
+    "toName": "Crop Yield Decline",
+    "kind": "cascade",
+    "chain": [
+      "Extreme Heatwave",
+      "Crop Yield Decline"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Extreme Heatwave \u2192 Crop Yield Decline. In story terms, an unresolved (or failed) Extreme Heatwave doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Crop Yield Decline. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M02",
+    "to": "M03",
+    "toName": "Water Scarcity",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Extreme Heatwave is tagged in the game data as a direct upstream driver of Water Scarcity. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Extreme Heatwave run unresolved removes a buffer that was holding Water Scarcity back, pulling it onto the board sooner. Resolving Extreme Heatwave well delays or softens Water Scarcity's arrival."
+  },
+  {
+    "from": "M02",
+    "to": "M36",
+    "toName": "Urban Heat Island",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Extreme Heatwave is tagged in the game data as a direct upstream driver of Urban Heat Island. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Extreme Heatwave run unresolved removes a buffer that was holding Urban Heat Island back, pulling it onto the board sooner. Resolving Extreme Heatwave well delays or softens Urban Heat Island's arrival."
+  },
+  {
+    "from": "M03",
+    "to": "M35",
+    "toName": "Groundwater Depletion",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Water Scarcity is tagged in the game data as a direct upstream driver of Groundwater Depletion. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Water Scarcity run unresolved removes a buffer that was holding Groundwater Depletion back, pulling it onto the board sooner. Resolving Water Scarcity well delays or softens Groundwater Depletion's arrival."
+  },
+  {
+    "from": "M03",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "cascade",
+    "chain": [
+      "Water Scarcity",
+      "Crop Yield Decline",
+      "Food Price Spike",
+      "Migration"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Water Scarcity \u2192 Crop Yield Decline \u2192 Food Price Spike \u2192 Migration. In story terms, an unresolved (or failed) Water Scarcity doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Climate Migration. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M03",
+    "to": "M31",
+    "toName": "Food Price Spike",
+    "kind": "cascade",
+    "chain": [
+      "Water Scarcity",
+      "Crop Yield Decline",
+      "Food Price Spike"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Water Scarcity \u2192 Crop Yield Decline \u2192 Food Price Spike. In story terms, an unresolved (or failed) Water Scarcity doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Food Price Spike. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M04",
+    "to": "SPECIES_DECLINE",
+    "toName": "",
+    "kind": "soft",
+    "chain": null,
+    "explanation": "\"Species Decline\" isn't a standalone mystery card in the current 66 \u2014 it's a compounding ecological outcome the game logic tracks when Deforestation escalates. Treat this as a soft link: it feeds pressure toward the nearest matching mystery on the board (Fish Population Decline / Biodiversity Collapse) rather than unlocking a separate numbered node. Flag for the dev team to decide whether it needs its own node or should be folded into an existing one."
+  },
+  {
+    "from": "M04",
+    "to": "M10",
+    "toName": "Flood Risk",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Deforestation is tagged in the game data as a direct upstream driver of Flood Risk. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Deforestation run unresolved removes a buffer that was holding Flood Risk back, pulling it onto the board sooner. Resolving Deforestation well delays or softens Flood Risk's arrival."
+  },
+  {
+    "from": "M04",
+    "to": "M37",
+    "toName": "Wildfire Risk",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Deforestation is tagged in the game data as a direct upstream driver of Wildfire Risk. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Deforestation run unresolved removes a buffer that was holding Wildfire Risk back, pulling it onto the board sooner. Resolving Deforestation well delays or softens Wildfire Risk's arrival."
+  },
+  {
+    "from": "M05",
+    "to": "M06",
+    "toName": "Fish Population Decline",
+    "kind": "cascade",
+    "chain": [
+      "Coral Reef Bleaching",
+      "Fish Population Decline"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Coral Reef Bleaching \u2192 Fish Population Decline. In story terms, an unresolved (or failed) Coral Reef Bleaching doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Fish Population Decline. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M05",
+    "to": "M33",
+    "toName": "Ocean Acidification",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Coral Reef Bleaching is tagged in the game data as a direct upstream driver of Ocean Acidification. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Coral Reef Bleaching run unresolved removes a buffer that was holding Ocean Acidification back, pulling it onto the board sooner. Resolving Coral Reef Bleaching well delays or softens Ocean Acidification's arrival."
+  },
+  {
+    "from": "M06",
+    "to": "M51",
+    "toName": "Fisheries Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Fish Population Decline is tagged in the game data as a direct upstream driver of Fisheries Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Fish Population Decline run unresolved removes a buffer that was holding Fisheries Collapse back, pulling it onto the board sooner. Resolving Fish Population Decline well delays or softens Fisheries Collapse's arrival."
+  },
+  {
+    "from": "M06",
+    "to": "M31",
+    "toName": "Food Price Spike",
+    "kind": "cascade",
+    "chain": [
+      "Coral Reef Bleaching",
+      "Fish Population Decline",
+      "Food Supply Reduction",
+      "Food Price Spike"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Coral Reef Bleaching \u2192 Fish Population Decline \u2192 Food Supply Reduction \u2192 Food Price Spike. In story terms, an unresolved (or failed) Fish Population Decline doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Food Price Spike. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M07",
+    "to": "M31",
+    "toName": "Food Price Spike",
+    "kind": "cascade",
+    "chain": [
+      "Extreme Heatwave",
+      "Crop Yield Decline",
+      "Food Price Spike"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Extreme Heatwave \u2192 Crop Yield Decline \u2192 Food Price Spike. In story terms, an unresolved (or failed) Crop Yield Decline doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Food Price Spike. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M07",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "cascade",
+    "chain": [
+      "Extreme Heatwave",
+      "Crop Yield Decline",
+      "Food Price Spike",
+      "Migration"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Extreme Heatwave \u2192 Crop Yield Decline \u2192 Food Price Spike \u2192 Migration. In story terms, an unresolved (or failed) Crop Yield Decline doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Climate Migration. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M08",
+    "to": "M44",
+    "toName": "Desertification",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Soil Degradation is tagged in the game data as a direct upstream driver of Desertification. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Soil Degradation run unresolved removes a buffer that was holding Desertification back, pulling it onto the board sooner. Resolving Soil Degradation well delays or softens Desertification's arrival."
+  },
+  {
+    "from": "M08",
+    "to": "M07",
+    "toName": "Crop Yield Decline",
+    "kind": "cascade",
+    "chain": [
+      "Soil Degradation",
+      "Crop Yield Decline"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Soil Degradation \u2192 Crop Yield Decline. In story terms, an unresolved (or failed) Soil Degradation doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Crop Yield Decline. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M09",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "cascade",
+    "chain": [
+      "Air Pollution",
+      "Public Health Emergency"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Air Pollution \u2192 Public Health Emergency. In story terms, an unresolved (or failed) Air Pollution doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Public Health Emergency. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M09",
+    "to": "M36",
+    "toName": "Urban Heat Island",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Air Pollution is tagged in the game data as a direct upstream driver of Urban Heat Island. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Air Pollution run unresolved removes a buffer that was holding Urban Heat Island back, pulling it onto the board sooner. Resolving Air Pollution well delays or softens Urban Heat Island's arrival."
+  },
+  {
+    "from": "M10",
+    "to": "M48",
+    "toName": "Infrastructure Failure",
+    "kind": "cascade",
+    "chain": [
+      "Flood Risk",
+      "Infrastructure Failure"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Flood Risk \u2192 Infrastructure Failure. In story terms, an unresolved (or failed) Flood Risk doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Infrastructure Failure. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M10",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Flood Risk is tagged in the game data as a direct upstream driver of Climate Migration. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Flood Risk run unresolved removes a buffer that was holding Climate Migration back, pulling it onto the board sooner. Resolving Flood Risk well delays or softens Climate Migration's arrival."
+  },
+  {
+    "from": "M11",
+    "to": "M36",
+    "toName": "Urban Heat Island",
+    "kind": "cascade",
+    "chain": [
+      "Urban Green Space Loss",
+      "Urban Heat Island"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Urban Green Space Loss \u2192 Urban Heat Island. In story terms, an unresolved (or failed) Urban Green Space Loss doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Urban Heat Island. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M11",
+    "to": "M09",
+    "toName": "Air Pollution",
+    "kind": "cascade",
+    "chain": [
+      "Urban Green Space Loss",
+      "Urban Heat Island",
+      "Air Pollution"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Urban Green Space Loss \u2192 Urban Heat Island \u2192 Air Pollution. In story terms, an unresolved (or failed) Urban Green Space Loss doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Air Pollution. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M11",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "cascade",
+    "chain": [
+      "Urban Green Space Loss",
+      "Urban Heat Island",
+      "Air Pollution",
+      "Public Health Emergency"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Urban Green Space Loss \u2192 Urban Heat Island \u2192 Air Pollution \u2192 Public Health Emergency. In story terms, an unresolved (or failed) Urban Green Space Loss doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Public Health Emergency. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M12",
+    "to": "M06",
+    "toName": "Fish Population Decline",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Plastic Pollution In Oceans is tagged in the game data as a direct upstream driver of Fish Population Decline. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Plastic Pollution In Oceans run unresolved removes a buffer that was holding Fish Population Decline back, pulling it onto the board sooner. Resolving Plastic Pollution In Oceans well delays or softens Fish Population Decline's arrival."
+  },
+  {
+    "from": "M12",
+    "to": "M05",
+    "toName": "Coral Reef Bleaching",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Plastic Pollution In Oceans is tagged in the game data as a direct upstream driver of Coral Reef Bleaching. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Plastic Pollution In Oceans run unresolved removes a buffer that was holding Coral Reef Bleaching back, pulling it onto the board sooner. Resolving Plastic Pollution In Oceans well delays or softens Coral Reef Bleaching's arrival."
+  },
+  {
+    "from": "M13",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Energy Access Inequality is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Energy Access Inequality run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Energy Access Inequality well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M13",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Energy Access Inequality is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Energy Access Inequality run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Energy Access Inequality well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M14",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Youth Climate Anxiety is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Youth Climate Anxiety run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Youth Climate Anxiety well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M14",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Youth Climate Anxiety is tagged in the game data as a direct upstream driver of Public Health Emergency. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Youth Climate Anxiety run unresolved removes a buffer that was holding Public Health Emergency back, pulling it onto the board sooner. Resolving Youth Climate Anxiety well delays or softens Public Health Emergency's arrival."
+  },
+  {
+    "from": "M15",
+    "to": "M03",
+    "toName": "Water Scarcity",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Industrial Water Contamination is tagged in the game data as a direct upstream driver of Water Scarcity. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Industrial Water Contamination run unresolved removes a buffer that was holding Water Scarcity back, pulling it onto the board sooner. Resolving Industrial Water Contamination well delays or softens Water Scarcity's arrival."
+  },
+  {
+    "from": "M15",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Industrial Water Contamination is tagged in the game data as a direct upstream driver of Public Health Emergency. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Industrial Water Contamination run unresolved removes a buffer that was holding Public Health Emergency back, pulling it onto the board sooner. Resolving Industrial Water Contamination well delays or softens Public Health Emergency's arrival."
+  },
+  {
+    "from": "M15",
+    "to": "M35",
+    "toName": "Groundwater Depletion",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Industrial Water Contamination is tagged in the game data as a direct upstream driver of Groundwater Depletion. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Industrial Water Contamination run unresolved removes a buffer that was holding Groundwater Depletion back, pulling it onto the board sooner. Resolving Industrial Water Contamination well delays or softens Groundwater Depletion's arrival."
+  },
+  {
+    "from": "M16",
+    "to": "M40",
+    "toName": "Supply Chain Disruption",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Sustainable Business Transition is tagged in the game data as a direct upstream driver of Supply Chain Disruption. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Sustainable Business Transition run unresolved removes a buffer that was holding Supply Chain Disruption back, pulling it onto the board sooner. Resolving Sustainable Business Transition well delays or softens Supply Chain Disruption's arrival."
+  },
+  {
+    "from": "M16",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "cascade",
+    "chain": [
+      "Business Resistance",
+      "Regulatory Failure",
+      "Carbon Lock-In"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Business Resistance \u2192 Regulatory Failure \u2192 Carbon Lock-In. In story terms, an unresolved (or failed) Sustainable Business Transition doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Carbon Lock-In. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M17",
+    "to": "M07",
+    "toName": "Crop Yield Decline",
+    "kind": "cascade",
+    "chain": [
+      "Knowledge Loss",
+      "Monoculture",
+      "Soil Degradation",
+      "Crop Yield Decline"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Knowledge Loss \u2192 Monoculture \u2192 Soil Degradation \u2192 Crop Yield Decline. In story terms, an unresolved (or failed) Loss Of Traditional Farming Knowledge doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Crop Yield Decline. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M17",
+    "to": "M08",
+    "toName": "Soil Degradation",
+    "kind": "cascade",
+    "chain": [
+      "Knowledge Loss",
+      "Monoculture",
+      "Soil Degradation"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Knowledge Loss \u2192 Monoculture \u2192 Soil Degradation. In story terms, an unresolved (or failed) Loss Of Traditional Farming Knowledge doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Soil Degradation. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M17",
+    "to": "M04",
+    "toName": "Deforestation",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Loss Of Traditional Farming Knowledge is tagged in the game data as a direct upstream driver of Deforestation. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Loss Of Traditional Farming Knowledge run unresolved removes a buffer that was holding Deforestation back, pulling it onto the board sooner. Resolving Loss Of Traditional Farming Knowledge well delays or softens Deforestation's arrival."
+  },
+  {
+    "from": "M18",
+    "to": "M15",
+    "toName": "Industrial Water Contamination",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "E-Waste Crisis is tagged in the game data as a direct upstream driver of Industrial Water Contamination. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting E-Waste Crisis run unresolved removes a buffer that was holding Industrial Water Contamination back, pulling it onto the board sooner. Resolving E-Waste Crisis well delays or softens Industrial Water Contamination's arrival."
+  },
+  {
+    "from": "M18",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "E-Waste Crisis is tagged in the game data as a direct upstream driver of Public Health Emergency. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting E-Waste Crisis run unresolved removes a buffer that was holding Public Health Emergency back, pulling it onto the board sooner. Resolving E-Waste Crisis well delays or softens Public Health Emergency's arrival."
+  },
+  {
+    "from": "M19",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Policy Inaction is tagged in the game data as a direct upstream driver of Carbon Lock-In. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Policy Inaction run unresolved removes a buffer that was holding Carbon Lock-In back, pulling it onto the board sooner. Resolving Climate Policy Inaction well delays or softens Carbon Lock-In's arrival."
+  },
+  {
+    "from": "M19",
+    "to": "M60",
+    "toName": "Tipping Point Activation",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Policy Inaction is tagged in the game data as a direct upstream driver of Tipping Point Activation. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Policy Inaction run unresolved removes a buffer that was holding Tipping Point Activation back, pulling it onto the board sooner. Resolving Climate Policy Inaction well delays or softens Tipping Point Activation's arrival."
+  },
+  {
+    "from": "M20",
+    "to": "M38",
+    "toName": "Pollinator Loss",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Loss Of Urban Biodiversity is tagged in the game data as a direct upstream driver of Pollinator Loss. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Loss Of Urban Biodiversity run unresolved removes a buffer that was holding Pollinator Loss back, pulling it onto the board sooner. Resolving Loss Of Urban Biodiversity well delays or softens Pollinator Loss's arrival."
+  },
+  {
+    "from": "M20",
+    "to": "M07",
+    "toName": "Crop Yield Decline",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Loss Of Urban Biodiversity is tagged in the game data as a direct upstream driver of Crop Yield Decline. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Loss Of Urban Biodiversity run unresolved removes a buffer that was holding Crop Yield Decline back, pulling it onto the board sooner. Resolving Loss Of Urban Biodiversity well delays or softens Crop Yield Decline's arrival."
+  },
+  {
+    "from": "M21",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Heat Stress On Workers is tagged in the game data as a direct upstream driver of Public Health Emergency. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Heat Stress On Workers run unresolved removes a buffer that was holding Public Health Emergency back, pulling it onto the board sooner. Resolving Heat Stress On Workers well delays or softens Public Health Emergency's arrival."
+  },
+  {
+    "from": "M21",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Heat Stress On Workers is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Heat Stress On Workers run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Heat Stress On Workers well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M21",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Heat Stress On Workers is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Heat Stress On Workers run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Heat Stress On Workers well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M22",
+    "to": "M12",
+    "toName": "Plastic Pollution In Oceans",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Fast Fashion Environmental Impact is tagged in the game data as a direct upstream driver of Plastic Pollution In Oceans. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Fast Fashion Environmental Impact run unresolved removes a buffer that was holding Plastic Pollution In Oceans back, pulling it onto the board sooner. Resolving Fast Fashion Environmental Impact well delays or softens Plastic Pollution In Oceans's arrival."
+  },
+  {
+    "from": "M22",
+    "to": "M15",
+    "toName": "Industrial Water Contamination",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Fast Fashion Environmental Impact is tagged in the game data as a direct upstream driver of Industrial Water Contamination. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Fast Fashion Environmental Impact run unresolved removes a buffer that was holding Industrial Water Contamination back, pulling it onto the board sooner. Resolving Fast Fashion Environmental Impact well delays or softens Industrial Water Contamination's arrival."
+  },
+  {
+    "from": "M23",
+    "to": "M19",
+    "toName": "Climate Policy Inaction",
+    "kind": "cascade",
+    "chain": [
+      "Education Gap",
+      "Misinformation",
+      "Voter Apathy",
+      "Climate Policy Inaction"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Education Gap \u2192 Misinformation \u2192 Voter Apathy \u2192 Climate Policy Inaction. In story terms, an unresolved (or failed) Climate Education Gap doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Climate Policy Inaction. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M23",
+    "to": "M14",
+    "toName": "Youth Climate Anxiety",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Education Gap is tagged in the game data as a direct upstream driver of Youth Climate Anxiety. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Education Gap run unresolved removes a buffer that was holding Youth Climate Anxiety back, pulling it onto the board sooner. Resolving Climate Education Gap well delays or softens Youth Climate Anxiety's arrival."
+  },
+  {
+    "from": "M24",
+    "to": "M03",
+    "toName": "Water Scarcity",
+    "kind": "cascade",
+    "chain": [
+      "Groundwater Over-Extraction",
+      "Aquifer Collapse",
+      "Water Scarcity"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Groundwater Over-Extraction \u2192 Aquifer Collapse \u2192 Water Scarcity. In story terms, an unresolved (or failed) Groundwater Over-Extraction doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Water Scarcity. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M24",
+    "to": "M07",
+    "toName": "Crop Yield Decline",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Groundwater Over-Extraction is tagged in the game data as a direct upstream driver of Crop Yield Decline. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Groundwater Over-Extraction run unresolved removes a buffer that was holding Crop Yield Decline back, pulling it onto the board sooner. Resolving Groundwater Over-Extraction well delays or softens Crop Yield Decline's arrival."
+  },
+  {
+    "from": "M24",
+    "to": "M35",
+    "toName": "Groundwater Depletion",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Groundwater Over-Extraction is tagged in the game data as a direct upstream driver of Groundwater Depletion. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Groundwater Over-Extraction run unresolved removes a buffer that was holding Groundwater Depletion back, pulling it onto the board sooner. Resolving Groundwater Over-Extraction well delays or softens Groundwater Depletion's arrival."
+  },
+  {
+    "from": "M25",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Renewable Energy Transition Barriers is tagged in the game data as a direct upstream driver of Carbon Lock-In. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Renewable Energy Transition Barriers run unresolved removes a buffer that was holding Carbon Lock-In back, pulling it onto the board sooner. Resolving Renewable Energy Transition Barriers well delays or softens Carbon Lock-In's arrival."
+  },
+  {
+    "from": "M25",
+    "to": "M47",
+    "toName": "Energy Security Crisis",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Renewable Energy Transition Barriers is tagged in the game data as a direct upstream driver of Energy Security Crisis. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Renewable Energy Transition Barriers run unresolved removes a buffer that was holding Energy Security Crisis back, pulling it onto the board sooner. Resolving Renewable Energy Transition Barriers well delays or softens Energy Security Crisis's arrival."
+  },
+  {
+    "from": "M26",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Urban Food Desert is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Urban Food Desert run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Urban Food Desert well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M26",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Urban Food Desert is tagged in the game data as a direct upstream driver of Public Health Emergency. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Urban Food Desert run unresolved removes a buffer that was holding Public Health Emergency back, pulling it onto the board sooner. Resolving Urban Food Desert well delays or softens Public Health Emergency's arrival."
+  },
+  {
+    "from": "M26",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Urban Food Desert is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Urban Food Desert run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Urban Food Desert well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M27",
+    "to": "SPECIES_DECLINE",
+    "toName": "",
+    "kind": "soft",
+    "chain": null,
+    "explanation": "\"Species Decline\" isn't a standalone mystery card in the current 66 \u2014 it's a compounding ecological outcome the game logic tracks when Species Habitat Fragmentation escalates. Treat this as a soft link: it feeds pressure toward the nearest matching mystery on the board (Fish Population Decline / Biodiversity Collapse) rather than unlocking a separate numbered node. Flag for the dev team to decide whether it needs its own node or should be folded into an existing one."
+  },
+  {
+    "from": "M27",
+    "to": "M45",
+    "toName": "Ecosystem Collapse",
+    "kind": "cascade",
+    "chain": [
+      "Habitat Fragmentation",
+      "Species Isolation",
+      "Local Extinction",
+      "Ecosystem Collapse"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Habitat Fragmentation \u2192 Species Isolation \u2192 Local Extinction \u2192 Ecosystem Collapse. In story terms, an unresolved (or failed) Species Habitat Fragmentation doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Ecosystem Collapse. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M27",
+    "to": "M04",
+    "toName": "Deforestation",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Species Habitat Fragmentation is tagged in the game data as a direct upstream driver of Deforestation. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Species Habitat Fragmentation run unresolved removes a buffer that was holding Deforestation back, pulling it onto the board sooner. Resolving Species Habitat Fragmentation well delays or softens Deforestation's arrival."
+  },
+  {
+    "from": "M28",
+    "to": "M19",
+    "toName": "Climate Policy Inaction",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Misinformation Spread is tagged in the game data as a direct upstream driver of Climate Policy Inaction. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Misinformation Spread run unresolved removes a buffer that was holding Climate Policy Inaction back, pulling it onto the board sooner. Resolving Climate Misinformation Spread well delays or softens Climate Policy Inaction's arrival."
+  },
+  {
+    "from": "M28",
+    "to": "M23",
+    "toName": "Climate Education Gap",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Misinformation Spread is tagged in the game data as a direct upstream driver of Climate Education Gap. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Misinformation Spread run unresolved removes a buffer that was holding Climate Education Gap back, pulling it onto the board sooner. Resolving Climate Misinformation Spread well delays or softens Climate Education Gap's arrival."
+  },
+  {
+    "from": "M28",
+    "to": "M14",
+    "toName": "Youth Climate Anxiety",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Misinformation Spread is tagged in the game data as a direct upstream driver of Youth Climate Anxiety. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Misinformation Spread run unresolved removes a buffer that was holding Youth Climate Anxiety back, pulling it onto the board sooner. Resolving Climate Misinformation Spread well delays or softens Youth Climate Anxiety's arrival."
+  },
+  {
+    "from": "M29",
+    "to": "M04",
+    "toName": "Deforestation",
+    "kind": "cascade",
+    "chain": [
+      "Land Rights Loss",
+      "Deforestation"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Land Rights Loss \u2192 Deforestation. In story terms, an unresolved (or failed) Loss Of Indigenous Land Rights doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Deforestation. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M29",
+    "to": "M61",
+    "toName": "Amazon Dieback",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Loss Of Indigenous Land Rights is tagged in the game data as a direct upstream driver of Amazon Dieback. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Loss Of Indigenous Land Rights run unresolved removes a buffer that was holding Amazon Dieback back, pulling it onto the board sooner. Resolving Loss Of Indigenous Land Rights well delays or softens Amazon Dieback's arrival."
+  },
+  {
+    "from": "M29",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Loss Of Indigenous Land Rights is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Loss Of Indigenous Land Rights run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Loss Of Indigenous Land Rights well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M30",
+    "to": "M09",
+    "toName": "Air Pollution",
+    "kind": "cascade",
+    "chain": [
+      "Transport Lock-In",
+      "Continued Emissions",
+      "Air Pollution"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Transport Lock-In \u2192 Continued Emissions \u2192 Air Pollution. In story terms, an unresolved (or failed) Transport Emissions Lock-In doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Air Pollution. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M30",
+    "to": "M36",
+    "toName": "Urban Heat Island",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Transport Emissions Lock-In is tagged in the game data as a direct upstream driver of Urban Heat Island. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Transport Emissions Lock-In run unresolved removes a buffer that was holding Urban Heat Island back, pulling it onto the board sooner. Resolving Transport Emissions Lock-In well delays or softens Urban Heat Island's arrival."
+  },
+  {
+    "from": "M30",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Transport Emissions Lock-In is tagged in the game data as a direct upstream driver of Carbon Lock-In. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Transport Emissions Lock-In run unresolved removes a buffer that was holding Carbon Lock-In back, pulling it onto the board sooner. Resolving Transport Emissions Lock-In well delays or softens Carbon Lock-In's arrival."
+  },
+  {
+    "from": "M31",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "cascade",
+    "chain": [
+      "Food Price Spike",
+      "Social Inequality"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Food Price Spike \u2192 Social Inequality. In story terms, an unresolved (or failed) Food Price Spike doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Social Inequality. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M31",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "cascade",
+    "chain": [
+      "Food Price Spike",
+      "Social Inequality",
+      "Economic Instability",
+      "Migration"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Food Price Spike \u2192 Social Inequality \u2192 Economic Instability \u2192 Migration. In story terms, an unresolved (or failed) Food Price Spike doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Climate Migration. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M32",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Migration is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Migration run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Climate Migration well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M32",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Migration is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Migration run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Climate Migration well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M33",
+    "to": "M05",
+    "toName": "Coral Reef Bleaching",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ocean Acidification is tagged in the game data as a direct upstream driver of Coral Reef Bleaching. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ocean Acidification run unresolved removes a buffer that was holding Coral Reef Bleaching back, pulling it onto the board sooner. Resolving Ocean Acidification well delays or softens Coral Reef Bleaching's arrival."
+  },
+  {
+    "from": "M33",
+    "to": "M06",
+    "toName": "Fish Population Decline",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ocean Acidification is tagged in the game data as a direct upstream driver of Fish Population Decline. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ocean Acidification run unresolved removes a buffer that was holding Fish Population Decline back, pulling it onto the board sooner. Resolving Ocean Acidification well delays or softens Fish Population Decline's arrival."
+  },
+  {
+    "from": "M33",
+    "to": "M51",
+    "toName": "Fisheries Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ocean Acidification is tagged in the game data as a direct upstream driver of Fisheries Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ocean Acidification run unresolved removes a buffer that was holding Fisheries Collapse back, pulling it onto the board sooner. Resolving Ocean Acidification well delays or softens Fisheries Collapse's arrival."
+  },
+  {
+    "from": "M34",
+    "to": "M03",
+    "toName": "Water Scarcity",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Glacier Retreat is tagged in the game data as a direct upstream driver of Water Scarcity. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Glacier Retreat run unresolved removes a buffer that was holding Water Scarcity back, pulling it onto the board sooner. Resolving Glacier Retreat well delays or softens Water Scarcity's arrival."
+  },
+  {
+    "from": "M34",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Glacier Retreat is tagged in the game data as a direct upstream driver of Climate Migration. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Glacier Retreat run unresolved removes a buffer that was holding Climate Migration back, pulling it onto the board sooner. Resolving Glacier Retreat well delays or softens Climate Migration's arrival."
+  },
+  {
+    "from": "M34",
+    "to": "M35",
+    "toName": "Groundwater Depletion",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Glacier Retreat is tagged in the game data as a direct upstream driver of Groundwater Depletion. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Glacier Retreat run unresolved removes a buffer that was holding Groundwater Depletion back, pulling it onto the board sooner. Resolving Glacier Retreat well delays or softens Groundwater Depletion's arrival."
+  },
+  {
+    "from": "M35",
+    "to": "M03",
+    "toName": "Water Scarcity",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Groundwater Depletion is tagged in the game data as a direct upstream driver of Water Scarcity. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Groundwater Depletion run unresolved removes a buffer that was holding Water Scarcity back, pulling it onto the board sooner. Resolving Groundwater Depletion well delays or softens Water Scarcity's arrival."
+  },
+  {
+    "from": "M35",
+    "to": "M31",
+    "toName": "Food Price Spike",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Groundwater Depletion is tagged in the game data as a direct upstream driver of Food Price Spike. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Groundwater Depletion run unresolved removes a buffer that was holding Food Price Spike back, pulling it onto the board sooner. Resolving Groundwater Depletion well delays or softens Food Price Spike's arrival."
+  },
+  {
+    "from": "M35",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Groundwater Depletion is tagged in the game data as a direct upstream driver of Climate Migration. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Groundwater Depletion run unresolved removes a buffer that was holding Climate Migration back, pulling it onto the board sooner. Resolving Groundwater Depletion well delays or softens Climate Migration's arrival."
+  },
+  {
+    "from": "M36",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "cascade",
+    "chain": [
+      "Urban Heat Island",
+      "Health Emergency"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Urban Heat Island \u2192 Health Emergency. In story terms, an unresolved (or failed) Urban Heat Island doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Public Health Emergency. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M36",
+    "to": "M47",
+    "toName": "Energy Security Crisis",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Urban Heat Island is tagged in the game data as a direct upstream driver of Energy Security Crisis. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Urban Heat Island run unresolved removes a buffer that was holding Energy Security Crisis back, pulling it onto the board sooner. Resolving Urban Heat Island well delays or softens Energy Security Crisis's arrival."
+  },
+  {
+    "from": "M37",
+    "to": "M04",
+    "toName": "Deforestation",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Wildfire Risk is tagged in the game data as a direct upstream driver of Deforestation. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Wildfire Risk run unresolved removes a buffer that was holding Deforestation back, pulling it onto the board sooner. Resolving Wildfire Risk well delays or softens Deforestation's arrival."
+  },
+  {
+    "from": "M37",
+    "to": "M09",
+    "toName": "Air Pollution",
+    "kind": "cascade",
+    "chain": [
+      "Wildfire Risk",
+      "Air Pollution"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Wildfire Risk \u2192 Air Pollution. In story terms, an unresolved (or failed) Wildfire Risk doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Air Pollution. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M37",
+    "to": "M49",
+    "toName": "Public Health Emergency",
+    "kind": "cascade",
+    "chain": [
+      "Wildfire Risk",
+      "Air Pollution",
+      "Public Health Emergency"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Wildfire Risk \u2192 Air Pollution \u2192 Public Health Emergency. In story terms, an unresolved (or failed) Wildfire Risk doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Public Health Emergency. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M38",
+    "to": "M07",
+    "toName": "Crop Yield Decline",
+    "kind": "cascade",
+    "chain": [
+      "Pollinator Loss",
+      "Crop Yield Decline"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Pollinator Loss \u2192 Crop Yield Decline. In story terms, an unresolved (or failed) Pollinator Loss doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Crop Yield Decline. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M38",
+    "to": "M58",
+    "toName": "Biodiversity Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Pollinator Loss is tagged in the game data as a direct upstream driver of Biodiversity Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Pollinator Loss run unresolved removes a buffer that was holding Biodiversity Collapse back, pulling it onto the board sooner. Resolving Pollinator Loss well delays or softens Biodiversity Collapse's arrival."
+  },
+  {
+    "from": "M39",
+    "to": "M06",
+    "toName": "Fish Population Decline",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Mangrove Loss is tagged in the game data as a direct upstream driver of Fish Population Decline. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Mangrove Loss run unresolved removes a buffer that was holding Fish Population Decline back, pulling it onto the board sooner. Resolving Mangrove Loss well delays or softens Fish Population Decline's arrival."
+  },
+  {
+    "from": "M39",
+    "to": "M46",
+    "toName": "Coastal Erosion",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Mangrove Loss is tagged in the game data as a direct upstream driver of Coastal Erosion. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Mangrove Loss run unresolved removes a buffer that was holding Coastal Erosion back, pulling it onto the board sooner. Resolving Mangrove Loss well delays or softens Coastal Erosion's arrival."
+  },
+  {
+    "from": "M39",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Mangrove Loss is tagged in the game data as a direct upstream driver of Climate Migration. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Mangrove Loss run unresolved removes a buffer that was holding Climate Migration back, pulling it onto the board sooner. Resolving Mangrove Loss well delays or softens Climate Migration's arrival."
+  },
+  {
+    "from": "M40",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Supply Chain Disruption is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Supply Chain Disruption run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Supply Chain Disruption well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M40",
+    "to": "M31",
+    "toName": "Food Price Spike",
+    "kind": "cascade",
+    "chain": [
+      "Supply Chain Disruption",
+      "Food Shortage",
+      "Price Spike"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Supply Chain Disruption \u2192 Food Shortage \u2192 Price Spike. In story terms, an unresolved (or failed) Supply Chain Disruption doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Food Price Spike. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M41",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai Energy Consumption Crisis is tagged in the game data as a direct upstream driver of Carbon Lock-In. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai Energy Consumption Crisis run unresolved removes a buffer that was holding Carbon Lock-In back, pulling it onto the board sooner. Resolving Ai Energy Consumption Crisis well delays or softens Carbon Lock-In's arrival."
+  },
+  {
+    "from": "M41",
+    "to": "M47",
+    "toName": "Energy Security Crisis",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai Energy Consumption Crisis is tagged in the game data as a direct upstream driver of Energy Security Crisis. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai Energy Consumption Crisis run unresolved removes a buffer that was holding Energy Security Crisis back, pulling it onto the board sooner. Resolving Ai Energy Consumption Crisis well delays or softens Energy Security Crisis's arrival."
+  },
+  {
+    "from": "M41",
+    "to": "M40",
+    "toName": "Supply Chain Disruption",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai Energy Consumption Crisis is tagged in the game data as a direct upstream driver of Supply Chain Disruption. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai Energy Consumption Crisis run unresolved removes a buffer that was holding Supply Chain Disruption back, pulling it onto the board sooner. Resolving Ai Energy Consumption Crisis well delays or softens Supply Chain Disruption's arrival."
+  },
+  {
+    "from": "M42",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Algorithmic Greenwashing is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Algorithmic Greenwashing run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Algorithmic Greenwashing well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M42",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Algorithmic Greenwashing is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Algorithmic Greenwashing run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Algorithmic Greenwashing well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M42",
+    "to": "M19",
+    "toName": "Climate Policy Inaction",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Algorithmic Greenwashing is tagged in the game data as a direct upstream driver of Climate Policy Inaction. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Algorithmic Greenwashing run unresolved removes a buffer that was holding Climate Policy Inaction back, pulling it onto the board sooner. Resolving Algorithmic Greenwashing well delays or softens Climate Policy Inaction's arrival."
+  },
+  {
+    "from": "M43",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Insurance Crisis is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Insurance Crisis run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Insurance Crisis well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M43",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "cascade",
+    "chain": [
+      "Insurance Crisis",
+      "Uninsured Loss",
+      "Economic Destabilisation",
+      "Social Inequality"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Insurance Crisis \u2192 Uninsured Loss \u2192 Economic Destabilisation \u2192 Social Inequality. In story terms, an unresolved (or failed) Insurance Crisis doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Social Inequality. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M44",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "cascade",
+    "chain": [
+      "Desertification",
+      "Agricultural Collapse",
+      "Migration"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Desertification \u2192 Agricultural Collapse \u2192 Migration. In story terms, an unresolved (or failed) Desertification doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Climate Migration. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M44",
+    "to": "M57",
+    "toName": "Food System Breakdown",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Desertification is tagged in the game data as a direct upstream driver of Food System Breakdown. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Desertification run unresolved removes a buffer that was holding Food System Breakdown back, pulling it onto the board sooner. Resolving Desertification well delays or softens Food System Breakdown's arrival."
+  },
+  {
+    "from": "M45",
+    "to": "M58",
+    "toName": "Biodiversity Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ecosystem Collapse is tagged in the game data as a direct upstream driver of Biodiversity Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ecosystem Collapse run unresolved removes a buffer that was holding Biodiversity Collapse back, pulling it onto the board sooner. Resolving Ecosystem Collapse well delays or softens Biodiversity Collapse's arrival."
+  },
+  {
+    "from": "M45",
+    "to": "M57",
+    "toName": "Food System Breakdown",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ecosystem Collapse is tagged in the game data as a direct upstream driver of Food System Breakdown. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ecosystem Collapse run unresolved removes a buffer that was holding Food System Breakdown back, pulling it onto the board sooner. Resolving Ecosystem Collapse well delays or softens Food System Breakdown's arrival."
+  },
+  {
+    "from": "M46",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Coastal Erosion is tagged in the game data as a direct upstream driver of Climate Migration. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Coastal Erosion run unresolved removes a buffer that was holding Climate Migration back, pulling it onto the board sooner. Resolving Coastal Erosion well delays or softens Climate Migration's arrival."
+  },
+  {
+    "from": "M46",
+    "to": "M48",
+    "toName": "Infrastructure Failure",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Coastal Erosion is tagged in the game data as a direct upstream driver of Infrastructure Failure. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Coastal Erosion run unresolved removes a buffer that was holding Infrastructure Failure back, pulling it onto the board sooner. Resolving Coastal Erosion well delays or softens Infrastructure Failure's arrival."
+  },
+  {
+    "from": "M47",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "cascade",
+    "chain": [
+      "Energy Insecurity",
+      "Political Crisis",
+      "Economic Instability"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Energy Insecurity \u2192 Political Crisis \u2192 Economic Instability. In story terms, an unresolved (or failed) Energy Security Crisis doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Economic Instability. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M47",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Energy Security Crisis is tagged in the game data as a direct upstream driver of Carbon Lock-In. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Energy Security Crisis run unresolved removes a buffer that was holding Carbon Lock-In back, pulling it onto the board sooner. Resolving Energy Security Crisis well delays or softens Carbon Lock-In's arrival."
+  },
+  {
+    "from": "M48",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Infrastructure Failure is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Infrastructure Failure run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Infrastructure Failure well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M48",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Infrastructure Failure is tagged in the game data as a direct upstream driver of Climate Migration. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Infrastructure Failure run unresolved removes a buffer that was holding Climate Migration back, pulling it onto the board sooner. Resolving Infrastructure Failure well delays or softens Climate Migration's arrival."
+  },
+  {
+    "from": "M49",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Public Health Emergency is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Public Health Emergency run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Public Health Emergency well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M49",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "cascade",
+    "chain": [
+      "Public Health Emergency",
+      "Mortality",
+      "Economic Burden",
+      "Social Inequality"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Public Health Emergency \u2192 Mortality \u2192 Economic Burden \u2192 Social Inequality. In story terms, an unresolved (or failed) Public Health Emergency doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Social Inequality. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M50",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Refugees is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Refugees run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Climate Refugees well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M50",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Climate Refugees is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Climate Refugees run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Climate Refugees well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M51",
+    "to": "M57",
+    "toName": "Food System Breakdown",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Fisheries Collapse is tagged in the game data as a direct upstream driver of Food System Breakdown. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Fisheries Collapse run unresolved removes a buffer that was holding Food System Breakdown back, pulling it onto the board sooner. Resolving Fisheries Collapse well delays or softens Food System Breakdown's arrival."
+  },
+  {
+    "from": "M51",
+    "to": "M55",
+    "toName": "Economic Instability",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Fisheries Collapse is tagged in the game data as a direct upstream driver of Economic Instability. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Fisheries Collapse run unresolved removes a buffer that was holding Economic Instability back, pulling it onto the board sooner. Resolving Fisheries Collapse well delays or softens Economic Instability's arrival."
+  },
+  {
+    "from": "M52",
+    "to": "M32",
+    "toName": "Climate Migration",
+    "kind": "cascade",
+    "chain": [
+      "Water Conflict",
+      "Political Instability",
+      "Regional Crisis",
+      "Migration"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Water Conflict \u2192 Political Instability \u2192 Regional Crisis \u2192 Migration. In story terms, an unresolved (or failed) Water Conflict doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Climate Migration. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M52",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Water Conflict is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Water Conflict run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Water Conflict well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M53",
+    "to": "M59",
+    "toName": "Carbon Lock-In",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai-Driven Resource Extraction Surge is tagged in the game data as a direct upstream driver of Carbon Lock-In. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai-Driven Resource Extraction Surge run unresolved removes a buffer that was holding Carbon Lock-In back, pulling it onto the board sooner. Resolving Ai-Driven Resource Extraction Surge well delays or softens Carbon Lock-In's arrival."
+  },
+  {
+    "from": "M53",
+    "to": "M58",
+    "toName": "Biodiversity Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai-Driven Resource Extraction Surge is tagged in the game data as a direct upstream driver of Biodiversity Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai-Driven Resource Extraction Surge run unresolved removes a buffer that was holding Biodiversity Collapse back, pulling it onto the board sooner. Resolving Ai-Driven Resource Extraction Surge well delays or softens Biodiversity Collapse's arrival."
+  },
+  {
+    "from": "M53",
+    "to": "M60",
+    "toName": "Tipping Point Activation",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai-Driven Resource Extraction Surge is tagged in the game data as a direct upstream driver of Tipping Point Activation. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai-Driven Resource Extraction Surge run unresolved removes a buffer that was holding Tipping Point Activation back, pulling it onto the board sooner. Resolving Ai-Driven Resource Extraction Surge well delays or softens Tipping Point Activation's arrival."
+  },
+  {
+    "from": "M54",
+    "to": "M45",
+    "toName": "Ecosystem Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Autonomous Systems And Ecological Blind Spots is tagged in the game data as a direct upstream driver of Ecosystem Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Autonomous Systems And Ecological Blind Spots run unresolved removes a buffer that was holding Ecosystem Collapse back, pulling it onto the board sooner. Resolving Autonomous Systems And Ecological Blind Spots well delays or softens Ecosystem Collapse's arrival."
+  },
+  {
+    "from": "M54",
+    "to": "M58",
+    "toName": "Biodiversity Collapse",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Autonomous Systems And Ecological Blind Spots is tagged in the game data as a direct upstream driver of Biodiversity Collapse. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Autonomous Systems And Ecological Blind Spots run unresolved removes a buffer that was holding Biodiversity Collapse back, pulling it onto the board sooner. Resolving Autonomous Systems And Ecological Blind Spots well delays or softens Biodiversity Collapse's arrival."
+  },
+  {
+    "from": "M54",
+    "to": "SPECIES_DECLINE",
+    "toName": "",
+    "kind": "soft",
+    "chain": null,
+    "explanation": "\"Species Decline\" isn't a standalone mystery card in the current 66 \u2014 it's a compounding ecological outcome the game logic tracks when Autonomous Systems And Ecological Blind Spots escalates. Treat this as a soft link: it feeds pressure toward the nearest matching mystery on the board (Fish Population Decline / Biodiversity Collapse) rather than unlocking a separate numbered node. Flag for the dev team to decide whether it needs its own node or should be folded into an existing one."
+  },
+  {
+    "from": "M55",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "cascade",
+    "chain": [
+      "Economic Instability",
+      "Social Inequality"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Economic Instability \u2192 Social Inequality. In story terms, an unresolved (or failed) Economic Instability doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Social Inequality. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M55",
+    "to": "M63",
+    "toName": "Multi-Hazard Cascades",
+    "kind": "cascade",
+    "chain": [
+      "Economic Instability",
+      "Social Inequality",
+      "Multi-Hazard Cascades"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Economic Instability \u2192 Social Inequality \u2192 Multi-Hazard Cascades. In story terms, an unresolved (or failed) Economic Instability doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Multi-Hazard Cascades. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M56",
+    "to": "M63",
+    "toName": "Multi-Hazard Cascades",
+    "kind": "cascade",
+    "chain": [
+      "Social Inequality",
+      "Multi-Hazard Cascades"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Social Inequality \u2192 Multi-Hazard Cascades. In story terms, an unresolved (or failed) Social Inequality doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Multi-Hazard Cascades. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M56",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Social Inequality",
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Social Inequality \u2192 Multi-Hazard Cascades \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Social Inequality doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M57",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Food System Breakdown",
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Food System Breakdown \u2192 Multi-Hazard Cascades \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Food System Breakdown doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M57",
+    "to": "M63",
+    "toName": "Multi-Hazard Cascades",
+    "kind": "cascade",
+    "chain": [
+      "Food System Breakdown",
+      "Multi-Hazard Cascades"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Food System Breakdown \u2192 Multi-Hazard Cascades. In story terms, an unresolved (or failed) Food System Breakdown doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Multi-Hazard Cascades. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M58",
+    "to": "M60",
+    "toName": "Tipping Point Activation",
+    "kind": "cascade",
+    "chain": [
+      "Biodiversity Collapse",
+      "Tipping Point Activation"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Biodiversity Collapse \u2192 Tipping Point Activation. In story terms, an unresolved (or failed) Biodiversity Collapse doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Tipping Point Activation. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M58",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Biodiversity Collapse",
+      "Tipping Point Activation",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Biodiversity Collapse \u2192 Tipping Point Activation \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Biodiversity Collapse doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M59",
+    "to": "M60",
+    "toName": "Tipping Point Activation",
+    "kind": "cascade",
+    "chain": [
+      "Carbon Lock-In",
+      "Tipping Point Activation"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Carbon Lock-In \u2192 Tipping Point Activation. In story terms, an unresolved (or failed) Carbon Lock-In doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Tipping Point Activation. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M59",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Carbon Lock-In",
+      "Tipping Point Activation",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Carbon Lock-In \u2192 Tipping Point Activation \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Carbon Lock-In doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M60",
+    "to": "M61",
+    "toName": "Amazon Dieback",
+    "kind": "cascade",
+    "chain": [
+      "Tipping Point Activation",
+      "Amazon Dieback"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Tipping Point Activation \u2192 Amazon Dieback. In story terms, an unresolved (or failed) Tipping Point Activation doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Amazon Dieback. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M60",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Tipping Point Activation",
+      "Amazon Dieback",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Tipping Point Activation \u2192 Amazon Dieback \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Tipping Point Activation doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M61",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Amazon Dieback",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Amazon Dieback \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Amazon Dieback doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M62",
+    "to": "M63",
+    "toName": "Multi-Hazard Cascades",
+    "kind": "cascade",
+    "chain": [
+      "Ocean Circulation Disruption",
+      "Multi-Hazard Cascades"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Ocean Circulation Disruption \u2192 Multi-Hazard Cascades. In story terms, an unresolved (or failed) Ocean Circulation Disruption doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Multi-Hazard Cascades. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M62",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Ocean Circulation Disruption",
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Ocean Circulation Disruption \u2192 Multi-Hazard Cascades \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Ocean Circulation Disruption doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M63",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "cascade",
+    "chain": [
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Multi-Hazard Cascades \u2192 Planetary Boundaries Breach. In story terms, an unresolved (or failed) Multi-Hazard Cascades doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Planetary Boundaries Breach. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M64",
+    "to": "VICTORY",
+    "toName": "Game Complete",
+    "kind": "soft",
+    "chain": null,
+    "explanation": "This is the endgame trigger, not another mystery. Successfully resolving Planetary Boundaries Breach (Planetary Boundaries Breach) is the final act that ends the game in the players' favour."
+  },
+  {
+    "from": "M65",
+    "to": "M60",
+    "toName": "Tipping Point Activation",
+    "kind": "cascade",
+    "chain": [
+      "Model Manipulation",
+      "Consensus Collapse",
+      "Policy Paralysis",
+      "Tipping Point Activation"
+    ],
+    "explanation": "The game's own Butterfly Network spells this one out: Model Manipulation \u2192 Consensus Collapse \u2192 Policy Paralysis \u2192 Tipping Point Activation. In story terms, an unresolved (or failed) Ai Climate Model Manipulation doesn't stay contained \u2014 it escalates step by step until it directly produces the conditions that define Tipping Point Activation. That's the causal thread a player should see when they click this connector."
+  },
+  {
+    "from": "M65",
+    "to": "M63",
+    "toName": "Multi-Hazard Cascades",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai Climate Model Manipulation is tagged in the game data as a direct upstream driver of Multi-Hazard Cascades. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai Climate Model Manipulation run unresolved removes a buffer that was holding Multi-Hazard Cascades back, pulling it onto the board sooner. Resolving Ai Climate Model Manipulation well delays or softens Multi-Hazard Cascades's arrival."
+  },
+  {
+    "from": "M65",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai Climate Model Manipulation is tagged in the game data as a direct upstream driver of Planetary Boundaries Breach. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai Climate Model Manipulation run unresolved removes a buffer that was holding Planetary Boundaries Breach back, pulling it onto the board sooner. Resolving Ai Climate Model Manipulation well delays or softens Planetary Boundaries Breach's arrival."
+  },
+  {
+    "from": "M66",
+    "to": "M63",
+    "toName": "Multi-Hazard Cascades",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai-Accelerated Inequality In Climate Adaptation is tagged in the game data as a direct upstream driver of Multi-Hazard Cascades. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai-Accelerated Inequality In Climate Adaptation run unresolved removes a buffer that was holding Multi-Hazard Cascades back, pulling it onto the board sooner. Resolving Ai-Accelerated Inequality In Climate Adaptation well delays or softens Multi-Hazard Cascades's arrival."
+  },
+  {
+    "from": "M66",
+    "to": "M56",
+    "toName": "Social Inequality",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai-Accelerated Inequality In Climate Adaptation is tagged in the game data as a direct upstream driver of Social Inequality. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai-Accelerated Inequality In Climate Adaptation run unresolved removes a buffer that was holding Social Inequality back, pulling it onto the board sooner. Resolving Ai-Accelerated Inequality In Climate Adaptation well delays or softens Social Inequality's arrival."
+  },
+  {
+    "from": "M66",
+    "to": "M64",
+    "toName": "Planetary Boundaries Breach",
+    "kind": "bridge",
+    "chain": null,
+    "explanation": "Ai-Accelerated Inequality In Climate Adaptation is tagged in the game data as a direct upstream driver of Planetary Boundaries Breach. There isn't an explicit multi-step chain written out for this pair, but the unlock logic treats them as directly coupled: letting Ai-Accelerated Inequality In Climate Adaptation run unresolved removes a buffer that was holding Planetary Boundaries Breach back, pulling it onto the board sooner. Resolving Ai-Accelerated Inequality In Climate Adaptation well delays or softens Planetary Boundaries Breach's arrival."
+  }
+]

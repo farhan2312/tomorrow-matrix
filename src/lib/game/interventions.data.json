@@ -1,0 +1,5999 @@
+[
+  {
+    "id": "I-001",
+    "name": "Renewable Energy",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 60,
+    "description": "Deploy solar, wind and other renewable energy systems to displace fossil fuel generation at scale. Covers national grid integration, community energy projects and industrial switching.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 4,
+      "energy": 7,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M01",
+      "M02",
+      "M25"
+    ],
+    "ripple": [
+      {
+        "code": "M01",
+        "name": "Arctic Ice Loss",
+        "explanation": "that drives ice melt, reducing albedo loss and breaking the warming feedback loop."
+      },
+      {
+        "code": "M02",
+        "name": "Extreme Heatwave",
+        "explanation": "over time, reducing the frequency and intensity of extreme heat events."
+      },
+      {
+        "code": "M25",
+        "name": "Renewable Energy Transition Barriers",
+        "explanation": "renewable capacity removes the dependency on Barriers fossil fuel infrastructure. +: : : :+: :+ ⚡ Carbon Tax Energy & 55 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-002",
+    "name": "Carbon Tax",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 55,
+    "description": "Place a price on carbon emissions to make fossil fuels reflect their true cost, driving investment toward cleaner alternatives and funding climate adaptation programs.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 2,
+      "energy": 5,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M01",
+      "M19"
+    ],
+    "ripple": [
+      {
+        "code": "M01",
+        "name": "Arctic Ice Loss",
+        "explanation": "reducing the emissions that drive Arctic warming and ice loss."
+      },
+      {
+        "code": "M19",
+        "name": "Climate Policy Inaction",
+        "explanation": "policy mechanism that outlasts political cycles, countering the gridlock driving inaction. +: : : :+: :+ ⚡ Electric Mobility Energy & 50 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-003",
+    "name": "Electric Mobility",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 50,
+    "description": "Electrify road transport through EV incentives, charging infrastructure rollout and fleet transition requirements for public and commercial vehicles.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 6,
+      "energy": 5,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M01",
+      "M09",
+      "M30"
+    ],
+    "ripple": [
+      {
+        "code": "M01",
+        "name": "Arctic Ice Loss",
+        "explanation": "contributing to slower warming and reduced Arctic ice melt."
+      },
+      {
+        "code": "M09",
+        "name": "Air Pollution",
+        "explanation": "emissions the primary driver of urban air pollution and associated health crises."
+      },
+      {
+        "code": "M30",
+        "name": "Transport Emissions Lock-In",
+        "explanation": "transport dependency, unlocking the transition to clean mobility at city scale. +: : : :+: :+ ⚡ Emission Standards Energy & 45 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-004",
+    "name": "Emission Standards",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 45,
+    "description": "Set legally binding limits on emissions from vehicles, factories and power plants, forcing industry to adopt cleaner technologies or face penalties.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 6,
+      "energy": 3,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M09"
+    ],
+    "ripple": [
+      {
+        "code": "M09",
+        "name": "Air Pollution",
+        "explanation": "industrial and transport pollutants causing dangerous air quality levels in cities. +: : : :+: :+ ⚡ Clean Energy Energy & 55 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-005",
+    "name": "Clean Energy",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 55,
+    "description": "Invest in the full portfolio of clean energy technologies --- solar, wind, geothermal, tidal and clean hydrogen --- to build a zero-emission energy system.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 5,
+      "energy": 8,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M09"
+    ],
+    "ripple": [
+      {
+        "code": "M09",
+        "name": "Air Pollution",
+        "explanation": "eliminates the emissions that create toxic urban smog and particulate matter. +: : : :+: :+ ⚡ Carbon Pricing Energy & 60 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-006",
+    "name": "Carbon Pricing",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 60,
+    "description": "Implement economy-wide carbon pricing --- either a direct tax or cap-and-trade system --- to internalise the cost of carbon and redirect investment to clean alternatives.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 3,
+      "energy": 6,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M55"
+    ],
+    "ripple": [
+      {
+        "code": "M55",
+        "name": "Amazon Dieback",
+        "explanation": "investment less profitable, accelerating stranded asset risk and breaking the carbon lock-in. +: : : :+: :+ ⚡ Fossil Fuel Subsidy Removal Energy & 65 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-007",
+    "name": "Fossil Fuel Subsidy",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 65,
+    "description": "Eliminate government subsidies that artificially reduce the cost of fossil fuels, levelling the economic playing field for renewables and clean energy alternatives.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 3,
+      "energy": 7,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M55"
+    ],
+    "ripple": [
+      {
+        "code": "M55",
+        "name": "Amazon Dieback",
+        "explanation": "fossil fuels, making clean energy economically competitive and unlocking rapid transition. +: : : :+: :+ ⚡ Clean Energy Mandate Energy & 65 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-008",
+    "name": "Clean Energy Mandate",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 65,
+    "description": "Require that a defined percentage of national electricity generation comes from zero-emission sources by a set date, creating certainty for clean energy investment.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 4,
+      "energy": 9,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M55"
+    ],
+    "ripple": [
+      {
+        "code": "M55",
+        "name": "Amazon Dieback",
+        "explanation": "lobby resistance, forcing the energy transition regardless of fossil fuel economic incumbency. +: : : :+: :+ ⚡ Emission Reduction Energy & 55 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-009",
+    "name": "Emission Reduction",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 55,
+    "description": "Broad-based national and sectoral programs targeting absolute reductions in greenhouse gas emissions across all economic sectors.",
+    "effects": {
+      "terra": 7,
+      "climate": 6,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 4,
+      "energy": 4,
+      "industrial": 4,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M33",
+      "M34"
+    ],
+    "ripple": [
+      {
+        "code": "M33",
+        "name": "Ocean Acidification",
+        "explanation": "acidification, allowing marine ecosystems time to adapt and recover."
+      },
+      {
+        "code": "M34",
+        "name": "Wildfire Outbreaks",
+        "explanation": "reducing the temperature anomalies that are driving glacier melt. +: : : :+: :+ ⚡ Emergency Emissions Cut Energy & 80 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-010",
+    "name": "Emergency Emissions Cut",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 80,
+    "description": "Declare a climate emergency and implement immediate, deep cuts to emissions across all sectors --- energy, transport, industry and land use --- via emergency legislation.",
+    "effects": {
+      "terra": 12,
+      "climate": 10,
+      "water": 2,
+      "food": 0,
+      "bio": 2,
+      "community": 0,
+      "air": 6,
+      "energy": 8,
+      "industrial": 6,
+      "ocean": 3,
+      "forest": 2,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M56"
+    ],
+    "ripple": [
+      {
+        "code": "M56",
+        "name": "Methane Surge",
+        "explanation": "warming trajectory fast enough to prevent irreversible tipping point activation in climate systems. +: : : :+: :+ ⚡ Carbon Dioxide Removal Energy & 75 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-011",
+    "name": "Carbon Dioxide Removal",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 75,
+    "description": "Deploy technologies and nature-based solutions to actively remove CO₂ from the atmosphere --- including direct air capture, bioenergy with carbon capture, and enhanced weathering.",
+    "effects": {
+      "terra": 10,
+      "climate": 9,
+      "water": 0,
+      "food": 0,
+      "bio": 2,
+      "community": 0,
+      "air": 3,
+      "energy": 3,
+      "industrial": 0,
+      "ocean": 2,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M56"
+    ],
+    "ripple": [
+      {
+        "code": "M56",
+        "name": "Methane Surge",
+        "explanation": "concentrations, lowering the likelihood of triggering self-reinforcing warming feedbacks. +: : : :+: :+ ⚡ Grid Modernisation Energy & 55 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-012",
+    "name": "Grid Modernisation",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 55,
+    "description": "Upgrade electricity grid infrastructure to handle distributed renewable energy sources, improve resilience, reduce transmission losses and enable smart demand management.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 2,
+      "energy": 8,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M25"
+    ],
+    "ripple": [
+      {
+        "code": "M25",
+        "name": "Renewable Energy Transition Barriers",
+        "explanation": "renewable deployment modernising the grid Barriers removes the infrastructure bottleneck blocking the energy transition. +: : : :+: :+ ⚡ Feed-in Tariffs Energy & 45 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-013",
+    "name": "Feed-in Tariffs",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 45,
+    "description": "Guarantee renewable energy producers a fixed price for electricity fed into the grid, creating revenue certainty and de-risking renewable energy investment.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 2,
+      "energy": 7,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M25"
+    ],
+    "ripple": [
+      {
+        "code": "M25",
+        "name": "Renewable Energy Transition Barriers",
+        "explanation": "unlocks private investment in renewables, Barriers overcoming the investment uncertainty barrier. +: : : :+: :+ ⚡ Renewable Portfolio Standards Energy & 50 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-014",
+    "name": "Renewable Portfolio",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 50,
+    "description": "Require electricity retailers to source a set percentage of power from renewable sources, creating long-term market demand that drives deployment.",
+    "effects": {
+      "terra": 6,
+      "climate": 5,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 3,
+      "energy": 8,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M25"
+    ],
+    "ripple": [
+      {
+        "code": "M25",
+        "name": "Renewable Energy Transition Barriers",
+        "explanation": "fossil fuel lobby resistance and policy Barriers uncertainty, directly dismantling the transition barrier. +: : : :+: :+ ⚡ Renewable Energy Investment Energy & 60 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-015",
+    "name": "Renewable Energy",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 60,
+    "description": "Direct public and private capital into renewable energy at scale through green bonds, infrastructure funds, and national clean energy financing programs.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 3,
+      "energy": 9,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M45"
+    ],
+    "ripple": [
+      {
+        "code": "M45",
+        "name": "Biodiversity Collapse",
+        "explanation": "dependence on volatile fossil fuel imports, directly addressing energy security vulnerabilities. +: : : :+: :+ ⚡ Energy Storage Energy & 55 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-016",
+    "name": "Energy Storage",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 55,
+    "description": "Deploy grid-scale battery storage, pumped hydro and other storage technologies to handle the intermittency of renewable energy and ensure reliable clean power supply.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 2,
+      "energy": 8,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M45"
+    ],
+    "ripple": [
+      {
+        "code": "M45",
+        "name": "Biodiversity Collapse",
+        "explanation": "renewables, enabling reliable clean energy supply that doesn\\'t depend on fossil fuel backup. +: : : :+: :+ ⚡ EV Transition Support Energy & 50 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-017",
+    "name": "EV Transition Support",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 50,
+    "description": "Provide purchase incentives, charging infrastructure grants and fleet transition programs to accelerate the shift from fossil fuel vehicles to electric alternatives.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 6,
+      "energy": 5,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M30"
+    ],
+    "ripple": [
+      {
+        "code": "M30",
+        "name": "Transport Emissions Lock-In",
+        "explanation": "directly remove the adoption barriers keeping consumers tied to fossil fuel vehicles. +: : : :+: :+ ⚡ Public Transport Investment Energy & 55 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-018",
+    "name": "Public Transport",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 55,
+    "description": "Expand and improve public transit systems --- rail, bus rapid transit, metro --- to provide clean, affordable alternatives to private car use in urban and peri-urban areas.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 5,
+      "air": 5,
+      "energy": 4,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M30"
+    ],
+    "ripple": [
+      {
+        "code": "M30",
+        "name": "Transport Emissions Lock-In",
+        "explanation": "away from private vehicles, reducing total road emissions without requiring consumers to buy EVs. +: : : :+: :+ ⚡ Low Emission Zones Energy & 40 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-019",
+    "name": "Low Emission Zones",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 40,
+    "description": "Restrict access of high-emission vehicles to defined urban areas, reducing local pollution, driving EV adoption and signalling policy direction to automakers.",
+    "effects": {
+      "terra": 4,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 7,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M30"
+    ],
+    "ripple": [
+      {
+        "code": "M30",
+        "name": "Transport Emissions Lock-In",
+        "explanation": "geographically bounded emission cuts and create economic pressure that accelerates EV fleet transition. +: : : :+: :+ ⚡ Rapid Decarbonisation Energy & 75 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-020",
+    "name": "Rapid Decarbonisation",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 75,
+    "description": "Implement society-wide rapid decarbonisation strategies across energy, industry, transport and land use --- compressing decades of transition into years through emergency policy coordination.",
+    "effects": {
+      "terra": 10,
+      "climate": 9,
+      "water": 2,
+      "food": 0,
+      "bio": 3,
+      "community": 2,
+      "air": 5,
+      "energy": 8,
+      "industrial": 6,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M58"
+    ],
+    "ripple": [
+      {
+        "code": "M58",
+        "name": "Antarctic Ice Sheet Collapse",
+        "explanation": "reducing the freshwater influx into the North Disruption Atlantic that is weakening ocean circulation. +: : : :+: :+ ⚡ Arctic Protection Energy & 65 Climate"
+      }
+    ]
+  },
+  {
+    "id": "I-021",
+    "name": "Arctic Protection",
+    "categoryLabel": "Energy & Climate",
+    "categoryId": "energy",
+    "categoryEmoji": "⚡",
+    "cost": 65,
+    "description": "Establish Arctic conservation zones, ban new fossil fuel extraction in Arctic regions and fund international monitoring to protect the climate-critical Arctic ecosystem.",
+    "effects": {
+      "terra": 8,
+      "climate": 7,
+      "water": 3,
+      "food": 0,
+      "bio": 5,
+      "community": 0,
+      "air": 0,
+      "energy": 3,
+      "industrial": 0,
+      "ocean": 5,
+      "forest": 3,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M58"
+    ],
+    "ripple": [
+      {
+        "code": "M58",
+        "name": "Antarctic Ice Sheet Collapse",
+        "explanation": "influx driving AMOC slowdown, preserving ocean Disruption circulation and the heat distribution it provides. +: :+ 💧 Water & Ocean 21 interventions in this category +: : : :+: :+ 💧 Water Conservation Program Water & 40 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-022",
+    "name": "Water Conservation",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 40,
+    "description": "Implement water demand management through efficiency standards, metering, public campaigns and pricing reform to reduce consumption across households, agriculture and industry.",
+    "effects": {
+      "terra": 6,
+      "climate": 2,
+      "water": 7,
+      "food": 3,
+      "bio": 0,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M03"
+    ],
+    "ripple": [
+      {
+        "code": "M03",
+        "name": "Water Scarcity",
+        "explanation": "shrinking reservoirs and aquifers, buying time for climate adaptation while reducing supply pressure. +: : : :+: :+ 💧 Drip Irrigation Water & 35 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-023",
+    "name": "Drip Irrigation",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 35,
+    "description": "Replace flood and sprinkler irrigation with precision drip systems that deliver water directly to plant roots, reducing agricultural water consumption by up to 60%.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 6,
+      "food": 5,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M03",
+      "M07",
+      "M24",
+      "M35"
+    ],
+    "ripple": [
+      {
+        "code": "M03",
+        "name": "Water Scarcity",
+        "explanation": "which accounts for 70% of global freshwater use directly alleviating scarcity pressure on communities."
+      },
+      {
+        "code": "M07",
+        "name": "Crop Yield Decline",
+        "explanation": "under drought stress, improving yields even when total water availability is reduced."
+      },
+      {
+        "code": "M24",
+        "name": "Groundwater Over-Extraction",
+        "explanation": "rate of aquifer depletion, extending the lifespan of groundwater resources."
+      },
+      {
+        "code": "M35",
+        "name": "Reservoir Depletion",
+        "explanation": "recharge rates to catch up with demand, slowing the rate of groundwater decline. +: : : :+: :+ 💧 Wetland Restoration Water & 45 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-024",
+    "name": "Wetland Restoration",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 45,
+    "description": "Restore degraded wetlands, marshes and floodplains to rebuild natural water filtration, flood buffering, carbon storage and biodiversity habitat functions.",
+    "effects": {
+      "terra": 7,
+      "climate": 3,
+      "water": 6,
+      "food": 2,
+      "bio": 5,
+      "community": 4,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M03",
+      "M10"
+    ],
+    "ripple": [
+      {
+        "code": "M03",
+        "name": "Water Scarcity",
+        "explanation": "recharge groundwater and buffer drought conditions building natural water security."
+      },
+      {
+        "code": "M10",
+        "name": "Flood Risk",
+        "explanation": "act as natural sponges that absorb flood peaks and slow storm water, reducing downstream flood risk without hard infrastructure. +: : : :+: :+ 💧 Pollution Standards Water & 45 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-025",
+    "name": "Pollution Standards",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 45,
+    "description": "Establish and enforce strict limits on industrial and agricultural chemical discharges into waterways, with monitoring systems and meaningful penalties for violations.",
+    "effects": {
+      "terra": 6,
+      "climate": 0,
+      "water": 7,
+      "food": 2,
+      "bio": 4,
+      "community": 4,
+      "air": 2,
+      "energy": 0,
+      "industrial": 4,
+      "ocean": 4,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M15"
+    ],
+    "ripple": [
+      {
+        "code": "M15",
+        "name": "Industrial Water Contamination",
+        "explanation": "chemical pollutants entering waterways that are poisoning drinking water and aquatic ecosystems. +: : : :+: :+ 💧 Wastewater Treatment Water & 45 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-026",
+    "name": "Wastewater Treatment",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 45,
+    "description": "Build and upgrade wastewater treatment infrastructure to remove pollutants before discharge, protecting downstream communities and water-dependent ecosystems.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 7,
+      "food": 2,
+      "bio": 3,
+      "community": 5,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 4,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M15"
+    ],
+    "ripple": [
+      {
+        "code": "M15",
+        "name": "Industrial Water Contamination",
+        "explanation": "from effluent before it enters waterways, protecting drinking water sources and aquatic life. +: : : :+: :+ 💧 Wetland Buffer Zones Water & 35 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-027",
+    "name": "Wetland Buffer Zones",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 35,
+    "description": "Establish vegetated buffer zones along rivers and water bodies to intercept runoff, filter pollutants and reduce the volume of contaminants reaching waterways.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 5,
+      "food": 2,
+      "bio": 4,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M15"
+    ],
+    "ripple": [
+      {
+        "code": "M15",
+        "name": "Industrial Water Contamination",
+        "explanation": "and industrial runoff before it reaches waterways, reducing contamination at source. +: : : :+: :+ 💧 Aquifer Recharge Programs Water & 45 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-028",
+    "name": "Aquifer Recharge",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 45,
+    "description": "Actively recharge underground aquifers using managed aquifer recharge techniques --- capturing surplus surface water during wet periods and injecting it into depleted groundwater systems.",
+    "effects": {
+      "terra": 6,
+      "climate": 2,
+      "water": 8,
+      "food": 4,
+      "bio": 2,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M24",
+      "M35"
+    ],
+    "ripple": [
+      {
+        "code": "M24",
+        "name": "Groundwater Over-Extraction",
+        "explanation": "partially offsetting over-extraction and buying critical time for demand reduction measures."
+      },
+      {
+        "code": "M35",
+        "name": "Reservoir Depletion",
+        "explanation": "reserves, reducing subsidence risk and extending water availability for dependent communities. +: : : :+: :+ 💧 Water Metering Water & 30 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-029",
+    "name": "Water Metering",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 30,
+    "description": "Install smart water meters to provide real-time usage data, enabling targeted demand management, leak detection and consumption-based pricing.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 6,
+      "food": 2,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M35"
+    ],
+    "ripple": [
+      {
+        "code": "M35",
+        "name": "Reservoir Depletion",
+        "explanation": "pricing signals that reduce over-extraction, slowing aquifer depletion without restricting productive use. +: : : :+: :+ 💧 Water Pricing Water & 35 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-030",
+    "name": "Water Pricing",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 35,
+    "description": "Reform water pricing structures to reflect true scarcity value, incentivise efficient use and cross-subsidise access for lower-income users.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 7,
+      "food": 3,
+      "bio": 0,
+      "community": 2,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M24"
+    ],
+    "ripple": [
+      {
+        "code": "M24",
+        "name": "Groundwater Over-Extraction",
+        "explanation": "wasteful usage and incentivise investment in water-efficient technologies across agriculture and industry. +: : : :+: :+ 💧 Water Storage Infrastructure Water & 50 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-031",
+    "name": "Water Storage",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 50,
+    "description": "Build dams, reservoirs and underground storage systems to capture seasonal rainfall and glacial meltwater, providing buffer storage against the irregular water supply created by climate change.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 8,
+      "food": 5,
+      "bio": -2,
+      "community": 5,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M34"
+    ],
+    "ripple": [
+      {
+        "code": "M34",
+        "name": "Wildfire Outbreaks",
+        "explanation": "that would otherwise be lost, redistributing it to communities and farms during dry seasons. +: : : :+: :+ 💧 Glacier Monitoring Water & 25 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-032",
+    "name": "Glacier Monitoring",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 25,
+    "description": "Deploy sensor networks and satellite monitoring to track glacier mass balance, melt rates and downstream flow patterns, enabling early warning and adaptive water management.",
+    "effects": {
+      "terra": 3,
+      "climate": 2,
+      "water": 4,
+      "food": 2,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M34"
+    ],
+    "ripple": [
+      {
+        "code": "M34",
+        "name": "Wildfire Outbreaks",
+        "explanation": "seasonal water shortfalls, adapt agricultural practices and plan storage before crisis hits. +: : : :+: :+ 💧 Marine Protected Areas Water & 45 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-033",
+    "name": "Marine Protected Areas",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 45,
+    "description": "Designate no-take or restricted-use zones in oceans and coastal waters to protect marine biodiversity, allow fish stock recovery and preserve critical habitat from human disturbance.",
+    "effects": {
+      "terra": 7,
+      "climate": 2,
+      "water": 2,
+      "food": 4,
+      "bio": 6,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 8,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M05",
+      "M06",
+      "M33",
+      "M49"
+    ],
+    "ripple": [
+      {
+        "code": "M05",
+        "name": "Coral Reef Bleaching",
+        "explanation": "fishing and pollution, giving coral reef ecosystems a better chance of recovering from bleaching events."
+      },
+      {
+        "code": "M06",
+        "name": "Fish Population Decline",
+        "explanation": "by protecting breeding grounds, spilling adult fish into surrounding waters to replenish stocks."
+      },
+      {
+        "code": "M33",
+        "name": "Ocean Acidification",
+        "explanation": "stressors like overfishing increases their resilience to the acidification stress already underway."
+      },
+      {
+        "code": "M49",
+        "name": "Ecosystem Collapse",
+        "explanation": "recovery protecting spawning areas and allowing populations to rebuild before collapse becomes irreversible. +: : : :+: :+ 💧 Blue Carbon Projects Water & 40 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-034",
+    "name": "Blue Carbon Projects",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 40,
+    "description": "Restore and protect blue carbon ecosystems --- seagrass beds, saltmarshes and mangroves --- that sequester carbon at rates far exceeding terrestrial forests.",
+    "effects": {
+      "terra": 6,
+      "climate": 5,
+      "water": 3,
+      "food": 2,
+      "bio": 5,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 2,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M05"
+    ],
+    "ripple": [
+      {
+        "code": "M05",
+        "name": "Coral Reef Bleaching",
+        "explanation": "and reduces coastal warming, creating healthier conditions for adjacent coral reef recovery. +: : : :+: :+ 💧 Mangrove Restoration Water & 40 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-035",
+    "name": "Mangrove Restoration",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 40,
+    "description": "Replant and restore mangrove forests along tropical and subtropical coastlines to sequester carbon, protect shorelines, provide fish nursery habitat and support coastal community livelihoods.",
+    "effects": {
+      "terra": 7,
+      "climate": 4,
+      "water": 3,
+      "food": 3,
+      "bio": 6,
+      "community": 5,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 4,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M05",
+      "M06",
+      "M39"
+    ],
+    "ripple": [
+      {
+        "code": "M05",
+        "name": "Coral Reef Bleaching",
+        "explanation": "reaches reefs, reducing the nutrient and sediment pollution that compounds bleaching stress."
+      },
+      {
+        "code": "M06",
+        "name": "Fish Population Decline",
+        "explanation": "commercially important fish species their restoration is essential to stock recovery."
+      },
+      {
+        "code": "M39",
+        "name": "Sea Level Rise",
+        "explanation": "rebuilding coastal carbon stores, fishery habitat and storm protection simultaneously. +: : : :+: :+ 💧 Ocean Cleanup Water & 40 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-036",
+    "name": "Ocean Cleanup",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 40,
+    "description": "Deploy ocean cleanup technologies and coastal waste interception systems to remove plastic pollution from waterways before it reaches the ocean and at ocean surface and river mouth locations.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 2,
+      "food": 3,
+      "bio": 4,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M12"
+    ],
+    "ripple": [
+      {
+        "code": "M12",
+        "name": "Plastic Pollution In Oceans",
+        "explanation": "in Oceans marine environments, limiting ongoing microplastic fragmentation and ingestion by marine life. +: : : :+: :+ 💧 Ocean Alkalinity Enhancement Water & 50 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-037",
+    "name": "Ocean Alkalinity",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 50,
+    "description": "Add alkaline minerals to the ocean to chemically neutralise excess acidity from CO₂ absorption, protecting marine organisms and creating a carbon removal co-benefit.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 2,
+      "food": 3,
+      "bio": 3,
+      "community": 0,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 7,
+      "forest": 0,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M33"
+    ],
+    "ripple": [
+      {
+        "code": "M33",
+        "name": "Ocean Acidification",
+        "explanation": "calcifying organisms like shellfish and corals from shell dissolution caused by lowered pH. +: : : :+: :+ 💧 Sustainable Fisheries Water & 40 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-038",
+    "name": "Sustainable Fisheries",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 40,
+    "description": "Implement science-based catch limits, gear restrictions and monitoring across commercial and artisanal fisheries to maintain stocks at sustainable levels.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 0,
+      "food": 5,
+      "bio": 4,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M06"
+    ],
+    "ripple": [
+      {
+        "code": "M06",
+        "name": "Fish Population Decline",
+        "explanation": "rebuild by preventing extraction beyond natural replenishment rates. +: : : :+: :+ 💧 Fishing Quotas Water & 40 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-039",
+    "name": "Fishing Quotas",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 40,
+    "description": "Set legally binding limits on the volume of each fish species that can be caught per season, enforced through licensing, monitoring and meaningful penalties.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 0,
+      "food": 4,
+      "bio": 4,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M49"
+    ],
+    "ripple": [
+      {
+        "code": "M49",
+        "name": "Ecosystem Collapse",
+        "explanation": "driver of stock collapse alongside climate stress, giving populations time to recover. +: : : :+: :+ 💧 Coastal Management Policy Water & 45 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-040",
+    "name": "Coastal Management",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 45,
+    "description": "Develop integrated coastal management frameworks that balance economic use with ecosystem protection, including setback rules, development restrictions and restoration mandates.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 5,
+      "community": 5,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 5,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M39"
+    ],
+    "ripple": [
+      {
+        "code": "M39",
+        "name": "Sea Level Rise",
+        "explanation": "development pressures that are the primary driver of mangrove clearing, protecting remaining stands. +: : : :+: :+ 💧 Transboundary Water Treaties Water & 55 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-041",
+    "name": "Transboundary Water",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 55,
+    "description": "Negotiate legally binding international agreements for shared river basins and aquifers, establishing fair allocation rules, dispute resolution mechanisms and joint monitoring.",
+    "effects": {
+      "terra": 7,
+      "climate": 3,
+      "water": 8,
+      "food": 4,
+      "bio": 2,
+      "community": 6,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M50"
+    ],
+    "ripple": [
+      {
+        "code": "M50",
+        "name": "Food Insecurity",
+        "explanation": "cooperation, establishing a legal framework for shared water governance that prevents conflict from escalating. +: : : :+: :+ 💧 Water Efficiency Programs Water & 35 Ocean"
+      }
+    ]
+  },
+  {
+    "id": "I-042",
+    "name": "Water Efficiency",
+    "categoryLabel": "Water & Ocean",
+    "categoryId": "water",
+    "categoryEmoji": "💧",
+    "cost": 35,
+    "description": "Deploy efficiency standards, incentives and technical assistance for water-efficient appliances, industrial processes and agricultural practices across all sectors.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 7,
+      "food": 4,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M50"
+    ],
+    "ripple": [
+      {
+        "code": "M50",
+        "name": "Food Insecurity",
+        "explanation": "sectors eases pressure on shared resources, reducing the scarcity that is the root cause of water conflict. +: :+ 🌾 Food & Agriculture 16 interventions in this category +: : : :+: :+ 🌾 Sustainable Agriculture Food & 45 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-043",
+    "name": "Sustainable Agriculture",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 45,
+    "description": "Transition farming systems to sustainable practices --- crop rotation, integrated pest management, reduced chemical inputs, conservation tillage --- that maintain productivity while rebuilding ecosystem health.",
+    "effects": {
+      "terra": 7,
+      "climate": 2,
+      "water": 4,
+      "food": 6,
+      "bio": 4,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 2,
+      "forest": 0,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M07"
+    ],
+    "ripple": [
+      {
+        "code": "M07",
+        "name": "Crop Yield Decline",
+        "explanation": "retention and pest resistance the underlying ecological foundations of crop productivity. +: : : :+: :+ 🌾 Regenerative Agriculture Food & 45 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-044",
+    "name": "Regenerative Agriculture",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 45,
+    "description": "Actively restore soil health, biodiversity and carbon sequestration through practices like cover cropping, composting, holistic grazing, agroforestry and minimal soil disturbance.",
+    "effects": {
+      "terra": 8,
+      "climate": 5,
+      "water": 4,
+      "food": 5,
+      "bio": 5,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 2,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M07",
+      "M08"
+    ],
+    "ripple": [
+      {
+        "code": "M07",
+        "name": "Crop Yield Decline",
+        "explanation": "microbiome, water-holding capacity and nutrient cycling that underpin long-term agricultural productivity."
+      },
+      {
+        "code": "M08",
+        "name": "Soil Degradation",
+        "explanation": "to soil degradation directly rebuilding organic matter, structure and biological activity. +: : : :+: :+ 🌾 Cover Cropping Food & 30 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-045",
+    "name": "Cover Cropping",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 30,
+    "description": "Plant cover crops between main crop cycles to protect soil from erosion, fix nitrogen, suppress weeds and build organic matter --- improving long-term soil health and productivity.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 3,
+      "food": 4,
+      "bio": 3,
+      "community": 2,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M08"
+    ],
+    "ripple": [
+      {
+        "code": "M08",
+        "name": "Soil Degradation",
+        "explanation": "add organic matter directly addressing the primary drivers of soil degradation. +: : : :+: :+ 🌾 Agroforestry Food & 40 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-046",
+    "name": "Agroforestry",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 40,
+    "description": "Integrate trees, shrubs and crops in the same land area to create farming systems that produce food, sequester carbon, protect soil and provide biodiversity habitat simultaneously.",
+    "effects": {
+      "terra": 7,
+      "climate": 4,
+      "water": 4,
+      "food": 5,
+      "bio": 5,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 5,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M04",
+      "M08"
+    ],
+    "ripple": [
+      {
+        "code": "M04",
+        "name": "Deforestation",
+        "explanation": "tree-based farming, reducing the economic pressure that drives deforestation for agricultural land conversion."
+      },
+      {
+        "code": "M08",
+        "name": "Soil Degradation",
+        "explanation": "cycle deep nutrients, rebuilding soil health in degraded agricultural landscapes. +: : : :+: :+ 🌾 Seed Banks Food & 30 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-047",
+    "name": "Seed Banks",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 30,
+    "description": "Collect, store and maintain collections of diverse crop and wild plant seeds to preserve genetic resources that can be used to develop climate-resilient varieties and restore lost biodiversity.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 0,
+      "food": 5,
+      "bio": 6,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M17"
+    ],
+    "ripple": [
+      {
+        "code": "M17",
+        "name": "Loss Of Traditional Farming Knowledge",
+        "explanation": "embodied in traditional crop varieties, Knowledge maintaining options for resilient food systems even as farming knowledge is lost. +: : : :+: :+ 🌾 Indigenous Agriculture Programs Food & 35 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-048",
+    "name": "Indigenous Agriculture",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 35,
+    "description": "Support Indigenous farming communities to maintain, document and adapt their traditional agricultural knowledge, practices and seed varieties as foundations for climate-resilient food systems.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 2,
+      "food": 5,
+      "bio": 5,
+      "community": 6,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M17"
+    ],
+    "ripple": [
+      {
+        "code": "M17",
+        "name": "Loss Of Traditional Farming Knowledge",
+        "explanation": "economic and cultural pathways for traditional Knowledge agricultural wisdom to pass to future generations. +: : : :+: :+ 🌾 Food Reserves Food & 40 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-049",
+    "name": "Food Reserves",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 40,
+    "description": "Establish national and regional strategic food reserves --- physical grain and commodity stocks --- to buffer against supply shocks and price spikes from climate events.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 0,
+      "food": 7,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M31"
+    ],
+    "ripple": [
+      {
+        "code": "M31",
+        "name": "Glacier Retreat",
+        "explanation": "shocks to dampen price spikes, protecting food affordability for low-income populations. +: : : :+: :+ 🌾 Urban Farms Food & 35 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-050",
+    "name": "Urban Farms",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 35,
+    "description": "Establish rooftop gardens, vertical farms, community plots and urban food production facilities within cities to provide fresh food access independent of supply chains.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 0,
+      "food": 6,
+      "bio": 3,
+      "community": 6,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M26"
+    ],
+    "ripple": [
+      {
+        "code": "M26",
+        "name": "Urban Food Desert",
+        "explanation": "directly provide fresh food access, bypassing the retail supply chains that have abandoned those communities. +: : : :+: :+ 🌾 Food Subsidy Policy Food & 40 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-051",
+    "name": "Food Subsidy Policy",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 40,
+    "description": "Direct subsidies to ensure affordable access to fresh, nutritious food for low-income populations --- including school meal programs, food stamps and healthy food price supports.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 0,
+      "food": 7,
+      "bio": 0,
+      "community": 6,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M26"
+    ],
+    "ripple": [
+      {
+        "code": "M26",
+        "name": "Urban Food Desert",
+        "explanation": "accessible in low-income urban areas where affordability is the primary barrier to healthy diets. +: : : :+: :+ 🌾 Community Gardens Food & 25 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-052",
+    "name": "Community Gardens",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 25,
+    "description": "Develop shared growing spaces in urban and peri-urban areas that provide food production, community connection, green space and food education for residents.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 0,
+      "food": 5,
+      "bio": 3,
+      "community": 6,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M26"
+    ],
+    "ripple": [
+      {
+        "code": "M26",
+        "name": "Urban Food Desert",
+        "explanation": "food production while rebuilding social capital and food literacy in underserved urban communities. +: : : :+: :+ 🌾 Food Sovereignty Programs Food & 50 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-053",
+    "name": "Food Sovereignty",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 50,
+    "description": "Support communities\\' right to define their own food systems --- including local production rights, traditional seed access, market protection and democratic food governance.",
+    "effects": {
+      "terra": 7,
+      "climate": 3,
+      "water": 2,
+      "food": 8,
+      "bio": 5,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M53"
+    ],
+    "ripple": [
+      {
+        "code": "M53",
+        "name": "Multi-Hazard Cascades",
+        "explanation": "inherently more resilient to global supply chain collapse, maintaining food access even when globalised systems fail. +: : : :+: :+ 🌾 Diversified Agriculture Food & 35 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-054",
+    "name": "Diversified Agriculture",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 35,
+    "description": "Support crop diversity and mixed farming systems that reduce vulnerability to single-crop failure, rebuild ecological diversity and maintain food production across a wider range of climate conditions.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 6,
+      "bio": 5,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M53"
+    ],
+    "ripple": [
+      {
+        "code": "M53",
+        "name": "Multi-Hazard Cascades",
+        "explanation": "different climate tolerances when one fails, others survive, maintaining food supply during climate shocks. +: : : :+: :+ 🌾 Emergency Food Reserves Food & 45 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-055",
+    "name": "Emergency Food Reserves",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 45,
+    "description": "Establish pre-positioned emergency food stocks at regional and community levels for rapid deployment during acute food crises caused by climate events, supply chain failure or conflict.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 0,
+      "food": 8,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M53"
+    ],
+    "ripple": [
+      {
+        "code": "M53",
+        "name": "Multi-Hazard Cascades",
+        "explanation": "defence against acute food system failure, ensuring minimum nutrition during the period before recovery systems are established. +: : : :+: :+ 🌾 Pesticide Reduction Food & 35 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-056",
+    "name": "Pesticide Reduction",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 35,
+    "description": "Phase out the most harmful pesticides, particularly those affecting pollinators and soil organisms, while supporting farmers to adopt integrated pest management alternatives.",
+    "effects": {
+      "terra": 6,
+      "climate": 0,
+      "water": 3,
+      "food": 4,
+      "bio": 7,
+      "community": 2,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M38"
+    ],
+    "ripple": [
+      {
+        "code": "M38",
+        "name": "Climate Migration",
+        "explanation": "landscapes is the single most effective intervention to halt insecticide-driven bee and pollinator colony collapse. +: : : :+: :+ 🌾 Wildflower Corridors Food & 25 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-057",
+    "name": "Wildflower Corridors",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 25,
+    "description": "Plant wildflower strips and hedgerows along field margins, roadsides and urban areas to provide year-round foraging habitat and nesting sites for bees, butterflies and other pollinators.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 0,
+      "food": 3,
+      "bio": 6,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M38"
+    ],
+    "ripple": [
+      {
+        "code": "M38",
+        "name": "Climate Migration",
+        "explanation": "habitat that pollinators depend on for food addressing the habitat loss driving pollinator decline across agricultural landscapes. +: : : :+: :+ 🌾 Bee Habitat Programs Food & 30 Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "I-058",
+    "name": "Bee Habitat Programs",
+    "categoryLabel": "Food & Agriculture",
+    "categoryId": "food",
+    "categoryEmoji": "🌾",
+    "cost": 30,
+    "description": "Create protected nesting sites, manage land for pollinator-friendly vegetation and establish urban bee sanctuaries to rebuild wild and managed bee populations.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 0,
+      "food": 4,
+      "bio": 6,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M38"
+    ],
+    "ripple": [
+      {
+        "code": "M38",
+        "name": "Climate Migration",
+        "explanation": "the nesting site crisis particularly for solitary native bees which are critical pollinators but have no managed population support. +: :+ 🌿 Biodiversity & Land 20 interventions in this category +: : : :+: :+ 🌿 Reforestation Biodiversity 40 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-059",
+    "name": "Reforestation",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 40,
+    "description": "Plant trees at scale on degraded and deforested land to restore forest ecosystems, sequester carbon, rebuild biodiversity habitat and restore water cycles.",
+    "effects": {
+      "terra": 8,
+      "climate": 5,
+      "water": 4,
+      "food": 2,
+      "bio": 6,
+      "community": 3,
+      "air": 3,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 2,
+      "forest": 9,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M04",
+      "M42"
+    ],
+    "ripple": [
+      {
+        "code": "M04",
+        "name": "Deforestation",
+        "explanation": "restoring carbon storage, biodiversity habitat and the water cycle functions that deforestation destroys."
+      },
+      {
+        "code": "M42",
+        "name": "Carbon Lock-In",
+        "explanation": "erosion and restores local rainfall patterns reversing the conditions that allow productive land to become desert. +: : : :+: :+ 🌿 Protected Areas Biodiversity 45 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-060",
+    "name": "Protected Areas",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 45,
+    "description": "Designate and effectively manage national parks, nature reserves and biodiversity corridors where human exploitation is restricted to allow ecosystems to recover and thrive.",
+    "effects": {
+      "terra": 8,
+      "climate": 4,
+      "water": 4,
+      "food": 2,
+      "bio": 8,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 6,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M04",
+      "M43"
+    ],
+    "ripple": [
+      {
+        "code": "M04",
+        "name": "Deforestation",
+        "explanation": "for agricultural or industrial conversion the primary driver of deforestation."
+      },
+      {
+        "code": "M43",
+        "name": "Energy Security Crisis",
+        "explanation": "can maintain function even as surrounding landscapes are degraded, preventing total collapse. +: : : :+: :+ 🌿 Wildlife Corridors Biodiversity 40 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-061",
+    "name": "Wildlife Corridors",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 40,
+    "description": "Create linear strips of protected habitat connecting isolated wildlife reserves, enabling species movement, genetic exchange and natural recolonisation of restored areas.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 7,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 4,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M27"
+    ],
+    "ripple": [
+      {
+        "code": "M27",
+        "name": "Species Habitat Fragmentation",
+        "explanation": "patches, restoring gene flow and allowing Fragmentation populations to achieve viable size preventing local extinction. +: : : :+: :+ 🌿 Conservation Easements Biodiversity 35 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-062",
+    "name": "Conservation Easements",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 35,
+    "description": "Legal agreements with private landowners that permanently restrict development rights on ecologically valuable land in exchange for tax benefits or payments, protecting habitat without public land acquisition.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 6,
+      "community": 2,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 5,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M27"
+    ],
+    "ripple": [
+      {
+        "code": "M27",
+        "name": "Species Habitat Fragmentation",
+        "explanation": "public reserves, creating connected habitat Fragmentation networks that reduce fragmentation at landscape scale. +: : : :+: :+ 🌿 Habitat Restoration Biodiversity 45 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-063",
+    "name": "Habitat Restoration",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 45,
+    "description": "Active ecological restoration of degraded habitats --- grasslands, wetlands, forests, peatlands --- using native species planting, invasive species removal and hydrological restoration.",
+    "effects": {
+      "terra": 8,
+      "climate": 5,
+      "water": 5,
+      "food": 2,
+      "bio": 8,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 5,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M27"
+    ],
+    "ripple": [
+      {
+        "code": "M27",
+        "name": "Species Habitat Fragmentation",
+        "explanation": "patches increases connectivity, creating viable Fragmentation habitat for more species and reducing fragmentation pressure. +: : : :+: :+ 🌿 Rewilding Biodiversity 50 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-064",
+    "name": "Rewilding",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 50,
+    "description": "Allow large land areas to return to natural ecological processes, including reintroduction of keystone species, removal of artificial drainage and cessation of intensive land management.",
+    "effects": {
+      "terra": 9,
+      "climate": 5,
+      "water": 5,
+      "food": 2,
+      "bio": 9,
+      "community": 4,
+      "air": 3,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 7,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M43"
+    ],
+    "ripple": [
+      {
+        "code": "M43",
+        "name": "Energy Security Crisis",
+        "explanation": "processes that sustain biodiversity allowing ecosystems to recover function without permanent human management. +: : : :+: :+ 🌿 Keystone Species Recovery Biodiversity 45 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-065",
+    "name": "Keystone Species",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 45,
+    "description": "Target conservation and reintroduction efforts at keystone species whose presence disproportionately structures ecosystems --- wolves, beavers, sea otters, sharks --- to trigger cascading ecological recovery.",
+    "effects": {
+      "terra": 7,
+      "climate": 3,
+      "water": 4,
+      "food": 2,
+      "bio": 8,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 4,
+      "forest": 5,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M43"
+    ],
+    "ripple": [
+      {
+        "code": "M43",
+        "name": "Energy Security Crisis",
+        "explanation": "cascades that stabilise food webs and rebuild ecosystem function preventing the cascade that leads to collapse. +: : : :+: :+ 🌿 Land Rehabilitation Biodiversity 45 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-066",
+    "name": "Land Rehabilitation",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 45,
+    "description": "Restore degraded drylands and desertified areas through soil amendment, water harvesting, indigenous plant establishment and community-based land restoration programs.",
+    "effects": {
+      "terra": 7,
+      "climate": 3,
+      "water": 4,
+      "food": 5,
+      "bio": 5,
+      "community": 4,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 4,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M42"
+    ],
+    "ripple": [
+      {
+        "code": "M42",
+        "name": "Carbon Lock-In",
+        "explanation": "degradation and vegetation loss that allows desertification to advance, restoring productive capacity. +: : : :+: :+ 🌿 Sustainable Grazing Biodiversity 35 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-067",
+    "name": "Sustainable Grazing",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 35,
+    "description": "Implement holistic and rotational grazing management that works with grassland ecology, preventing overgrazing-driven soil loss while maintaining pastoral livelihoods.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 4,
+      "bio": 5,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M42"
+    ],
+    "ripple": [
+      {
+        "code": "M42",
+        "name": "Carbon Lock-In",
+        "explanation": "strips vegetation and triggers soil erosion the primary human-driven pathway to desertification. +: : : :+: :+ 🌿 30x30 Protected Areas Biodiversity 65 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-068",
+    "name": "30x30 Protected Areas",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 65,
+    "description": "Protect 30% of the world\\'s land and ocean by 2030 through legally binding national and international commitments, creating a global network of nature reserves.",
+    "effects": {
+      "terra": 10,
+      "climate": 5,
+      "water": 5,
+      "food": 3,
+      "bio": 10,
+      "community": 3,
+      "air": 3,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 7,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M54"
+    ],
+    "ripple": [
+      {
+        "code": "M54",
+        "name": "Tipping Point Activation",
+        "explanation": "habitat network required to halt the sixth mass extinction, providing refugia for species under climate and exploitation pressure. +: : : :+: :+ 🌿 Rewilding at Scale Biodiversity 65 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-069",
+    "name": "Rewilding at Scale",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 65,
+    "description": "Coordinate landscape-scale rewilding across national boundaries, reintroducing apex predators and megafauna, restoring river systems and creating vast self-sustaining wilderness areas.",
+    "effects": {
+      "terra": 10,
+      "climate": 6,
+      "water": 6,
+      "food": 3,
+      "bio": 10,
+      "community": 4,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 4,
+      "forest": 8,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M54"
+    ],
+    "ripple": [
+      {
+        "code": "M54",
+        "name": "Tipping Point Activation",
+        "explanation": "connected ecosystems needed for viable wild populations, preventing the cascade from biodiversity decline to full collapse. +: : : :+: :+ 🌿 Nature-Positive Finance Biodiversity 55 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-070",
+    "name": "Nature-Positive Finance",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 55,
+    "description": "Reform financial systems to require that all investments demonstrate a net positive impact on nature --- through biodiversity net gain requirements, natural capital accounting and green bond standards.",
+    "effects": {
+      "terra": 8,
+      "climate": 4,
+      "water": 3,
+      "food": 2,
+      "bio": 7,
+      "community": 3,
+      "air": 0,
+      "energy": 3,
+      "industrial": 4,
+      "ocean": 4,
+      "forest": 5,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M54"
+    ],
+    "ripple": [
+      {
+        "code": "M54",
+        "name": "Tipping Point Activation",
+        "explanation": "investment away from nature-destructive activities, reducing the economic drivers of habitat loss and species decline. +: : : :+: :+ 🌿 Deforestation Moratorium Biodiversity 60 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-071",
+    "name": "Deforestation Moratorium",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 60,
+    "description": "Impose an immediate halt to deforestation in primary and secondary forests through legislation, land use controls and supply chain regulations that block deforestation-linked commodities.",
+    "effects": {
+      "terra": 9,
+      "climate": 7,
+      "water": 5,
+      "food": 2,
+      "bio": 7,
+      "community": 3,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 10,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M57"
+    ],
+    "ripple": [
+      {
+        "code": "M57",
+        "name": "Ocean Circulation Disruption",
+        "explanation": "reducing rainfall and drying the Amazon, directly preventing the forest from crossing the tipping point into irreversible savannification. +: : : :+: :+ 🌿 Forest Restoration at Scale Biodiversity 65 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-072",
+    "name": "Forest Restoration at",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 65,
+    "description": "Restore hundreds of millions of hectares of degraded and cleared forest land through natural regeneration, assisted restoration and sustainable land use transitions.",
+    "effects": {
+      "terra": 10,
+      "climate": 7,
+      "water": 6,
+      "food": 3,
+      "bio": 8,
+      "community": 4,
+      "air": 5,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 10,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M57"
+    ],
+    "ripple": [
+      {
+        "code": "M57",
+        "name": "Ocean Circulation Disruption",
+        "explanation": "increases forest cover, restores rainfall recycling patterns and reduces the temperature anomalies triggering dieback. +: : : :+: :+ 🌿 Indigenous Land Rights Biodiversity 50 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-073",
+    "name": "Indigenous Land Rights",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 50,
+    "description": "Legally recognise and enforce Indigenous peoples\\' rights to their traditional lands, giving them the security and authority to continue sustainable land stewardship practices.",
+    "effects": {
+      "terra": 8,
+      "climate": 4,
+      "water": 4,
+      "food": 3,
+      "bio": 7,
+      "community": 7,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 2,
+      "forest": 6,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M29",
+      "M57"
+    ],
+    "ripple": [
+      {
+        "code": "M29",
+        "name": "Loss Of Indigenous Land Rights",
+        "explanation": "dispossession that leads to extractive land use Rights Indigenous-managed territories have demonstrably better biodiversity outcomes than other land categories."
+      },
+      {
+        "code": "M57",
+        "name": "Ocean Circulation Disruption",
+        "explanation": "effective deforestation barriers securing land rights is simultaneously a biodiversity and climate intervention. +: : : :+: :+ 🌿 Prescribed Burns Biodiversity 35 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-074",
+    "name": "Prescribed Burns",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 35,
+    "description": "Conduct controlled burns in fire-adapted ecosystems to reduce fuel loads, promote fire-adapted biodiversity and reduce the risk and intensity of catastrophic wildfires.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 0,
+      "food": 0,
+      "bio": 4,
+      "community": 4,
+      "air": 3,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 4,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M37"
+    ],
+    "ripple": [
+      {
+        "code": "M37",
+        "name": "Land-Use Conflict",
+        "explanation": "loads that allow wildfires to reach catastrophic intensity and spread beyond control. +: : : :+: :+ 🌿 Firebreak Infrastructure Biodiversity 35 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-075",
+    "name": "Firebreak Infrastructure",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 35,
+    "description": "Create and maintain firebreaks --- cleared strips, roads and water features --- in high-risk landscapes to limit wildfire spread and protect communities and ecosystems.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 0,
+      "food": 0,
+      "bio": 3,
+      "community": 5,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M37"
+    ],
+    "ripple": [
+      {
+        "code": "M37",
+        "name": "Land-Use Conflict",
+        "explanation": "individual fires to smaller areas and protecting both communities and intact forest from destruction. +: : : :+: :+ 🌿 Green Corridors Biodiversity 35 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-076",
+    "name": "Green Corridors",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 35,
+    "description": "Create ecological corridors through urban and suburban areas using street trees, parks, green roofs and gardens to maintain biodiversity movement in human-dominated landscapes.",
+    "effects": {
+      "terra": 6,
+      "climate": 2,
+      "water": 3,
+      "food": 2,
+      "bio": 6,
+      "community": 4,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M20"
+    ],
+    "ripple": [
+      {
+        "code": "M20",
+        "name": "Loss Of Urban Biodiversity",
+        "explanation": "cities, allowing recolonisation of restored habitats and maintaining viable populations in urban landscapes. +: : : :+: :+ 🌿 Native Planting Policy Biodiversity 30 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-077",
+    "name": "Native Planting Policy",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 30,
+    "description": "Require or incentivise the use of native plant species in urban landscaping, green infrastructure and restoration projects to maximise ecological value and support local wildlife.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 2,
+      "food": 2,
+      "bio": 6,
+      "community": 3,
+      "air": 3,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M20"
+    ],
+    "ripple": [
+      {
+        "code": "M20",
+        "name": "Loss Of Urban Biodiversity",
+        "explanation": "and nesting habitats that urban wildlife depends on non-native ornamental plants largely fail to support local ecological webs. +: : : :+: :+ 🌿 Pesticide Restrictions Biodiversity 35 & Land"
+      }
+    ]
+  },
+  {
+    "id": "I-078",
+    "name": "Pesticide Restrictions",
+    "categoryLabel": "Biodiversity & Land",
+    "categoryId": "nature",
+    "categoryEmoji": "🌿",
+    "cost": 35,
+    "description": "Restrict or ban the most ecologically harmful pesticides from sale and use, with particular focus on neonicotinoids and other compounds that persist in the environment and affect non-target species.",
+    "effects": {
+      "terra": 6,
+      "climate": 0,
+      "water": 4,
+      "food": 3,
+      "bio": 7,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 0
+    },
+    "linkedMysteries": [
+      "M20"
+    ],
+    "ripple": [
+      {
+        "code": "M20",
+        "name": "Loss Of Urban Biodiversity",
+        "explanation": "major cause of insect and pollinator decline, allowing invertebrate populations to recover in city ecosystems. +: :+ 🏙️ Cities & Infrastructure 18 interventions in this category +: : : :+: :+ 🏙️ Urban Cooling Cities & 40 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-079",
+    "name": "Urban Cooling",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 40,
+    "description": "Deploy heat mitigation strategies in cities --- shade canopies, cool pavements, water features, green spaces, cool roofs --- to reduce urban temperatures during heatwaves.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 2,
+      "food": 0,
+      "bio": 3,
+      "community": 6,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M02"
+    ],
+    "ripple": [
+      {
+        "code": "M02",
+        "name": "Extreme Heatwave",
+        "explanation": "in cities by 1--5°C, directly protecting residents from heat-related illness and death during extreme heat events. +: : : :+: :+ 🏙️ Green Infrastructure Cities & 45 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-080",
+    "name": "Green Infrastructure",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 45,
+    "description": "Design and deploy urban green infrastructure --- bioswales, green roofs, permeable pavements, tree canopy --- to manage stormwater, reduce heat and improve ecological quality in cities.",
+    "effects": {
+      "terra": 7,
+      "climate": 3,
+      "water": 5,
+      "food": 2,
+      "bio": 5,
+      "community": 6,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M10",
+      "M11"
+    ],
+    "ripple": [
+      {
+        "code": "M10",
+        "name": "Flood Risk",
+        "explanation": "infrastructure intercepts and absorbs stormwater, reducing runoff volumes that overwhelm drainage systems and cause urban flooding."
+      },
+      {
+        "code": "M11",
+        "name": "Urban Green Space Loss",
+        "explanation": "functionality in built-up areas, providing nature services to communities even in densely developed urban environments. +: : : :+: :+ 🏙️ Urban Rewilding Cities & 40 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-081",
+    "name": "Urban Rewilding",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 40,
+    "description": "Introduce unmanaged or lightly managed natural areas into cities --- meadows, pond habitats, scrubland --- to provide genuine ecological habitat and connection with nature for urban residents.",
+    "effects": {
+      "terra": 6,
+      "climate": 2,
+      "water": 3,
+      "food": 2,
+      "bio": 7,
+      "community": 5,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M11"
+    ],
+    "ripple": [
+      {
+        "code": "M11",
+        "name": "Urban Green Space Loss",
+        "explanation": "habitat that manicured parks cannot supporting a far greater range of species in the urban ecosystem. +: : : :+: :+ 🏙️ Parks Policy Cities & 30 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-082",
+    "name": "Parks Policy",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 30,
+    "description": "Mandate minimum green space ratios in urban planning, protect existing parks from development and fund upgrades to ensure equitable green space access across all neighbourhoods.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 3,
+      "food": 0,
+      "bio": 4,
+      "community": 6,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M11"
+    ],
+    "ripple": [
+      {
+        "code": "M11",
+        "name": "Urban Green Space Loss",
+        "explanation": "prevent the development-driven green space loss that is reducing urban biodiversity and community wellbeing. +: : : :+: :+ 🏙️ Flood Barriers Cities & 50 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-083",
+    "name": "Flood Barriers",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 50,
+    "description": "Build hard flood defence infrastructure --- sea walls, tidal barriers, levees, flood gates --- to protect urban areas and coastal communities from flood events.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 4,
+      "food": 2,
+      "bio": -2,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": -2,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M10"
+    ],
+    "ripple": [
+      {
+        "code": "M10",
+        "name": "Flood Risk",
+        "explanation": "flood defences provide immediate protection for communities and infrastructure against flood events, though they must be combined with nature-based solutions for long-term resilience. +: : : :+: :+ 🏙️ Green Roofs Cities & 35 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-084",
+    "name": "Green Roofs",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 35,
+    "description": "Install vegetated roofing systems on urban buildings to reduce stormwater runoff, insulate buildings, cool cities and provide miniature biodiversity habitat.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 4,
+      "food": 0,
+      "bio": 4,
+      "community": 4,
+      "air": 3,
+      "energy": 2,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 2,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M36"
+    ],
+    "ripple": [
+      {
+        "code": "M36",
+        "name": "Urban Heat Island",
+        "explanation": "with vegetation that cools through evapotranspiration, reducing the heat island effect building by building. +: : : :+: :+ 🏙️ Cool Pavements Cities & 30 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-085",
+    "name": "Cool Pavements",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 30,
+    "description": "Replace dark heat-absorbing asphalt with reflective or permeable pavement materials that reduce surface temperature, urban heat and stormwater runoff.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 3,
+      "food": 0,
+      "bio": 0,
+      "community": 4,
+      "air": 3,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M36"
+    ],
+    "ripple": [
+      {
+        "code": "M36",
+        "name": "Urban Heat Island",
+        "explanation": "at city scale, directly lowering daytime and nighttime temperatures in densely built areas. +: : : :+: :+ 🏙️ Urban Forest Policy Cities & 35 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-086",
+    "name": "Urban Forest Policy",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 35,
+    "description": "Expand tree canopy cover in urban areas through tree-planting targets, canopy preservation rules and urban greening requirements for all new developments.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 5,
+      "community": 5,
+      "air": 5,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 4,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M36"
+    ],
+    "ripple": [
+      {
+        "code": "M36",
+        "name": "Urban Heat Island",
+        "explanation": "cooling and reduced albedo collectively reducing city temperatures by up to 8°C in tree-covered areas. +: : : :+: :+ 🏙️ Early Warning Systems Cities & 35 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-087",
+    "name": "Early Warning Systems",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 35,
+    "description": "Deploy multi-hazard early warning systems for floods, wildfires, heatwaves and storms to enable communities to prepare and evacuate before climate events cause loss of life.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 2,
+      "food": 2,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M37",
+      "M47"
+    ],
+    "ripple": [
+      {
+        "code": "M37",
+        "name": "Land-Use Conflict",
+        "explanation": "and fire response, dramatically reducing fatalities and infrastructure losses when wildfires do occur."
+      },
+      {
+        "code": "M47",
+        "name": "Water Conflict",
+        "explanation": "action like heatwave health alerts before extreme events cause preventable deaths. +: : : :+: :+ 🏙️ Climate-Proof Infrastructure Cities & 55 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-088",
+    "name": "Climate-Proof",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 55,
+    "description": "Design and retrofit infrastructure --- roads, bridges, power grids, water systems, hospitals --- to withstand projected climate hazards including storms, floods, heatwaves and sea level rise.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 4,
+      "food": 2,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 3,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M46"
+    ],
+    "ripple": [
+      {
+        "code": "M46",
+        "name": "Fisheries Collapse",
+        "explanation": "failures that occur when infrastructure not Failure designed for current conditions is hit by climate events. +: : : :+: :+ 🏙️ Resilience Investment Cities & 55 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-089",
+    "name": "Resilience Investment",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 55,
+    "description": "Direct systematic capital investment into climate adaptation --- upgrading infrastructure, building community preparedness, funding nature-based defences and supporting economic diversification.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 4,
+      "food": 3,
+      "bio": 3,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M46"
+    ],
+    "ripple": [
+      {
+        "code": "M46",
+        "name": "Fisheries Collapse",
+        "explanation": "funding gaps and maintenance neglect that allow Failure infrastructure to deteriorate to the point of climate-driven failure. +: : : :+: :+ 🏙️ Maintenance Funding Cities & 40 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-090",
+    "name": "Maintenance Funding",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 40,
+    "description": "Secure dedicated long-term funding streams for ongoing maintenance of critical infrastructure, preventing the deferred maintenance that transforms manageable repairs into catastrophic failures.",
+    "effects": {
+      "terra": 3,
+      "climate": 0,
+      "water": 3,
+      "food": 2,
+      "bio": 0,
+      "community": 6,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M46"
+    ],
+    "ripple": [
+      {
+        "code": "M46",
+        "name": "Fisheries Collapse",
+        "explanation": "degradation that allows infrastructure to reach Failure crisis point an ounce of prevention worth pounds of emergency repair. +: : : :+: :+ 🏙️ Managed Retreat Cities & 60 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-091",
+    "name": "Managed Retreat",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 60,
+    "description": "Proactively relocate communities and infrastructure from high-risk coastal, flood and fire zones before disasters occur, with government support for land purchase and resettlement.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 4,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M32",
+      "M44"
+    ],
+    "ripple": [
+      {
+        "code": "M32",
+        "name": "Permafrost Thaw",
+        "explanation": "displacement into planned, supported relocation protecting community cohesion and economic stability during transition."
+      },
+      {
+        "code": "M44",
+        "name": "Supply Chain Disruption",
+        "explanation": "assets from the erosion zone, making the coast more resilient and allowing natural processes to function. +: : : :+: :+ 🏙️ Coastal Defences Cities & 55 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-092",
+    "name": "Coastal Defences",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 55,
+    "description": "Build physical coastal protection structures --- sea walls, breakwaters, beach nourishment systems --- to protect communities from wave action, storm surge and erosion.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 3,
+      "food": 2,
+      "bio": -2,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M44"
+    ],
+    "ripple": [
+      {
+        "code": "M44",
+        "name": "Supply Chain Disruption",
+        "explanation": "protecting homes, infrastructure and arable coastal land from sea-level rise and storm surge damage. +: : : :+: :+ 🏙️ Heat Safety Regulations Cities & 35 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-093",
+    "name": "Heat Safety Regulations",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 35,
+    "description": "Mandate heat safety measures for outdoor workers --- mandatory rest periods, shade requirements, hydration access, heat stress monitoring --- legally enforceable during high-temperature periods.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 2,
+      "food": 2,
+      "bio": 0,
+      "community": 6,
+      "air": 0,
+      "energy": 0,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M21"
+    ],
+    "ripple": [
+      {
+        "code": "M21",
+        "name": "Heat Stress On Workers",
+        "explanation": "on Workers protections for the most vulnerable workers outdoor agricultural and construction labourers who face the greatest heat exposure. +: : : :+: :+ 🏙️ Shade Structures Cities & 25 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-094",
+    "name": "Shade Structures",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 25,
+    "description": "Install permanent shade structures, tree canopy and cooling shelters at work sites, transit stops, markets and public spaces to reduce heat exposure for vulnerable populations.",
+    "effects": {
+      "terra": 3,
+      "climate": 0,
+      "water": 2,
+      "food": 2,
+      "bio": 0,
+      "community": 5,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M21"
+    ],
+    "ripple": [
+      {
+        "code": "M21",
+        "name": "Heat Stress On Workers",
+        "explanation": "on Workers ground level, directly protecting workers from the temperature levels that cause heat exhaustion and productivity loss. +: : : :+: :+ 🏙️ Shift Timing Policy Cities & 20 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-095",
+    "name": "Shift Timing Policy",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 20,
+    "description": "Mandate that outdoor work in high-temperature conditions is scheduled in early morning and evening hours, avoiding the peak heat of midday through legally enforced shift requirements.",
+    "effects": {
+      "terra": 2,
+      "climate": 0,
+      "water": 0,
+      "food": 2,
+      "bio": 0,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M21"
+    ],
+    "ripple": [
+      {
+        "code": "M21",
+        "name": "Heat Stress On Workers",
+        "explanation": "on Workers simplest, zero-cost intervention that can immediately reduce heat-related illness without requiring infrastructure investment. +: : : :+: :+ 🏙️ Urban Cooling (Heat Safety) Cities & 35 Infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "I-096",
+    "name": "ESG Reporting Mandates",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 40,
+    "description": "Require companies to publicly disclose their environmental, social and governance performance against standardised metrics, enabling investors, regulators and the public to assess real sustainability performance.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 2,
+      "energy": 3,
+      "industrial": 6,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M16"
+    ],
+    "ripple": [
+      {
+        "code": "M16",
+        "name": "Sustainable Business Transition",
+        "explanation": "accountability, removing the information asymmetry that allows companies to project green credentials without backing them with performance. +: : : :+: :+ 💼 Green Finance Economy 50 &"
+      }
+    ]
+  },
+  {
+    "id": "I-097",
+    "name": "Green Finance",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 50,
+    "description": "Mobilise public and private finance specifically for environmental projects --- clean energy, nature restoration, sustainable agriculture --- through green bonds, sustainability-linked loans and blended finance.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 3,
+      "food": 2,
+      "bio": 4,
+      "community": 3,
+      "air": 2,
+      "energy": 6,
+      "industrial": 4,
+      "ocean": 2,
+      "forest": 3,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M16"
+    ],
+    "ripple": [
+      {
+        "code": "M16",
+        "name": "Sustainable Business Transition",
+        "explanation": "businesses to invest in sustainable transformation, removing the cost barrier that prevents voluntary transition. +: : : :+: :+ 💼 Carbon Disclosure Economy 35 &"
+      }
+    ]
+  },
+  {
+    "id": "I-098",
+    "name": "Carbon Disclosure",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 35,
+    "description": "Require businesses and financial institutions to publicly disclose their carbon emissions and climate-related financial risks, creating market pressure for emission reductions.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 2,
+      "energy": 4,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M16"
+    ],
+    "ripple": [
+      {
+        "code": "M16",
+        "name": "Sustainable Business Transition",
+        "explanation": "investor, consumer and regulatory scrutiny creating market incentives for businesses to reduce their carbon footprint. +: : : :+: :+ 💼 Plastic Bans Economy 40 &"
+      }
+    ]
+  },
+  {
+    "id": "I-099",
+    "name": "Plastic Bans",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 40,
+    "description": "Prohibit the manufacture and sale of single-use plastics --- bags, straws, packaging, utensils --- replacing them with reusable or compostable alternatives.",
+    "effects": {
+      "terra": 6,
+      "climate": 0,
+      "water": 3,
+      "food": 2,
+      "bio": 5,
+      "community": 4,
+      "air": 2,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 6,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M12"
+    ],
+    "ripple": [
+      {
+        "code": "M12",
+        "name": "Plastic Pollution In Oceans",
+        "explanation": "in Oceans the millions of tonnes entering waterways annually the most upstream solution to ocean plastic pollution. +: : : :+: :+ 💼 Extended Producer Responsibility Economy 45 &"
+      }
+    ]
+  },
+  {
+    "id": "I-100",
+    "name": "Extended Producer",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 45,
+    "description": "Make manufacturers legally and financially responsible for the end-of-life management of their products, incentivising design for longevity, recyclability and reduced environmental impact.",
+    "effects": {
+      "terra": 6,
+      "climate": 2,
+      "water": 3,
+      "food": 0,
+      "bio": 3,
+      "community": 3,
+      "air": 2,
+      "energy": 2,
+      "industrial": 7,
+      "ocean": 4,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M12",
+      "M18"
+    ],
+    "ripple": [
+      {
+        "code": "M12",
+        "name": "Plastic Pollution In Oceans",
+        "explanation": "in Oceans creates financial incentives to reduce packaging, improve recyclability and fund proper waste collection."
+      },
+      {
+        "code": "M18",
+        "name": "E-Waste Crisis",
+        "explanation": "fund collection and recycling programs, preventing toxic e-waste from reaching informal dumping and communities. +: : : :+: :+ 💼 Right to Repair Laws Economy 35 &"
+      }
+    ]
+  },
+  {
+    "id": "I-101",
+    "name": "Right to Repair Laws",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 35,
+    "description": "Mandate that manufacturers provide spare parts, repair manuals and software access for their products, enabling consumers and independent repairers to extend product lifespans.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 2,
+      "food": 0,
+      "bio": 0,
+      "community": 4,
+      "air": 2,
+      "energy": 2,
+      "industrial": 6,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M18"
+    ],
+    "ripple": [
+      {
+        "code": "M18",
+        "name": "E-Waste Crisis",
+        "explanation": "reducing the replacement rate that drives e-waste generation and the toxic impacts of informal recycling. +: : : :+: :+ 💼 Circular Electronics Economy 40 &"
+      }
+    ]
+  },
+  {
+    "id": "I-102",
+    "name": "Circular Electronics",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 40,
+    "description": "Require electronics manufacturers to design products for disassembly, use recycled content, establish take-back programs and meet targets for materials recovery from end-of-life devices.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 3,
+      "food": 0,
+      "bio": 2,
+      "community": 3,
+      "air": 2,
+      "energy": 2,
+      "industrial": 7,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M18"
+    ],
+    "ripple": [
+      {
+        "code": "M18",
+        "name": "E-Waste Crisis",
+        "explanation": "material content of devices, improve recyclability and build the infrastructure for responsible end-of-life material recovery. +: : : :+: :+ 💼 Slow Fashion Movement Economy 30 &"
+      }
+    ]
+  },
+  {
+    "id": "I-103",
+    "name": "Slow Fashion Movement",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 30,
+    "description": "Support consumer behaviour change toward buying fewer, higher-quality, longer-lasting garments --- through education campaigns, fashion industry reform and market incentives for sustainable brands.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 4,
+      "food": 0,
+      "bio": 2,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 5,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M22"
+    ],
+    "ripple": [
+      {
+        "code": "M22",
+        "name": "Fast Fashion Environmental Impact",
+        "explanation": "production, cutting associated water use, Impact chemical dye runoff and carbon emissions at source. +: : : :+: :+ 💼 Textile Take-Back Programs Economy 30 &"
+      }
+    ]
+  },
+  {
+    "id": "I-104",
+    "name": "Textile Take-Back",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 30,
+    "description": "Require fashion brands to collect worn garments for resale, repair or recycling, reducing textile waste sent to landfill and recovering materials from the waste stream.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 3,
+      "food": 0,
+      "bio": 2,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 6,
+      "ocean": 3,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M22"
+    ],
+    "ripple": [
+      {
+        "code": "M22",
+        "name": "Fast Fashion Environmental Impact",
+        "explanation": "landfill and incineration, extending garment life Impact and recovering fibres that reduce demand for virgin material production. +: : : :+: :+ 💼 Circular Fashion Economy 35 &"
+      }
+    ]
+  },
+  {
+    "id": "I-105",
+    "name": "Circular Fashion",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 35,
+    "description": "Redesign the fashion economy around circular principles --- garments made to last, designed for disassembly and recycling, and supported by rental, resale and repair business models.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 4,
+      "food": 0,
+      "bio": 2,
+      "community": 3,
+      "air": 3,
+      "energy": 0,
+      "industrial": 7,
+      "ocean": 4,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M22"
+    ],
+    "ripple": [
+      {
+        "code": "M22",
+        "name": "Fast Fashion Environmental Impact",
+        "explanation": "production eliminating waste and dramatically Impact reducing the water, chemical and carbon intensity of clothing. +: : : :+: :+ 💼 Supply Chain Diversification Economy 50 &"
+      }
+    ]
+  },
+  {
+    "id": "I-106",
+    "name": "Supply Chain",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 50,
+    "description": "Reduce supply chain vulnerability by diversifying suppliers, nearshoring production and building redundancy into critical supply networks to withstand climate and geopolitical shocks.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 0,
+      "food": 4,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 0,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M40"
+    ],
+    "ripple": [
+      {
+        "code": "M40",
+        "name": "Food Price Spike",
+        "explanation": "failure, making businesses more resilient to climate-driven disruptions at any one geographic location. +: : : :+: :+ 💼 Local Production Economy 40 &"
+      }
+    ]
+  },
+  {
+    "id": "I-107",
+    "name": "Local Production",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 40,
+    "description": "Support domestic and regional production of critical goods --- food, energy, medicines, components --- to reduce import dependence and shorten supply chains, increasing resilience to global disruptions.",
+    "effects": {
+      "terra": 5,
+      "climate": 0,
+      "water": 0,
+      "food": 5,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 3,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M40"
+    ],
+    "ripple": [
+      {
+        "code": "M40",
+        "name": "Food Price Spike",
+        "explanation": "reduces climate exposure across the supply chain, maintaining availability of critical goods during disruption events. +: : : :+: :+ 💼 Climate Risk Insurance Economy 45 &"
+      }
+    ]
+  },
+  {
+    "id": "I-108",
+    "name": "Climate Risk Insurance",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 45,
+    "description": "Develop accessible climate risk insurance products --- crop insurance, flood insurance, parametric insurance --- to spread financial risk and enable communities to recover after climate events.",
+    "effects": {
+      "terra": 3,
+      "climate": 0,
+      "water": 2,
+      "food": 4,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M40"
+    ],
+    "ripple": [
+      {
+        "code": "M40",
+        "name": "Food Price Spike",
+        "explanation": "climate disruptions, reducing the cascading economic effects when events disrupt critical supply networks. +: : : :+: :+ 💼 Public Insurance Schemes Economy 50 &"
+      }
+    ]
+  },
+  {
+    "id": "I-109",
+    "name": "Public Insurance Schemes",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 50,
+    "description": "Establish government-backed insurance programs for uninsurable climate risks, acting as insurer of last resort for communities abandoned by private markets.",
+    "effects": {
+      "terra": 4,
+      "climate": 0,
+      "water": 2,
+      "food": 3,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M41"
+    ],
+    "ripple": [
+      {
+        "code": "M41",
+        "name": "Public Health Emergency",
+        "explanation": "private insurers withdraw from high-risk zones, preventing households and businesses from being left entirely without financial protection. +: : : :+: :+ 💼 Risk Disclosure Rules Economy 40 &"
+      }
+    ]
+  },
+  {
+    "id": "I-110",
+    "name": "Risk Disclosure Rules",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 40,
+    "description": "Require financial institutions and corporations to disclose material climate-related financial risks to investors and regulators under standardised frameworks like TCFD.",
+    "effects": {
+      "terra": 4,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 2,
+      "air": 0,
+      "energy": 4,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M41"
+    ],
+    "ripple": [
+      {
+        "code": "M41",
+        "name": "Public Health Emergency",
+        "explanation": "price climate risk accurately, creating early warning signals before risks become uninsurable crises. +: : : :+: :+ 💼 Climate Risk Pricing Economy 45 &"
+      }
+    ]
+  },
+  {
+    "id": "I-111",
+    "name": "Climate Risk Pricing",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 45,
+    "description": "Reform financial risk models to accurately reflect climate physical and transition risks in asset valuations, insurance premiums and loan terms.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 4,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M41"
+    ],
+    "ripple": [
+      {
+        "code": "M41",
+        "name": "Public Health Emergency",
+        "explanation": "solvency in high-risk markets and incentivises risk reduction by property owners and municipalities. +: : : :+: :+ 💼 Subsidy Programs Economy 45 &"
+      }
+    ]
+  },
+  {
+    "id": "I-112",
+    "name": "Subsidy Programs",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 45,
+    "description": "Direct government subsidies to ensure that essential goods --- food, energy, housing --- remain affordable for low-income populations during climate-driven price shocks.",
+    "effects": {
+      "terra": 3,
+      "climate": 0,
+      "water": 0,
+      "food": 6,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M31"
+    ],
+    "ripple": [
+      {
+        "code": "M31",
+        "name": "Glacier Retreat",
+        "explanation": "households from the full impact of food price spikes, preventing the hunger and social unrest that follow unmitigated price increases. +: : : :+: :+ 💼 Trade Reform Economy 50 &"
+      }
+    ]
+  },
+  {
+    "id": "I-113",
+    "name": "Trade Reform",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 50,
+    "description": "Reform international trade rules to support food security, eliminate dumping, reduce export restrictions during crisis and enable countries to build domestic food system resilience.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 0,
+      "food": 6,
+      "bio": 0,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M31"
+    ],
+    "ripple": [
+      {
+        "code": "M31",
+        "name": "Glacier Retreat",
+        "explanation": "supplies to flow where they are needed, dampening price spikes that result from market segmentation. +: : : :+: :+ 💼 Blue Carbon Finance Economy 45 &"
+      }
+    ]
+  },
+  {
+    "id": "I-114",
+    "name": "Blue Carbon Finance",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 45,
+    "description": "Create financial mechanisms that pay for the carbon sequestration provided by coastal blue carbon ecosystems --- channelling payments to fund mangrove, seagrass and saltmarsh protection.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 2,
+      "food": 2,
+      "bio": 5,
+      "community": 4,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 6,
+      "forest": 3,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M39"
+    ],
+    "ripple": [
+      {
+        "code": "M39",
+        "name": "Sea Level Rise",
+        "explanation": "from standing mangroves, making their preservation financially competitive with conversion to shrimp ponds or coastal development. +: : : :+: :+ 💼 Climate Risk Finance Economy 60 &"
+      }
+    ]
+  },
+  {
+    "id": "I-115",
+    "name": "Climate Risk Finance",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 60,
+    "description": "Build comprehensive climate risk financial systems --- central bank climate scenarios, systemic risk stress testing and macroprudential regulation --- to prevent climate shocks from triggering financial crises.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 4,
+      "industrial": 6,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 9
+    },
+    "linkedMysteries": [
+      "M51"
+    ],
+    "ripple": [
+      {
+        "code": "M51",
+        "name": "Economic Instability",
+        "explanation": "amplification of physical climate losses into financial system failure, containing contagion from climate events. +: : : :+: :+ 💼 Just Transition Economy 55 &"
+      }
+    ]
+  },
+  {
+    "id": "I-116",
+    "name": "Just Transition",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 55,
+    "description": "Design and fund the economic transition away from fossil fuels in a way that protects workers, communities and regions dependent on carbon-intensive industries through retraining, new investment and income support.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 0,
+      "food": 2,
+      "bio": 0,
+      "community": 8,
+      "air": 3,
+      "energy": 6,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M51"
+    ],
+    "ripple": [
+      {
+        "code": "M51",
+        "name": "Economic Instability",
+        "explanation": "instability that rapid economic restructuring causes, maintaining the political support base needed for continued climate action. +: : : :+: :+ 💼 Green New Deal Economy 70 &"
+      }
+    ]
+  },
+  {
+    "id": "I-117",
+    "name": "Green New Deal",
+    "categoryLabel": "Economy & Finance",
+    "categoryId": "economy",
+    "categoryEmoji": "💼",
+    "cost": 70,
+    "description": "Implement a comprehensive economic program that simultaneously decarbonises the economy, creates green jobs, reduces inequality and builds community resilience through massive public investment.",
+    "effects": {
+      "terra": 9,
+      "climate": 7,
+      "water": 3,
+      "food": 4,
+      "bio": 4,
+      "community": 8,
+      "air": 5,
+      "energy": 8,
+      "industrial": 7,
+      "ocean": 3,
+      "forest": 4,
+      "economy": 8
+    },
+    "linkedMysteries": [
+      "M51"
+    ],
+    "ripple": [
+      {
+        "code": "M51",
+        "name": "Economic Instability",
+        "explanation": "in clean industries, replacing the stranded asset losses from fossil fuel phase-out with new job-creating investment. +: :+ ⚖️ Society & Governance 33 interventions in this category +: : : :+: :+ ⚖️ Public Awareness Campaign Society & 25 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-118",
+    "name": "Public Awareness",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 25,
+    "description": "Run targeted public communication campaigns to build climate literacy, motivate behaviour change and increase public support for ambitious climate policies.",
+    "effects": {
+      "terra": 3,
+      "climate": 2,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 2,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M02"
+    ],
+    "ripple": [
+      {
+        "code": "M02",
+        "name": "Extreme Heatwave",
+        "explanation": "during heatwaves knowing to avoid sun exposure, stay hydrated and check on vulnerable neighbours reduces casualties. +: : : :+: :+ ⚖️ Off-Grid Solar Society & 35 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-119",
+    "name": "Off-Grid Solar",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 35,
+    "description": "Deploy off-grid solar home systems and mini-grids in communities without access to centralised electricity, providing clean, affordable power for lighting, charging and small appliances.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 0,
+      "food": 2,
+      "bio": 0,
+      "community": 8,
+      "air": 4,
+      "energy": 7,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M13"
+    ],
+    "ripple": [
+      {
+        "code": "M13",
+        "name": "Energy Access Inequality",
+        "explanation": "communities beyond the grid, enabling lighting, phone charging and powering basic health and education services. +: : : :+: :+ ⚖️ Energy Subsidy Policy Society & 40 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-120",
+    "name": "Energy Subsidy Policy",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 40,
+    "description": "Redirect fossil fuel subsidies toward clean energy access programs that benefit low-income communities, funding off-grid solar, efficient cookstoves and clean cooking fuel access.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 2,
+      "bio": 0,
+      "community": 7,
+      "air": 4,
+      "energy": 7,
+      "industrial": 4,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M13"
+    ],
+    "ripple": [
+      {
+        "code": "M13",
+        "name": "Energy Access Inequality",
+        "explanation": "electricity access for low-income households, enabling clean energy adoption that wouldn\\'t occur at market prices. +: : : :+: :+ ⚖️ Community Microgrids Society & 45 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-121",
+    "name": "Community Microgrids",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 45,
+    "description": "Build decentralised community-owned electricity networks powered by local renewable sources, providing resilient, affordable power independent of centralised grid vulnerabilities.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 0,
+      "food": 2,
+      "bio": 0,
+      "community": 8,
+      "air": 4,
+      "energy": 8,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M13"
+    ],
+    "ripple": [
+      {
+        "code": "M13",
+        "name": "Energy Access Inequality",
+        "explanation": "community scale, enabling energy-poor communities to leapfrog centralised grid infrastructure entirely. +: : : :+: :+ ⚖️ Climate Education Society & 30 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-122",
+    "name": "Climate Education",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 30,
+    "description": "Integrate comprehensive climate science and sustainability into formal education curricula at all levels, building the knowledge base young people need to navigate and address climate change.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 3,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M14"
+    ],
+    "ripple": [
+      {
+        "code": "M14",
+        "name": "Youth Climate Anxiety",
+        "explanation": "young people with knowledge and skills for climate action are more resilient to climate grief and more motivated to act. +: : : :+: :+ ⚖️ Youth Leadership Programs Society & 30 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-123",
+    "name": "Youth Leadership",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 30,
+    "description": "Fund and support youth-led climate initiatives, councils and leadership programs that give young people meaningful roles in climate decision-making and community action.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M14"
+    ],
+    "ripple": [
+      {
+        "code": "M14",
+        "name": "Youth Climate Anxiety",
+        "explanation": "active engagement youth with agency and community connection show better mental health outcomes alongside greater climate impact. +: : : :+: :+ ⚖️ Community Action Spaces Society & 25 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-124",
+    "name": "Community Action Spaces",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 25,
+    "description": "Create physical and digital spaces where communities can organise around climate issues, share knowledge, plan local action and build the social networks that enable collective response.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 2,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M14"
+    ],
+    "ripple": [
+      {
+        "code": "M14",
+        "name": "Youth Climate Anxiety",
+        "explanation": "amplifies climate anxiety connecting young people with peers, mentors and action networks transforms individual despair into collective purpose. +: : : :+: :+ ⚖️ Citizens Assembly Society & 35 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-125",
+    "name": "Citizens Assembly",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 35,
+    "description": "Convene representative groups of ordinary citizens to deliberate on climate policy --- producing informed, publicly legitimised recommendations that give political cover for ambitious action.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 6,
+      "air": 0,
+      "energy": 4,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M19"
+    ],
+    "ripple": [
+      {
+        "code": "M19",
+        "name": "Climate Policy Inaction",
+        "explanation": "building public consensus outside the political system their recommendations carry democratic legitimacy that enables bolder policy. +: : : :+: :+ ⚖️ Carbon Legislation Society & 55 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-126",
+    "name": "Carbon Legislation",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 55,
+    "description": "Pass legally binding national carbon reduction targets, net-zero commitments and enabling legislation that gives governments the mandate and tools to implement deep decarbonisation.",
+    "effects": {
+      "terra": 8,
+      "climate": 7,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 4,
+      "energy": 6,
+      "industrial": 6,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M19"
+    ],
+    "ripple": [
+      {
+        "code": "M19",
+        "name": "Climate Policy Inaction",
+        "explanation": "act, removing the discretion that allows short-term political interests to override climate commitments. +: : : :+: :+ ⚖️ International Climate Pacts Society & 60 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-127",
+    "name": "International Climate",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 60,
+    "description": "Negotiate and ratify binding international climate agreements that commit countries to measurable targets, provide financing mechanisms and establish accountability through peer review and compliance frameworks.",
+    "effects": {
+      "terra": 9,
+      "climate": 8,
+      "water": 3,
+      "food": 3,
+      "bio": 4,
+      "community": 4,
+      "air": 3,
+      "energy": 6,
+      "industrial": 5,
+      "ocean": 3,
+      "forest": 4,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M19"
+    ],
+    "ripple": [
+      {
+        "code": "M19",
+        "name": "Climate Policy Inaction",
+        "explanation": "accountability and domestic political pressure that is harder to ignore than purely domestic policy debates. +: : : :+: :+ ⚖️ Climate Curriculum Society & 30 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-128",
+    "name": "Climate Curriculum",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 30,
+    "description": "Develop and mandate comprehensive, scientifically accurate climate change curricula that build understanding of climate science, impacts, solutions and justice from primary through tertiary education.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 4,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M23"
+    ],
+    "ripple": [
+      {
+        "code": "M23",
+        "name": "Climate Education Gap",
+        "explanation": "literacy across all students, regardless of school or teacher closing the inconsistent patchwork of climate education that creates the gap. +: : : :+: :+ ⚖️ Media Literacy Programs Society & 25 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-129",
+    "name": "Media Literacy Programs",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 25,
+    "description": "Teach students and adults to critically evaluate information sources, identify misinformation tactics and engage with evidence-based climate communication.",
+    "effects": {
+      "terra": 4,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 6,
+      "air": 0,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M23",
+      "M28"
+    ],
+    "ripple": [
+      {
+        "code": "M23",
+        "name": "Climate Education Gap",
+        "explanation": "misinformation vulnerability that climate education gaps create, building the critical thinking needed to resist denial campaigns."
+      },
+      {
+        "code": "M28",
+        "name": "Climate Misinformation Spread",
+        "explanation": "resistant to algorithmic misinformation, reducing Spread the virality of climate denial content. +: : : :+: :+ ⚖️ Community Dialogues Society & 20 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-130",
+    "name": "Community Dialogues",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 20,
+    "description": "Facilitate structured community conversations on climate impacts, values and responses --- building shared understanding, local solutions and social cohesion around climate action.",
+    "effects": {
+      "terra": 3,
+      "climate": 2,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 2,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M23"
+    ],
+    "ripple": [
+      {
+        "code": "M23",
+        "name": "Climate Education Gap",
+        "explanation": "connecting abstract science to community lived experience in ways that formal education cannot replicate. +: : : :+: :+ ⚖️ Fact-Checking Networks Society & 30 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-131",
+    "name": "Fact-Checking Networks",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 30,
+    "description": "Support independent, cross-platform fact-checking organisations that rapidly identify and counter climate misinformation with evidence-based responses.",
+    "effects": {
+      "terra": 4,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M28"
+    ],
+    "ripple": [
+      {
+        "code": "M28",
+        "name": "Climate Misinformation Spread",
+        "explanation": "spread rapid debunking limits the half-life Spread of viral climate denial content before it shapes public perception. +: : : :+: :+ ⚖️ Media Regulation Society & 40 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-132",
+    "name": "Media Regulation",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 40,
+    "description": "Regulate social media algorithms and media platforms to reduce the amplification of climate misinformation, with transparency requirements and duties of care for harmful content.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 6,
+      "air": 0,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M28"
+    ],
+    "ripple": [
+      {
+        "code": "M28",
+        "name": "Climate Misinformation Spread",
+        "explanation": "amplification that turns individual Spread misinformation posts into viral narratives reducing the reach and impact of climate denial. +: : : :+: :+ ⚖️ Science Communication Society & 25 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-133",
+    "name": "Science Communication",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 25,
+    "description": "Fund and support climate scientists to communicate their research to public audiences through accessible media, social platforms and community engagement.",
+    "effects": {
+      "terra": 4,
+      "climate": 3,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 3,
+      "industrial": 2,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M28"
+    ],
+    "ripple": [
+      {
+        "code": "M28",
+        "name": "Climate Misinformation Spread",
+        "explanation": "builds the climate credibility that makes Spread populations more resistant to misinformation campaigns. +: : : :+: :+ ⚖️ Land Rights Legislation Society & 45 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-134",
+    "name": "Land Rights Legislation",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 45,
+    "description": "Pass and enforce laws recognising Indigenous and community land rights, providing legal titles, protecting traditional use rights and creating enforceable remedies for violations.",
+    "effects": {
+      "terra": 7,
+      "climate": 4,
+      "water": 4,
+      "food": 3,
+      "bio": 6,
+      "community": 8,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 5,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M29"
+    ],
+    "ripple": [
+      {
+        "code": "M29",
+        "name": "Loss Of Indigenous Land Rights",
+        "explanation": "that allows Indigenous communities to defend Rights their land from encroachment and continue sustainable land stewardship. +: : : :+: :+ ⚖️ Free Prior and Informed Consent Society & 35 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-135",
+    "name": "Free Prior and Informed",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 35,
+    "description": "Implement FPIC processes that require governments and corporations to obtain genuine, informed consent from Indigenous communities before proceeding with projects affecting their lands.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 5,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 4,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M29"
+    ],
+    "ripple": [
+      {
+        "code": "M29",
+        "name": "Loss Of Indigenous Land Rights",
+        "explanation": "extractive projects on their lands, providing a Rights practical mechanism to prevent dispossession from resource exploitation. +: : : :+: :+ ⚖️ Land Trusts Society & 35 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-136",
+    "name": "Land Trusts",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 35,
+    "description": "Establish community land trusts that hold land in perpetuity for sustainable use, removing it from speculative markets and ensuring long-term stewardship by communities.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 3,
+      "bio": 5,
+      "community": 7,
+      "air": 2,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 4,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M29"
+    ],
+    "ripple": [
+      {
+        "code": "M29",
+        "name": "Loss Of Indigenous Land Rights",
+        "explanation": "lands from market forces that would Rights otherwise drive conversion to extractive uses. +: : : :+: :+ ⚖️ Climate Refugee Policy Society & 55 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-137",
+    "name": "Climate Refugee Policy",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 55,
+    "description": "Develop national and international policy frameworks that provide legal protection, resettlement pathways and support services for people displaced by climate events.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 2,
+      "food": 3,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M32"
+    ],
+    "ripple": [
+      {
+        "code": "M32",
+        "name": "Permafrost Thaw",
+        "explanation": "rights, reducing the vulnerability that makes forced displacement so devastating for affected communities. +: : : :+: :+ ⚖️ Climate Financing Society & 60 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-138",
+    "name": "Climate Financing",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 60,
+    "description": "Mobilise international climate finance from wealthy nations to support developing countries in adapting to climate impacts and transitioning to clean energy systems.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 4,
+      "food": 4,
+      "bio": 4,
+      "community": 7,
+      "air": 3,
+      "energy": 6,
+      "industrial": 5,
+      "ocean": 3,
+      "forest": 4,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M32"
+    ],
+    "ripple": [
+      {
+        "code": "M32",
+        "name": "Permafrost Thaw",
+        "explanation": "to invest in the climate resilience measures that reduce displacement pressure, addressing migration at source rather than managing flows. +: : : :+: :+ ⚖️ Health System Investment Society & 55 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-139",
+    "name": "Health System Investment",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 55,
+    "description": "Increase investment in health system capacity, infrastructure, workforce and emergency preparedness to handle the growing burden of climate-related illness and injury.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 3,
+      "food": 3,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M47"
+    ],
+    "ripple": [
+      {
+        "code": "M47",
+        "name": "Water Conflict",
+        "explanation": "impacts more beds, more trained workers, better supply chains reducing mortality and economic burden during health crises. +: : : :+: :+ ⚖️ Environmental Health Policy Society & 45 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-140",
+    "name": "Environmental Health",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 45,
+    "description": "Develop integrated health and environment policies that address the root environmental causes of health crises --- air quality, water safety, heat exposure, toxic chemical exposure.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 4,
+      "food": 3,
+      "bio": 3,
+      "community": 7,
+      "air": 5,
+      "energy": 0,
+      "industrial": 3,
+      "ocean": 2,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M47"
+    ],
+    "ripple": [
+      {
+        "code": "M47",
+        "name": "Water Conflict",
+        "explanation": "pollution, contamination, heat prevents climate-related health crises from arising rather than treating them after the fact. +: : : :+: :+ ⚖️ Climate Refugee Convention Society & 60 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-141",
+    "name": "Climate Refugee",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 60,
+    "description": "Negotiate an international treaty providing legal recognition and protection rights for climate-displaced people, filling the gap in existing refugee law that leaves climate migrants without legal status.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 2,
+      "food": 3,
+      "bio": 0,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M48"
+    ],
+    "ripple": [
+      {
+        "code": "M48",
+        "name": "Infrastructure Failure",
+        "explanation": "from a stateless population without rights into a legally recognised group with international protection and resettlement entitlements. +: : : :+: :+ ⚖️ Managed Resettlement Society & 55 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-142",
+    "name": "Managed Resettlement",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 55,
+    "description": "Plan and fund the proactive, dignified resettlement of communities from areas that will become uninhabitable due to climate change --- sea level rise, desertification, extreme heat.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 3,
+      "food": 3,
+      "bio": 2,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M48"
+    ],
+    "ripple": [
+      {
+        "code": "M48",
+        "name": "Infrastructure Failure",
+        "explanation": "cohesion, cultural continuity and economic stability compared to chaotic displacement transforming a humanitarian crisis into a managed transition. +: : : :+: :+ ⚖️ International Aid Society & 50 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-143",
+    "name": "International Aid",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 50,
+    "description": "Mobilise rapid international humanitarian and development assistance for communities displaced by climate events, covering immediate needs and longer-term recovery.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 3,
+      "food": 5,
+      "bio": 0,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M48"
+    ],
+    "ripple": [
+      {
+        "code": "M48",
+        "name": "Infrastructure Failure",
+        "explanation": "resources food, shelter, healthcare that prevent humanitarian crises from escalating into mass mortality in the wake of displacement. +: : : :+: :+ ⚖️ Rural Development Society & 45 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-144",
+    "name": "Rural Development",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 45,
+    "description": "Invest in rural economic development --- infrastructure, markets, education, healthcare and connectivity --- to create viable livelihoods that reduce rural-urban migration pressure.",
+    "effects": {
+      "terra": 5,
+      "climate": 2,
+      "water": 3,
+      "food": 5,
+      "bio": 3,
+      "community": 7,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 3,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M17"
+    ],
+    "ripple": [
+      {
+        "code": "M17",
+        "name": "Loss Of Traditional Farming Knowledge",
+        "explanation": "livelihood for younger generations, reducing the Knowledge outmigration that causes traditional agricultural knowledge to disappear with departing elders. +: : : :+: :+ ⚖️ Just Transition Programs Society & 55 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-145",
+    "name": "Just Transition Programs",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 55,
+    "description": "Fund programs that support workers, communities and regions transitioning away from fossil fuel industries --- retraining, economic diversification, social protection and community investment.",
+    "effects": {
+      "terra": 6,
+      "climate": 5,
+      "water": 0,
+      "food": 2,
+      "bio": 0,
+      "community": 8,
+      "air": 3,
+      "energy": 6,
+      "industrial": 5,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 8
+    },
+    "linkedMysteries": [
+      "M52"
+    ],
+    "ripple": [
+      {
+        "code": "M52",
+        "name": "Social Inequality",
+        "explanation": "concentration of transition costs on already-disadvantaged communities, reducing the inequality that makes climate action politically unsustainable. +: : : :+: :+ ⚖️ Universal Basic Services Society & 60 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-146",
+    "name": "Universal Basic Services",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 60,
+    "description": "Guarantee universal access to essential services --- healthcare, education, housing, transport, digital access --- as rights regardless of income, building the social foundation for climate resilience.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 4,
+      "food": 5,
+      "bio": 0,
+      "community": 9,
+      "air": 3,
+      "energy": 4,
+      "industrial": 3,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M52"
+    ],
+    "ripple": [
+      {
+        "code": "M52",
+        "name": "Social Inequality",
+        "explanation": "income, ensuring that those least responsible for climate change are not most exposed to its impacts. +: : : :+: :+ ⚖️ Climate Justice Policy Society & 55 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-147",
+    "name": "Climate Justice Policy",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 55,
+    "description": "Embed climate justice principles across all climate policy --- ensuring that those most affected by climate change have voice in decisions, first access to adaptation resources and compensation for loss and damage.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 4,
+      "food": 4,
+      "bio": 3,
+      "community": 9,
+      "air": 3,
+      "energy": 4,
+      "industrial": 3,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M52"
+    ],
+    "ripple": [
+      {
+        "code": "M52",
+        "name": "Social Inequality",
+        "explanation": "resources flow to the most vulnerable rather than the most politically powerful addressing the equity dimension of climate response. +: : : :+: :+ ⚖️ Community Co-Management Society & 35 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-148",
+    "name": "Community Co-Management",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 35,
+    "description": "Transfer management authority over fisheries, forests and water resources to local communities, building on traditional knowledge and local stewardship incentives.",
+    "effects": {
+      "terra": 6,
+      "climate": 2,
+      "water": 4,
+      "food": 5,
+      "bio": 5,
+      "community": 8,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 5,
+      "forest": 4,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M49"
+    ],
+    "ripple": [
+      {
+        "code": "M49",
+        "name": "Ecosystem Collapse",
+        "explanation": "incentives with long-term sustainability communities dependent on fish stocks for their livelihoods have strong motivations to prevent overexploitation. +: : : :+: :+ ⚖️ Water Diplomacy Society & 50 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-149",
+    "name": "Water Diplomacy",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 50,
+    "description": "Deploy trained water diplomats and international mediation processes to facilitate negotiations over shared water resources before disputes escalate into conflict.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 8,
+      "food": 4,
+      "bio": 2,
+      "community": 6,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M50"
+    ],
+    "ripple": [
+      {
+        "code": "M50",
+        "name": "Food Insecurity",
+        "explanation": "conflict over water, establishing the trust and institutional mechanisms needed for durable water sharing agreements. +: : : :+: :+ ⚖️ International Climate Cooperation Society & 65 Governance"
+      }
+    ]
+  },
+  {
+    "id": "I-150",
+    "name": "International Climate",
+    "categoryLabel": "Society & Governance",
+    "categoryId": "society",
+    "categoryEmoji": "⚖",
+    "cost": 65,
+    "description": "Build institutional frameworks for deep international climate cooperation --- technology transfer, joint research, common carbon markets, loss and damage mechanisms --- that go beyond national commitments.",
+    "effects": {
+      "terra": 10,
+      "climate": 9,
+      "water": 5,
+      "food": 5,
+      "bio": 5,
+      "community": 7,
+      "air": 5,
+      "energy": 7,
+      "industrial": 6,
+      "ocean": 5,
+      "forest": 5,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M58"
+    ],
+    "ripple": [
+      {
+        "code": "M58",
+        "name": "Antarctic Ice Sheet Collapse",
+        "explanation": "rapid decarbonisation needed to prevent AMOC Disruption collapse no single nation can address a planetary-scale tipping point alone. +: :+ 🤖 AI & Technology 12 interventions in this category +: : : :+: :+ 🤖 Green AI Standards AI & 45 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-151",
+    "name": "Green AI Standards",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 45,
+    "description": "Establish mandatory energy efficiency and renewable power standards for AI data centres and model training, requiring disclosed energy consumption and carbon footprint per model.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 4,
+      "energy": 7,
+      "industrial": 6,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M61"
+    ],
+    "ripple": [
+      {
+        "code": "M61",
+        "name": "AI Energy Consumption Crisis",
+        "explanation": "training and inference, forcing the sector to run on clean energy and improve computational efficiency before scaling. +: : : :+: :+ 🤖 Renewable-Powered Data Centres AI & 50 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-152",
+    "name": "Renewable-Powered Data",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 50,
+    "description": "Require that data centres powering AI systems source 100% of their electricity from renewable energy through direct PPAs, on-site generation or green tariff contracts.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 5,
+      "energy": 9,
+      "industrial": 7,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M61"
+    ],
+    "ripple": [
+      {
+        "code": "M61",
+        "name": "AI Energy Consumption Crisis",
+        "explanation": "fossil fuel demand enabling AI scaling without undermining renewable energy targets or stressing fossil-dependent grids. +: : : :+: :+ 🤖 AI Efficiency Mandates AI & 40 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-153",
+    "name": "AI Efficiency Mandates",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 40,
+    "description": "Regulate AI model training and deployment to meet improving energy efficiency standards --- measured in computations per watt --- driving innovation in energy-efficient AI architecture.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 0,
+      "air": 3,
+      "energy": 7,
+      "industrial": 6,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 4
+    },
+    "linkedMysteries": [
+      "M61"
+    ],
+    "ripple": [
+      {
+        "code": "M61",
+        "name": "AI Energy Consumption Crisis",
+        "explanation": "hardware innovation that reduces energy consumption per unit of AI output allowing capability to scale without proportional energy growth. +: : : :+: :+ 🤖 AI Audit Requirements AI & 40 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-154",
+    "name": "AI Audit Requirements",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 40,
+    "description": "Require independent audits of AI systems used in sustainability reporting and ESG disclosures, with traceability requirements that enable verification of AI-generated claims.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 4,
+      "industrial": 7,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M62"
+    ],
+    "ripple": [
+      {
+        "code": "M62",
+        "name": "Algorithmic Greenwashing",
+        "explanation": "generated sustainability claims if the AI can be audited, fabrications can be detected and those responsible held liable. +: : : :+: :+ 🤖 ESG Verification Standards AI & 40 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-155",
+    "name": "ESG Verification",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 40,
+    "description": "Develop standardised third-party verification requirements for ESG data and reports, with penalties for unverifiable or misleading claims regardless of whether they were AI-generated.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 3,
+      "air": 0,
+      "energy": 4,
+      "industrial": 7,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M62"
+    ],
+    "ripple": [
+      {
+        "code": "M62",
+        "name": "Algorithmic Greenwashing",
+        "explanation": "to publish false ESG claims removing the financial incentive for algorithmic greenwashing by creating credible enforcement. +: : : :+: :+ 🤖 Digital Accountability Law AI & 45 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-156",
+    "name": "Digital Accountability",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 45,
+    "description": "Pass legislation requiring transparency in AI-generated content, with mandatory labelling of AI-produced media and liability for organisations deploying AI to deceive in regulated domains.",
+    "effects": {
+      "terra": 5,
+      "climate": 4,
+      "water": 0,
+      "food": 0,
+      "bio": 0,
+      "community": 5,
+      "air": 0,
+      "energy": 3,
+      "industrial": 6,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M62"
+    ],
+    "ripple": [
+      {
+        "code": "M62",
+        "name": "Algorithmic Greenwashing",
+        "explanation": "friction for AI-enabled greenwashing investors and regulators can identify AI-generated claims and apply heightened scrutiny. +: : : :+: :+ 🤖 AI Impact Assessment Mandates AI & 45 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-157",
+    "name": "AI Impact Assessment",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 45,
+    "description": "Require comprehensive environmental and ecological impact assessments for AI systems deployed in extractive industries, logistics, agriculture and urban planning before deployment.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 3,
+      "food": 2,
+      "bio": 6,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 6,
+      "ocean": 3,
+      "forest": 4,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M63"
+    ],
+    "ripple": [
+      {
+        "code": "M63",
+        "name": "AI-Driven Resource Extraction Surge",
+        "explanation": "optimised extraction deployment creates a Surge regulatory checkpoint that can halt or modify the most ecologically damaging applications. +: : : :+: :+ 🤖 Extraction Moratoriums AI & 55 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-158",
+    "name": "Extraction Moratoriums",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 55,
+    "description": "Impose moratoriums on new fossil fuel and mineral extraction projects that rely on AI to access previously uneconomical reserves, pending assessment of climate and ecological impact.",
+    "effects": {
+      "terra": 7,
+      "climate": 6,
+      "water": 3,
+      "food": 0,
+      "bio": 5,
+      "community": 0,
+      "air": 3,
+      "energy": 3,
+      "industrial": 3,
+      "ocean": 4,
+      "forest": 4,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M63"
+    ],
+    "ripple": [
+      {
+        "code": "M63",
+        "name": "AI-Driven Resource Extraction Surge",
+        "explanation": "marginal reserves that AI optimisation has made Surge accessible, halting the rebound effect at source. +: : : :+: :+ 🤖 Nature-Positive AI Policy AI & 45 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-159",
+    "name": "Nature-Positive AI",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 45,
+    "description": "Establish policy frameworks requiring AI systems used in land use, transport and agriculture to incorporate biodiversity and ecological constraints into their decision-making.",
+    "effects": {
+      "terra": 7,
+      "climate": 4,
+      "water": 4,
+      "food": 3,
+      "bio": 8,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 5,
+      "ocean": 4,
+      "forest": 5,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M63"
+    ],
+    "ripple": [
+      {
+        "code": "M63",
+        "name": "AI-Driven Resource Extraction Surge",
+        "explanation": "systems prevent optimisation for purely economic Surge extraction metrics ecological values become inbuilt decision constraints rather than afterthoughts. +: : : :+: :+ 🤖 Ecological AI Audits AI & 40 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-160",
+    "name": "Ecological AI Audits",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 40,
+    "description": "Require periodic audits of AI systems deployed in nature-affecting sectors to assess their ecological footprint, unintended wildlife impacts and compliance with nature-positive standards.",
+    "effects": {
+      "terra": 6,
+      "climate": 3,
+      "water": 3,
+      "food": 2,
+      "bio": 7,
+      "community": 3,
+      "air": 0,
+      "energy": 0,
+      "industrial": 5,
+      "ocean": 4,
+      "forest": 4,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M64"
+    ],
+    "ripple": [
+      {
+        "code": "M64",
+        "name": "Autonomous Systems & Ecological Blind Spots",
+        "explanation": "that autonomous systems create the first step Blind Spots to correcting blind spots is visibility into what the system is actually doing to ecosystems. +: : : :+: :+ 🤖 Nature-Inclusive Algorithm Design AI & 40 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-161",
+    "name": "Nature-Inclusive",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 40,
+    "description": "Develop and mandate design standards for AI systems that incorporate ecological data as core inputs alongside economic variables --- ensuring algorithms can\\'t optimise for profit while ignoring nature.",
+    "effects": {
+      "terra": 7,
+      "climate": 4,
+      "water": 4,
+      "food": 3,
+      "bio": 8,
+      "community": 3,
+      "air": 2,
+      "energy": 0,
+      "industrial": 6,
+      "ocean": 5,
+      "forest": 5,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M64"
+    ],
+    "ripple": [
+      {
+        "code": "M64",
+        "name": "Autonomous Systems & Ecological Blind Spots",
+        "explanation": "training removes the fundamental blind spot Blind Spots systems trained on ecological value can\\'t make decisions that systematically ignore it. +: : : :+: :+ 🤖 AI Environmental Impact Assessment AI & 35 Technology"
+      }
+    ]
+  },
+  {
+    "id": "I-162",
+    "name": "AI Environmental Impact",
+    "categoryLabel": "AI & Technology",
+    "categoryId": "ai",
+    "categoryEmoji": "🤖",
+    "cost": 35,
+    "description": "Develop standardised frameworks for assessing the environmental impact of AI systems across their lifecycle --- training energy, deployment infrastructure, induced activity effects and ecological consequences of decisions made.",
+    "effects": {
+      "terra": 5,
+      "climate": 3,
+      "water": 2,
+      "food": 0,
+      "bio": 5,
+      "community": 2,
+      "air": 2,
+      "energy": 4,
+      "industrial": 6,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 3
+    },
+    "linkedMysteries": [
+      "M64"
+    ],
+    "ripple": [
+      {
+        "code": "M64",
+        "name": "Autonomous Systems & Ecological Blind Spots",
+        "explanation": "into the ecological consequences of AI deployment Blind Spots decisions enabling regulators and developers to address harms before they become entrenched. +: :+ 🌍 Systemic & Global 14 interventions in this category +: : : :+: :+ 🌍 Open-Source Climate AI Verification Systemic 60 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-163",
+    "name": "Open-Source Climate AI",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 60,
+    "description": "Create international open-source systems for verifying AI-generated climate models, with transparent audit trails, shared validation datasets and independent scientific review of model outputs.",
+    "effects": {
+      "terra": 9,
+      "climate": 8,
+      "water": 3,
+      "food": 3,
+      "bio": 3,
+      "community": 5,
+      "air": 2,
+      "energy": 4,
+      "industrial": 5,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M65"
+    ],
+    "ripple": [
+      {
+        "code": "M65",
+        "name": "AI Climate Model Manipulation",
+        "explanation": "tamper-resistant system for detecting model poisoning adversarial attacks become visible before they corrupt global climate consensus. +: : : :+: :+ 🌍 International AI Security Treaty Systemic 70 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-164",
+    "name": "International AI",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 70,
+    "description": "Negotiate a binding international treaty that prohibits adversarial attacks on scientific AI systems, establishes norms for AI security in climate research and creates verification mechanisms.",
+    "effects": {
+      "terra": 9,
+      "climate": 9,
+      "water": 4,
+      "food": 4,
+      "bio": 4,
+      "community": 6,
+      "air": 4,
+      "energy": 5,
+      "industrial": 5,
+      "ocean": 4,
+      "forest": 4,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M65"
+    ],
+    "ripple": [
+      {
+        "code": "M65",
+        "name": "AI Climate Model Manipulation",
+        "explanation": "and deterrence against adversarial AI attacks on climate science making model manipulation a sanctionable act under international law. +: : : :+: :+ 🌍 Federated Model Integrity Protocols Systemic 55 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-165",
+    "name": "Federated Model",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 55,
+    "description": "Deploy cryptographic and federated learning protocols that ensure the integrity of shared climate AI models --- detecting data poisoning, ensuring no single actor can manipulate shared outputs.",
+    "effects": {
+      "terra": 7,
+      "climate": 7,
+      "water": 3,
+      "food": 3,
+      "bio": 3,
+      "community": 4,
+      "air": 2,
+      "energy": 4,
+      "industrial": 5,
+      "ocean": 3,
+      "forest": 3,
+      "economy": 5
+    },
+    "linkedMysteries": [
+      "M65"
+    ],
+    "ripple": [
+      {
+        "code": "M65",
+        "name": "AI Climate Model Manipulation",
+        "explanation": "mathematically detectable when model inputs or outputs have been manipulated creating security at the algorithmic level. +: : : :+: :+ 🌍 Open AI for Climate Commons Systemic 60 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-166",
+    "name": "Open AI for Climate",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 60,
+    "description": "Create a global commons of open-source AI climate tools --- flood prediction, crop advisory, extreme weather modelling --- freely accessible to all nations regardless of technical capacity.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 6,
+      "food": 6,
+      "bio": 4,
+      "community": 9,
+      "air": 3,
+      "energy": 5,
+      "industrial": 4,
+      "ocean": 4,
+      "forest": 4,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M66"
+    ],
+    "ripple": [
+      {
+        "code": "M66",
+        "name": "AI-Accelerated Inequality in Climate Adaptation",
+        "explanation": "communities and countries without the resources Adaptation to develop proprietary AI can access the same Inequality adaptation intelligence as wealthy nations. +: : : :+: :+ 🌍 Technology Transfer Mandates Systemic 60 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-167",
+    "name": "Technology Transfer",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 60,
+    "description": "Require wealthy nations and technology companies to transfer clean and climate adaptation technologies --- including AI systems --- to developing nations on preferential or free terms.",
+    "effects": {
+      "terra": 8,
+      "climate": 6,
+      "water": 5,
+      "food": 5,
+      "bio": 4,
+      "community": 9,
+      "air": 4,
+      "energy": 7,
+      "industrial": 5,
+      "ocean": 4,
+      "forest": 4,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M66"
+    ],
+    "ripple": [
+      {
+        "code": "M66",
+        "name": "AI-Accelerated Inequality in Climate Adaptation",
+        "explanation": "the access gap requiring the most AI-capable Adaptation actors to share their tools with those who need Inequality them most but can least afford them. +: : : :+: :+ 🌍 Global South AI Capacity Programmes Systemic 55 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-168",
+    "name": "Global South AI Capacity",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 55,
+    "description": "Fund programs that build AI capacity in Global South nations --- training data scientists, developing locally appropriate AI tools and creating infrastructure for climate AI deployment.",
+    "effects": {
+      "terra": 7,
+      "climate": 5,
+      "water": 5,
+      "food": 5,
+      "bio": 4,
+      "community": 9,
+      "air": 3,
+      "energy": 5,
+      "industrial": 5,
+      "ocean": 4,
+      "forest": 4,
+      "economy": 7
+    },
+    "linkedMysteries": [
+      "M66"
+    ],
+    "ripple": [
+      {
+        "code": "M66",
+        "name": "AI-Accelerated Inequality in Climate Adaptation",
+        "explanation": "in vulnerable nations rather than dependency Adaptation on foreign tools, communities develop AI adapted Inequality to their specific contexts and needs. +: : : :+: :+ 🌍 Climate Refugee Convention Systemic 65 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-169",
+    "name": "Climate Refugee",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 65,
+    "description": "Negotiate a dedicated international convention providing legal recognition, rights and resettlement frameworks for people displaced by climate change --- filling the gap in existing refugee law.",
+    "effects": {
+      "terra": 6,
+      "climate": 4,
+      "water": 3,
+      "food": 4,
+      "bio": 0,
+      "community": 9,
+      "air": 0,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M48"
+    ],
+    "ripple": [
+      {
+        "code": "M48",
+        "name": "Infrastructure Failure",
+        "explanation": "enforceable rights to protection, non-refoulement and resettlement assistance transforming a legal void into a framework for dignified transition. +: : : :+: :+ 🌍 Global Emergency Cooperation Systemic 80 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-170",
+    "name": "Global Emergency",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 80,
+    "description": "Activate emergency international cooperation frameworks to coordinate global response to simultaneous climate crises --- pooling resources, expertise and political will across nations.",
+    "effects": {
+      "terra": 12,
+      "climate": 9,
+      "water": 7,
+      "food": 7,
+      "bio": 6,
+      "community": 10,
+      "air": 6,
+      "energy": 7,
+      "industrial": 7,
+      "ocean": 6,
+      "forest": 6,
+      "economy": 8
+    },
+    "linkedMysteries": [
+      "M59"
+    ],
+    "ripple": [
+      {
+        "code": "M59",
+        "name": "Resource Conflict",
+        "explanation": "mechanism capable of coordinating response to simultaneous crises across multiple systems national responses are individually insufficient. +: : : :+: :+ 🌍 Climate Resilience Fund Systemic 70 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-171",
+    "name": "Climate Resilience Fund",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 70,
+    "description": "Establish a large-scale global climate resilience fund that provides rapid, flexible financing for adaptation, loss and damage compensation and emergency response across the developing world.",
+    "effects": {
+      "terra": 9,
+      "climate": 6,
+      "water": 7,
+      "food": 7,
+      "bio": 5,
+      "community": 10,
+      "air": 4,
+      "energy": 5,
+      "industrial": 4,
+      "ocean": 5,
+      "forest": 5,
+      "economy": 8
+    },
+    "linkedMysteries": [
+      "M59"
+    ],
+    "ripple": [
+      {
+        "code": "M59",
+        "name": "Resource Conflict",
+        "explanation": "response to cascading crises before they compound speed of financial response is critical when multiple hazards strike simultaneously. +: : : :+: :+ 🌍 Systemic Transformation Systemic 90 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-172",
+    "name": "Systemic Transformation",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 90,
+    "description": "Pursue fundamental transformation of economic, energy and food systems --- not incremental improvement but redesign of the underlying structures that generate environmental crisis.",
+    "effects": {
+      "terra": 14,
+      "climate": 12,
+      "water": 9,
+      "food": 9,
+      "bio": 9,
+      "community": 12,
+      "air": 8,
+      "energy": 11,
+      "industrial": 10,
+      "ocean": 8,
+      "forest": 9,
+      "economy": 10
+    },
+    "linkedMysteries": [
+      "M59"
+    ],
+    "ripple": [
+      {
+        "code": "M59",
+        "name": "Resource Conflict",
+        "explanation": "of environmental crisis can prevent cascading failures from recurring symptom management cannot address fundamental system dysfunction. +: : : :+: :+ 🌍 Global Governance Reform Systemic 80 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-173",
+    "name": "Global Governance Reform",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 80,
+    "description": "Reform international governance institutions --- UN, WTO, IMF, World Bank --- to centre climate action, equity and planetary boundaries in all decision-making.",
+    "effects": {
+      "terra": 12,
+      "climate": 10,
+      "water": 7,
+      "food": 7,
+      "bio": 7,
+      "community": 10,
+      "air": 6,
+      "energy": 8,
+      "industrial": 8,
+      "ocean": 7,
+      "forest": 7,
+      "economy": 9
+    },
+    "linkedMysteries": [
+      "M60"
+    ],
+    "ripple": [
+      {
+        "code": "M60",
+        "name": "Planetary Boundaries Breach",
+        "explanation": "institutions coordinating global economic activity are aligned with rather than working against planetary boundaries. +: : : :+: :+ 🌍 Planetary Stewardship Systemic 90 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-174",
+    "name": "Planetary Stewardship",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 90,
+    "description": "Adopt a planetary stewardship framework across governance at all scales --- where human economic activity is designed to operate within Earth\\'s ecological limits, not extract from them.",
+    "effects": {
+      "terra": 15,
+      "climate": 12,
+      "water": 10,
+      "food": 9,
+      "bio": 12,
+      "community": 10,
+      "air": 8,
+      "energy": 9,
+      "industrial": 9,
+      "ocean": 10,
+      "forest": 10,
+      "economy": 8
+    },
+    "linkedMysteries": [
+      "M60"
+    ],
+    "ripple": [
+      {
+        "code": "M60",
+        "name": "Planetary Boundaries Breach",
+        "explanation": "intervention redesigning human civilisation to fit within Earth\\'s safe operating space rather than continuously testing and exceeding its limits. +: : : :+: :+ 🌍 Full System Transformation Systemic 100 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-175",
+    "name": "Full System",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 100,
+    "description": "ENDGAME INTERVENTION: Coordinate the complete transformation of human civilisation\\'s relationship with the planet --- energy, food, economy, governance and culture --- toward sustainable coexistence.",
+    "effects": {
+      "terra": 20,
+      "climate": 16,
+      "water": 14,
+      "food": 13,
+      "bio": 16,
+      "community": 15,
+      "air": 12,
+      "energy": 15,
+      "industrial": 14,
+      "ocean": 14,
+      "forest": 14,
+      "economy": 12
+    },
+    "linkedMysteries": [
+      "M60"
+    ],
+    "ripple": [
+      {
+        "code": "M60",
+        "name": "Planetary Boundaries Breach",
+        "explanation": "permanently resolving the Planetary Boundaries Breach incremental improvements within the existing system cannot address a systemic failure of civilisation\\'s relationship with Earth. +: : : :+: :+ 🌍 International Climate Pact Systemic 70 & Global"
+      }
+    ]
+  },
+  {
+    "id": "I-176",
+    "name": "Urban Cooling (Heat",
+    "categoryLabel": "Cities & Infrastructure",
+    "categoryId": "cities",
+    "categoryEmoji": "🏙",
+    "cost": 35,
+    "description": "See I-79. Additional deployment targeting worker environments and transit infrastructure specifically.",
+    "effects": {
+      "terra": 4,
+      "climate": 2,
+      "water": 2,
+      "food": 0,
+      "bio": 2,
+      "community": 6,
+      "air": 4,
+      "energy": 0,
+      "industrial": 0,
+      "ocean": 0,
+      "forest": 0,
+      "economy": 2
+    },
+    "linkedMysteries": [
+      "M21"
+    ],
+    "ripple": [
+      {
+        "code": "M21",
+        "name": "Heat Stress On Workers",
+        "explanation": "on Workers directly reduce the thermal load on workers the difference between safe and dangerous work conditions during heatwaves. +: :+ 💼 Economy & Finance 22 interventions in this category +: : : :+: :+ 💼 ESG Reporting Mandates Economy 40 &"
+      }
+    ]
+  },
+  {
+    "id": "I-177",
+    "name": "International Climate",
+    "categoryLabel": "Systemic & Global",
+    "categoryId": "systemic",
+    "categoryEmoji": "🌍",
+    "cost": 70,
+    "description": "See I-127. This refers to emergency-level international climate agreements beyond standard treaty frameworks.",
+    "effects": {
+      "terra": 10,
+      "climate": 9,
+      "water": 5,
+      "food": 5,
+      "bio": 5,
+      "community": 7,
+      "air": 5,
+      "energy": 7,
+      "industrial": 6,
+      "ocean": 5,
+      "forest": 5,
+      "economy": 6
+    },
+    "linkedMysteries": [
+      "M56"
+    ],
+    "ripple": [
+      {
+        "code": "M56",
+        "name": "Methane Surge",
+        "explanation": "all major emitters toward emergency-level action is the prerequisite for the emission cuts needed to prevent tipping point activation."
+      }
+    ]
+  }
+]

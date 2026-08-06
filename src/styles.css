@@ -4,10 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* For Tomorrow — design system
- * Brand: white, deep green, warm orange, warm greys.
- * All colors defined as tokens; use semantic utilities everywhere.
- */
+/* ============================================================
+   TOMORROW MATRIX — Hopeful Earth Design System
+   Light theme · Whites · Greens · Oranges · Greys
+   Inspired by Terra Nil + Civilization VI + modern dashboards
+   ============================================================ */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -16,7 +17,6 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 20px);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -38,223 +38,196 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Brand tokens */
-  --color-leaf: var(--leaf);
-  --color-leaf-soft: var(--leaf-soft);
-  --color-forest: var(--forest);
-  --color-ember: var(--ember);
-  --color-clay: var(--clay);
+  /* Game-specific tokens */
+  --color-terra: var(--terra);
+  --color-terra-deep: var(--terra-deep);
+  --color-terra-soft: var(--terra-soft);
+  --color-warmth: var(--warmth);
+  --color-warmth-soft: var(--warmth-soft);
   --color-sand: var(--sand);
-  --color-cream: var(--cream);
-  --color-mist: var(--mist);
+  --color-stone: var(--stone);
   --color-ink: var(--ink);
 
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
-  --font-sans:
-    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Indicator colors */
+  --color-climate: var(--ind-climate);
+  --color-food: var(--ind-food);
+  --color-water: var(--ind-water);
+  --color-bio: var(--ind-bio);
+  --color-economy: var(--ind-economy);
 
-  --shadow-soft: 0 20px 60px -30px color-mix(in oklab, var(--ink) 25%, transparent);
-  --shadow-lift: 0 30px 80px -40px color-mix(in oklab, var(--forest) 40%, transparent);
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 1rem;
+  --radius: 0.875rem;
 
-  /* Neutrals */
-  --background: oklch(0.99 0.008 95);
-  --foreground: oklch(0.22 0.02 60);
-  --ink: oklch(0.18 0.02 60);
-  --cream: oklch(0.985 0.015 90);
-  --mist: oklch(0.955 0.012 90);
-  --sand: oklch(0.9 0.03 85);
-
+  /* Surfaces */
+  --background: oklch(0.995 0.003 100);          /* near-white warm */
+  --foreground: oklch(0.22 0.02 150);            /* deep forest ink */
   --card: oklch(1 0 0);
-  --card-foreground: var(--foreground);
+  --card-foreground: oklch(0.22 0.02 150);
   --popover: oklch(1 0 0);
-  --popover-foreground: var(--foreground);
+  --popover-foreground: oklch(0.22 0.02 150);
 
-  /* Brand */
-  --leaf: oklch(0.65 0.13 128); /* #84994f */
-  --leaf-soft: oklch(0.85 0.08 128); /* #b5c99a */
-  --forest: oklch(0.45 0.09 135);
-  --ember: oklch(0.72 0.17 62); /* #fcb53b */
-  --clay: oklch(0.55 0.17 40); /* #d06224 */
-  --rust: oklch(0.45 0.16 35); /* #862b0d / #ae431e */
+  /* Brand — Terra green */
+  --primary: oklch(0.58 0.13 150);
+  --primary-foreground: oklch(0.99 0.01 100);
 
-  --primary: var(--forest);
-  --primary-foreground: oklch(0.985 0.005 90);
-  --secondary: var(--mist);
-  --secondary-foreground: var(--ink);
-  --muted: var(--mist);
-  --muted-foreground: oklch(0.5 0.02 70);
-  --accent: oklch(0.94 0.04 90);
-  --accent-foreground: var(--ink);
-  --destructive: oklch(0.55 0.2 30);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.9 0.015 85);
-  --input: oklch(0.92 0.012 85);
-  --ring: var(--leaf);
+  /* Secondary — warm sand grey */
+  --secondary: oklch(0.96 0.012 90);
+  --secondary-foreground: oklch(0.30 0.03 150);
 
-  --chart-1: var(--leaf);
-  --chart-2: var(--ember);
-  --chart-3: var(--clay);
-  --chart-4: var(--forest);
-  --chart-5: var(--leaf-soft);
+  --muted: oklch(0.965 0.008 100);
+  --muted-foreground: oklch(0.50 0.015 150);
+
+  /* Accent — warm orange */
+  --accent: oklch(0.96 0.025 75);
+  --accent-foreground: oklch(0.40 0.10 60);
+
+  --destructive: oklch(0.60 0.18 30);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.92 0.008 120);
+  --input: oklch(0.93 0.008 120);
+  --ring: oklch(0.58 0.13 150);
+
+  /* Game palette */
+  --terra: oklch(0.62 0.14 150);          /* hopeful green */
+  --terra-deep: oklch(0.42 0.10 150);     /* forest */
+  --terra-soft: oklch(0.93 0.04 145);     /* mint wash */
+  --warmth: oklch(0.72 0.16 55);          /* warm orange */
+  --warmth-soft: oklch(0.95 0.04 70);     /* peach wash */
+  --sand: oklch(0.92 0.03 85);            /* pale sand */
+  --stone: oklch(0.65 0.01 120);          /* neutral grey */
+  --ink: oklch(0.22 0.02 150);            /* charcoal */
+
+  /* Indicators */
+  --ind-climate: oklch(0.68 0.13 200);    /* sky */
+  --ind-food: oklch(0.75 0.14 90);        /* harvest */
+  --ind-water: oklch(0.62 0.13 230);      /* river */
+  --ind-bio: oklch(0.60 0.14 145);        /* moss */
+  --ind-economy: oklch(0.65 0.12 60);     /* amber */
+
+  /* Gradients & effects */
+  --gradient-terra: linear-gradient(135deg, oklch(0.72 0.13 150), oklch(0.58 0.14 165));
+  --gradient-warmth: linear-gradient(135deg, oklch(0.82 0.13 70), oklch(0.68 0.16 45));
+  --gradient-sky: linear-gradient(180deg, oklch(0.98 0.01 200), oklch(0.94 0.03 150));
+  --gradient-card: linear-gradient(180deg, oklch(1 0 0), oklch(0.98 0.01 100));
+
+  --shadow-card: 0 1px 2px oklch(0.22 0.02 150 / 0.04), 0 8px 24px oklch(0.22 0.02 150 / 0.06);
+  --shadow-lift: 0 4px 12px oklch(0.22 0.02 150 / 0.08), 0 24px 48px oklch(0.42 0.10 150 / 0.10);
+  --shadow-glow: 0 0 0 1px oklch(0.62 0.14 150 / 0.20), 0 8px 28px oklch(0.62 0.14 150 / 0.18);
+
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Fonts */
 @layer base {
-  @font-face {
-    font-family: "Instrument Serif";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizDREVItHgc8qDIbSTKq4XKVnRUcw.woff2")
-      format("woff2");
-  }
-  @font-face {
-    font-family: "Instrument Serif";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizBREVItHgc8qDIbSTKq4XkRiUa6zUTiw.woff2")
-      format("woff2");
-  }
-
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-
-  body {
+  * { border-color: var(--color-border); }
+  html, body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
-    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-
-  ::selection {
-    background: color-mix(in oklab, var(--leaf) 40%, transparent);
-    color: var(--ink);
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
   }
+  .font-mono { font-family: var(--font-mono); }
 }
 
-/* Utilities */
-@utility text-display {
-  font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
+/* ============================================================
+   Utility primitives for the game
+   ============================================================ */
+
+@utility surface-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
 }
 
-@utility glass {
-  background: color-mix(in oklab, white 65%, transparent);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid color-mix(in oklab, white 60%, transparent);
+@utility surface-lift {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lift);
 }
 
-@utility glass-dark {
-  background: color-mix(in oklab, var(--ink) 70%, transparent);
-  backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid color-mix(in oklab, white 15%, transparent);
+@utility pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  border: 1px solid var(--color-border);
 }
 
-@utility grain {
-  position: relative;
+@utility chip-terra {
+  background: var(--terra-soft);
+  color: var(--terra-deep);
+  border: 1px solid color-mix(in oklab, var(--terra) 25%, transparent);
 }
 
-/* Animations */
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.85;
-  }
-  50% {
-    transform: scale(1.03);
-    opacity: 1;
+@utility chip-warmth {
+  background: var(--warmth-soft);
+  color: oklch(0.45 0.12 50);
+  border: 1px solid color-mix(in oklab, var(--warmth) 25%, transparent);
+}
+
+@utility chip-stone {
+  background: var(--color-muted);
+  color: var(--color-muted-foreground);
+  border: 1px solid var(--color-border);
+}
+
+@utility card-hover {
+  transition: transform 280ms var(--transition-smooth),
+              box-shadow 280ms var(--transition-smooth);
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
   }
 }
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -12px, 0);
-  }
+
+@utility glow-terra {
+  box-shadow: var(--shadow-glow);
 }
-@keyframes orbit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, oklch(0.22 0.02 150 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.22 0.02 150 / 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 oklch(0.62 0.14 150 / 0.45); }
+  70%  { box-shadow: 0 0 0 14px oklch(0.62 0.14 150 / 0); }
+  100% { box-shadow: 0 0 0 0 oklch(0.62 0.14 150 / 0); }
+}
+@utility animate-pulse-ring { animation: pulse-ring 2s var(--transition-smooth) infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@utility animate-float { animation: float 6s ease-in-out infinite; }
+
 @keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
-@keyframes flow {
-  from {
-    stroke-dashoffset: 100;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.15);
-  }
-}
-
-.animate-breathe {
-  animation: breathe 6s ease-in-out infinite;
-}
-.animate-drift {
-  animation: drift 8s ease-in-out infinite;
-}
-.animate-orbit-slow {
-  animation: orbit 60s linear infinite;
-}
-.animate-pulse-soft {
-  animation: pulse-soft 3s ease-in-out infinite;
-}
-
-/* Gradient text */
-@utility text-gradient-brand {
-  background-image: linear-gradient(
-    100deg,
-    var(--forest) 0%,
-    var(--leaf) 45%,
-    var(--ember) 85%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-/* No-select helper for interactive canvases */
-.no-select {
-  user-select: none;
-  -webkit-user-select: none;
+@utility animate-shimmer {
+  background: linear-gradient(90deg,
+    transparent, oklch(0.62 0.14 150 / 0.12), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
 }

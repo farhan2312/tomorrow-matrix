@@ -1,0 +1,2673 @@
+[
+  {
+    "code": "M01",
+    "id": "m01",
+    "title": "Arctic Ice Loss",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Satellite observations show Arctic sea ice shrinking at an alarming rate. Scientists warn this may trigger cascading climate impacts.",
+    "primaryRoles": [
+      "scientist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "citizen"
+    ],
+    "sequence": [
+      "CO\u2082 Emissions",
+      "Global Warming",
+      "Arctic Temperature Rise",
+      "Sea Ice Melt",
+      "Albedo Loss",
+      "More Heat Absorption",
+      "Accelerated Warming",
+      "Arctic Ice Loss"
+    ],
+    "unlocks": [
+      "Extreme Heatwave",
+      "Glacier Retreat",
+      "Ocean Circulation Disruption"
+    ],
+    "linkedCrises": [
+      "Extreme Heatwave",
+      "Flooding"
+    ],
+    "linkedInterventions": [
+      "Renewable Energy",
+      "Carbon Tax",
+      "Electric Mobility"
+    ],
+    "butterfly": [
+      "Arctic Ice Loss",
+      "Extreme Heatwave",
+      "Crop Yield Decline",
+      "Food Price Spike"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Scientist Mission Progress": 1,
+      "Climate Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Climate Indicator": -3,
+      "Heatwave Crisis Probability": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M02",
+    "id": "m02",
+    "title": "Extreme Heatwave",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Record-breaking temperatures are affecting cities, agriculture and public health.",
+    "primaryRoles": [
+      "scientist",
+      "farmer",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "citizen"
+    ],
+    "sequence": [
+      "Arctic Ice Loss",
+      "Jet Stream Disruption",
+      "Weather Pattern Changes",
+      "Persistent Heat Systems",
+      "Heat Stress",
+      "Water Demand Increase",
+      "Crop Stress",
+      "Extreme Heatwave"
+    ],
+    "unlocks": [
+      "Crop Yield Decline",
+      "Water Scarcity",
+      "Urban Heat Island"
+    ],
+    "linkedCrises": [
+      "Wildfire",
+      "Drought"
+    ],
+    "linkedInterventions": [
+      "Urban Cooling",
+      "Renewable Energy",
+      "Public Awareness Campaign"
+    ],
+    "butterfly": [
+      "Extreme Heatwave"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Food Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Food Indicator": -5,
+      "Water Indicator": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M03",
+    "id": "m03",
+    "title": "Water Scarcity",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "Reservoirs are shrinking. Communities and farms are under severe pressure.",
+    "primaryRoles": [
+      "farmer",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "citizen"
+    ],
+    "sequence": [
+      "Temperature Rise",
+      "Drought",
+      "Reduced Rainfall",
+      "Reservoir Depletion",
+      "Water Stress",
+      "Agricultural Impact",
+      "Community Impact",
+      "Water Scarcity"
+    ],
+    "unlocks": [
+      "Groundwater Depletion",
+      "Climate Migration",
+      "Food Price Spike"
+    ],
+    "linkedCrises": [
+      "Water Emergency",
+      "Drought",
+      "Migration Crisis"
+    ],
+    "linkedInterventions": [
+      "Water Conservation Program",
+      "Drip Irrigation",
+      "Wetland Restoration"
+    ],
+    "butterfly": [
+      "Water Scarcity",
+      "Crop Yield Decline",
+      "Food Price Spike",
+      "Migration",
+      "Social Instability"
+    ],
+    "success": {
+      "Planet Health": 10,
+      "Climate Action Points": 60,
+      "Water Indicator": 4
+    },
+    "failure": {
+      "Planet Health": -8,
+      "Water Indicator": -8,
+      "Food Indicator": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M04",
+    "id": "m04",
+    "title": "Deforestation",
+    "category": "bio",
+    "categoryLabel": "Land Use",
+    "brief": "Forest cover is disappearing at an alarming rate, releasing stored carbon and destroying habitats.",
+    "primaryRoles": [
+      "scientist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "student",
+      "business",
+      "activist"
+    ],
+    "sequence": [
+      "Forest Clearing",
+      "Tree Removal",
+      "Carbon Release",
+      "Reduced Carbon Storage",
+      "Habitat Loss",
+      "Biodiversity Decline",
+      "Climate Impact",
+      "Deforestation"
+    ],
+    "unlocks": [
+      "Species Decline",
+      "Flood Risk",
+      "Wildfire Risk"
+    ],
+    "linkedCrises": [
+      "Illegal Logging Crisis",
+      "Biodiversity Emergency"
+    ],
+    "linkedInterventions": [
+      "Reforestation",
+      "Protected Areas",
+      "Agroforestry"
+    ],
+    "butterfly": [
+      "Deforestation",
+      "Species Decline",
+      "Ecosystem Collapse",
+      "Biodiversity Collapse"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Biodiversity Indicator": 4
+    },
+    "failure": {
+      "Planet Health": -7,
+      "Biodiversity Indicator": -6,
+      "Flood Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M05",
+    "id": "m05",
+    "title": "Coral Reef Bleaching",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Coral reefs are whitening as ocean temperatures rise. Marine ecosystems face collapse.",
+    "primaryRoles": [
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "activist"
+    ],
+    "sequence": [
+      "CO\u2082 Emissions",
+      "Ocean Warming",
+      "Ocean Acidification",
+      "Coral Stress",
+      "Bleaching Event",
+      "Habitat Loss",
+      "Fish Population Decline",
+      "Coral Reef Bleaching"
+    ],
+    "unlocks": [
+      "Fish Population Decline",
+      "Ocean Acidification"
+    ],
+    "linkedCrises": [
+      "Marine Ecosystem Crisis"
+    ],
+    "linkedInterventions": [
+      "Marine Protected Areas",
+      "Blue Carbon Projects",
+      "Mangrove Restoration"
+    ],
+    "butterfly": [
+      "Coral Reef Bleaching"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Biodiversity Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Ocean Health Indicator": -5,
+      "Fishery Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M06",
+    "id": "m06",
+    "title": "Fish Population Decline",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Fishing communities are reporting lower catches. Marine ecosystems are showing signs of stress.",
+    "primaryRoles": [
+      "scientist",
+      "business"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "farmer"
+    ],
+    "sequence": [
+      "Ocean Warming",
+      "Habitat Degradation",
+      "Coral Reef Damage",
+      "Reduced Breeding Grounds",
+      "Food Chain Disruption",
+      "Fish Reproduction Decline",
+      "Population Reduction",
+      "Fish Population Decline"
+    ],
+    "unlocks": [
+      "Fisheries Collapse",
+      "Food Price Spike"
+    ],
+    "linkedCrises": [
+      "Fishery Crisis",
+      "Food Security Crisis"
+    ],
+    "linkedInterventions": [
+      "Marine Protected Areas",
+      "Sustainable Fisheries",
+      "Mangrove Restoration"
+    ],
+    "butterfly": [
+      "Fish Population Decline"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Biodiversity Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Food Indicator": -2,
+      "Ocean Health Indicator": -5
+    },
+    "tier": 1
+  },
+  {
+    "code": "M07",
+    "id": "m07",
+    "title": "Crop Yield Decline",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "Farmers are reporting reduced harvests across multiple regions. Food security concerns are increasing.",
+    "primaryRoles": [
+      "farmer"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "business"
+    ],
+    "sequence": [
+      "Extreme Heatwave",
+      "Soil Moisture Loss",
+      "Water Stress",
+      "Crop Stress",
+      "Reduced Productivity",
+      "Lower Harvest",
+      "Food Supply Reduction",
+      "Crop Yield Decline"
+    ],
+    "unlocks": [
+      "Food Price Spike",
+      "Climate Migration"
+    ],
+    "linkedCrises": [
+      "Food Shortage",
+      "Drought"
+    ],
+    "linkedInterventions": [
+      "Sustainable Agriculture",
+      "Drip Irrigation",
+      "Regenerative Agriculture"
+    ],
+    "butterfly": [
+      "Crop Yield Decline"
+    ],
+    "success": {
+      "Planet Health": 10,
+      "Climate Action Points": 60,
+      "Food Indicator": 5
+    },
+    "failure": {
+      "Planet Health": -8,
+      "Food Indicator": -8,
+      "Food Price Spike Risk": 15
+    },
+    "tier": 1
+  },
+  {
+    "code": "M08",
+    "id": "m08",
+    "title": "Soil Degradation",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "Agricultural lands are losing fertility. Farm productivity is at risk.",
+    "primaryRoles": [
+      "farmer"
+    ],
+    "secondaryRoles": [
+      "activist",
+      "scientist"
+    ],
+    "sequence": [
+      "Intensive Farming",
+      "Monoculture Practices",
+      "Nutrient Depletion",
+      "Soil Erosion",
+      "Reduced Fertility",
+      "Water Retention Loss",
+      "Lower Productivity",
+      "Soil Degradation"
+    ],
+    "unlocks": [
+      "Desertification",
+      "Crop Yield Decline"
+    ],
+    "linkedCrises": [
+      "Agricultural Crisis"
+    ],
+    "linkedInterventions": [
+      "Regenerative Agriculture",
+      "Cover Cropping",
+      "Agroforestry"
+    ],
+    "butterfly": [
+      "Soil Degradation"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Food Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Food Indicator": -4,
+      "Desertification Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M09",
+    "id": "m09",
+    "title": "Air Pollution",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Primary Roles:.",
+    "primaryRoles": [
+      "planner",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "student",
+      "business"
+    ],
+    "sequence": [
+      "Fossil Fuel Use",
+      "Industrial Emissions",
+      "Vehicle Emissions",
+      "Air Pollutant Build-Up",
+      "Smog Formation",
+      "Poor Air Quality",
+      "Health Impacts",
+      "Air Pollution"
+    ],
+    "unlocks": [
+      "Public Health Emergency",
+      "Urban Heat Island"
+    ],
+    "linkedCrises": [
+      "Public Health Emergency"
+    ],
+    "linkedInterventions": [
+      "Electric Mobility",
+      "Clean Energy",
+      "Emission Standards"
+    ],
+    "butterfly": [
+      "Air Pollution"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Climate Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Health Score": -5,
+      "Public Support": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M10",
+    "id": "m10",
+    "title": "Flood Risk",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Heavy rainfall and rising water levels threaten communities.",
+    "primaryRoles": [
+      "planner"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "citizen"
+    ],
+    "sequence": [
+      "Global Warming",
+      "Increased Evaporation",
+      "Intense Rainfall",
+      "Drainage System Overload",
+      "Floodplain Exposure",
+      "Property Damage",
+      "Community Disruption",
+      "Flood Risk"
+    ],
+    "unlocks": [
+      "Infrastructure Failure",
+      "Climate Migration"
+    ],
+    "linkedCrises": [
+      "Flood",
+      "Cyclone"
+    ],
+    "linkedInterventions": [
+      "Wetland Restoration",
+      "Flood Barriers",
+      "Green Infrastructure"
+    ],
+    "butterfly": [
+      "Flood Risk"
+    ],
+    "success": {
+      "Planet Health": 10,
+      "Climate Action Points": 60,
+      "Water Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -8,
+      "Economy Indicator": -4,
+      "Flood Crisis Severity": 15
+    },
+    "tier": 1
+  },
+  {
+    "code": "M11",
+    "id": "m11",
+    "title": "Urban Green Space Loss",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Rapid urban development is eliminating parks and green corridors. Residents face rising temperatures and shrinking natural spaces.",
+    "primaryRoles": [
+      "planner",
+      "student"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "scientist"
+    ],
+    "sequence": [
+      "Urban Expansion",
+      "Land Conversion",
+      "Tree Removal",
+      "Impervious Surface Increase",
+      "Heat Retention",
+      "Reduced Biodiversity",
+      "Mental Health Decline",
+      "Urban Green Space Loss"
+    ],
+    "unlocks": [],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Urban Green Space Loss"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Biodiversity Indicator": 2,
+      "Community Wellbeing": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Urban Heat Risk": 10,
+      "Health Score": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M12",
+    "id": "m12",
+    "title": "Plastic Pollution In Oceans",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "activist",
+      "business"
+    ],
+    "secondaryRoles": [
+      "student",
+      "scientist"
+    ],
+    "sequence": [
+      "Single-Use Plastic Production",
+      "Improper Waste Disposal",
+      "River Transport",
+      "Ocean Entry",
+      "Microplastic Fragmentation",
+      "Marine Ingestion",
+      "Food Chain Contamination",
+      "Plastic Pollution"
+    ],
+    "unlocks": [
+      "Urban Heat Island",
+      "Air Pollution",
+      "Public Health Emergency"
+    ],
+    "linkedCrises": [
+      "Urban Heat Island",
+      "Public Health Stress"
+    ],
+    "linkedInterventions": [
+      "Green Infrastructure",
+      "Urban Rewilding",
+      "Parks Policy"
+    ],
+    "butterfly": [
+      "Plastic Pollution In Oceans"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Ocean Health Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Ocean Health Indicator": -5,
+      "Biodiversity Indicator": -2
+    },
+    "tier": 1
+  },
+  {
+    "code": "M13",
+    "id": "m13",
+    "title": "Energy Access Inequality",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "student",
+      "citizen"
+    ],
+    "sequence": [
+      "Energy Poverty",
+      "Reliance on Biomass",
+      "Indoor Air Pollution",
+      "Educational Barriers",
+      "Health Service Gaps",
+      "Economic Exclusion",
+      "Widening Inequality",
+      "Energy Access Inequality"
+    ],
+    "unlocks": [
+      "Social Inequality",
+      "Economic Instability"
+    ],
+    "linkedCrises": [
+      "Social Unrest",
+      "Health Emergency"
+    ],
+    "linkedInterventions": [
+      "Off-Grid Solar",
+      "Energy Subsidy Policy",
+      "Community Microgrids"
+    ],
+    "butterfly": [
+      "Energy Access Inequality",
+      "Education Gap",
+      "Economic Exclusion",
+      "Social Instability"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Social Equity Indicator": 4,
+      "Education Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Social Equity Indicator": -4,
+      "Health Score": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M14",
+    "id": "m14",
+    "title": "Youth Climate Anxiety",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Factory discharge and agricultural runoff are poisoning rivers and groundwater that communities depend on.",
+    "primaryRoles": [
+      "student",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "scientist"
+    ],
+    "sequence": [
+      "Climate News Overload",
+      "Sense of Helplessness",
+      "Eco-Grief",
+      "Social Isolation",
+      "Reduced Civic Engagement",
+      "Mental Health Decline",
+      "Apathy Spiral",
+      "Youth Climate Anxiety"
+    ],
+    "unlocks": [
+      "Water Scarcity",
+      "Public Health Emergency",
+      "Groundwater Depletion"
+    ],
+    "linkedCrises": [
+      "Water Emergency",
+      "Public Health Emergency"
+    ],
+    "linkedInterventions": [
+      "Pollution Standards",
+      "Wastewater Treatment",
+      "Wetland Buffer Zones"
+    ],
+    "butterfly": [
+      "Water Contamination",
+      "Health Crisis",
+      "Economic Burden",
+      "Social Inequality"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Public Engagement": 3,
+      "Youth Mobilisation": 2
+    },
+    "failure": {
+      "Planet Health": -4,
+      "Public Support": -5,
+      "Activist Capacity": -2
+    },
+    "tier": 1
+  },
+  {
+    "code": "M15",
+    "id": "m15",
+    "title": "Industrial Water Contamination",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "SUSTAINABLE BUSINESS TRANSITION.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "planner",
+      "citizen",
+      "scientist",
+      "activist"
+    ],
+    "sequence": [
+      "Industrial Discharge",
+      "Agricultural Runoff",
+      "Waterway Entry",
+      "Chemical Accumulation",
+      "Aquatic Ecosystem Harm",
+      "Drinking Water Contamination",
+      "Community Health Risk",
+      "Water Contamination"
+    ],
+    "unlocks": [
+      "Supply Chain Disruption",
+      "Carbon Lock-In"
+    ],
+    "linkedCrises": [
+      "Reputational Crisis",
+      "Regulatory Penalty"
+    ],
+    "linkedInterventions": [
+      "ESG Reporting Mandates",
+      "Green Finance",
+      "Carbon Disclosure"
+    ],
+    "butterfly": [
+      "Business Resistance"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Water Indicator": 3,
+      "Health Score": 2
+    },
+    "failure": {
+      "Planet Health": -7,
+      "Water Indicator": -6,
+      "Health Score": -5
+    },
+    "tier": 1
+  },
+  {
+    "code": "M16",
+    "id": "m16",
+    "title": "Sustainable Business Transition",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Indigenous and generational farming wisdom is disappearing as younger generations migrate to cities, reducing agricultural resilience.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "student"
+    ],
+    "sequence": [
+      "Regulatory Pressure",
+      "ESG Investment Trends",
+      "Consumer Demand Shift",
+      "Supply Chain Scrutiny",
+      "Greenwashing Risk",
+      "Business Model Rethink",
+      "Circular Economy Adoption",
+      "Sustainable Transition"
+    ],
+    "unlocks": [],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Sustainable Business Transition"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Economy Indicator": 4,
+      "Business Credibility": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Economy Indicator": -3,
+      "Regulatory Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M17",
+    "id": "m17",
+    "title": "Loss Of Traditional Farming Knowledge",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "farmer",
+      "citizen"
+    ],
+    "secondaryRoles": [
+      "activist",
+      "scientist"
+    ],
+    "sequence": [
+      "Rural Outmigration",
+      "Cultural Knowledge Loss",
+      "Monoculture Expansion",
+      "Reduced Crop Diversity",
+      "Soil Knowledge Gap",
+      "Pest Resistance Decline",
+      "Food System Fragility",
+      "Traditional Knowledge Loss"
+    ],
+    "unlocks": [
+      "Crop Yield Decline",
+      "Soil Degradation",
+      "Deforestation"
+    ],
+    "linkedCrises": [
+      "Agricultural Crisis",
+      "Cultural Loss Emergency"
+    ],
+    "linkedInterventions": [
+      "Seed Banks",
+      "Indigenous Agriculture Programs",
+      "Rural Development"
+    ],
+    "butterfly": [
+      "Knowledge Loss"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Food Indicator": 3,
+      "Cultural Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Food Indicator": -4,
+      "Biodiversity Indicator": -2
+    },
+    "tier": 1
+  },
+  {
+    "code": "M18",
+    "id": "m18",
+    "title": "E-Waste Crisis",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "business",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "scientist",
+      "policymaker",
+      "student"
+    ],
+    "sequence": [
+      "Electronics Overconsumption",
+      "Short Product Lifespan",
+      "Improper Disposal",
+      "Toxic Material Release",
+      "Soil and Water Contamination",
+      "Health Impacts",
+      "Resource Waste",
+      "E-Waste Crisis"
+    ],
+    "unlocks": [
+      "Carbon Lock-In",
+      "Tipping Point Activation"
+    ],
+    "linkedCrises": [
+      "Climate Target Failure",
+      "Social Unrest"
+    ],
+    "linkedInterventions": [
+      "Citizens Assembly",
+      "Carbon Legislation",
+      "International Climate Pacts"
+    ],
+    "butterfly": [
+      "Policy Inaction",
+      "Emission Growth",
+      "Temperature Rise",
+      "Tipping Point Risk"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Health Score": 2,
+      "Economy Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Health Score": -4,
+      "Water Indicator": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M19",
+    "id": "m19",
+    "title": "Climate Policy Inaction",
+    "category": "governance",
+    "categoryLabel": "Governance",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "student",
+      "business",
+      "scientist"
+    ],
+    "sequence": [
+      "Fossil Fuel Lobbying",
+      "Short-Term Thinking",
+      "Voter Apathy",
+      "Policy Delay",
+      "Missed Targets",
+      "Increased Emissions",
+      "Worsening Climate",
+      "Policy Inaction"
+    ],
+    "unlocks": [
+      "Public Health Emergency",
+      "Economic Instability",
+      "Social Inequality"
+    ],
+    "linkedCrises": [
+      "Labour Crisis",
+      "Public Health Emergency"
+    ],
+    "linkedInterventions": [
+      "Heat Safety Regulations",
+      "Shade Structures",
+      "Shift Timing Policy"
+    ],
+    "butterfly": [
+      "Climate Policy Inaction"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 55,
+      "Climate Indicator": 3,
+      "Policy Progress": 2
+    },
+    "failure": {
+      "Planet Health": -7,
+      "Climate Indicator": -5,
+      "Global Temperature": 0
+    },
+    "tier": 1
+  },
+  {
+    "code": "M20",
+    "id": "m20",
+    "title": "Loss Of Urban Biodiversity",
+    "category": "bio",
+    "categoryLabel": "Biodiversity",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "planner",
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "student",
+      "citizen"
+    ],
+    "sequence": [
+      "Habitat Fragmentation",
+      "Pesticide Use",
+      "Light Pollution",
+      "Invasive Species",
+      "Pollinator Decline",
+      "Seed Dispersal Failure",
+      "Urban Ecosystem Collapse",
+      "Urban Biodiversity Loss"
+    ],
+    "unlocks": [
+      "Climate Policy Inaction",
+      "Youth Climate Anxiety"
+    ],
+    "linkedCrises": [
+      "Social Disengagement",
+      "Policy Stagnation"
+    ],
+    "linkedInterventions": [
+      "Climate Curriculum",
+      "Media Literacy Programs",
+      "Community Dialogues"
+    ],
+    "butterfly": [
+      "Education Gap",
+      "Misinformation",
+      "Voter Apathy",
+      "Climate Policy Inaction"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Biodiversity Indicator": 3,
+      "Community Wellbeing": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Biodiversity Indicator": -4,
+      "Food Indicator": -2
+    },
+    "tier": 1
+  },
+  {
+    "code": "M21",
+    "id": "m21",
+    "title": "Heat Stress On Workers",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Butterfly Network.",
+    "primaryRoles": [
+      "citizen",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "sequence": [
+      "Rising Temperatures",
+      "Outdoor Work Exposure",
+      "Heat Exhaustion",
+      "Productivity Loss",
+      "Medical Costs Rise",
+      "Worker Unrest",
+      "Labour Shortage",
+      "Worker Heat Stress"
+    ],
+    "unlocks": [
+      "Carbon Lock-In",
+      "Energy Security Crisis"
+    ],
+    "linkedCrises": [
+      "Energy Security Crisis",
+      "Climate Target Failure"
+    ],
+    "linkedInterventions": [
+      "Grid Modernisation",
+      "Feed-in Tariffs",
+      "Renewable Portfolio Standards"
+    ],
+    "butterfly": [
+      "Urban Food Desert",
+      "Nutritional Poverty",
+      "Health Crisis",
+      "Economic Exclusion"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Social Equity Indicator": 3,
+      "Economy Indicator": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Health Score": -5,
+      "Economy Indicator": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M22",
+    "id": "m22",
+    "title": "Fast Fashion Environmental Impact",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "business",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "student",
+      "policymaker"
+    ],
+    "sequence": [
+      "Overconsumption Culture",
+      "Cheap Mass Production",
+      "Toxic Dye Runoff",
+      "Textile Waste Generation",
+      "Microfibre Pollution",
+      "Carbon Footprint Growth",
+      "Land and Water Strain",
+      "Fast Fashion Impact"
+    ],
+    "unlocks": [
+      "Species Decline",
+      "Ecosystem Collapse",
+      "Deforestation"
+    ],
+    "linkedCrises": [
+      "Biodiversity Emergency",
+      "Ecosystem Failure"
+    ],
+    "linkedInterventions": [
+      "Wildlife Corridors",
+      "Conservation Easements",
+      "Habitat Restoration"
+    ],
+    "butterfly": [
+      "Fast Fashion Environmental Impact"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Water Indicator": 2,
+      "Consumer Behaviour": 3
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Water Indicator": -3,
+      "Ocean Health Indicator": -2
+    },
+    "tier": 1
+  },
+  {
+    "code": "M23",
+    "id": "m23",
+    "title": "Climate Education Gap",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "student",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "scientist"
+    ],
+    "sequence": [
+      "Curriculum Gaps",
+      "Media Misinformation",
+      "Climate Denial",
+      "Public Confusion",
+      "Low Action Motivation",
+      "Voter Disengagement",
+      "Slow Policy Response",
+      "Climate Education Gap"
+    ],
+    "unlocks": [
+      "Deforestation",
+      "Amazon Dieback",
+      "Social Inequality"
+    ],
+    "linkedCrises": [
+      "Ecological Emergency",
+      "Social Justice Crisis"
+    ],
+    "linkedInterventions": [
+      "Land Rights Legislation",
+      "Free Prior and Informed Consent",
+      "Land Trusts"
+    ],
+    "butterfly": [
+      "Land Rights Loss",
+      "Deforestation",
+      "Carbon Release",
+      "Global Temperature Rise"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Public Engagement": 4,
+      "Youth Mobilisation": 3
+    },
+    "failure": {
+      "Planet Health": -4,
+      "Public Support": -5,
+      "Policy Delay Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M24",
+    "id": "m24",
+    "title": "Groundwater Over-Extraction",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "You design urban environments. Your mysteries focus on infrastructure, urban ecology, and liveable cities.",
+    "primaryRoles": [
+      "farmer",
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "planner",
+      "policymaker"
+    ],
+    "sequence": [
+      "Agricultural Demand",
+      "Urban Water Demand",
+      "Over-Pumping",
+      "Aquifer Depletion",
+      "Land Subsidence",
+      "Well Drying",
+      "Water Supply Reduction",
+      "Groundwater Over-Extraction"
+    ],
+    "unlocks": [],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Groundwater Over-Extraction"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Water Indicator": 4
+    },
+    "failure": {
+      "Planet Health": -7,
+      "Water Indicator": -7,
+      "Food Indicator": -3
+    },
+    "tier": 1
+  },
+  {
+    "code": "M25",
+    "id": "m25",
+    "title": "Renewable Energy Transition Barriers",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Rationale:.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "planner"
+    ],
+    "sequence": [
+      "Fossil Fuel Subsidies",
+      "Grid Infrastructure Gaps",
+      "Permitting Delays",
+      "Community Opposition",
+      "Investment Uncertainty",
+      "Technology Deployment Lag",
+      "Continued Emissions",
+      "Transition Barrier"
+    ],
+    "unlocks": [],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Renewable Energy Transition Barriers"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 55,
+      "Climate Indicator": 3,
+      "Economy Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Climate Indicator": -4
+    },
+    "tier": 1
+  },
+  {
+    "code": "M26",
+    "id": "m26",
+    "title": "Urban Food Desert",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "Rationale:.",
+    "primaryRoles": [
+      "planner",
+      "citizen"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "activist"
+    ],
+    "sequence": [
+      "Supermarket Retreat",
+      "Public Transport Gaps",
+      "Affordability Barriers",
+      "Nutritional Poverty",
+      "Diet-Related Disease",
+      "Economic Burden",
+      "Health Inequality",
+      "Urban Food Desert"
+    ],
+    "unlocks": [],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Urban Food Desert"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Social Equity Indicator": 4,
+      "Health Score": 3
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Health Score": -5,
+      "Social Equity Indicator": -4
+    },
+    "tier": 1
+  },
+  {
+    "code": "M27",
+    "id": "m27",
+    "title": "Species Habitat Fragmentation",
+    "category": "bio",
+    "categoryLabel": "Biodiversity",
+    "brief": "Rationale:.",
+    "primaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "policymaker"
+    ],
+    "sequence": [
+      "Infrastructure Expansion",
+      "Habitat Splitting",
+      "Isolated Populations",
+      "Reduced Gene Flow",
+      "Inbreeding",
+      "Species Vulnerability",
+      "Local Extinction",
+      "Habitat Fragmentation"
+    ],
+    "unlocks": [],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Species Habitat Fragmentation"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 45,
+      "Biodiversity Indicator": 4
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Biodiversity Indicator": -5,
+      "Extinction Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M28",
+    "id": "m28",
+    "title": "Climate Misinformation Spread",
+    "category": "governance",
+    "categoryLabel": "Governance",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "activist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "student",
+      "scientist",
+      "citizen"
+    ],
+    "sequence": [
+      "Vested Interest Funding",
+      "Social Media Algorithms",
+      "Misinformation Spread",
+      "Public Doubt",
+      "Policy Resistance",
+      "Scientific Mistrust",
+      "Action Delay",
+      "Climate Misinformation"
+    ],
+    "unlocks": [
+      "Social Inequality",
+      "Climate Migration"
+    ],
+    "linkedCrises": [
+      "Food Shortage",
+      "Social Unrest"
+    ],
+    "linkedInterventions": [
+      "Food Reserves",
+      "Subsidy Programs",
+      "Trade Reform"
+    ],
+    "butterfly": [
+      "Food Price Spike",
+      "Social Inequality",
+      "Economic Instability",
+      "Migration"
+    ],
+    "success": {
+      "Planet Health": 7,
+      "Climate Action Points": 50,
+      "Public Engagement": 4,
+      "Policy Progress": 2
+    },
+    "failure": {
+      "Planet Health": -5,
+      "Public Support": -6,
+      "Policy Delay Risk": 15
+    },
+    "tier": 1
+  },
+  {
+    "code": "M29",
+    "id": "m29",
+    "title": "Loss Of Indigenous Land Rights",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "citizen",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "scientist"
+    ],
+    "sequence": [
+      "Land Tenure Gaps",
+      "Extractive Industry Pressure",
+      "Legal System Exclusion",
+      "Forced Displacement",
+      "Traditional Land Use Loss",
+      "Ecosystem Degradation",
+      "Cultural Heritage Loss",
+      "Indigenous Land Rights Loss"
+    ],
+    "unlocks": [
+      "Social Inequality",
+      "Economic Instability"
+    ],
+    "linkedCrises": [
+      "Refugee Crisis",
+      "Social Unrest"
+    ],
+    "linkedInterventions": [
+      "Climate Refugee Policy",
+      "Managed Retreat",
+      "Climate Financing"
+    ],
+    "butterfly": [
+      "Climate Migration"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Social Equity Indicator": 4,
+      "Biodiversity Indicator": 3
+    },
+    "failure": {
+      "Planet Health": -7,
+      "Biodiversity Indicator": -5,
+      "Social Equity Indicator": -4
+    },
+    "tier": 1
+  },
+  {
+    "code": "M30",
+    "id": "m30",
+    "title": "Transport Emissions Lock-In",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Linked Crisis Events:.",
+    "primaryRoles": [
+      "planner",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "business",
+      "activist"
+    ],
+    "sequence": [
+      "Car-Dependent Planning",
+      "Fossil Fuel Vehicle Fleet",
+      "Charging Infrastructure Gap",
+      "Consumer Habit Inertia",
+      "Continued Exhaust Emissions",
+      "Urban Air Pollution",
+      "Climate Target Miss",
+      "Transport Emissions Lock-In"
+    ],
+    "unlocks": [
+      "Water Scarcity",
+      "Climate Migration",
+      "Groundwater Depletion"
+    ],
+    "linkedCrises": [
+      "Water Emergency",
+      "Food Crisis"
+    ],
+    "linkedInterventions": [
+      "Emission Reduction",
+      "Water Storage Infrastructure",
+      "Glacier Monitoring"
+    ],
+    "butterfly": [
+      "Glacier Retreat",
+      "River Decline",
+      "Agricultural Crisis",
+      "Food Price Spike"
+    ],
+    "success": {
+      "Planet Health": 8,
+      "Climate Action Points": 50,
+      "Climate Indicator": 3,
+      "Air Quality": 3
+    },
+    "failure": {
+      "Planet Health": -6,
+      "Climate Indicator": -4,
+      "Air Pollution Risk": 10
+    },
+    "tier": 1
+  },
+  {
+    "code": "M31",
+    "id": "m31",
+    "title": "Glacier Retreat",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "Mountain glaciers feeding major rivers are retreating, threatening downstream water supply.",
+    "primaryRoles": [
+      "scientist",
+      "farmer"
+    ],
+    "secondaryRoles": [
+      "planner",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Water Scarcity",
+      "Climate Migration"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Glacier Retreat",
+      "River Decline",
+      "Agricultural Crisis",
+      "Food Price Spike"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M32",
+    "id": "m32",
+    "title": "Permafrost Thaw",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Thawing permafrost releases trapped methane, accelerating warming in a vicious feedback loop.",
+    "primaryRoles": [
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Tipping Point Activation",
+      "Methane Surge"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Permafrost Thaw",
+      "Methane Release",
+      "Accelerated Warming",
+      "Tipping Point"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M33",
+    "id": "m33",
+    "title": "Ocean Acidification",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Excess CO\u2082 acidifies ocean water, dissolving shellfish and reef structures.",
+    "primaryRoles": [
+      "scientist",
+      "business"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "activist"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Fisheries Collapse",
+      "Coastal Economy Loss"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Ocean Acidification",
+      "Shellfish Decline",
+      "Reef Loss",
+      "Fishery Collapse"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M34",
+    "id": "m34",
+    "title": "Wildfire Outbreaks",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Hotter, drier seasons expand wildfire reach into communities and carbon sinks.",
+    "primaryRoles": [
+      "planner",
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Public Health Emergency",
+      "Air Pollution"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Wildfire",
+      "Air Pollution",
+      "Health Emergency",
+      "Carbon Release"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M35",
+    "id": "m35",
+    "title": "Reservoir Depletion",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "Major reservoirs are dropping below operational thresholds during prolonged droughts.",
+    "primaryRoles": [
+      "planner",
+      "farmer"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Energy Security Crisis",
+      "Water Emergency"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Reservoir Depletion",
+      "Water Rationing",
+      "Power Cuts",
+      "Economic Stress"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M36",
+    "id": "m36",
+    "title": "Urban Heat Island",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Cities trap heat through asphalt and concrete, amplifying heatwave mortality.",
+    "primaryRoles": [
+      "planner",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "scientist",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Public Health Emergency",
+      "Energy Security Crisis"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Urban Heat Island",
+      "Health Emergency",
+      "Economic Burden",
+      "Social Inequality"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M37",
+    "id": "m37",
+    "title": "Land-Use Conflict",
+    "category": "bio",
+    "categoryLabel": "Bio",
+    "brief": "Competing demands for land between farming, housing and conservation are escalating.",
+    "primaryRoles": [
+      "farmer",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "activist",
+      "planner"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Species Decline",
+      "Ecosystem Collapse"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Land Conversion",
+      "Habitat Loss",
+      "Biodiversity Decline",
+      "Conflict"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M38",
+    "id": "m38",
+    "title": "Climate Migration",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Communities displaced by drought, flood and sea rise create unprecedented migration pressure.",
+    "primaryRoles": [
+      "citizen",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "activist",
+      "planner"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Social Inequality",
+      "Resource Conflict"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Climate Migration",
+      "Border Strain",
+      "Social Tension",
+      "Political Instability"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M39",
+    "id": "m39",
+    "title": "Sea Level Rise",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Rising seas inundate coastal cities and erode shoreline communities.",
+    "primaryRoles": [
+      "scientist",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "policymaker"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Climate Migration",
+      "Infrastructure Failure"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Sea Level Rise",
+      "Coastal Erosion",
+      "Property Loss",
+      "Climate Migration"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M40",
+    "id": "m40",
+    "title": "Food Price Spike",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Shocks across breadbaskets cascade into global food price surges.",
+    "primaryRoles": [
+      "farmer",
+      "business"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "policymaker"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Social Inequality",
+      "Food Insecurity"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Food Price Spike",
+      "Hunger Risk",
+      "Social Unrest",
+      "Migration"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 2
+  },
+  {
+    "code": "M41",
+    "id": "m41",
+    "title": "Public Health Emergency",
+    "category": "health",
+    "categoryLabel": "Health",
+    "brief": "Heat, smoke and disease overwhelm public health systems simultaneously.",
+    "primaryRoles": [
+      "citizen",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "scientist",
+      "planner"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Social Inequality",
+      "Economic Instability"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Health Emergency",
+      "Hospital Overload",
+      "Economic Burden",
+      "Social Inequality"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M42",
+    "id": "m42",
+    "title": "Carbon Lock-In",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Long-lived fossil infrastructure locks in emissions for decades to come.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Tipping Point Activation",
+      "Economic Instability"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Carbon Lock-In",
+      "Stranded Assets",
+      "Climate Target Miss",
+      "Tipping Point"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M43",
+    "id": "m43",
+    "title": "Energy Security Crisis",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Grid stress, fuel scarcity and price shocks destabilise national energy supply.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "planner",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Economic Instability",
+      "Infrastructure Failure"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Energy Crisis",
+      "Blackouts",
+      "Economic Disruption",
+      "Social Unrest"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M44",
+    "id": "m44",
+    "title": "Supply Chain Disruption",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Climate shocks ripple through globalised supply chains, breaking critical flows.",
+    "primaryRoles": [
+      "business",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "farmer"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Economic Instability",
+      "Food Price Spike"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Supply Shock",
+      "Stockouts",
+      "Price Spike",
+      "Economic Slowdown"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M45",
+    "id": "m45",
+    "title": "Biodiversity Collapse",
+    "category": "bio",
+    "categoryLabel": "Bio",
+    "brief": "Cumulative habitat loss triggers cascading species collapses across ecosystems.",
+    "primaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Ecosystem Collapse",
+      "Food Insecurity"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Biodiversity Loss",
+      "Pollinator Decline",
+      "Crop Failure",
+      "Ecosystem Collapse"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M46",
+    "id": "m46",
+    "title": "Fisheries Collapse",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Overfishing combined with warming oceans collapses commercial stocks worldwide.",
+    "primaryRoles": [
+      "business",
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "policymaker"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Food Insecurity",
+      "Coastal Economy Loss"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Fisheries Collapse",
+      "Food Supply Crisis",
+      "Price Spike",
+      "Social Unrest"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M47",
+    "id": "m47",
+    "title": "Water Conflict",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "Shared rivers and aquifers become flashpoints between nations under scarcity.",
+    "primaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Climate Migration",
+      "Resource Conflict"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Water Conflict",
+      "Political Instability",
+      "Regional Crisis",
+      "Migration"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M48",
+    "id": "m48",
+    "title": "Infrastructure Failure",
+    "category": "cities",
+    "categoryLabel": "Cities",
+    "brief": "Aging infrastructure fails under climate stress, disrupting essential services.",
+    "primaryRoles": [
+      "planner",
+      "business"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Economic Instability",
+      "Public Health Emergency"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Infrastructure Failure",
+      "Service Disruption",
+      "Economic Loss",
+      "Social Inequality"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M49",
+    "id": "m49",
+    "title": "Ecosystem Collapse",
+    "category": "bio",
+    "categoryLabel": "Bio",
+    "brief": "Key ecosystems pass tipping points beyond recovery, taking services with them.",
+    "primaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "policymaker"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Tipping Point Activation",
+      "Food Insecurity"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Ecosystem Collapse",
+      "Service Loss",
+      "Food Insecurity",
+      "Climate Acceleration"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M50",
+    "id": "m50",
+    "title": "Food Insecurity",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "Persistent shortages turn into widespread food insecurity across regions.",
+    "primaryRoles": [
+      "farmer",
+      "citizen"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Climate Migration",
+      "Social Inequality"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Food Insecurity",
+      "Malnutrition",
+      "Migration",
+      "Social Unrest"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 3
+  },
+  {
+    "code": "M51",
+    "id": "m51",
+    "title": "Economic Instability",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Economy.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "citizen"
+    ],
+    "sequence": [
+      "Climate Physical Risk",
+      "Transition Risk",
+      "Asset Stranding",
+      "Credit Market Stress",
+      "Investment Collapse",
+      "Currency Instability",
+      "Systemic Financial Risk",
+      "Economic Instability"
+    ],
+    "unlocks": [
+      "Social Inequality",
+      "Multi-Hazard Cascades"
+    ],
+    "linkedCrises": [
+      "Financial Crisis",
+      "Social Unrest"
+    ],
+    "linkedInterventions": [
+      "Climate Risk Finance",
+      "Just Transition",
+      "Green New Deal"
+    ],
+    "butterfly": [
+      "Economic Instability",
+      "Social Inequality",
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M52",
+    "id": "m52",
+    "title": "Social Inequality",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Society.",
+    "primaryRoles": [
+      "citizen",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "policymaker"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "linkedCrises": [
+      "Social Collapse",
+      "Political Crisis"
+    ],
+    "linkedInterventions": [
+      "Just Transition Programs",
+      "Universal Basic Services",
+      "Climate Justice Policy"
+    ],
+    "butterfly": [
+      "Social Inequality"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M53",
+    "id": "m53",
+    "title": "Multi-Hazard Cascades",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Compound disasters strike simultaneously, overwhelming response capacity.",
+    "primaryRoles": [
+      "scientist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "planner",
+      "activist"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Planetary Boundaries Breach",
+      "Tipping Point Activation"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Multi-Hazard Cascades",
+      "Response Failure",
+      "Cascade Acceleration",
+      "Planetary Stress"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M54",
+    "id": "m54",
+    "title": "Tipping Point Activation",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Earth system crosses a major tipping point, locking in self-amplifying change.",
+    "primaryRoles": [
+      "scientist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "activist",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Amazon Dieback",
+      "Planetary Boundaries Breach"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Tipping Point Activation",
+      "Amazon Dieback",
+      "Planetary Boundaries Breach"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M55",
+    "id": "m55",
+    "title": "Amazon Dieback",
+    "category": "bio",
+    "categoryLabel": "Bio",
+    "brief": "The Amazon shifts from rainforest to savanna, releasing massive carbon stocks.",
+    "primaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "farmer",
+      "policymaker"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Tipping Point Activation",
+      "Planetary Boundaries Breach"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Amazon Dieback",
+      "Carbon Release",
+      "Climate Acceleration",
+      "Hydrological Collapse"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M56",
+    "id": "m56",
+    "title": "Methane Surge",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Permafrost and ocean methane releases trigger rapid additional warming.",
+    "primaryRoles": [
+      "scientist"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "business"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Tipping Point Activation",
+      "Multi-Hazard Cascades"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Methane Surge",
+      "Warming Spike",
+      "Tipping Cascade",
+      "Adaptation Failure"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M57",
+    "id": "m57",
+    "title": "Ocean Circulation Disruption",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Atlantic overturning weakens, scrambling regional climates worldwide.",
+    "primaryRoles": [
+      "scientist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "planner"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Food Insecurity",
+      "Climate Migration"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "AMOC Slowdown",
+      "Regional Climate Shock",
+      "Crop Failure",
+      "Migration"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M58",
+    "id": "m58",
+    "title": "Antarctic Ice Sheet Collapse",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "West Antarctic ice sheet destabilises, committing meters of sea level rise.",
+    "primaryRoles": [
+      "scientist",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Sea Level Rise",
+      "Climate Migration"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Ice Sheet Collapse",
+      "Sea Level Rise",
+      "Coastal Inundation",
+      "Mass Migration"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M59",
+    "id": "m59",
+    "title": "Resource Conflict",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Climate-driven scarcity triggers conflict over water, food and energy resources.",
+    "primaryRoles": [
+      "policymaker",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "business"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Climate Migration",
+      "Planetary Boundaries Breach"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Resource Conflict",
+      "War Risk",
+      "Refugee Crisis",
+      "System Breakdown"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M60",
+    "id": "m60",
+    "title": "Planetary Boundaries Breach",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Multiple planetary boundaries breached simultaneously \u2014 Earth enters a new state.",
+    "primaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "citizen"
+    ],
+    "sequence": [],
+    "unlocks": [
+      "Multi-Hazard Cascades",
+      "Tipping Point Activation"
+    ],
+    "linkedCrises": [],
+    "linkedInterventions": [],
+    "butterfly": [
+      "Planetary Boundaries Breach",
+      "Hothouse Earth",
+      "Civilisational Stress",
+      "Adaptation Limit"
+    ],
+    "success": {},
+    "failure": {},
+    "tier": 4
+  },
+  {
+    "code": "M61",
+    "id": "m61",
+    "title": "AI Energy Consumption Crisis",
+    "category": "energy",
+    "categoryLabel": "AI & Tech",
+    "brief": "The explosive growth of AI data centres is driving massive electricity demand, threatening renewable energy targets and straining national grids.",
+    "primaryRoles": ["business", "policymaker"],
+    "secondaryRoles": ["scientist"],
+    "sequence": ["AI Model Scaling","Data Centre Proliferation","Energy Demand Surge","Grid Capacity Stress","Fossil Fuel Rebound Risk","Carbon Footprint Growth","Renewable Target Undermined","AI Energy Consumption Crisis"],
+    "unlocks": ["Carbon Lock-In","Energy Security Crisis","Supply Chain Disruption"],
+    "linkedCrises": ["Energy Security Crisis","Climate Target Failure"],
+    "linkedInterventions": ["Green AI Standards","Renewable-Powered Data Centres","AI Efficiency Mandates"],
+    "butterfly": ["AI Energy Surge","Grid Stress","Fossil Fuel Rebound","Climate Target Failure"],
+    "aiConnection": "Training large AI models can consume as much electricity as hundreds of homes use in a year. As AI scales globally, data-centre demand could reach 10–20% of world electricity by 2030 — AI's climate benefit depends entirely on whether its energy source is clean.",
+    "tier": 2
+  },
+  {
+    "code": "M62",
+    "id": "m62",
+    "title": "Algorithmic Greenwashing",
+    "category": "governance",
+    "categoryLabel": "AI & Governance",
+    "brief": "Companies use AI-generated reports, deepfakes, and automated content to falsely project green credentials — misleading investors, consumers and regulators.",
+    "primaryRoles": ["activist", "policymaker"],
+    "secondaryRoles": ["business"],
+    "sequence": ["AI Content Generation","Fabricated ESG Reports","Investor Deception","Capital Misallocation","Real Climate Action Underfunded","Public Trust Erosion","Regulatory Backlash","Algorithmic Greenwashing"],
+    "unlocks": ["Economic Instability","Social Inequality","Climate Policy Inaction"],
+    "linkedCrises": ["Financial Fraud Crisis","Regulatory Failure"],
+    "linkedInterventions": ["AI Audit Requirements","ESG Verification Standards","Digital Accountability Law"],
+    "butterfly": ["Greenwash AI","Investor Deception","Capital Misallocation","Real Climate Action Underfunded"],
+    "aiConnection": "Generative AI makes it trivially easy to produce convincing sustainability reports and fabricated impact metrics at scale. Without mandatory AI audit trails and third-party ESG verification, bad actors can flood markets with false green claims — diverting billions from genuine climate solutions.",
+    "tier": 2
+  },
+  {
+    "code": "M63",
+    "id": "m63",
+    "title": "AI-Driven Resource Extraction Surge",
+    "category": "pollution",
+    "categoryLabel": "AI & Land Use",
+    "brief": "AI is being used by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling — accelerating extraction and emissions.",
+    "primaryRoles": ["scientist", "activist"],
+    "secondaryRoles": ["policymaker", "citizen"],
+    "sequence": ["AI Exploration Tools","Fossil Reserve Discovery","Optimised Extraction","Rebound Effect","Emission Surge","Ecosystem Degradation","Climate Debt Accumulation","AI-Driven Resource Extraction Surge"],
+    "unlocks": ["Carbon Lock-In","Biodiversity Collapse","Tipping Point Activation"],
+    "linkedCrises": ["Ecological Emergency","Carbon Lock-In","Regulatory Failure"],
+    "linkedInterventions": ["AI Impact Assessment Mandates","Extraction Moratoriums","Nature-Positive AI Policy"],
+    "butterfly": ["AI Extraction Efficiency","Fossil Reserve Exploitation","Emission Surge","Tipping Point Risk"],
+    "aiConnection": "AI is being deployed by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling, producing a rebound effect where efficiency gains accelerate total extraction. The same tools that could model climate futures are making fossil-fuel exploitation cheaper and faster — a direct contradiction of decarbonisation goals.",
+    "tier": 3
+  },
+  {
+    "code": "M64",
+    "id": "m64",
+    "title": "Autonomous Systems & Ecological Blind Spots",
+    "category": "bio",
+    "categoryLabel": "AI & Biodiversity",
+    "brief": "Autonomous drones, precision agriculture AI and smart infrastructure make decisions that damage ecosystems and wildlife corridors — with no ecological awareness in their design.",
+    "primaryRoles": ["scientist", "planner"],
+    "secondaryRoles": ["citizen", "activist"],
+    "sequence": ["Autonomous System Deployment","Efficiency-Only Optimisation","Ecological Blind Spots","Habitat Fragmentation","Pollinator Decline","Species Stress","Ecosystem Cascade","Autonomous Systems Ecological Blind Spots"],
+    "unlocks": ["Ecosystem Collapse","Biodiversity Collapse","Species Decline"],
+    "linkedCrises": ["Biodiversity Emergency","Ecosystem Failure","Regulatory Crisis"],
+    "linkedInterventions": ["Ecological AI Audits","Nature-Inclusive Algorithm Design","AI Environmental Impact Assessment"],
+    "butterfly": ["AI Blind Spots","Habitat Disruption","Species Stress","Ecosystem Cascade"],
+    "aiConnection": "Most AI systems optimising logistics, agriculture and urban planning are trained on economic and efficiency data only — with no ecological constraints encoded. Autonomous decisions can systematically destroy pollinator habitat, fragment wildlife corridors or disrupt migration patterns at scale, faster than any human process and with no single point of accountability.",
+    "tier": 3
+  },
+  {
+    "code": "M65",
+    "id": "m65",
+    "title": "AI Climate Model Manipulation",
+    "category": "climate",
+    "categoryLabel": "AI & Climate",
+    "brief": "Adversarial machine learning subtly corrupts the shared AI-driven climate models that feed IPCC reports and treaty negotiations — eroding scientific consensus.",
+    "primaryRoles": ["scientist", "policymaker"],
+    "secondaryRoles": ["activist"],
+    "sequence": ["Shared Climate Models","Adversarial Data Injection","Biased Inference","Consensus Erosion","Policy Paralysis","Delayed Mitigation","Tipping Point Activation","AI Climate Model Manipulation"],
+    "unlocks": ["Tipping Point Activation","Multi-Hazard Cascades","Planetary Boundaries Breach"],
+    "linkedCrises": ["Scientific Integrity Crisis","Policy Paralysis"],
+    "linkedInterventions": ["Open-Source Climate AI Verification","International AI Security Treaty","Federated Model Integrity Protocols"],
+    "butterfly": ["Model Manipulation","Consensus Collapse","Policy Paralysis","Tipping Point Activation"],
+    "aiConnection": "Modern climate science depends on shared AI-driven models — CMIP6, weather prediction, carbon-cycle models — feeding directly into IPCC reports. Adversarial machine learning can introduce subtle, undetectable biases that make models systematically underestimate warming or overstate carbon sinks — one of the highest-stakes AI security threats on the planet.",
+    "tier": 4
+  },
+  {
+    "code": "M66",
+    "id": "m66",
+    "title": "AI-Accelerated Inequality in Climate Adaptation",
+    "category": "society",
+    "categoryLabel": "AI & Society",
+    "brief": "Wealthy nations and corporations gain massive adaptation advantages from AI while the Global South is left behind, deepening the climate-justice gap to breaking point.",
+    "primaryRoles": ["citizen", "policymaker"],
+    "secondaryRoles": ["activist", "scientist"],
+    "sequence": ["AI Adaptation Advantage","North-South Divide","Data & Compute Gap","Uneven Resilience","Adaptation Failure","Displacement Surge","Justice Crisis","AI-Accelerated Inequality in Climate Adaptation"],
+    "unlocks": ["Climate Migration","Social Inequality","Planetary Boundaries Breach"],
+    "linkedCrises": ["Climate Justice Crisis","Migration Emergency"],
+    "linkedInterventions": ["Global AI Adaptation Fund","Open Climate AI Commons","South-Led AI Capacity Building"],
+    "butterfly": ["AI Adaptation Gap","Uneven Resilience","Adaptation Failure","Climate Justice Crisis"],
+    "aiConnection": "Precision flood prediction, AI-optimised crop systems and smart-city resilience require data, compute, and talent concentrated in the Global North. Without deliberate transfer mechanisms, AI compounds existing climate injustice — those least responsible for emissions have the least access to the tools that reduce harm.",
+    "tier": 4
+  }
+]

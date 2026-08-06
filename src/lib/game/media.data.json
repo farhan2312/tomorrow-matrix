@@ -1,0 +1,17 @@
+{
+  "_readme": [
+    "Mystery media registry — keyed by mystery CODE (M01 … M66).",
+    "Drop in one entry per mystery. No frontend changes are required when adding",
+    "media: the Mystery Engine reads this file at runtime.",
+    "",
+    "Shape:",
+    "  \"M01\": {",
+    "    \"intro\":     { \"src\": \"https://…/m01-intro.mp4\", \"poster\": \"…jpg\", \"captions\": \"…vtt\", \"title\": \"…\", \"durationLabel\": \"1:20\" },",
+    "    \"explainer\": { \"src\": \"…\", \"poster\": \"…\", \"captions\": \"…\", \"keyPoints\": [\"…\", \"…\"] },",
+    "    \"extra\": [ { \"kind\": \"interview\", \"label\": \"Expert Interview\", \"src\": \"…\" } ]",
+    "  }",
+    "",
+    "\"kind\" for extras is free-form (interview | simulation | visualization | …) —",
+    "the UI renders any extras generically."
+  ]
+}

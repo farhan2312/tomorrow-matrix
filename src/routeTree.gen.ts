@@ -9,133 +9,384 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as RoleSelectRouteImport } from './routes/role-select'
+import { Route as RecruitRouteImport } from './routes/recruit'
+import { Route as PlayRouteImport } from './routes/play'
+import { Route as ModeSelectRouteImport } from './routes/mode-select'
+import { Route as EndgameRouteImport } from './routes/endgame'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AccountRouteImport } from './routes/account'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BookRouteImport } from './routes/book'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as CoursesIndexRouteImport } from './routes/courses.index'
-import { Route as CoursesCourseIdRouteImport } from './routes/courses.$courseId'
-import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
+import { Route as PlayIndexRouteImport } from './routes/play.index'
+import { Route as LobbyIndexRouteImport } from './routes/lobby.index'
+import { Route as PlayRoleRouteImport } from './routes/play.role'
+import { Route as PlayNetworkRouteImport } from './routes/play.network'
+import { Route as PlayMarketplaceRouteImport } from './routes/play.marketplace'
+import { Route as PlayMapRouteImport } from './routes/play.map'
+import { Route as PlayKnowledgeRouteImport } from './routes/play.knowledge'
+import { Route as PlayJournalRouteImport } from './routes/play.journal'
+import { Route as PlayDashboardRouteImport } from './routes/play.dashboard'
+import { Route as PlayArchiveRouteImport } from './routes/play.archive'
+import { Route as LobbyCodeRouteImport } from './routes/lobby.$code'
+import { Route as FacilitatorCodeRouteImport } from './routes/facilitator.$code'
+import { Route as PlayMysteriesIndexRouteImport } from './routes/play.mysteries.index'
+import { Route as PlayMysteriesIdRouteImport } from './routes/play.mysteries.$id'
+import { Route as FacilitatorWorkshopCodeRouteImport } from './routes/facilitator.workshop.$code'
 
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoleSelectRoute = RoleSelectRouteImport.update({
+  id: '/role-select',
+  path: '/role-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecruitRoute = RecruitRouteImport.update({
+  id: '/recruit',
+  path: '/recruit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayRoute = PlayRouteImport.update({
+  id: '/play',
+  path: '/play',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModeSelectRoute = ModeSelectRouteImport.update({
+  id: '/mode-select',
+  path: '/mode-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EndgameRoute = EndgameRouteImport.update({
+  id: '/endgame',
+  path: '/endgame',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BookRoute = BookRouteImport.update({
-  id: '/book',
-  path: '/book',
+const PlayIndexRoute = PlayIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PlayRoute,
+} as any)
+const LobbyIndexRoute = LobbyIndexRouteImport.update({
+  id: '/lobby/',
+  path: '/lobby/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const PlayRoleRoute = PlayRoleRouteImport.update({
+  id: '/role',
+  path: '/role',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayNetworkRoute = PlayNetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayMarketplaceRoute = PlayMarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayMapRoute = PlayMapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayKnowledgeRoute = PlayKnowledgeRouteImport.update({
+  id: '/knowledge',
+  path: '/knowledge',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayJournalRoute = PlayJournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayDashboardRoute = PlayDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayArchiveRoute = PlayArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
+  getParentRoute: () => PlayRoute,
+} as any)
+const LobbyCodeRoute = LobbyCodeRouteImport.update({
+  id: '/lobby/$code',
+  path: '/lobby/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
+const FacilitatorCodeRoute = FacilitatorCodeRouteImport.update({
+  id: '/facilitator/$code',
+  path: '/facilitator/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
+const PlayMysteriesIndexRoute = PlayMysteriesIndexRouteImport.update({
+  id: '/mysteries/',
+  path: '/mysteries/',
+  getParentRoute: () => PlayRoute,
 } as any)
-const CoursesIndexRoute = CoursesIndexRouteImport.update({
-  id: '/courses/',
-  path: '/courses/',
-  getParentRoute: () => rootRouteImport,
+const PlayMysteriesIdRoute = PlayMysteriesIdRouteImport.update({
+  id: '/mysteries/$id',
+  path: '/mysteries/$id',
+  getParentRoute: () => PlayRoute,
 } as any)
-const CoursesCourseIdRoute = CoursesCourseIdRouteImport.update({
-  id: '/courses/$courseId',
-  path: '/courses/$courseId',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesSlugRoute = ServicesSlugRouteImport.update({
-  id: '/services/$slug',
-  path: '/services/$slug',
+const FacilitatorWorkshopCodeRoute = FacilitatorWorkshopCodeRouteImport.update({
+  id: '/facilitator/workshop/$code',
+  path: '/facilitator/workshop/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/book': typeof BookRoute
-  '/contact': typeof ContactRoute
-  '/privacy': typeof PrivacyRoute
-  '/terms': typeof TermsRoute
-  '/courses/$courseId': typeof CoursesCourseIdRoute
-  '/services/$slug': typeof ServicesSlugRoute
-  '/courses/': typeof CoursesIndexRoute
+  '/account': typeof AccountRoute
+  '/auth': typeof AuthRoute
+  '/endgame': typeof EndgameRoute
+  '/mode-select': typeof ModeSelectRoute
+  '/play': typeof PlayRouteWithChildren
+  '/recruit': typeof RecruitRoute
+  '/role-select': typeof RoleSelectRoute
+  '/settings': typeof SettingsRoute
+  '/facilitator/$code': typeof FacilitatorCodeRoute
+  '/lobby/$code': typeof LobbyCodeRoute
+  '/play/archive': typeof PlayArchiveRoute
+  '/play/dashboard': typeof PlayDashboardRoute
+  '/play/journal': typeof PlayJournalRoute
+  '/play/knowledge': typeof PlayKnowledgeRoute
+  '/play/map': typeof PlayMapRoute
+  '/play/marketplace': typeof PlayMarketplaceRoute
+  '/play/network': typeof PlayNetworkRoute
+  '/play/role': typeof PlayRoleRoute
+  '/lobby/': typeof LobbyIndexRoute
+  '/play/': typeof PlayIndexRoute
+  '/facilitator/workshop/$code': typeof FacilitatorWorkshopCodeRoute
+  '/play/mysteries/$id': typeof PlayMysteriesIdRoute
+  '/play/mysteries/': typeof PlayMysteriesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/book': typeof BookRoute
-  '/contact': typeof ContactRoute
-  '/privacy': typeof PrivacyRoute
-  '/terms': typeof TermsRoute
-  '/courses/$courseId': typeof CoursesCourseIdRoute
-  '/services/$slug': typeof ServicesSlugRoute
-  '/courses': typeof CoursesIndexRoute
+  '/account': typeof AccountRoute
+  '/auth': typeof AuthRoute
+  '/endgame': typeof EndgameRoute
+  '/mode-select': typeof ModeSelectRoute
+  '/recruit': typeof RecruitRoute
+  '/role-select': typeof RoleSelectRoute
+  '/settings': typeof SettingsRoute
+  '/facilitator/$code': typeof FacilitatorCodeRoute
+  '/lobby/$code': typeof LobbyCodeRoute
+  '/play/archive': typeof PlayArchiveRoute
+  '/play/dashboard': typeof PlayDashboardRoute
+  '/play/journal': typeof PlayJournalRoute
+  '/play/knowledge': typeof PlayKnowledgeRoute
+  '/play/map': typeof PlayMapRoute
+  '/play/marketplace': typeof PlayMarketplaceRoute
+  '/play/network': typeof PlayNetworkRoute
+  '/play/role': typeof PlayRoleRoute
+  '/lobby': typeof LobbyIndexRoute
+  '/play': typeof PlayIndexRoute
+  '/facilitator/workshop/$code': typeof FacilitatorWorkshopCodeRoute
+  '/play/mysteries/$id': typeof PlayMysteriesIdRoute
+  '/play/mysteries': typeof PlayMysteriesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/book': typeof BookRoute
-  '/contact': typeof ContactRoute
-  '/privacy': typeof PrivacyRoute
-  '/terms': typeof TermsRoute
-  '/courses/$courseId': typeof CoursesCourseIdRoute
-  '/services/$slug': typeof ServicesSlugRoute
-  '/courses/': typeof CoursesIndexRoute
+  '/account': typeof AccountRoute
+  '/auth': typeof AuthRoute
+  '/endgame': typeof EndgameRoute
+  '/mode-select': typeof ModeSelectRoute
+  '/play': typeof PlayRouteWithChildren
+  '/recruit': typeof RecruitRoute
+  '/role-select': typeof RoleSelectRoute
+  '/settings': typeof SettingsRoute
+  '/facilitator/$code': typeof FacilitatorCodeRoute
+  '/lobby/$code': typeof LobbyCodeRoute
+  '/play/archive': typeof PlayArchiveRoute
+  '/play/dashboard': typeof PlayDashboardRoute
+  '/play/journal': typeof PlayJournalRoute
+  '/play/knowledge': typeof PlayKnowledgeRoute
+  '/play/map': typeof PlayMapRoute
+  '/play/marketplace': typeof PlayMarketplaceRoute
+  '/play/network': typeof PlayNetworkRoute
+  '/play/role': typeof PlayRoleRoute
+  '/lobby/': typeof LobbyIndexRoute
+  '/play/': typeof PlayIndexRoute
+  '/facilitator/workshop/$code': typeof FacilitatorWorkshopCodeRoute
+  '/play/mysteries/$id': typeof PlayMysteriesIdRoute
+  '/play/mysteries/': typeof PlayMysteriesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/book'
-    | '/contact'
-    | '/privacy'
-    | '/terms'
-    | '/courses/$courseId'
-    | '/services/$slug'
-    | '/courses/'
+    | '/account'
+    | '/auth'
+    | '/endgame'
+    | '/mode-select'
+    | '/play'
+    | '/recruit'
+    | '/role-select'
+    | '/settings'
+    | '/facilitator/$code'
+    | '/lobby/$code'
+    | '/play/archive'
+    | '/play/dashboard'
+    | '/play/journal'
+    | '/play/knowledge'
+    | '/play/map'
+    | '/play/marketplace'
+    | '/play/network'
+    | '/play/role'
+    | '/lobby/'
+    | '/play/'
+    | '/facilitator/workshop/$code'
+    | '/play/mysteries/$id'
+    | '/play/mysteries/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/book'
-    | '/contact'
-    | '/privacy'
-    | '/terms'
-    | '/courses/$courseId'
-    | '/services/$slug'
-    | '/courses'
+    | '/account'
+    | '/auth'
+    | '/endgame'
+    | '/mode-select'
+    | '/recruit'
+    | '/role-select'
+    | '/settings'
+    | '/facilitator/$code'
+    | '/lobby/$code'
+    | '/play/archive'
+    | '/play/dashboard'
+    | '/play/journal'
+    | '/play/knowledge'
+    | '/play/map'
+    | '/play/marketplace'
+    | '/play/network'
+    | '/play/role'
+    | '/lobby'
+    | '/play'
+    | '/facilitator/workshop/$code'
+    | '/play/mysteries/$id'
+    | '/play/mysteries'
   id:
     | '__root__'
     | '/'
-    | '/book'
-    | '/contact'
-    | '/privacy'
-    | '/terms'
-    | '/courses/$courseId'
-    | '/services/$slug'
-    | '/courses/'
+    | '/account'
+    | '/auth'
+    | '/endgame'
+    | '/mode-select'
+    | '/play'
+    | '/recruit'
+    | '/role-select'
+    | '/settings'
+    | '/facilitator/$code'
+    | '/lobby/$code'
+    | '/play/archive'
+    | '/play/dashboard'
+    | '/play/journal'
+    | '/play/knowledge'
+    | '/play/map'
+    | '/play/marketplace'
+    | '/play/network'
+    | '/play/role'
+    | '/lobby/'
+    | '/play/'
+    | '/facilitator/workshop/$code'
+    | '/play/mysteries/$id'
+    | '/play/mysteries/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BookRoute: typeof BookRoute
-  ContactRoute: typeof ContactRoute
-  PrivacyRoute: typeof PrivacyRoute
-  TermsRoute: typeof TermsRoute
-  CoursesCourseIdRoute: typeof CoursesCourseIdRoute
-  ServicesSlugRoute: typeof ServicesSlugRoute
-  CoursesIndexRoute: typeof CoursesIndexRoute
+  AccountRoute: typeof AccountRoute
+  AuthRoute: typeof AuthRoute
+  EndgameRoute: typeof EndgameRoute
+  ModeSelectRoute: typeof ModeSelectRoute
+  PlayRoute: typeof PlayRouteWithChildren
+  RecruitRoute: typeof RecruitRoute
+  RoleSelectRoute: typeof RoleSelectRoute
+  SettingsRoute: typeof SettingsRoute
+  FacilitatorCodeRoute: typeof FacilitatorCodeRoute
+  LobbyCodeRoute: typeof LobbyCodeRoute
+  LobbyIndexRoute: typeof LobbyIndexRoute
+  FacilitatorWorkshopCodeRoute: typeof FacilitatorWorkshopCodeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/role-select': {
+      id: '/role-select'
+      path: '/role-select'
+      fullPath: '/role-select'
+      preLoaderRoute: typeof RoleSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recruit': {
+      id: '/recruit'
+      path: '/recruit'
+      fullPath: '/recruit'
+      preLoaderRoute: typeof RecruitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play': {
+      id: '/play'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mode-select': {
+      id: '/mode-select'
+      path: '/mode-select'
+      fullPath: '/mode-select'
+      preLoaderRoute: typeof ModeSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/endgame': {
+      id: '/endgame'
+      path: '/endgame'
+      fullPath: '/endgame'
+      preLoaderRoute: typeof EndgameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -143,67 +394,158 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/book': {
-      id: '/book'
-      path: '/book'
-      fullPath: '/book'
-      preLoaderRoute: typeof BookRouteImport
+    '/play/': {
+      id: '/play/'
+      path: '/'
+      fullPath: '/play/'
+      preLoaderRoute: typeof PlayIndexRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/lobby/': {
+      id: '/lobby/'
+      path: '/lobby'
+      fullPath: '/lobby/'
+      preLoaderRoute: typeof LobbyIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/play/role': {
+      id: '/play/role'
+      path: '/role'
+      fullPath: '/play/role'
+      preLoaderRoute: typeof PlayRoleRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/network': {
+      id: '/play/network'
+      path: '/network'
+      fullPath: '/play/network'
+      preLoaderRoute: typeof PlayNetworkRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/marketplace': {
+      id: '/play/marketplace'
+      path: '/marketplace'
+      fullPath: '/play/marketplace'
+      preLoaderRoute: typeof PlayMarketplaceRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/map': {
+      id: '/play/map'
+      path: '/map'
+      fullPath: '/play/map'
+      preLoaderRoute: typeof PlayMapRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/knowledge': {
+      id: '/play/knowledge'
+      path: '/knowledge'
+      fullPath: '/play/knowledge'
+      preLoaderRoute: typeof PlayKnowledgeRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/journal': {
+      id: '/play/journal'
+      path: '/journal'
+      fullPath: '/play/journal'
+      preLoaderRoute: typeof PlayJournalRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/dashboard': {
+      id: '/play/dashboard'
+      path: '/dashboard'
+      fullPath: '/play/dashboard'
+      preLoaderRoute: typeof PlayDashboardRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/archive': {
+      id: '/play/archive'
+      path: '/archive'
+      fullPath: '/play/archive'
+      preLoaderRoute: typeof PlayArchiveRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/lobby/$code': {
+      id: '/lobby/$code'
+      path: '/lobby/$code'
+      fullPath: '/lobby/$code'
+      preLoaderRoute: typeof LobbyCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
+    '/facilitator/$code': {
+      id: '/facilitator/$code'
+      path: '/facilitator/$code'
+      fullPath: '/facilitator/$code'
+      preLoaderRoute: typeof FacilitatorCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
+    '/play/mysteries/': {
+      id: '/play/mysteries/'
+      path: '/mysteries'
+      fullPath: '/play/mysteries/'
+      preLoaderRoute: typeof PlayMysteriesIndexRouteImport
+      parentRoute: typeof PlayRoute
     }
-    '/courses/': {
-      id: '/courses/'
-      path: '/courses'
-      fullPath: '/courses/'
-      preLoaderRoute: typeof CoursesIndexRouteImport
-      parentRoute: typeof rootRouteImport
+    '/play/mysteries/$id': {
+      id: '/play/mysteries/$id'
+      path: '/mysteries/$id'
+      fullPath: '/play/mysteries/$id'
+      preLoaderRoute: typeof PlayMysteriesIdRouteImport
+      parentRoute: typeof PlayRoute
     }
-    '/courses/$courseId': {
-      id: '/courses/$courseId'
-      path: '/courses/$courseId'
-      fullPath: '/courses/$courseId'
-      preLoaderRoute: typeof CoursesCourseIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/$slug': {
-      id: '/services/$slug'
-      path: '/services/$slug'
-      fullPath: '/services/$slug'
-      preLoaderRoute: typeof ServicesSlugRouteImport
+    '/facilitator/workshop/$code': {
+      id: '/facilitator/workshop/$code'
+      path: '/facilitator/workshop/$code'
+      fullPath: '/facilitator/workshop/$code'
+      preLoaderRoute: typeof FacilitatorWorkshopCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
+interface PlayRouteChildren {
+  PlayArchiveRoute: typeof PlayArchiveRoute
+  PlayDashboardRoute: typeof PlayDashboardRoute
+  PlayJournalRoute: typeof PlayJournalRoute
+  PlayKnowledgeRoute: typeof PlayKnowledgeRoute
+  PlayMapRoute: typeof PlayMapRoute
+  PlayMarketplaceRoute: typeof PlayMarketplaceRoute
+  PlayNetworkRoute: typeof PlayNetworkRoute
+  PlayRoleRoute: typeof PlayRoleRoute
+  PlayIndexRoute: typeof PlayIndexRoute
+  PlayMysteriesIdRoute: typeof PlayMysteriesIdRoute
+  PlayMysteriesIndexRoute: typeof PlayMysteriesIndexRoute
+}
+
+const PlayRouteChildren: PlayRouteChildren = {
+  PlayArchiveRoute: PlayArchiveRoute,
+  PlayDashboardRoute: PlayDashboardRoute,
+  PlayJournalRoute: PlayJournalRoute,
+  PlayKnowledgeRoute: PlayKnowledgeRoute,
+  PlayMapRoute: PlayMapRoute,
+  PlayMarketplaceRoute: PlayMarketplaceRoute,
+  PlayNetworkRoute: PlayNetworkRoute,
+  PlayRoleRoute: PlayRoleRoute,
+  PlayIndexRoute: PlayIndexRoute,
+  PlayMysteriesIdRoute: PlayMysteriesIdRoute,
+  PlayMysteriesIndexRoute: PlayMysteriesIndexRoute,
+}
+
+const PlayRouteWithChildren = PlayRoute._addFileChildren(PlayRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BookRoute: BookRoute,
-  ContactRoute: ContactRoute,
-  PrivacyRoute: PrivacyRoute,
-  TermsRoute: TermsRoute,
-  CoursesCourseIdRoute: CoursesCourseIdRoute,
-  ServicesSlugRoute: ServicesSlugRoute,
-  CoursesIndexRoute: CoursesIndexRoute,
+  AccountRoute: AccountRoute,
+  AuthRoute: AuthRoute,
+  EndgameRoute: EndgameRoute,
+  ModeSelectRoute: ModeSelectRoute,
+  PlayRoute: PlayRouteWithChildren,
+  RecruitRoute: RecruitRoute,
+  RoleSelectRoute: RoleSelectRoute,
+  SettingsRoute: SettingsRoute,
+  FacilitatorCodeRoute: FacilitatorCodeRoute,
+  LobbyCodeRoute: LobbyCodeRoute,
+  LobbyIndexRoute: LobbyIndexRoute,
+  FacilitatorWorkshopCodeRoute: FacilitatorWorkshopCodeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

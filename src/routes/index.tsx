@@ -1,82 +1,168 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { TerraProvider, TerraIndicator } from "@/components/site/TerraHealth";
-import {
-  NetworkBackground,
-  CursorGlow,
-  FloatingParticles,
-} from "@/components/site/NetworkBackground";
-import { SmoothScroll } from "@/components/site/SmoothScroll";
-import { Nav } from "@/components/site/Nav";
-import { Hero } from "@/components/sections/Hero";
-import { Challenges, Framework } from "@/components/sections/Story";
-import { Lifecycle } from "@/components/sections/Lifecycle";
-import { Services } from "@/components/sections/Services";
-import { WhyUs } from "@/components/sections/WhyUs";
-import { Founder } from "@/components/sections/Founder";
-import { TomorrowMatrix } from "@/components/sections/TomorrowMatrix";
-import { Knowledge } from "@/components/sections/Knowledge";
-import { Assessment } from "@/components/sections/Assessment";
-import { Final } from "@/components/sections/Final";
+import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { Globe2, ArrowRight, Sparkles, Network as NetIcon, Map as MapIcon, AlertTriangle, LogIn, UserCircle } from "lucide-react";
+import { useGame } from "@/lib/game/store";
+import { supabase } from "@/integrations/supabase/client";
+import terraGlobe from "@/assets/terra-globe.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "For Tomorrow — Credible sustainability, from today" },
-      {
-        name: "description",
-        content:
-          "For Tomorrow partners with organizations to design, implement, and verify sustainability and ESG solutions that are measurable, compliant, and future-ready.",
-      },
-      { property: "og:title", content: "For Tomorrow — Credible sustainability, from today" },
-      {
-        property: "og:description",
-        content:
-          "An integrated sustainability practice: strategy, measurement, reporting, verification.",
-      },
-      { property: "og:url", content: "/" },
+      { title: "The Tomorrow Matrix — A Living Climate System Game" },
+      { name: "description", content: "Restore Terra to 70% before 2050. Solve climate mysteries, respond to crises, and shape the planet's future." },
+      { property: "og:title", content: "The Tomorrow Matrix" },
+      { property: "og:description", content: "One Planet. Many Choices. Our Future." },
     ],
-    links: [{ rel: "canonical", href: "/" }],
   }),
-  component: Home,
+  component: Landing,
 });
 
-function Home() {
+function Landing() {
+  const navigate = useNavigate();
+  const { setPlayer, reset } = useGame();
+  const [name, setName] = useState("");
+  const [signedIn, setSignedIn] = useState<null | { email: string | null; display: string | null }>(null);
+
+  useEffect(() => {
+    supabase.auth.getUser().then(async ({ data }) => {
+      if (!data.user) {
+        // First-time / signed-out landing
+        import("@/lib/voice/store").then((m) => m.narrate("OB-01"));
+        return;
+      }
+      const { data: prof } = await supabase.from("profiles").select("display_name").eq("id", data.user.id).maybeSingle();
+      setSignedIn({ email: data.user.email ?? null, display: prof?.display_name ?? null });
+      import("@/lib/voice/store").then((m) => m.narrate("OB-02"));
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
+      if (!session) setSignedIn(null);
+      else setSignedIn({ email: session.user.email ?? null, display: null });
+    });
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const startGuest = () => {
+    reset();
+    setPlayer(name.trim() || signedIn?.display || signedIn?.email?.split("@")[0] || "Guest");
+    navigate({ to: "/mode-select" });
+  };
+
   return (
-    <TerraProvider>
-      <SmoothScroll />
-      <div className="relative min-h-screen overflow-hidden bg-background">
-        <NetworkBackground />
-        <CursorGlow />
-        <FloatingParticles />
+    <main className="min-h-screen overflow-hidden bg-background">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+        <div className="flex items-center gap-2">
+          <div className="grid h-8 w-8 place-items-center rounded-xl bg-[image:var(--gradient-terra)] text-white shadow-sm">
+            <Globe2 className="h-4 w-4" />
+          </div>
+          <span className="font-display text-base font-semibold">Tomorrow Matrix</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">How it works</a>
+          {signedIn ? (
+            <Link to="/account" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-[color:var(--terra-deep)]">
+              <UserCircle className="h-4 w-4" /> {signedIn.display || signedIn.email || "Account"}
+            </Link>
+          ) : (
+            <Link to="/auth" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-[color:var(--terra-deep)]">
+              <LogIn className="h-4 w-4" /> Sign in
+            </Link>
+          )}
+        </div>
+      </nav>
 
-        {/* Slow morphing gradient wash */}
-        <div
-          aria-hidden
-          className="pointer-events-none fixed inset-0 z-0"
-          style={{
-            background:
-              "radial-gradient(1200px 800px at 10% 10%, color-mix(in oklab, var(--leaf-soft) 25%, transparent), transparent 60%), radial-gradient(900px 700px at 90% 40%, color-mix(in oklab, var(--ember) 12%, transparent), transparent 60%), radial-gradient(1000px 800px at 50% 100%, color-mix(in oklab, var(--forest) 15%, transparent), transparent 60%)",
-          }}
-        />
+      <section className="relative mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-8 md:grid-cols-2 md:gap-16 md:pt-16">
+        <div className="flex flex-col justify-center">
+          <span className="pill chip-terra w-fit">
+            <Sparkles className="h-3 w-3" /> A living climate system game
+          </span>
+          <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] tracking-tight text-foreground md:text-6xl">
+            One Planet.<br/>
+            <span className="bg-[image:var(--gradient-terra)] bg-clip-text text-transparent">Many Choices.</span><br/>
+            Our Future.
+          </h1>
+          <p className="mt-5 max-w-md text-base text-muted-foreground md:text-lg">
+            Terra is at 40% health. You and your stakeholders have until 2050 to restore it to 70%.
+            Investigate mysteries, navigate crises, and watch every choice ripple across the planet.
+          </p>
 
-        <Nav />
+          <form
+            onSubmit={(e) => { e.preventDefault(); startGuest(); }}
+            className="mt-7 flex w-full max-w-md flex-col gap-2 sm:flex-row"
+          >
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder={signedIn?.display ? `Playing as ${signedIn.display}` : "Choose a player name (optional)"}
+              className="h-12 flex-1 rounded-xl border border-input bg-card px-4 text-sm outline-none ring-ring/30 transition-all focus:border-[color:var(--terra)] focus:ring-2"
+            />
+            <button
+              type="submit"
 
-        <main className="relative z-10">
-          <Hero />
-          <Challenges />
-          <Framework />
-          <Lifecycle />
-          <Services />
-          <WhyUs />
-          <Founder />
-          <TomorrowMatrix />
-          <Knowledge />
-          <Assessment />
-          <Final />
-        </main>
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-terra)] px-5 text-sm font-medium text-white shadow-sm transition-transform hover:scale-[1.02]"
+            >
+              Enter Terra <ArrowRight className="h-4 w-4" />
+            </button>
+          </form>
+          {signedIn ? (
+            <p className="mt-2 text-xs text-muted-foreground">
+              Signed in — your profile follows you across devices. Game progress stays on this device.
+            </p>
+          ) : (
+            <p className="mt-2 flex items-start gap-1.5 text-xs text-muted-foreground">
+              <AlertTriangle className="mt-0.5 h-3 w-3 shrink-0 text-[color:var(--warmth)]" />
+              <span>Guest mode: progress is saved only on this device.{" "}
+                <Link to="/auth" className="text-[color:var(--terra-deep)] underline">Sign in</Link> to save a profile that follows you.
+              </span>
+            </p>
+          )}
 
-        <TerraIndicator />
-      </div>
-    </TerraProvider>
+          <div className="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-6 text-sm">
+            <Stat icon={Sparkles} label="Mysteries" value="60+" />
+            <Stat icon={MapIcon}  label="Regions"   value="12" />
+            <Stat icon={NetIcon}  label="Stakeholders" value="8" />
+          </div>
+
+        </div>
+
+        <div className="relative flex items-center justify-center">
+          <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle_at_center,var(--terra-soft),transparent_60%)]" />
+          <img
+            src={terraGlobe}
+            alt="Planet Terra, half lush and half struggling — your mission begins here"
+            width={1024}
+            height={1024}
+            className="w-full max-w-lg animate-float drop-shadow-[0_30px_60px_rgba(20,80,40,0.18)]"
+          />
+        </div>
+      </section>
+
+      <section id="how" className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="grid gap-4 md:grid-cols-4">
+          {[
+            { n: "01", t: "Choose Your Role", d: "Scientist, Farmer, Activist… each role sees a unique piece of the puzzle." },
+            { n: "02", t: "Discover Alerts",  d: "Explore Terra's world map and find regions in crisis." },
+            { n: "03", t: "Solve Mysteries",  d: "Connect causes, actions and impacts to unlock Climate Action Points." },
+            { n: "04", t: "Restore Terra",    d: "Invest in interventions, respond to crises, and watch the planet heal." },
+          ].map((s) => (
+            <div key={s.n} className="surface-card p-5">
+              <div className="font-mono text-xs text-[color:var(--terra-deep)]">{s.n}</div>
+              <div className="mt-2 font-display text-lg font-semibold">{s.t}</div>
+              <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function Stat({ icon: Icon, label, value }: { icon: typeof Sparkles; label: string; value: string }) {
+  return (
+    <div>
+      <Icon className="h-4 w-4 text-[color:var(--terra-deep)]" />
+      <div className="mt-1 font-display text-xl font-semibold">{value}</div>
+      <div className="text-xs text-muted-foreground">{label}</div>
+    </div>
   );
 }
