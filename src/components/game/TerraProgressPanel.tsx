@@ -6,7 +6,9 @@ import { MYSTERIES, isMysteryUnlocked } from "@/lib/game/data";
 import { cn } from "@/lib/utils";
 
 export function TerraProgressPanel() {
-  const [open, setOpen] = useState(true);
+  // Start collapsed: as a fixed overlay it otherwise covers the centered content
+  // (the sequence cards on mobile, the aside on desktop). Users can expand it.
+  const [open, setOpen] = useState(false);
   const { planetHealth, cap, solvedMysteries, pendingCrisisId } = useGame();
 
   const total = MYSTERIES.length;

@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Mail, MailCheck, Phone, ArrowLeft, Loader2 } from "lucide-react";
+import { MailCheck, ArrowLeft, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -14,18 +14,12 @@ export const Route = createFileRoute("/auth")({
   component: AuthPage,
 });
 
-type Tab = "email" | "phone";
-
 function AuthPage() {
   const navigate = useNavigate();
-  const [tab, setTab] = useState<Tab>("email");
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [otp, setOtp] = useState("");
-  const [otpSent, setOtpSent] = useState(false);
   const [busy, setBusy] = useState<null | string>(null);
   // When an email has been dispatched, show a confirmation panel instead of the form.
   const [sent, setSent] = useState<null | { kind: "signup" | "reset"; email: string }>(null);
@@ -140,28 +134,6 @@ function AuthPage() {
     } finally { setBusy(null); }
   };
 
-  const sendOtp = async () => {
-    setBusy("phone");
-    try {
-      const { error } = await supabase.auth.signInWithOtp({ phone });
-      if (error) throw error;
-      setOtpSent(true);
-      toast.success("Code sent by SMS.");
-    } catch (err) {
-      toast.error((err as Error).message);
-    } finally { setBusy(null); }
-  };
-
-  const verifyOtp = async () => {
-    setBusy("phone");
-    try {
-      const { error } = await supabase.auth.verifyOtp({ phone, token: otp, type: "sms" });
-      if (error) throw error;
-    } catch (err) {
-      toast.error((err as Error).message);
-    } finally { setBusy(null); }
-  };
-
   return (
     <main className="min-h-screen bg-background">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
@@ -221,65 +193,33 @@ function AuthPage() {
             <div className="h-px flex-1 bg-border" /> or <div className="h-px flex-1 bg-border" />
           </div>
 
-          <div className="flex gap-1 rounded-lg bg-muted p-1 text-xs">
-            <button onClick={() => setTab("email")} className={`flex-1 rounded-md px-3 py-1.5 ${tab === "email" ? "bg-background shadow-sm" : ""}`}>
-              <Mail className="mr-1 inline h-3 w-3" /> Email
-            </button>
-            <button onClick={() => setTab("phone")} className={`flex-1 rounded-md px-3 py-1.5 ${tab === "phone" ? "bg-background shadow-sm" : ""}`}>
-              <Phone className="mr-1 inline h-3 w-3" /> Phone
-            </button>
-          </div>
-
-          {tab === "email" ? (
-            <form onSubmit={emailAuth} className="grid gap-2">
-              {mode === "signup" && (
-                <input value={displayName} onChange={(e) => setDisplayName(e.target.value)} placeholder="Display name"
-                  className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
-              )}
-              <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
+          <form onSubmit={emailAuth} className="grid gap-2">
+            {mode === "signup" && (
+              <input value={displayName} onChange={(e) => setDisplayName(e.target.value)} placeholder="Display name"
                 className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
-              <input type="password" required minLength={6} value={password} onChange={(e) => { setPassword(e.target.value); if (formError) setFormError(null); }} placeholder="Password"
-                className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
-              {formError && (
-                <p className="rounded-lg bg-destructive/10 px-3 py-2 text-xs text-destructive">{formError}</p>
-              )}
-              <button disabled={!!busy} type="submit"
-                className="mt-1 inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white disabled:opacity-60">
-                {busy === "email" ? <Loader2 className="h-4 w-4 animate-spin" /> : mode === "signup" ? "Create account" : "Sign in"}
-              </button>
-              <button type="button" onClick={() => { setMode(mode === "signup" ? "signin" : "signup"); setFormError(null); }}
+            )}
+            <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
+              className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
+            <input type="password" required minLength={6} value={password} onChange={(e) => { setPassword(e.target.value); if (formError) setFormError(null); }} placeholder="Password"
+              className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
+            {formError && (
+              <p className="rounded-lg bg-destructive/10 px-3 py-2 text-xs text-destructive">{formError}</p>
+            )}
+            <button disabled={!!busy} type="submit"
+              className="mt-1 inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white disabled:opacity-60">
+              {busy === "email" ? <Loader2 className="h-4 w-4 animate-spin" /> : mode === "signup" ? "Create account" : "Sign in"}
+            </button>
+            <button type="button" onClick={() => { setMode(mode === "signup" ? "signin" : "signup"); setFormError(null); }}
+              className="text-xs text-muted-foreground hover:text-foreground">
+              {mode === "signup" ? "Already have an account? Sign in" : "New here? Create an account"}
+            </button>
+            {mode === "signin" && (
+              <button type="button" onClick={sendReset} disabled={busy === "reset"}
                 className="text-xs text-muted-foreground hover:text-foreground">
-                {mode === "signup" ? "Already have an account? Sign in" : "New here? Create an account"}
+                {busy === "reset" ? "Sending reset link…" : "Forgot password?"}
               </button>
-              {mode === "signin" && (
-                <button type="button" onClick={sendReset} disabled={busy === "reset"}
-                  className="text-xs text-muted-foreground hover:text-foreground">
-                  {busy === "reset" ? "Sending reset link…" : "Forgot password?"}
-                </button>
-              )}
-            </form>
-          ) : (
-            <div className="grid gap-2">
-              <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+1 555 123 4567"
-                className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
-              {!otpSent ? (
-                <button onClick={sendOtp} disabled={!!busy || !phone}
-                  className="inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white disabled:opacity-60">
-                  {busy === "phone" ? <Loader2 className="h-4 w-4 animate-spin" /> : "Send code"}
-                </button>
-              ) : (
-                <>
-                  <input value={otp} onChange={(e) => setOtp(e.target.value)} placeholder="6-digit code"
-                    className="h-10 rounded-lg border border-input bg-card px-3 text-sm tracking-widest" />
-                  <button onClick={verifyOtp} disabled={!!busy || otp.length < 4}
-                    className="inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white disabled:opacity-60">
-                    {busy === "phone" ? <Loader2 className="h-4 w-4 animate-spin" /> : "Verify & sign in"}
-                  </button>
-                </>
-              )}
-              <p className="text-[11px] text-muted-foreground">SMS sign-in requires an SMS provider configured on your workspace.</p>
-            </div>
-          )}
+            )}
+          </form>
         </div>
 
         <div className="text-center text-xs text-muted-foreground">
