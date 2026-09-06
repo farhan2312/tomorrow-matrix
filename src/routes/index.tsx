@@ -21,6 +21,7 @@ export const Route = createFileRoute("/")({
 function Landing() {
   const navigate = useNavigate();
   const { setPlayer, reset } = useGame();
+  const role = useGame((s) => s.role);
   const [name, setName] = useState("");
   const [signedIn, setSignedIn] = useState<null | { email: string | null; display: string | null; avatar: string | null }>(null);
 
@@ -101,9 +102,18 @@ function Landing() {
             Investigate mysteries, navigate crises, and watch every choice ripple across the planet.
           </p>
 
+          {signedIn && role && (
+            <button
+              onClick={() => navigate({ to: "/play" })}
+              className="mt-7 inline-flex h-12 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-terra)] px-5 text-sm font-medium text-white shadow-sm transition-transform hover:scale-[1.01]"
+            >
+              Continue your game <ArrowRight className="h-4 w-4" />
+            </button>
+          )}
+
           <form
             onSubmit={(e) => { e.preventDefault(); startGuest(); }}
-            className="mt-7 flex w-full max-w-md flex-col gap-2 sm:flex-row"
+            className={`${signedIn && role ? "mt-3" : "mt-7"} flex w-full max-w-md flex-col gap-2 sm:flex-row`}
           >
             <input
               value={name}
@@ -116,12 +126,12 @@ function Landing() {
 
               className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-terra)] px-5 text-sm font-medium text-white shadow-sm transition-transform hover:scale-[1.02]"
             >
-              Enter Terra <ArrowRight className="h-4 w-4" />
+              {signedIn && role ? "Start new game" : "Enter Terra"} <ArrowRight className="h-4 w-4" />
             </button>
           </form>
           {signedIn ? (
             <p className="mt-2 text-xs text-muted-foreground">
-              Signed in, your profile follows you across devices. Game progress stays on this device.
+              Signed in, your profile and game progress sync to your account across devices.
             </p>
           ) : (
             <p className="mt-2 flex items-start gap-1.5 text-xs text-muted-foreground">
