@@ -7,7 +7,20 @@ import { runTourOnce } from "@/lib/tour";
  */
 export function GameTour() {
   useEffect(() => {
-    const t = setTimeout(() => {
+    // Wait until the HUD has actually laid out (element present AND sized) so
+    // the pointed steps aren't skipped on slow renders. Falls through after ~4s
+    // (e.g. mobile, where the desktop HUD stays hidden) to show the intro steps.
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries += 1;
+      const el = document.querySelector('[data-tour="hud-terra"]') as HTMLElement | null;
+      const ready = el && el.getBoundingClientRect().width > 0;
+      if (ready || tries > 20) {
+        clearInterval(iv);
+        run();
+      }
+    }, 200);
+    const run = () =>
       runTourOnce("tm-tour-firstgame-v1", [
         {
           popover: {
@@ -56,8 +69,7 @@ export function GameTour() {
           },
         },
       ]);
-    }, 900);
-    return () => clearTimeout(t);
+    return () => clearInterval(iv);
   }, []);
   return null;
 }
