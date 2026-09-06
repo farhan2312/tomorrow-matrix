@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Mail, Phone, ArrowLeft, Loader2 } from "lucide-react";
+import { Mail, MailCheck, Phone, ArrowLeft, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -27,6 +27,8 @@ function AuthPage() {
   const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [busy, setBusy] = useState<null | string>(null);
+  // When an email has been dispatched, show a confirmation panel instead of the form.
+  const [sent, setSent] = useState<null | { kind: "signup" | "reset"; email: string }>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -70,7 +72,7 @@ function AuthPage() {
           },
         });
         if (error) throw error;
-        toast.success("Check your inbox to confirm your email.");
+        setSent({ kind: "signup", email });
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
@@ -90,7 +92,26 @@ function AuthPage() {
         redirectTo: `${window.location.origin}/reset-password`,
       });
       if (error) throw error;
-      toast.success("Password reset link sent. Check your email.");
+      setSent({ kind: "reset", email });
+    } catch (err) {
+      toast.error((err as Error).message);
+    } finally { setBusy(null); }
+  };
+
+  const resend = async () => {
+    if (!sent) return;
+    setBusy("resend");
+    try {
+      if (sent.kind === "reset") {
+        const { error } = await supabase.auth.resetPasswordForEmail(sent.email, {
+          redirectTo: `${window.location.origin}/reset-password`,
+        });
+        if (error) throw error;
+      } else {
+        const { error } = await supabase.auth.resend({ type: "signup", email: sent.email });
+        if (error) throw error;
+      }
+      toast.success("Email resent.");
     } catch (err) {
       toast.error((err as Error).message);
     } finally { setBusy(null); }
@@ -136,7 +157,34 @@ function AuthPage() {
           <p className="mt-2 text-sm text-muted-foreground">Save your progress, role and Climate Action Points across sessions.</p>
         </div>
 
-        <div className="surface-card grid gap-3 p-5">
+        {sent && (
+          <div className="surface-card grid gap-3 p-6 text-center">
+            <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[color:var(--terra-soft)]">
+              <MailCheck className="h-6 w-6 text-[color:var(--terra-deep)]" />
+            </div>
+            <h2 className="font-display text-lg font-semibold">Check your email</h2>
+            <p className="text-sm text-muted-foreground">
+              We sent a {sent.kind === "reset" ? "password reset" : "confirmation"} link to{" "}
+              <strong className="text-foreground">{sent.email}</strong>.{" "}
+              {sent.kind === "reset" ? "Open it to set a new password." : "Open it to activate your account."}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              The link expires in <strong>2 minutes</strong>. If it&apos;s not in your inbox, check your spam folder.
+            </p>
+            <div className="mt-1 flex items-center justify-center gap-2">
+              <button onClick={resend} disabled={busy === "resend"}
+                className="inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-input bg-card px-3 text-xs font-medium hover:bg-muted disabled:opacity-60">
+                {busy === "resend" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : null} Resend email
+              </button>
+              <button onClick={() => setSent(null)}
+                className="inline-flex h-9 items-center justify-center rounded-lg px-3 text-xs text-muted-foreground hover:text-foreground">
+                Use a different email
+              </button>
+            </div>
+          </div>
+        )}
+
+        <div className={`surface-card grid gap-3 p-5${sent ? " hidden" : ""}`}>
           <button onClick={() => oauth("google")} disabled={!!busy}
             className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-input bg-card px-4 text-sm font-medium hover:bg-muted disabled:opacity-60">
             {busy === "google" ? <Loader2 className="h-4 w-4 animate-spin" /> : <GoogleIcon />} Continue with Google
