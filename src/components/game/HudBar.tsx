@@ -39,9 +39,9 @@ export function HudBar() {
         </Link>
 
         <div className="ml-2 hidden items-center gap-1.5 md:flex">
-          <Stat label="Terra" value={`${planetHealth}%`} tone={planetHealth >= 70 ? "good" : planetHealth >= 40 ? "warn" : "bad"} />
+          <Stat label="Terra" value={`${planetHealth}%`} tone={planetHealth >= 70 ? "good" : planetHealth >= 40 ? "warn" : "bad"} tour="hud-terra" />
           <Stat label="Year" value={String(year)} />
-          <Stat label="CAP" value={String(cap)} tone="terra" />
+          <Stat label="CAP" value={String(cap)} tone="terra" tour="hud-cap" />
           {roleData && <Stat label="Role" value={roleData.name} />}
         </div>
 
@@ -53,6 +53,7 @@ export function HudBar() {
               <Link
                 key={n.to}
                 to={n.to as any}
+                data-tour={n.to === "/play/mysteries" ? "nav-mysteries" : n.to === "/play/marketplace" ? "nav-marketplace" : undefined}
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors",
                   active
@@ -106,7 +107,7 @@ export function HudBar() {
   );
 }
 
-function Stat({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" | "bad" | "terra" }) {
+function Stat({ label, value, tone, tour }: { label: string; value: string; tone?: "good" | "warn" | "bad" | "terra"; tour?: string }) {
   const toneClass =
     tone === "good"  ? "text-[color:var(--terra-deep)]" :
     tone === "warn"  ? "text-[color:var(--warmth)]" :
@@ -114,7 +115,7 @@ function Stat({ label, value, tone }: { label: string; value: string; tone?: "go
     tone === "terra" ? "text-[color:var(--terra-deep)]" :
                        "text-foreground";
   return (
-    <div className="flex items-baseline gap-1 rounded-md bg-muted/60 px-2.5 py-1">
+    <div data-tour={tour} className="flex items-baseline gap-1 rounded-md bg-muted/60 px-2.5 py-1">
       <span className="text-[10px] uppercase tracking-wider text-muted-foreground">{label}</span>
       <span className={cn("font-mono text-xs font-semibold tabular-nums", toneClass)}>{value}</span>
     </div>

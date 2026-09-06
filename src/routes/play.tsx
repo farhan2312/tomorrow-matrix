@@ -7,6 +7,7 @@ import { RoleChallengeModal } from "@/components/game/RoleChallengeModal";
 import { PromotionModal } from "@/components/game/PromotionModal";
 import { RosterRail, MultiplayerBridge } from "@/components/game/RosterRail";
 import { NarrationOverlay } from "@/components/game/NarrationOverlay";
+import { GameTour } from "@/components/game/GameTour";
 import { useGame } from "@/lib/game/store";
 import { useLobby } from "@/lib/multiplayer/store";
 import { getClientId } from "@/lib/multiplayer/identity";
@@ -75,6 +76,7 @@ function PlayLayout() {
   return (
     <div className="min-h-screen bg-background">
       <HudBar />
+      <GameTour />
       <Outlet />
       <RosterRail />
       <MultiplayerBridge />

@@ -255,3 +255,26 @@
   50%      { opacity: 0.95; }
 }
 @utility animate-node-pulse { animation: node-pulse 4s ease-in-out infinite; }
+
+/* driver.js guided-tour theming */
+.driver-popover {
+  border-radius: 14px;
+  padding: 18px;
+  font-family: inherit;
+  box-shadow: 0 20px 50px rgba(12, 35, 24, 0.28);
+}
+.driver-popover-title { font-size: 16px; font-weight: 700; }
+.driver-popover-description { font-size: 13px; line-height: 1.55; }
+.driver-popover-next-btn,
+.driver-popover-prev-btn {
+  border-radius: 9px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  padding: 7px 12px !important;
+}
+.driver-popover-next-btn {
+  background: linear-gradient(135deg, oklch(0.72 0.13 150), oklch(0.58 0.14 165)) !important;
+  color: #fff !important;
+  border: none !important;
+}

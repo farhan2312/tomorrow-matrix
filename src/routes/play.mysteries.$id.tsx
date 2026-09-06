@@ -12,6 +12,7 @@ import { useLobby } from "@/lib/multiplayer/store";
 import { getClientId } from "@/lib/multiplayer/identity";
 import { pushEvent } from "@/lib/multiplayer/api.functions";
 import { CardSequencer } from "@/components/game/CardSequencer";
+import { runTourOnce } from "@/lib/tour";
 import { AiTeamPanel } from "@/components/game/AiTeamPanel";
 import { MysteryCompleteModal } from "@/components/game/MysteryCompleteModal";
 import { MysteryIntroOverlay } from "@/components/game/MysteryIntroOverlay";
@@ -38,6 +39,24 @@ function MysteryDetail() {
   const broadcast = useServerFn(pushEvent);
   const alreadySolved = solvedMysteries.includes(mystery.id);
   const unlocked = isMysteryUnlocked(mystery.id, solvedMysteries);
+
+  // First time on a mystery: coach-mark the sequence puzzle.
+  useEffect(() => {
+    if (!unlocked) return;
+    const t = setTimeout(() => {
+      runTourOnce("tm-tour-mystery-v1", [
+        {
+          element: '[data-tour="sequencer"]',
+          popover: {
+            title: "Solve the chain",
+            description:
+              "Drag these cards into the correct order, first cause to final impact, then hit Validate. Stuck? Use a Hint.",
+          },
+        },
+      ]);
+    }, 700);
+    return () => clearTimeout(t);
+  }, [unlocked]);
   const visible = isMysteryVisibleForRole(role, mystery);
   const rel = roleRelationship(role, mystery);
   const bonus = bonusForRole(role, mystery);
@@ -168,7 +187,7 @@ function MysteryDetail() {
           </div>
 
           {/* Sequencer */}
-          <div className="surface-lift p-5">
+          <div data-tour="sequencer" className="surface-lift p-5">
             <div className="mb-4 flex items-center justify-between gap-3">
               <div>
                 <h2 className="font-display text-lg font-semibold">System chain puzzle</h2>
