@@ -185,7 +185,7 @@ function AuthPage() {
               {sent.kind === "reset" ? "Open it to set a new password." : "Open it to activate your account."}
             </p>
             <p className="text-xs text-muted-foreground">
-              The link expires in <strong>2 minutes</strong>. If it&apos;s not in your inbox, check your spam folder.
+              The link expires in <strong>5 minutes</strong>. If it&apos;s not in your inbox, check your spam folder.
             </p>
             <button onClick={() => { setSent(null); setMode("signin"); setFormError(null); }}
               className="mt-1 inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white">
