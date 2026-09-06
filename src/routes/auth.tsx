@@ -72,7 +72,7 @@ function AuthPage() {
     setBusy("email");
     try {
       if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email, password,
           options: {
             emailRedirectTo: `${window.location.origin}/auth`,
@@ -80,6 +80,13 @@ function AuthPage() {
           },
         });
         if (error) throw error;
+        // Supabase won't error on an existing email (anti-enumeration); instead
+        // it returns a user with an empty identities array. Detect + redirect.
+        if (data.user && (data.user.identities?.length ?? 0) === 0) {
+          setMode("signin");
+          setFormError("This email is already registered. Please sign in instead.");
+          return;
+        }
         setSent({ kind: "signup", email });
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
