@@ -86,7 +86,7 @@ export function WorldMap() {
         {/* Base atmospheric wash */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-transparent to-[color:var(--terra-soft)]/55" />
 
-        {/* Restoration heal layers — drawn under hotspots so pins stay clickable */}
+        {/* Restoration heal layers, drawn under hotspots so pins stay clickable */}
         <div className="pointer-events-none absolute inset-0">
           {REGIONS.map((r) => {
             const mystery = r.mysteryId ? MYSTERIES.find((m) => m.id === r.mysteryId) : null;

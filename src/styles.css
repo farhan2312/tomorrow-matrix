@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ============================================================
-   TOMORROW MATRIX — Hopeful Earth Design System
+   TOMORROW MATRIX, Hopeful Earth Design System
    Light theme · Whites · Greens · Oranges · Greys
    Inspired by Terra Nil + Civilization VI + modern dashboards
    ============================================================ */
@@ -71,18 +71,18 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.02 150);
 
-  /* Brand — Terra green */
+  /* Brand, Terra green */
   --primary: oklch(0.58 0.13 150);
   --primary-foreground: oklch(0.99 0.01 100);
 
-  /* Secondary — warm sand grey */
+  /* Secondary, warm sand grey */
   --secondary: oklch(0.96 0.012 90);
   --secondary-foreground: oklch(0.30 0.03 150);
 
   --muted: oklch(0.965 0.008 100);
   --muted-foreground: oklch(0.50 0.015 150);
 
-  /* Accent — warm orange */
+  /* Accent, warm orange */
   --accent: oklch(0.96 0.025 75);
   --accent-foreground: oklch(0.40 0.10 60);
 

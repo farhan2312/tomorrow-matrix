@@ -11,7 +11,7 @@ import { useGame } from "@/lib/game/store";
 const searchSchema = z.object({ facilitator: z.coerce.boolean().optional() });
 
 export const Route = createFileRoute("/lobby/")({
-  head: () => ({ meta: [{ title: "Multiplayer Lobby — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Multiplayer Lobby, Tomorrow Matrix" }] }),
   validateSearch: searchSchema,
   component: LobbyIndex,
 });
@@ -61,7 +61,7 @@ function LobbyIndex() {
       setLobby({ lobbyId: res.lobbyId, code: res.code, mode: res.mode as "play" | "workshop" });
       navigate({ to: "/lobby/$code", params: { code: res.code } });
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Could not join — check the code");
+      setError(e instanceof Error ? e.message : "Could not join, check the code");
     } finally { setBusy(null); }
   };
 
@@ -87,7 +87,7 @@ function LobbyIndex() {
           </h1>
           <p className="mt-3 text-muted-foreground">
             {isFacilitator
-              ? "Create a session, share the code with your participants, then steer the workshop from the facilitator console — pause, inject crises, and watch the analytics live."
+              ? "Create a session, share the code with your participants, then steer the workshop from the facilitator console, pause, inject crises, and watch the analytics live."
               : "Create a session and share the code, or join one with a friend's code. 2–6 players work the same Terra together."}
           </p>
         </header>
@@ -108,7 +108,7 @@ function LobbyIndex() {
                 <input
                   value={workshopName}
                   onChange={(e) => setWorkshopName(e.target.value.slice(0, 80))}
-                  placeholder="e.g. Climate Leaders Cohort — Nov 2026"
+                  placeholder="e.g. Climate Leaders Cohort, Nov 2026"
                   className="mt-2 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none focus:border-[color:var(--warmth)]"
                 />
               </>

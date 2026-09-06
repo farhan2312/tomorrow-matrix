@@ -126,7 +126,7 @@ export function VideoPlayer({
           <Film className="mx-auto h-6 w-6 text-muted-foreground" />
           <div className="mt-2 text-sm font-medium">{title ?? "Video"}</div>
           <p className="mt-1 text-xs text-muted-foreground">
-            Media not attached yet — this slot plays automatically once the video is added to the mystery library.
+            Media not attached yet, this slot plays automatically once the video is added to the mystery library.
           </p>
         </div>
         {overlayTopRight && <div className="absolute right-3 top-3">{overlayTopRight}</div>}

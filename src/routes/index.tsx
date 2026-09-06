@@ -9,7 +9,7 @@ import terraGlobe from "@/assets/terra-globe.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Tomorrow Matrix — A Living Climate System Game" },
+      { title: "The Tomorrow Matrix, A Living Climate System Game" },
       { name: "description", content: "Restore Terra to 70% before 2050. Solve climate mysteries, respond to crises, and shape the planet's future." },
       { property: "og:title", content: "The Tomorrow Matrix" },
       { property: "og:description", content: "One Planet. Many Choices. Our Future." },
@@ -33,21 +33,25 @@ function Landing() {
       }
       const meta = data.user.user_metadata ?? {};
       const { data: prof } = await supabase.from("profiles").select("display_name, avatar_url").eq("id", data.user.id).maybeSingle();
+      const dn = prof?.display_name ?? meta.full_name ?? meta.name ?? null;
       setSignedIn({
         email: data.user.email ?? null,
-        display: prof?.display_name ?? null,
+        display: dn,
         avatar: prof?.avatar_url ?? meta.avatar_url ?? meta.picture ?? null,
       });
+      if (dn) setName((n) => n || dn);
       import("@/lib/voice/store").then((m) => m.narrate("OB-02"));
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
       if (!session) { setSignedIn(null); return; }
       const meta = session.user.user_metadata ?? {};
+      const dn = meta.full_name ?? meta.name ?? null;
       setSignedIn({
         email: session.user.email ?? null,
-        display: meta.full_name ?? meta.name ?? null,
+        display: dn,
         avatar: meta.avatar_url ?? meta.picture ?? null,
       });
+      if (dn) setName((n) => n || dn);
     });
     return () => sub.subscription.unsubscribe();
   }, []);
@@ -104,7 +108,7 @@ function Landing() {
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder={signedIn?.display ? `Playing as ${signedIn.display}` : "Choose a player name (optional)"}
+              placeholder="Choose a player name (optional)"
               className="h-12 flex-1 rounded-xl border border-input bg-card px-4 text-sm outline-none ring-ring/30 transition-all focus:border-[color:var(--terra)] focus:ring-2"
             />
             <button
@@ -117,7 +121,7 @@ function Landing() {
           </form>
           {signedIn ? (
             <p className="mt-2 text-xs text-muted-foreground">
-              Signed in — your profile follows you across devices. Game progress stays on this device.
+              Signed in, your profile follows you across devices. Game progress stays on this device.
             </p>
           ) : (
             <p className="mt-2 flex items-start gap-1.5 text-xs text-muted-foreground">
@@ -140,7 +144,7 @@ function Landing() {
           <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle_at_center,var(--terra-soft),transparent_60%)]" />
           <img
             src={terraGlobe}
-            alt="Planet Terra, half lush and half struggling — your mission begins here"
+            alt="Planet Terra, half lush and half struggling, your mission begins here"
             width={1024}
             height={1024}
             className="w-full max-w-lg animate-float drop-shadow-[0_30px_60px_rgba(20,80,40,0.18)]"

@@ -23,7 +23,7 @@ function Journal() {
         <Stat label="Mysteries"    value={`${solvedMysteries.length} / ${MYSTERIES.length}`} />
         <Stat label="Interventions" value={`${purchasedInterventions.length} / ${INTERVENTIONS.length}`} />
         <Stat label="Crises resolved" value={String(resolvedCrises.length)} />
-        <Stat label="Role" value={roleData?.name ?? "—"} />
+        <Stat label="Role" value={roleData?.name ?? "-"} />
       </div>
 
       {roleData && (
@@ -62,7 +62,7 @@ function Journal() {
 
       {planetHealth >= 70 && (
         <Link to="/endgame" className="block surface-lift bg-[image:var(--gradient-terra)] p-5 text-center text-white shadow-sm">
-          <div className="font-display text-xl font-semibold">Terra is restored — see your legacy</div>
+          <div className="font-display text-xl font-semibold">Terra is restored, see your legacy</div>
           <div className="text-sm opacity-90">Open endgame summary →</div>
         </Link>
       )}

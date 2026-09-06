@@ -6,7 +6,7 @@ import { visibleMysteries, CRISES } from "@/lib/game/data";
 export const Route = createFileRoute("/play/network")({
   head: () => ({
     meta: [
-      { title: "Butterfly Network — Tomorrow Matrix" },
+      { title: "Butterfly Network, Tomorrow Matrix" },
       { name: "description", content: "See how every climate mystery cascades into another. The systems-thinking engine of Terra." },
     ],
   }),
@@ -27,7 +27,7 @@ function SystemsPage() {
           <h1 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">The Butterfly Network</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Every climate mystery is connected. Solve one and watch the cascade light up other
-            mysteries downstream — exactly how the real climate system behaves. Click any node to
+            mysteries downstream, exactly how the real climate system behaves. Click any node to
             see what influences it, what it influences, and which crisis events it can trigger.
           </p>
         </div>

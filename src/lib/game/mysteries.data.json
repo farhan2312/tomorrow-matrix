@@ -2582,7 +2582,7 @@
     "linkedCrises": ["Energy Security Crisis","Climate Target Failure"],
     "linkedInterventions": ["Green AI Standards","Renewable-Powered Data Centres","AI Efficiency Mandates"],
     "butterfly": ["AI Energy Surge","Grid Stress","Fossil Fuel Rebound","Climate Target Failure"],
-    "aiConnection": "Training large AI models can consume as much electricity as hundreds of homes use in a year. As AI scales globally, data-centre demand could reach 10–20% of world electricity by 2030 — AI's climate benefit depends entirely on whether its energy source is clean.",
+    "aiConnection": "Training large AI models can consume as much electricity as hundreds of homes use in a year. As AI scales globally, data-centre demand could reach 10–20% of world electricity by 2030, AI's climate benefit depends entirely on whether its energy source is clean.",
     "tier": 2
   },
   {
@@ -2591,7 +2591,7 @@
     "title": "Algorithmic Greenwashing",
     "category": "governance",
     "categoryLabel": "AI & Governance",
-    "brief": "Companies use AI-generated reports, deepfakes, and automated content to falsely project green credentials — misleading investors, consumers and regulators.",
+    "brief": "Companies use AI-generated reports, deepfakes, and automated content to falsely project green credentials, misleading investors, consumers and regulators.",
     "primaryRoles": ["activist", "policymaker"],
     "secondaryRoles": ["business"],
     "sequence": ["AI Content Generation","Fabricated ESG Reports","Investor Deception","Capital Misallocation","Real Climate Action Underfunded","Public Trust Erosion","Regulatory Backlash","Algorithmic Greenwashing"],
@@ -2599,7 +2599,7 @@
     "linkedCrises": ["Financial Fraud Crisis","Regulatory Failure"],
     "linkedInterventions": ["AI Audit Requirements","ESG Verification Standards","Digital Accountability Law"],
     "butterfly": ["Greenwash AI","Investor Deception","Capital Misallocation","Real Climate Action Underfunded"],
-    "aiConnection": "Generative AI makes it trivially easy to produce convincing sustainability reports and fabricated impact metrics at scale. Without mandatory AI audit trails and third-party ESG verification, bad actors can flood markets with false green claims — diverting billions from genuine climate solutions.",
+    "aiConnection": "Generative AI makes it trivially easy to produce convincing sustainability reports and fabricated impact metrics at scale. Without mandatory AI audit trails and third-party ESG verification, bad actors can flood markets with false green claims, diverting billions from genuine climate solutions.",
     "tier": 2
   },
   {
@@ -2608,7 +2608,7 @@
     "title": "AI-Driven Resource Extraction Surge",
     "category": "pollution",
     "categoryLabel": "AI & Land Use",
-    "brief": "AI is being used by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling — accelerating extraction and emissions.",
+    "brief": "AI is being used by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling, accelerating extraction and emissions.",
     "primaryRoles": ["scientist", "activist"],
     "secondaryRoles": ["policymaker", "citizen"],
     "sequence": ["AI Exploration Tools","Fossil Reserve Discovery","Optimised Extraction","Rebound Effect","Emission Surge","Ecosystem Degradation","Climate Debt Accumulation","AI-Driven Resource Extraction Surge"],
@@ -2616,7 +2616,7 @@
     "linkedCrises": ["Ecological Emergency","Carbon Lock-In","Regulatory Failure"],
     "linkedInterventions": ["AI Impact Assessment Mandates","Extraction Moratoriums","Nature-Positive AI Policy"],
     "butterfly": ["AI Extraction Efficiency","Fossil Reserve Exploitation","Emission Surge","Tipping Point Risk"],
-    "aiConnection": "AI is being deployed by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling, producing a rebound effect where efficiency gains accelerate total extraction. The same tools that could model climate futures are making fossil-fuel exploitation cheaper and faster — a direct contradiction of decarbonisation goals.",
+    "aiConnection": "AI is being deployed by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling, producing a rebound effect where efficiency gains accelerate total extraction. The same tools that could model climate futures are making fossil-fuel exploitation cheaper and faster, a direct contradiction of decarbonisation goals.",
     "tier": 3
   },
   {
@@ -2625,7 +2625,7 @@
     "title": "Autonomous Systems & Ecological Blind Spots",
     "category": "bio",
     "categoryLabel": "AI & Biodiversity",
-    "brief": "Autonomous drones, precision agriculture AI and smart infrastructure make decisions that damage ecosystems and wildlife corridors — with no ecological awareness in their design.",
+    "brief": "Autonomous drones, precision agriculture AI and smart infrastructure make decisions that damage ecosystems and wildlife corridors, with no ecological awareness in their design.",
     "primaryRoles": ["scientist", "planner"],
     "secondaryRoles": ["citizen", "activist"],
     "sequence": ["Autonomous System Deployment","Efficiency-Only Optimisation","Ecological Blind Spots","Habitat Fragmentation","Pollinator Decline","Species Stress","Ecosystem Cascade","Autonomous Systems Ecological Blind Spots"],
@@ -2633,7 +2633,7 @@
     "linkedCrises": ["Biodiversity Emergency","Ecosystem Failure","Regulatory Crisis"],
     "linkedInterventions": ["Ecological AI Audits","Nature-Inclusive Algorithm Design","AI Environmental Impact Assessment"],
     "butterfly": ["AI Blind Spots","Habitat Disruption","Species Stress","Ecosystem Cascade"],
-    "aiConnection": "Most AI systems optimising logistics, agriculture and urban planning are trained on economic and efficiency data only — with no ecological constraints encoded. Autonomous decisions can systematically destroy pollinator habitat, fragment wildlife corridors or disrupt migration patterns at scale, faster than any human process and with no single point of accountability.",
+    "aiConnection": "Most AI systems optimising logistics, agriculture and urban planning are trained on economic and efficiency data only, with no ecological constraints encoded. Autonomous decisions can systematically destroy pollinator habitat, fragment wildlife corridors or disrupt migration patterns at scale, faster than any human process and with no single point of accountability.",
     "tier": 3
   },
   {
@@ -2642,7 +2642,7 @@
     "title": "AI Climate Model Manipulation",
     "category": "climate",
     "categoryLabel": "AI & Climate",
-    "brief": "Adversarial machine learning subtly corrupts the shared AI-driven climate models that feed IPCC reports and treaty negotiations — eroding scientific consensus.",
+    "brief": "Adversarial machine learning subtly corrupts the shared AI-driven climate models that feed IPCC reports and treaty negotiations, eroding scientific consensus.",
     "primaryRoles": ["scientist", "policymaker"],
     "secondaryRoles": ["activist"],
     "sequence": ["Shared Climate Models","Adversarial Data Injection","Biased Inference","Consensus Erosion","Policy Paralysis","Delayed Mitigation","Tipping Point Activation","AI Climate Model Manipulation"],
@@ -2650,7 +2650,7 @@
     "linkedCrises": ["Scientific Integrity Crisis","Policy Paralysis"],
     "linkedInterventions": ["Open-Source Climate AI Verification","International AI Security Treaty","Federated Model Integrity Protocols"],
     "butterfly": ["Model Manipulation","Consensus Collapse","Policy Paralysis","Tipping Point Activation"],
-    "aiConnection": "Modern climate science depends on shared AI-driven models — CMIP6, weather prediction, carbon-cycle models — feeding directly into IPCC reports. Adversarial machine learning can introduce subtle, undetectable biases that make models systematically underestimate warming or overstate carbon sinks — one of the highest-stakes AI security threats on the planet.",
+    "aiConnection": "Modern climate science depends on shared AI-driven models, CMIP6, weather prediction, carbon-cycle models, feeding directly into IPCC reports. Adversarial machine learning can introduce subtle, undetectable biases that make models systematically underestimate warming or overstate carbon sinks, one of the highest-stakes AI security threats on the planet.",
     "tier": 4
   },
   {
@@ -2667,7 +2667,7 @@
     "linkedCrises": ["Climate Justice Crisis","Migration Emergency"],
     "linkedInterventions": ["Global AI Adaptation Fund","Open Climate AI Commons","South-Led AI Capacity Building"],
     "butterfly": ["AI Adaptation Gap","Uneven Resilience","Adaptation Failure","Climate Justice Crisis"],
-    "aiConnection": "Precision flood prediction, AI-optimised crop systems and smart-city resilience require data, compute, and talent concentrated in the Global North. Without deliberate transfer mechanisms, AI compounds existing climate injustice — those least responsible for emissions have the least access to the tools that reduce harm.",
+    "aiConnection": "Precision flood prediction, AI-optimised crop systems and smart-city resilience require data, compute, and talent concentrated in the Global North. Without deliberate transfer mechanisms, AI compounds existing climate injustice, those least responsible for emissions have the least access to the tools that reduce harm.",
     "tier": 4
   }
 ]

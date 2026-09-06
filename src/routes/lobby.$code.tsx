@@ -12,7 +12,7 @@ import type { RoleId } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/lobby/$code")({
-  head: () => ({ meta: [{ title: "Waiting Room — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Waiting Room, Tomorrow Matrix" }] }),
   component: WaitingRoom,
 });
 

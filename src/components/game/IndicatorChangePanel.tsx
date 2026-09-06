@@ -16,7 +16,7 @@ interface Props {
 }
 
 /**
- * Renders an animated indicator-change panel — appears post-solve or post-crisis
+ * Renders an animated indicator-change panel, appears post-solve or post-crisis
  * so players can immediately see what their decision moved.
  */
 export function IndicatorChangePanel({
@@ -41,7 +41,7 @@ export function IndicatorChangePanel({
   if (rows.length === 0) {
     return (
       <div className="rounded-xl border border-border bg-card p-4 text-sm text-muted-foreground">
-        Indicators held steady — no measurable change from this action.
+        Indicators held steady, no measurable change from this action.
       </div>
     );
   }

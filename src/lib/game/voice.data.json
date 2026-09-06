@@ -2,22 +2,22 @@
   {
     "id": "OB-01",
     "trigger": "First-time landing page load",
-    "line": "Terra is in trouble. The planet that sustains all life is at forty percent health — and falling. You are about to become part of the generation that changes that story. Welcome to The Tomorrow Matrix."
+    "line": "Terra is in trouble. The planet that sustains all life is at forty percent health, and falling. You are about to become part of the generation that changes that story. Welcome to The Tomorrow Matrix."
   },
   {
     "id": "OB-02",
     "trigger": "Returning player, landing page load",
-    "line": "Welcome back. Terra needs you again. Your progress is saved. Pick up where you left off — every mystery you solve brings the planet one step closer to healing."
+    "line": "Welcome back. Terra needs you again. Your progress is saved. Pick up where you left off, every mystery you solve brings the planet one step closer to healing."
   },
   {
     "id": "OB-03",
     "trigger": "Guest mode CTA tapped",
-    "line": "Playing as a guest means your progress, Climate Action Points, and solved mysteries won't be saved when you leave. Sign in with Google or Apple to keep your journey. Or continue — the planet still needs you today."
+    "line": "Playing as a guest means your progress, Climate Action Points, and solved mysteries won't be saved when you leave. Sign in with Google or Apple to keep your journey. Or continue, the planet still needs you today."
   },
   {
     "id": "OB-04",
     "trigger": "Authentication success",
-    "line": "You're in. Your data is secure and your progress will be waiting for you every time you return. Now — let's save a planet."
+    "line": "You're in. Your data is secure and your progress will be waiting for you every time you return. Now, let's save a planet."
   },
   {
     "id": "OB-05",
@@ -27,72 +27,72 @@
   {
     "id": "OB-06",
     "trigger": "Solo+AI mode selected",
-    "line": "Solo mode with AI advisors. You are the Director of Terra. Seven AI stakeholders will bring you their expertise — a scientist, a farmer, a policymaker, and more. Their insights are real. The choices are yours."
+    "line": "Solo mode with AI advisors. You are the Director of Terra. Seven AI stakeholders will bring you their expertise, a scientist, a farmer, a policymaker, and more. Their insights are real. The choices are yours."
   },
   {
     "id": "OB-07",
     "trigger": "Multiplayer mode selected (host)",
-    "line": "Multiplayer mode. Share your session code with teammates. Each player will see the crisis differently — because each role holds a different piece of the puzzle. You can only win this together."
+    "line": "Multiplayer mode. Share your session code with teammates. Each player will see the crisis differently, because each role holds a different piece of the puzzle. You can only win this together."
   },
   {
     "id": "OB-08",
-    "trigger": "Multiplayer join — session code accepted",
+    "trigger": "Multiplayer join, session code accepted",
     "line": "You've joined the mission. Find your role and bring your unique perspective to the team. What you know, others don't. Share it."
   },
   {
     "id": "OB-09",
     "trigger": "Facilitator mode selected",
-    "line": "Facilitator mode active. Your host dashboard gives you full control — you can trigger crises, pause for debrief, and guide your group through every decision. Your participants are counting on your leadership."
+    "line": "Facilitator mode active. Your host dashboard gives you full control, you can trigger crises, pause for debrief, and guide your group through every decision. Your participants are counting on your leadership."
   },
   {
     "id": "OB-10",
     "trigger": "Role selection screen loads",
-    "line": "Choose your stakeholder identity. Each role sees a different piece of the climate puzzle. Your role shapes what you investigate, what you know in a crisis, and how you level up. There is no wrong choice — but each one matters."
+    "line": "Choose your stakeholder identity. Each role sees a different piece of the climate puzzle. Your role shapes what you investigate, what you know in a crisis, and how you level up. There is no wrong choice, but each one matters."
   },
   {
     "id": "OB-11",
     "trigger": "Scientist role card selected or hovered",
-    "line": "You are the Scientist. You read the data before anyone else does. Climate tipping points, emissions projections, extreme weather patterns — you see the signals others miss. Your first mysteries reveal the hidden drivers of planetary breakdown."
+    "line": "You are the Scientist. You read the data before anyone else does. Climate tipping points, emissions projections, extreme weather patterns, you see the signals others miss. Your first mysteries reveal the hidden drivers of planetary breakdown."
   },
   {
     "id": "OB-12",
     "trigger": "Farmer role card selected or hovered",
-    "line": "You are the Farmer. The land tells you things no satellite can. Soil health, water availability, crop stress, pollinator collapse — you understand that food security is the floor beneath every other system. Lose it, and everything falls."
+    "line": "You are the Farmer. The land tells you things no satellite can. Soil health, water availability, crop stress, pollinator collapse, you understand that food security is the floor beneath every other system. Lose it, and everything falls."
   },
   {
     "id": "OB-13",
     "trigger": "Policy Maker role card selected or hovered",
-    "line": "You are the Policy Maker. Laws, budgets, regulations, and public trust — these are your tools. You know that the best science in the world achieves nothing without governance to enforce it. Your decisions affect everyone."
+    "line": "You are the Policy Maker. Laws, budgets, regulations, and public trust, these are your tools. You know that the best science in the world achieves nothing without governance to enforce it. Your decisions affect everyone."
   },
   {
     "id": "OB-14",
     "trigger": "Activist role card selected or hovered",
-    "line": "You are the Activist. You mobilise people. Campaign reach, community stories, grassroots pressure, public sentiment — you understand that institutions only move when people push. Your voice amplifies the science into action."
+    "line": "You are the Activist. You mobilise people. Campaign reach, community stories, grassroots pressure, public sentiment, you understand that institutions only move when people push. Your voice amplifies the science into action."
   },
   {
     "id": "OB-15",
     "trigger": "Business Leader role card selected or hovered",
-    "line": "You are the Business Leader. Markets, supply chains, investment returns, technology adoption — you see the economic forces that either accelerate or obstruct the transition. Green innovation is not just ethics — it is strategy."
+    "line": "You are the Business Leader. Markets, supply chains, investment returns, technology adoption, you see the economic forces that either accelerate or obstruct the transition. Green innovation is not just ethics, it is strategy."
   },
   {
     "id": "OB-16",
     "trigger": "City Planner role card selected or hovered",
-    "line": "You are the City Planner. Infrastructure, transport, land use, heat maps, flood zones — you design the systems billions of people depend on. Climate resilience starts with the city."
+    "line": "You are the City Planner. Infrastructure, transport, land use, heat maps, flood zones, you design the systems billions of people depend on. Climate resilience starts with the city."
   },
   {
     "id": "OB-17",
     "trigger": "Community Representative role card selected or hovered",
-    "line": "You are the Community Representative. You speak for the people who feel climate change in their water bills, their health, their daily commute. Local conditions, daily costs, service access — your perspective is the most honest measure of impact."
+    "line": "You are the Community Representative. You speak for the people who feel climate change in their water bills, their health, their daily commute. Local conditions, daily costs, service access, your perspective is the most honest measure of impact."
   },
   {
     "id": "OB-18",
     "trigger": "Student role card selected or hovered",
-    "line": "You are the Student. You will inherit the world your decisions are shaping today. Climate education gaps, youth anxiety, peer engagement, future scenarios — you see what's at stake more clearly than anyone."
+    "line": "You are the Student. You will inherit the world your decisions are shaping today. Climate education gaps, youth anxiety, peer engagement, future scenarios, you see what's at stake more clearly than anyone."
   },
   {
     "id": "MAP-01",
     "trigger": "World map first load (first session)",
-    "line": "This is Terra. A living planet — our version of Earth — at forty percent health and falling. Every glowing point on this map is a real climate mystery. Each one is a system that has broken, or is breaking. Click any active hotspot to begin investigating. The planet responds to everything you do."
+    "line": "This is Terra. A living planet, our version of Earth, at forty percent health and falling. Every glowing point on this map is a real climate mystery. Each one is a system that has broken, or is breaking. Click any active hotspot to begin investigating. The planet responds to everything you do."
   },
   {
     "id": "MAP-02",
@@ -102,7 +102,7 @@
   {
     "id": "MAP-03",
     "trigger": "First MCQ card appears",
-    "line": "Before you explore, three quick questions. These are calibrated for your role as [ROLE NAME]. Your answers earn Climate Action Points — and they'll sharpen your thinking for the mysteries ahead."
+    "line": "Before you explore, three quick questions. These are calibrated for your role as [ROLE NAME]. Your answers earn Climate Action Points, and they'll sharpen your thinking for the mysteries ahead."
   },
   {
     "id": "MAP-04",
@@ -112,37 +112,37 @@
   {
     "id": "MAP-05",
     "trigger": "Incorrect MCQ answer selected",
-    "line": "Not quite — the correct answer was [CORRECT ANSWER TEXT]. No points this time. The mysteries ahead will give you the full picture."
+    "line": "Not quite, the correct answer was [CORRECT ANSWER TEXT]. No points this time. The mysteries ahead will give you the full picture."
   },
   {
     "id": "MAP-06",
-    "trigger": "All 3 MCQs complete — map unlocks",
-    "line": "Good. The map is now yours to explore. Active mysteries are pulsing green. Locked ones are grey — they unlock as you solve others. The clock is running. Terra's year is [CURRENT YEAR]."
+    "trigger": "All 3 MCQs complete, map unlocks",
+    "line": "Good. The map is now yours to explore. Active mysteries are pulsing green. Locked ones are grey, they unlock as you solve others. The clock is running. Terra's year is [CURRENT YEAR]."
   },
   {
     "id": "MAP-07",
     "trigger": "Locked hotspot tapped",
-    "line": "This mystery is locked. Solve [PREREQUISITE MYSTERY NAME] first — that's what opens this door. Every mystery you crack reveals the next layer of the system."
+    "line": "This mystery is locked. Solve [PREREQUISITE MYSTERY NAME] first, that's what opens this door. Every mystery you crack reveals the next layer of the system."
   },
   {
     "id": "MAP-08",
     "trigger": "Available hotspot tapped",
-    "line": "Opening [MYSTERY NAME]. Arrange the causal chain correctly and you'll earn Climate Action Points — and Terra's health will rise. Think carefully before you validate."
+    "line": "Opening [MYSTERY NAME]. Arrange the causal chain correctly and you'll earn Climate Action Points, and Terra's health will rise. Think carefully before you validate."
   },
   {
     "id": "MAP-09",
     "trigger": "One mystery from crisis trigger",
-    "line": "Heads up. The next mystery you solve will trigger a crisis event. Terra is responding to the pressure — be ready to make a fast collective decision."
+    "line": "Heads up. The next mystery you solve will trigger a crisis event. Terra is responding to the pressure, be ready to make a fast collective decision."
   },
   {
     "id": "MAP-10",
     "trigger": "Tier unlocks (new tier becomes available)",
-    "line": "Tier [NEW TIER NUMBER] unlocked. [TIER NAME] mysteries are now available on the map. These are deeper, more complex systems — and the stakes are higher. You're ready for this."
+    "line": "Tier [NEW TIER NUMBER] unlocked. [TIER NAME] mysteries are now available on the map. These are deeper, more complex systems, and the stakes are higher. You're ready for this."
   },
   {
     "id": "MYS-NAV-01",
-    "trigger": "Mysteries tab — first open",
-    "line": "Your mystery library. As [ROLE NAME], your starred mysteries appear first — these are the ones where your expertise runs deepest. Solve them all to restore Terra and unlock the network of causes beneath every crisis."
+    "trigger": "Mysteries tab, first open",
+    "line": "Your mystery library. As [ROLE NAME], your starred mysteries appear first, these are the ones where your expertise runs deepest. Solve them all to restore Terra and unlock the network of causes beneath every crisis."
   },
   {
     "id": "MYS-NAV-02",
@@ -157,22 +157,22 @@
   {
     "id": "MYS-CARD-02",
     "trigger": "Locked mystery card tapped",
-    "line": "Locked. Complete [PREREQUISITE] to open this one. The mysteries are connected — just like the systems they describe."
+    "line": "Locked. Complete [PREREQUISITE] to open this one. The mysteries are connected, just like the systems they describe."
   },
   {
     "id": "MYS-M01",
     "trigger": "Solve screen opens for M01",
-    "line": "The Arctic is disappearing faster than models predicted. Satellite data confirms sea ice is shrinking at an alarming rate — and the consequences are not local. They cascade through every climate system on this planet. Trace the chain from the first human cause to the final impact on Terra."
+    "line": "The Arctic is disappearing faster than models predicted. Satellite data confirms sea ice is shrinking at an alarming rate, and the consequences are not local. They cascade through every climate system on this planet. Trace the chain from the first human cause to the final impact on Terra."
   },
   {
     "id": "MYS-M02",
     "trigger": "Solve screen opens for M02",
-    "line": "The thermometers are breaking records. Record-breaking temperatures are no longer rare events — they are the new normal for cities, farms, and ecosystems worldwide. Understand how a warming world makes extreme heat not just more frequent, but more devastating. Arrange the causes."
+    "line": "The thermometers are breaking records. Record-breaking temperatures are no longer rare events, they are the new normal for cities, farms, and ecosystems worldwide. Understand how a warming world makes extreme heat not just more frequent, but more devastating. Arrange the causes."
   },
   {
     "id": "MYS-M03",
     "trigger": "Solve screen opens for M03",
-    "line": "The reservoirs are shrinking. Farms are rationing. Cities are restricting. Water scarcity is not a distant problem — it is already reshaping how billions of people live and eat. Piece together the causal system that is draining the world's most essential resource."
+    "line": "The reservoirs are shrinking. Farms are rationing. Cities are restricting. Water scarcity is not a distant problem, it is already reshaping how billions of people live and eat. Piece together the causal system that is draining the world's most essential resource."
   },
   {
     "id": "MYS-M04",
@@ -182,7 +182,7 @@
   {
     "id": "MYS-M05",
     "trigger": "Solve screen opens for M05",
-    "line": "The reefs are turning white. Coral bleaching is not cosmetic — it signals the collapse of marine ecosystems that feed hundreds of millions of people. Understand the exact sequence of events transforming living reefs into underwater graveyards."
+    "line": "The reefs are turning white. Coral bleaching is not cosmetic, it signals the collapse of marine ecosystems that feed hundreds of millions of people. Understand the exact sequence of events transforming living reefs into underwater graveyards."
   },
   {
     "id": "MYS-M06",
@@ -192,7 +192,7 @@
   {
     "id": "MYS-M07",
     "trigger": "Solve screen opens for M07",
-    "line": "The harvest numbers are down — again. Across multiple regions and multiple crop types, farmers are reporting yields that cannot feed the populations depending on them. Piece together the causal sequence that is slowly hollowing out global food security."
+    "line": "The harvest numbers are down, again. Across multiple regions and multiple crop types, farmers are reporting yields that cannot feed the populations depending on them. Piece together the causal sequence that is slowly hollowing out global food security."
   },
   {
     "id": "MYS-M08",
@@ -207,7 +207,7 @@
   {
     "id": "MYS-M10",
     "trigger": "Solve screen opens for M10",
-    "line": "The water levels are rising. Communities built in floodplains are discovering their risk is not theoretical — it is arriving now, more often and more severely. Arrange the causal chain from rainfall events to infrastructure failure and displacement."
+    "line": "The water levels are rising. Communities built in floodplains are discovering their risk is not theoretical, it is arriving now, more often and more severely. Arrange the causal chain from rainfall events to infrastructure failure and displacement."
   },
   {
     "id": "MYS-M11",
@@ -217,17 +217,17 @@
   {
     "id": "MYS-M12",
     "trigger": "Solve screen opens for M12",
-    "line": "The ocean is filling with plastic. Massive accumulations of plastic waste are breaking down into microparticles that enter every layer of the marine food chain — and eventually, human bodies. Arrange the sequence from production to planetary harm."
+    "line": "The ocean is filling with plastic. Massive accumulations of plastic waste are breaking down into microparticles that enter every layer of the marine food chain, and eventually, human bodies. Arrange the sequence from production to planetary harm."
   },
   {
     "id": "MYS-M13",
     "trigger": "Solve screen opens for M13",
-    "line": "Millions are living without reliable electricity — not because the technology doesn't exist, but because the systems that distribute it are designed around profit, not equity. Trace the causal chain that makes energy access a justice issue, not just an engineering one."
+    "line": "Millions are living without reliable electricity, not because the technology doesn't exist, but because the systems that distribute it are designed around profit, not equity. Trace the causal chain that makes energy access a justice issue, not just an engineering one."
   },
   {
     "id": "MYS-M14",
     "trigger": "Solve screen opens for M14",
-    "line": "A generation is anxious. Young people worldwide are reporting grief, fear, and paralysis about the future of the planet — and that psychological weight is beginning to erode the civic engagement that climate action depends on. Understand the causal chain behind climate anxiety."
+    "line": "A generation is anxious. Young people worldwide are reporting grief, fear, and paralysis about the future of the planet, and that psychological weight is beginning to erode the civic engagement that climate action depends on. Understand the causal chain behind climate anxiety."
   },
   {
     "id": "MYS-M15",
@@ -237,17 +237,17 @@
   {
     "id": "MYS-M16",
     "trigger": "Solve screen opens for M16",
-    "line": "The pressure on businesses is mounting — from investors, from regulators, from customers. Companies that delay the transition to sustainable practices are discovering that the cost of inaction is rising faster than the cost of change. Trace the chain of forces reshaping commerce."
+    "line": "The pressure on businesses is mounting, from investors, from regulators, from customers. Companies that delay the transition to sustainable practices are discovering that the cost of inaction is rising faster than the cost of change. Trace the chain of forces reshaping commerce."
   },
   {
     "id": "MYS-M17",
     "trigger": "Solve screen opens for M17",
-    "line": "The knowledge is disappearing with the people who hold it. Generations of farming wisdom — adapted to local soils, local weather, local ecosystems — is being lost as rural communities age and young people leave for cities. This mystery is about what we lose when we lose this."
+    "line": "The knowledge is disappearing with the people who hold it. Generations of farming wisdom, adapted to local soils, local weather, local ecosystems, is being lost as rural communities age and young people leave for cities. This mystery is about what we lose when we lose this."
   },
   {
     "id": "MYS-M18",
     "trigger": "Solve screen opens for M18",
-    "line": "The electronics pile is growing. Discarded devices are releasing toxic materials — lead, mercury, cadmium — into soil and water in communities that often don't know the risk. Arrange the chain from consumer culture to toxic consequence."
+    "line": "The electronics pile is growing. Discarded devices are releasing toxic materials, lead, mercury, cadmium, into soil and water in communities that often don't know the risk. Arrange the chain from consumer culture to toxic consequence."
   },
   {
     "id": "MYS-M19",
@@ -262,17 +262,17 @@
   {
     "id": "MYS-M21",
     "trigger": "Solve screen opens for M21",
-    "line": "Workers are collapsing. Rising temperatures are making outdoor labour — agriculture, construction, logistics — physically dangerous during the hours that matter most. Trace the chain from warming climate to the economic and humanitarian cost of heat stress."
+    "line": "Workers are collapsing. Rising temperatures are making outdoor labour, agriculture, construction, logistics, physically dangerous during the hours that matter most. Trace the chain from warming climate to the economic and humanitarian cost of heat stress."
   },
   {
     "id": "MYS-M22",
     "trigger": "Solve screen opens for M22",
-    "line": "The fashion industry is one of the world's largest polluters — and most people don't know it. Fast fashion generates textile waste, water pollution, and emissions on a scale that rivals major industrial sectors. Arrange the causal chain from trend cycle to environmental harm."
+    "line": "The fashion industry is one of the world's largest polluters, and most people don't know it. Fast fashion generates textile waste, water pollution, and emissions on a scale that rivals major industrial sectors. Arrange the causal chain from trend cycle to environmental harm."
   },
   {
     "id": "MYS-M23",
     "trigger": "Solve screen opens for M23",
-    "line": "Students are leaving schools without the basic understanding of climate systems they need to make informed decisions as citizens, voters, and workers. The climate education gap is a systemic failure — and it has systemic consequences. Trace the chain."
+    "line": "Students are leaving schools without the basic understanding of climate systems they need to make informed decisions as citizens, voters, and workers. The climate education gap is a systemic failure, and it has systemic consequences. Trace the chain."
   },
   {
     "id": "MYS-M24",
@@ -282,12 +282,12 @@
   {
     "id": "MYS-M25",
     "trigger": "Solve screen opens for M25",
-    "line": "The technology exists. The costs have fallen. And yet the transition to renewable energy is slower than it needs to be — blocked by grid limitations, policy gaps, and incumbent economic interests. Arrange the chain of barriers from potential to stalled deployment."
+    "line": "The technology exists. The costs have fallen. And yet the transition to renewable energy is slower than it needs to be, blocked by grid limitations, policy gaps, and incumbent economic interests. Arrange the chain of barriers from potential to stalled deployment."
   },
   {
     "id": "MYS-M26",
     "trigger": "Solve screen opens for M26",
-    "line": "Fresh, affordable food is unavailable in entire neighbourhoods — not because it doesn't exist nearby, but because the systems of distribution and retail are organised around profit, not nutrition. Trace the causal chain from planning decisions to the health crisis of the urban food desert."
+    "line": "Fresh, affordable food is unavailable in entire neighbourhoods, not because it doesn't exist nearby, but because the systems of distribution and retail are organised around profit, not nutrition. Trace the causal chain from planning decisions to the health crisis of the urban food desert."
   },
   {
     "id": "MYS-M27",
@@ -302,27 +302,27 @@
   {
     "id": "MYS-M29",
     "trigger": "Solve screen opens for M29",
-    "line": "Indigenous communities are losing custodianship of lands they have sustainably managed for generations. These losses are not just cultural — they accelerate deforestation, biodiversity loss, and the destruction of the most effective land management systems on the planet. Trace the chain."
+    "line": "Indigenous communities are losing custodianship of lands they have sustainably managed for generations. These losses are not just cultural, they accelerate deforestation, biodiversity loss, and the destruction of the most effective land management systems on the planet. Trace the chain."
   },
   {
     "id": "MYS-M30",
     "trigger": "Solve screen opens for M30",
-    "line": "City infrastructure was designed around the car — and it locked in decades of transport emissions. Changing this requires redesigning cities, not just swapping vehicles. Arrange the causal chain from planning decisions to the emissions pattern that keeps transport dependent on fossil fuels."
+    "line": "City infrastructure was designed around the car, and it locked in decades of transport emissions. Changing this requires redesigning cities, not just swapping vehicles. Arrange the causal chain from planning decisions to the emissions pattern that keeps transport dependent on fossil fuels."
   },
   {
     "id": "MYS-M31",
     "trigger": "Solve screen opens for M31",
-    "line": "When crops fail and supply chains break, prices rise — and the communities with the least margin are the first to go hungry. Food price spikes are not market anomalies. They are the downstream consequence of upstream systems failing. Trace the chain."
+    "line": "When crops fail and supply chains break, prices rise, and the communities with the least margin are the first to go hungry. Food price spikes are not market anomalies. They are the downstream consequence of upstream systems failing. Trace the chain."
   },
   {
     "id": "MYS-M32",
     "trigger": "Solve screen opens for M32",
-    "line": "Millions of people are moving — not by choice, but because their homes are no longer survivable. Climate migration is the largest forced displacement in human history in the making. Understand the causal systems driving it."
+    "line": "Millions of people are moving, not by choice, but because their homes are no longer survivable. Climate migration is the largest forced displacement in human history in the making. Understand the causal systems driving it."
   },
   {
     "id": "MYS-M33",
     "trigger": "Solve screen opens for M33",
-    "line": "The ocean is absorbing CO₂ at an enormous rate — and changing chemistry as it does. Ocean acidification is making it harder for shellfish and corals to form shells, threatening the base of the marine food web. Arrange the chemical and ecological chain."
+    "line": "The ocean is absorbing CO₂ at an enormous rate, and changing chemistry as it does. Ocean acidification is making it harder for shellfish and corals to form shells, threatening the base of the marine food web. Arrange the chemical and ecological chain."
   },
   {
     "id": "MYS-M34",
@@ -332,12 +332,12 @@
   {
     "id": "MYS-M35",
     "trigger": "Solve screen opens for M35",
-    "line": "The wells are failing. Underground aquifers that took geological time to fill are being drawn down in decades. Groundwater depletion is a slow crisis with a fast ending — and it is already past the point of easy reversal in many regions. Arrange the causal sequence."
+    "line": "The wells are failing. Underground aquifers that took geological time to fill are being drawn down in decades. Groundwater depletion is a slow crisis with a fast ending, and it is already past the point of easy reversal in many regions. Arrange the causal sequence."
   },
   {
     "id": "MYS-M36",
     "trigger": "Solve screen opens for M36",
-    "line": "Cities trap heat. Concrete, asphalt, and the absence of green cover create islands of heat that are significantly warmer than surrounding areas — amplifying the health and energy consequences of global warming. Trace the urban heat spiral."
+    "line": "Cities trap heat. Concrete, asphalt, and the absence of green cover create islands of heat that are significantly warmer than surrounding areas, amplifying the health and energy consequences of global warming. Trace the urban heat spiral."
   },
   {
     "id": "MYS-M37",
@@ -347,7 +347,7 @@
   {
     "id": "MYS-M38",
     "trigger": "Solve screen opens for M38",
-    "line": "The bees are disappearing. Without pollinators, the agricultural systems that produce a third of the world's food supply cannot function. Pollinator collapse is not a biodiversity problem alone — it is a food security emergency. Trace the causal chain."
+    "line": "The bees are disappearing. Without pollinators, the agricultural systems that produce a third of the world's food supply cannot function. Pollinator collapse is not a biodiversity problem alone, it is a food security emergency. Trace the causal chain."
   },
   {
     "id": "MYS-M39",
@@ -357,7 +357,7 @@
   {
     "id": "MYS-M40",
     "trigger": "Solve screen opens for M40",
-    "line": "Climate events — floods, droughts, wildfires, heatwaves — are disrupting the global supply chains that move food, medicine, and materials around the world. Understand how climate shocks translate into economic shocks, and how both compound each other."
+    "line": "Climate events, floods, droughts, wildfires, heatwaves, are disrupting the global supply chains that move food, medicine, and materials around the world. Understand how climate shocks translate into economic shocks, and how both compound each other."
   },
   {
     "id": "MYS-M41",
@@ -367,12 +367,12 @@
   {
     "id": "MYS-M42",
     "trigger": "Solve screen opens for M42",
-    "line": "Productive land is turning to desert — a combination of climate stress, overgrazing, deforestation, and poor land management is consuming the agricultural land that billions depend on. Arrange the causal chain from land use to irreversible loss."
+    "line": "Productive land is turning to desert, a combination of climate stress, overgrazing, deforestation, and poor land management is consuming the agricultural land that billions depend on. Arrange the causal chain from land use to irreversible loss."
   },
   {
     "id": "MYS-M43",
     "trigger": "Solve screen opens for M43",
-    "line": "When keystone species disappear, the food webs that depend on them begin to unravel. Ecosystem collapse is not a single event — it is a cascade, triggered by the removal of the species that hold the system together. Trace the sequence."
+    "line": "When keystone species disappear, the food webs that depend on them begin to unravel. Ecosystem collapse is not a single event, it is a cascade, triggered by the removal of the species that hold the system together. Trace the sequence."
   },
   {
     "id": "MYS-M44",
@@ -382,7 +382,7 @@
   {
     "id": "MYS-M45",
     "trigger": "Solve screen opens for M45",
-    "line": "Dependence on fossil fuel imports and volatile energy markets is not just an environmental problem — it is a national security risk. Energy security crises ripple into economic instability, public unrest, and political fragility. Trace the chain."
+    "line": "Dependence on fossil fuel imports and volatile energy markets is not just an environmental problem, it is a national security risk. Energy security crises ripple into economic instability, public unrest, and political fragility. Trace the chain."
   },
   {
     "id": "MYS-M46",
@@ -392,22 +392,22 @@
   {
     "id": "MYS-M47",
     "trigger": "Solve screen opens for M47",
-    "line": "Climate-driven health crises — heat stroke, vector-borne disease, air pollution, malnutrition — are compounding each other and overwhelming health systems that were already under strain. Trace the causal chain from climate forcing to public health system failure."
+    "line": "Climate-driven health crises, heat stroke, vector-borne disease, air pollution, malnutrition, are compounding each other and overwhelming health systems that were already under strain. Trace the causal chain from climate forcing to public health system failure."
   },
   {
     "id": "MYS-M48",
     "trigger": "Solve screen opens for M48",
-    "line": "The scale of forced displacement is unprecedented. People fleeing climate-impacted zones are creating one of the most complex humanitarian and political challenges in history — with no clear international framework to manage it. Arrange the causal chain."
+    "line": "The scale of forced displacement is unprecedented. People fleeing climate-impacted zones are creating one of the most complex humanitarian and political challenges in history, with no clear international framework to manage it. Arrange the causal chain."
   },
   {
     "id": "MYS-M49",
     "trigger": "Solve screen opens for M49",
-    "line": "Fish stocks that have sustained human food systems for millennia are collapsing under the combined pressure of overfishing, pollution, and climate change. This is not a resource problem — it is a governance failure. Trace the sequence."
+    "line": "Fish stocks that have sustained human food systems for millennia are collapsing under the combined pressure of overfishing, pollution, and climate change. This is not a resource problem, it is a governance failure. Trace the sequence."
   },
   {
     "id": "MYS-M50",
     "trigger": "Solve screen opens for M50",
-    "line": "As freshwater becomes scarce, the communities and nations that share water sources come into conflict. Water conflict is already reshaping geopolitics — and it will reshape them further as climate change reduces supply. Arrange the causal chain."
+    "line": "As freshwater becomes scarce, the communities and nations that share water sources come into conflict. Water conflict is already reshaping geopolitics, and it will reshape them further as climate change reduces supply. Arrange the causal chain."
   },
   {
     "id": "MYS-M51",
@@ -417,32 +417,32 @@
   {
     "id": "MYS-M52",
     "trigger": "Solve screen opens for M52",
-    "line": "Climate change is not hitting everyone equally. The communities with the fewest resources are absorbing the greatest impacts — while those who contributed most to the crisis are best positioned to adapt. Social inequality and climate are deeply entangled. Arrange the causal chain."
+    "line": "Climate change is not hitting everyone equally. The communities with the fewest resources are absorbing the greatest impacts, while those who contributed most to the crisis are best positioned to adapt. Social inequality and climate are deeply entangled. Arrange the causal chain."
   },
   {
     "id": "MYS-M53",
     "trigger": "Solve screen opens for M53",
-    "line": "The global food system — the interconnected network of production, distribution, trade, and consumption — is fracturing under simultaneous pressure from climate, economics, and ecology. This is an expert-level mystery. Trace every link."
+    "line": "The global food system, the interconnected network of production, distribution, trade, and consumption, is fracturing under simultaneous pressure from climate, economics, and ecology. This is an expert-level mystery. Trace every link."
   },
   {
     "id": "MYS-M54",
     "trigger": "Solve screen opens for M54",
-    "line": "The sixth mass extinction is accelerating. Species are disappearing at rates not seen since the asteroid that ended the dinosaurs — and the driver this time is human activity at planetary scale. Arrange the causal chain."
+    "line": "The sixth mass extinction is accelerating. Species are disappearing at rates not seen since the asteroid that ended the dinosaurs, and the driver this time is human activity at planetary scale. Arrange the causal chain."
   },
   {
     "id": "MYS-M55",
     "trigger": "Solve screen opens for M55",
-    "line": "Fossil fuel infrastructure is not just an energy system — it is an economic and political system. The investments made, the jobs created, the tax revenues generated — these create structural resistance to change that policy alone cannot overcome. Trace the lock-in."
+    "line": "Fossil fuel infrastructure is not just an energy system, it is an economic and political system. The investments made, the jobs created, the tax revenues generated, these create structural resistance to change that policy alone cannot overcome. Trace the lock-in."
   },
   {
     "id": "MYS-M56",
     "trigger": "Solve screen opens for M56",
-    "line": "The planet has feedback loops — self-reinforcing mechanisms that accelerate warming beyond the initial trigger. Tipping point activation is the scenario where these loops become dominant. This is the mystery where the casual chain folds back on itself. Trace it carefully."
+    "line": "The planet has feedback loops, self-reinforcing mechanisms that accelerate warming beyond the initial trigger. Tipping point activation is the scenario where these loops become dominant. This is the mystery where the casual chain folds back on itself. Trace it carefully."
   },
   {
     "id": "MYS-M57",
     "trigger": "Solve screen opens for M57",
-    "line": "The Amazon is the lungs of the planet — and it is approaching a threshold beyond which it can no longer sustain itself as a forest. Amazon dieback would be the largest single climate event in human history. Arrange the causal chain to its endpoint."
+    "line": "The Amazon is the lungs of the planet, and it is approaching a threshold beyond which it can no longer sustain itself as a forest. Amazon dieback would be the largest single climate event in human history. Arrange the causal chain to its endpoint."
   },
   {
     "id": "MYS-M58",
@@ -452,37 +452,37 @@
   {
     "id": "MYS-M59",
     "trigger": "Solve screen opens for M59",
-    "line": "Multiple simultaneous climate crises — flooding, drought, food failure, displacement, economic shock — are beginning to compound each other beyond humanity's organised response capacity. Multi-hazard cascades are the systemic risk no single response can address. This is the penultimate mystery. Arrange every link."
+    "line": "Multiple simultaneous climate crises, flooding, drought, food failure, displacement, economic shock, are beginning to compound each other beyond humanity's organised response capacity. Multi-hazard cascades are the systemic risk no single response can address. This is the penultimate mystery. Arrange every link."
   },
   {
     "id": "MYS-M60",
     "trigger": "Solve screen opens for M60",
-    "line": "This is the final mystery. Earth is approaching — and in some systems, exceeding — the safe operating limits for human civilisation. Planetary Boundaries Breach is not a metaphor. It is the threshold at which the systems that sustain life begin to fail irreversibly. Trace the full chain. This is what we are trying to prevent."
+    "line": "This is the final mystery. Earth is approaching, and in some systems, exceeding, the safe operating limits for human civilisation. Planetary Boundaries Breach is not a metaphor. It is the threshold at which the systems that sustain life begin to fail irreversibly. Trace the full chain. This is what we are trying to prevent."
   },
   {
     "id": "MYS-PUZZLE-01",
     "trigger": "Puzzle cards load on screen",
-    "line": "Eight cards. One correct sequence — from the first cause to the final impact. Drag them into order and validate when you're ready. Take a moment before you commit."
+    "line": "Eight cards. One correct sequence, from the first cause to the final impact. Drag them into order and validate when you're ready. Take a moment before you commit."
   },
   {
     "id": "MYS-PUZZLE-02",
     "trigger": "Hint CTA tapped, -10 CAP deducted",
-    "line": "Hint used. Ten Climate Action Points deducted. Card [NUMBER] belongs in position [POSITION]. Use hints sparingly — every point you spend here is a point you can't invest in interventions."
+    "line": "Hint used. Ten Climate Action Points deducted. Card [NUMBER] belongs in position [POSITION]. Use hints sparingly, every point you spend here is a point you can't invest in interventions."
   },
   {
     "id": "MYS-PUZZLE-03",
-    "trigger": "First validate attempt — incorrect",
-    "line": "Not quite right. Red positions need rethinking. You still have three more attempts — and the maximum reward decreases with each one. Study the chain carefully."
+    "trigger": "First validate attempt, incorrect",
+    "line": "Not quite right. Red positions need rethinking. You still have three more attempts, and the maximum reward decreases with each one. Study the chain carefully."
   },
   {
     "id": "MYS-PUZZLE-04",
-    "trigger": "Second validate attempt — incorrect",
-    "line": "Still not right. You're now at seventy-five percent of the maximum reward. Look at what you know for certain — anchor those cards first, then work outward."
+    "trigger": "Second validate attempt, incorrect",
+    "line": "Still not right. You're now at seventy-five percent of the maximum reward. Look at what you know for certain, anchor those cards first, then work outward."
   },
   {
     "id": "MYS-PUZZLE-05",
-    "trigger": "Third validate attempt — incorrect",
-    "line": "Third attempt. Reward is now at fifty percent. Consider using a hint — or think about what must come first: what is the original human cause? Start there."
+    "trigger": "Third validate attempt, incorrect",
+    "line": "Third attempt. Reward is now at fifty percent. Consider using a hint, or think about what must come first: what is the original human cause? Start there."
   },
   {
     "id": "MYS-WIN-01",
@@ -491,23 +491,23 @@
   },
   {
     "id": "MYS-WIN-02",
-    "trigger": "Success — 2nd, 3rd or 4th attempt",
-    "line": "Correct sequence. [CAP AMOUNT] Climate Action Points earned. The chain is solved. Terra responds — every mystery you crack makes the planet a little more whole."
+    "trigger": "Success, 2nd, 3rd or 4th attempt",
+    "line": "Correct sequence. [CAP AMOUNT] Climate Action Points earned. The chain is solved. Terra responds, every mystery you crack makes the planet a little more whole."
   },
   {
     "id": "MYS-WIN-03",
     "trigger": "New mysteries unlock after solve",
-    "line": "New mysteries have appeared on the map. [MYSTERY NAME] is now active — it was waiting behind this one. That's how the system works: every answer reveals a deeper question."
+    "line": "New mysteries have appeared on the map. [MYSTERY NAME] is now active, it was waiting behind this one. That's how the system works: every answer reveals a deeper question."
   },
   {
     "id": "MYS-WIN-04",
-    "trigger": "Final mystery in tier solved — tier complete",
-    "line": "Tier [TIER NUMBER] complete. You've mapped the [DIFFICULTY] layer of Terra's crisis network. Tier [NEXT TIER] is now open — the systems are more entangled, the stakes are higher. Ready?"
+    "trigger": "Final mystery in tier solved, tier complete",
+    "line": "Tier [TIER NUMBER] complete. You've mapped the [DIFFICULTY] layer of Terra's crisis network. Tier [NEXT TIER] is now open, the systems are more entangled, the stakes are higher. Ready?"
   },
   {
     "id": "MYS-FAIL-01",
-    "trigger": "Mystery failure — all attempts exhausted or failure applied",
-    "line": "The chain wasn't completed in time. Terra's health has dropped — and [INDICATOR NAME] has weakened. You can try again. The mystery remains open. The planet still needs you to get this right."
+    "trigger": "Mystery failure, all attempts exhausted or failure applied",
+    "line": "The chain wasn't completed in time. Terra's health has dropped, and [INDICATOR NAME] has weakened. You can try again. The mystery remains open. The planet still needs you to get this right."
   },
   {
     "id": "Q-MCQ-01",
@@ -516,33 +516,33 @@
   },
   {
     "id": "Q-MCQ-02",
-    "trigger": "In-session MCQ — correct answer",
+    "trigger": "In-session MCQ, correct answer",
     "line": "Correct. Plus five Climate Action Points. That understanding is exactly what separates [ROLE NAME] stakeholders who lead from those who follow."
   },
   {
     "id": "Q-MCQ-03",
-    "trigger": "In-session MCQ — incorrect answer",
+    "trigger": "In-session MCQ, incorrect answer",
     "line": "That's not quite right. The answer is [CORRECT ANSWER TEXT]. No points this time, but this distinction matters for the mysteries ahead. Keep it in mind."
   },
   {
     "id": "Q-SCENE-01",
     "trigger": "Scenario question fires after 2nd mystery solved",
-    "line": "You've solved two mysteries. Now a scenario. This is the kind of real-world decision a [ROLE NAME] faces. Ten Climate Action Points if you choose correctly. There's one best answer — think it through."
+    "line": "You've solved two mysteries. Now a scenario. This is the kind of real-world decision a [ROLE NAME] faces. Ten Climate Action Points if you choose correctly. There's one best answer, think it through."
   },
   {
     "id": "Q-SCENE-02",
-    "trigger": "Scenario question — correct answer",
-    "line": "That's the right call. Plus ten Climate Action Points. That's the kind of thinking that builds lasting systems — not just short-term fixes."
+    "trigger": "Scenario question, correct answer",
+    "line": "That's the right call. Plus ten Climate Action Points. That's the kind of thinking that builds lasting systems, not just short-term fixes."
   },
   {
     "id": "Q-SCENE-03",
-    "trigger": "Scenario question — incorrect answer",
-    "line": "Not the best option here. [BRIEF CORRECT ANSWER EXPLANATION]. The tradeoffs in [ROLE NAME] decisions are never simple — but some paths have far less damage than others."
+    "trigger": "Scenario question, incorrect answer",
+    "line": "Not the best option here. [BRIEF CORRECT ANSWER EXPLANATION]. The tradeoffs in [ROLE NAME] decisions are never simple, but some paths have far less damage than others."
   },
   {
     "id": "Q-REFL-01",
     "trigger": "Reflection question fires",
-    "line": "A reflection moment. There's no single right answer here — only your honest thinking. Five Climate Action Points just for engaging with it. The most important climate decisions start with this kind of reflection."
+    "line": "A reflection moment. There's no single right answer here, only your honest thinking. Five Climate Action Points just for engaging with it. The most important climate decisions start with this kind of reflection."
   },
   {
     "id": "Q-REFL-02",
@@ -562,17 +562,17 @@
   {
     "id": "Q-CHAL-03",
     "trigger": "Role Mission launched",
-    "line": "Mission active: [MISSION NAME]. This is specific to your path as [ROLE NAME]. Complete the objectives — each one moves Terra and your role level forward."
+    "line": "Mission active: [MISSION NAME]. This is specific to your path as [ROLE NAME]. Complete the objectives, each one moves Terra and your role level forward."
   },
   {
     "id": "Q-CHAL-04",
     "trigger": "Role Mission completed",
-    "line": "Mission complete. [CAP AMOUNT] Climate Action Points earned. Your role level has progressed. [NEW LEVEL TITLE] — you've earned that."
+    "line": "Mission complete. [CAP AMOUNT] Climate Action Points earned. Your role level has progressed. [NEW LEVEL TITLE], you've earned that."
   },
   {
     "id": "Q-CHAL-05",
     "trigger": "Role Assessment launched",
-    "line": "The Role Assessment. This is your synthesis test — it measures whether you understand not just your own domain, but how your role connects to every other part of the system. One hundred Climate Action Points. Ready?"
+    "line": "The Role Assessment. This is your synthesis test, it measures whether you understand not just your own domain, but how your role connects to every other part of the system. One hundred Climate Action Points. Ready?"
   },
   {
     "id": "Q-CHAL-06",
@@ -582,12 +582,12 @@
   {
     "id": "CRISIS-INTRO",
     "trigger": "First crisis event fires (ever)",
-    "line": "Crisis alert. Terra is responding to the pressure you've been uncovering. Every four mysteries solved triggers a real-time emergency. You have ninety seconds to vote. In multiplayer, all roles vote — and each perspective matters. Choose wisely. The planet cannot wait."
+    "line": "Crisis alert. Terra is responding to the pressure you've been uncovering. Every four mysteries solved triggers a real-time emergency. You have ninety seconds to vote. In multiplayer, all roles vote, and each perspective matters. Choose wisely. The planet cannot wait."
   },
   {
     "id": "CRISIS-OPEN",
     "trigger": "Crisis overlay opens",
-    "line": "Crisis: [CRISIS NAME]. [AFFECTED POPULATION] [UNIT] in immediate need. Ninety seconds on the clock. Your role as [ROLE NAME] gives you specific intelligence about this situation — check your private information panel."
+    "line": "Crisis: [CRISIS NAME]. [AFFECTED POPULATION] [UNIT] in immediate need. Ninety seconds on the clock. Your role as [ROLE NAME] gives you specific intelligence about this situation, check your private information panel."
   },
   {
     "id": "CRISIS-TIMER-30",
@@ -602,12 +602,12 @@
   {
     "id": "CRISIS-TIMEOUT",
     "trigger": "Crisis timer expires without majority",
-    "line": "Time's up. No majority was reached. The worst outcome has been applied. Terra's health has taken a significant hit. When the next crisis comes — decide faster."
+    "line": "Time's up. No majority was reached. The worst outcome has been applied. Terra's health has taken a significant hit. When the next crisis comes, decide faster."
   },
   {
     "id": "CRISIS-RESULT-BEST",
     "trigger": "Best option wins crisis vote",
-    "line": "The group chose wisely. [BEST OPTION LABEL] — the most effective response given the constraints. Terra absorbs the blow, but recovers faster than it would have. Well done."
+    "line": "The group chose wisely. [BEST OPTION LABEL], the most effective response given the constraints. Terra absorbs the blow, but recovers faster than it would have. Well done."
   },
   {
     "id": "CRISIS-RESULT-MID",
@@ -617,22 +617,22 @@
   {
     "id": "CRISIS-RESULT-WORST",
     "trigger": "Worst option wins crisis vote",
-    "line": "That was the hardest possible outcome. Terra's health has fallen sharply. [WORST OPTION LABEL] — this will ripple through the planetary indicators for rounds to come. The next crisis demands better."
+    "line": "That was the hardest possible outcome. Terra's health has fallen sharply. [WORST OPTION LABEL], this will ripple through the planetary indicators for rounds to come. The next crisis demands better."
   },
   {
     "id": "CRISIS-REVEAL",
     "trigger": "Best response reveal panel shown",
-    "line": "Here's what the optimal response would have been — and why. [BEST RESPONSE EXPLANATION TEXT]. Every crisis is a lesson. The system is teaching you something. Pay attention."
+    "line": "Here's what the optimal response would have been, and why. [BEST RESPONSE EXPLANATION TEXT]. Every crisis is a lesson. The system is teaching you something. Pay attention."
   },
   {
     "id": "C1-NAR",
     "trigger": "Coastal Flooding Emergency fires",
-    "line": "Terra's coastal systems have reached breaking point. Four hundred thousand people are in the path of flooding that the existing infrastructure cannot contain. This is not a future scenario — it is happening now, while you deliberate. Ninety seconds."
+    "line": "Terra's coastal systems have reached breaking point. Four hundred thousand people are in the path of flooding that the existing infrastructure cannot contain. This is not a future scenario, it is happening now, while you deliberate. Ninety seconds."
   },
   {
     "id": "C1-PRIV",
     "trigger": "Role-specific info panel opens during Coastal Flooding Emergency",
-    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage — but only if you use it. Share it with your team."
+    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage, but only if you use it. Share it with your team."
   },
   {
     "id": "C2-NAR",
@@ -642,7 +642,7 @@
   {
     "id": "C2-PRIV",
     "trigger": "Role-specific info panel opens during Prolonged Drought & Wildfire Season",
-    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage — but only if you use it. Share it with your team."
+    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage, but only if you use it. Share it with your team."
   },
   {
     "id": "C3-NAR",
@@ -652,72 +652,72 @@
   {
     "id": "C3-PRIV",
     "trigger": "Role-specific info panel opens during Energy Grid Collapse",
-    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage — but only if you use it. Share it with your team."
+    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage, but only if you use it. Share it with your team."
   },
   {
     "id": "C4-NAR",
     "trigger": "Climate Migration Wave fires",
-    "line": "Two million people are on the move — not as refugees fleeing conflict, but as climate migrants fleeing habitability collapse. The cities they're heading to cannot absorb them. The regions they're leaving will send millions more. This crisis does not resolve itself. Only governance can. The Policymaker's vote counts double here."
+    "line": "Two million people are on the move, not as refugees fleeing conflict, but as climate migrants fleeing habitability collapse. The cities they're heading to cannot absorb them. The regions they're leaving will send millions more. This crisis does not resolve itself. Only governance can. The Policymaker's vote counts double here."
   },
   {
     "id": "C4-PRIV",
     "trigger": "Role-specific info panel opens during Climate Migration Wave",
-    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage — but only if you use it. Share it with your team."
+    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage, but only if you use it. Share it with your team."
   },
   {
     "id": "C5-NAR",
-    "trigger": "Extreme Heatwave — Public Health Emergency fires",
-    "line": "Forty-seven degrees Celsius. Outdoor workers are collapsing. Hospitals are at capacity. The heatwave is not a weather event — it is the direct consequence of the climate failures you have been tracking through every mystery. Now it demands an emergency response. Vote."
+    "trigger": "Extreme Heatwave, Public Health Emergency fires",
+    "line": "Forty-seven degrees Celsius. Outdoor workers are collapsing. Hospitals are at capacity. The heatwave is not a weather event, it is the direct consequence of the climate failures you have been tracking through every mystery. Now it demands an emergency response. Vote."
   },
   {
     "id": "C5-PRIV",
-    "trigger": "Role-specific info panel opens during Extreme Heatwave — Public Health Emergency",
-    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage — but only if you use it. Share it with your team."
+    "trigger": "Role-specific info panel opens during Extreme Heatwave, Public Health Emergency",
+    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage, but only if you use it. Share it with your team."
   },
   {
     "id": "C6-NAR",
     "trigger": "Ocean Ecosystem Collapse fires",
-    "line": "The ocean is collapsing. Sixty percent of Terra's marine food chain is at risk as coral bleaching and acidification compound each other. This is the crisis that nature-based investments could have prevented. Vote carefully — what you choose now will define whether ocean health recovers or becomes permanent loss."
+    "line": "The ocean is collapsing. Sixty percent of Terra's marine food chain is at risk as coral bleaching and acidification compound each other. This is the crisis that nature-based investments could have prevented. Vote carefully, what you choose now will define whether ocean health recovers or becomes permanent loss."
   },
   {
     "id": "C6-PRIV",
     "trigger": "Role-specific info panel opens during Ocean Ecosystem Collapse",
-    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage — but only if you use it. Share it with your team."
+    "line": "Your role has unique intelligence on this crisis. What you see in this panel, the other roles do not. This is your strategic advantage, but only if you use it. Share it with your team."
   },
   {
     "id": "BFN-01",
     "trigger": "Butterfly Network first open",
-    "line": "The Butterfly Network. Every mystery you see on this map is connected to every other. Solve one — and you change what's possible downstream. This is how the real climate system behaves. Every node you light up represents a system you've understood. Click any node to trace its connections."
+    "line": "The Butterfly Network. Every mystery you see on this map is connected to every other. Solve one, and you change what's possible downstream. This is how the real climate system behaves. Every node you light up represents a system you've understood. Click any node to trace its connections."
   },
   {
     "id": "BFN-02",
-    "trigger": "Butterfly Network return — new links added",
+    "trigger": "Butterfly Network return, new links added",
     "line": "[X] new connections have been added to the network since your last visit. The system is becoming visible. Keep solving."
   },
   {
     "id": "BFN-03",
     "trigger": "Mystery node tapped in Butterfly Network",
-    "line": "[MYSTERY NAME]. It's influenced by [UPSTREAM COUNT] upstream systems — and it influences [DOWNSTREAM COUNT] downstream ones. [CRISIS COUNT] crisis events are connected to this node. Trace the path."
+    "line": "[MYSTERY NAME]. It's influenced by [UPSTREAM COUNT] upstream systems, and it influences [DOWNSTREAM COUNT] downstream ones. [CRISIS COUNT] crisis events are connected to this node. Trace the path."
   },
   {
     "id": "BFN-04",
     "trigger": "Crisis-risk node tapped in Butterfly Network",
-    "line": "This node is on a crisis pathway. If [MYSTERY NAME] remains unsolved, the connected crisis becomes more likely — and more severe. This is the kind of link the network is designed to show you."
+    "line": "This node is on a crisis pathway. If [MYSTERY NAME] remains unsolved, the connected crisis becomes more likely, and more severe. This is the kind of link the network is designed to show you."
   },
   {
     "id": "BFN-05",
     "trigger": "Planetary indicator selected in Butterfly Network",
-    "line": "[INDICATOR NAME] is at [%]. The highlighted nodes are the mysteries most directly connected to it. Solving these will improve this indicator. Some are available now — others are still locked."
+    "line": "[INDICATOR NAME] is at [%]. The highlighted nodes are the mysteries most directly connected to it. Solving these will improve this indicator. Some are available now, others are still locked."
   },
   {
     "id": "DASH-01",
-    "trigger": "Dashboard — first open",
-    "line": "Your mission control. Everything Terra is tracking — health, planetary indicators, crisis history, tier progress — is here. The donut chart tells your main story: Terra health is at [TERRA HEALTH %]. The goal is seventy percent before 2050. You're in [CURRENT YEAR]. Time is part of the equation."
+    "trigger": "Dashboard, first open",
+    "line": "Your mission control. Everything Terra is tracking, health, planetary indicators, crisis history, tier progress, is here. The donut chart tells your main story: Terra health is at [TERRA HEALTH %]. The goal is seventy percent before 2050. You're in [CURRENT YEAR]. Time is part of the equation."
   },
   {
     "id": "DASH-02",
-    "trigger": "Dashboard return — notable change since last visit",
-    "line": "Something's shifted since you were last here. [MOST CHANGED INDICATOR] has moved [DIRECTION]. Check the indicators below — the system is talking to you."
+    "trigger": "Dashboard return, notable change since last visit",
+    "line": "Something's shifted since you were last here. [MOST CHANGED INDICATOR] has moved [DIRECTION]. Check the indicators below, the system is talking to you."
   },
   {
     "id": "DASH-IND-01",
@@ -727,12 +727,12 @@
   {
     "id": "DASH-IND-02",
     "trigger": "Critical indicator tapped",
-    "line": "[INDICATOR NAME] is critical — at [%] and falling. If it reaches zero, [CONSEQUENCE DESCRIPTION]. Prioritise mysteries in the [CATEGORY] group and visit the Marketplace. This cannot wait."
+    "line": "[INDICATOR NAME] is critical, at [%] and falling. If it reaches zero, [CONSEQUENCE DESCRIPTION]. Prioritise mysteries in the [CATEGORY] group and visit the Marketplace. This cannot wait."
   },
   {
     "id": "DASH-IND-03",
     "trigger": "Indicator changes to Recovering status",
-    "line": "[INDICATOR NAME] is recovering. Your actions are working. Keep the momentum — recovery is fragile until you clear the connected mysteries."
+    "line": "[INDICATOR NAME] is recovering. Your actions are working. Keep the momentum, recovery is fragile until you clear the connected mysteries."
   },
   {
     "id": "DASH-TIER-01",
@@ -746,18 +746,18 @@
   },
   {
     "id": "DASH-UNLOCK-01",
-    "trigger": "Recently unlocked section — new mysteries present",
+    "trigger": "Recently unlocked section, new mysteries present",
     "line": "[X] new mysteries have unlocked since your last visit. Each one is a door into a deeper system. Don't leave them waiting."
   },
   {
     "id": "RC-01",
-    "trigger": "Role Center — first open",
-    "line": "Your Role Center. Everything specific to your path as [ROLE NAME] is here — your level, your missions, your questionnaire, your badges. The more you engage with your role, the more your perspective sharpens. And the climate system needs every perspective."
+    "trigger": "Role Center, first open",
+    "line": "Your Role Center. Everything specific to your path as [ROLE NAME] is here, your level, your missions, your questionnaire, your badges. The more you engage with your role, the more your perspective sharpens. And the climate system needs every perspective."
   },
   {
     "id": "RC-02",
     "trigger": "Role level up",
-    "line": "Level up. You are now [NEW LEVEL TITLE] — a [ROLE NAME] who has earned their rank. [NEW XP REQUIREMENT] experience points to the next level. The harder challenges are ahead."
+    "line": "Level up. You are now [NEW LEVEL TITLE], a [ROLE NAME] who has earned their rank. [NEW XP REQUIREMENT] experience points to the next level. The harder challenges are ahead."
   },
   {
     "id": "RC-03",
@@ -771,53 +771,53 @@
   },
   {
     "id": "MKT-01",
-    "trigger": "Marketplace — first open",
-    "line": "The Intervention Marketplace. Your Climate Action Points are the currency — and everything here is a science-backed solution to a system you've been investigating. Every purchase ripples through Terra. Some heal quickly. Some take time. Some unlock new possibilities in the mystery network. Choose wisely."
+    "trigger": "Marketplace, first open",
+    "line": "The Intervention Marketplace. Your Climate Action Points are the currency, and everything here is a science-backed solution to a system you've been investigating. Every purchase ripples through Terra. Some heal quickly. Some take time. Some unlock new possibilities in the mystery network. Choose wisely."
   },
   {
     "id": "MKT-02",
-    "trigger": "Marketplace return — player has enough CAP to buy",
-    "line": "You have [CAP BALANCE] Climate Action Points. [X] interventions are within your reach. Each one does something real to this planet — check the ripple effect panel before you invest."
+    "trigger": "Marketplace return, player has enough CAP to buy",
+    "line": "You have [CAP BALANCE] Climate Action Points. [X] interventions are within your reach. Each one does something real to this planet, check the ripple effect panel before you invest."
   },
   {
     "id": "MKT-03",
-    "trigger": "Marketplace — not enough CAP for any item",
+    "trigger": "Marketplace, not enough CAP for any item",
     "line": "You have [CAP BALANCE] Climate Action Points. The cheapest intervention costs more than that right now. Solve more mysteries and answer more questions to build your balance. Then come back."
   },
   {
     "id": "MKT-INT-01",
     "trigger": "Intervention card hovered or tapped",
-    "line": "[INTERVENTION NAME]. Category: [CATEGORY]. Cost: [CAP COST] Climate Action Points. This affects [INDICATOR LIST]. Terra Health gain: plus [HEALTH %]. Check the ripple effect — this purchase changes more than just one indicator."
+    "line": "[INTERVENTION NAME]. Category: [CATEGORY]. Cost: [CAP COST] Climate Action Points. This affects [INDICATOR LIST]. Terra Health gain: plus [HEALTH %]. Check the ripple effect, this purchase changes more than just one indicator."
   },
   {
     "id": "MKT-INT-02",
-    "trigger": "Intervention purchased — confirmed",
-    "line": "[INTERVENTION NAME] — invested. [CAP COST] Climate Action Points spent. [INDICATOR CHANGES] are updating now. Watch the Butterfly Network — new paths may open because of this decision."
+    "trigger": "Intervention purchased, confirmed",
+    "line": "[INTERVENTION NAME], invested. [CAP COST] Climate Action Points spent. [INDICATOR CHANGES] are updating now. Watch the Butterfly Network, new paths may open because of this decision."
   },
   {
     "id": "MKT-INT-03",
     "trigger": "Nature-based intervention purchased",
-    "line": "A nature-based solution. These take longer than engineering fixes — but they're more resilient, and they protect against future crises too. Time is part of their value."
+    "line": "A nature-based solution. These take longer than engineering fixes, but they're more resilient, and they protect against future crises too. Time is part of their value."
   },
   {
     "id": "MKT-INT-04",
     "trigger": "Policy intervention purchased",
-    "line": "A governance intervention. Policy changes are the hardest to enact — but they scale further than any single technology. This one will be felt across multiple systems."
+    "line": "A governance intervention. Policy changes are the hardest to enact, but they scale further than any single technology. This one will be felt across multiple systems."
   },
   {
     "id": "MKT-INT-05",
-    "trigger": "Two Nature-based purchases skipped — C6 at risk",
+    "trigger": "Two Nature-based purchases skipped, C6 at risk",
     "line": "Warning. Terra's ocean systems are under severe stress. Two opportunities to invest in nature-based solutions have passed. The Ocean Ecosystem Collapse crisis may trigger early if this continues. Visit the Marketplace."
   },
   {
     "id": "ARC-01",
-    "trigger": "Card Archive — first open",
-    "line": "Your Climate Codex. Every mystery you've solved lives here as a collectible card. These are not trophies — they're records of the systems you now understand. Click any card to revisit the causal chain. The archive grows with every solve."
+    "trigger": "Card Archive, first open",
+    "line": "Your Climate Codex. Every mystery you've solved lives here as a collectible card. These are not trophies, they're records of the systems you now understand. Click any card to revisit the causal chain. The archive grows with every solve."
   },
   {
     "id": "ARC-02",
-    "trigger": "Archive card tapped — review mode opens",
-    "line": "[MYSTERY NAME]. You solved this on [SOLVE DATE], earning [CAP EARNED] Climate Action Points. Here's the full causal chain — from the first cause to the final impact. Review it. The connections you memorise become the instincts you use in harder mysteries."
+    "trigger": "Archive card tapped, review mode opens",
+    "line": "[MYSTERY NAME]. You solved this on [SOLVE DATE], earning [CAP EARNED] Climate Action Points. Here's the full causal chain, from the first cause to the final impact. Review it. The connections you memorise become the instincts you use in harder mysteries."
   },
   {
     "id": "ARC-03",
@@ -827,7 +827,7 @@
   {
     "id": "MP-01",
     "trigger": "Session code generated for host",
-    "line": "Your session is live. Share the code with your team. Each player will see the world differently — because each role holds different information. The only way to save Terra is to share what you know."
+    "line": "Your session is live. Share the code with your team. Each player will see the world differently, because each role holds different information. The only way to save Terra is to share what you know."
   },
   {
     "id": "MP-02",
@@ -837,12 +837,12 @@
   {
     "id": "MP-03",
     "trigger": "Session starts for all players",
-    "line": "The session begins. [PLAYER COUNT] stakeholders, one planet. You each see a different slice of the truth. Collaborate — the whole picture is the only one that saves Terra."
+    "line": "The session begins. [PLAYER COUNT] stakeholders, one planet. You each see a different slice of the truth. Collaborate, the whole picture is the only one that saves Terra."
   },
   {
     "id": "MP-04",
     "trigger": "Mystery in progress by another player",
-    "line": "[MYSTERY NAME] is being investigated by another player. You can work on it simultaneously — or focus on a different hotspot. First correct solve earns the full reward."
+    "line": "[MYSTERY NAME] is being investigated by another player. You can work on it simultaneously, or focus on a different hotspot. First correct solve earns the full reward."
   },
   {
     "id": "MP-05",
@@ -852,26 +852,26 @@
   {
     "id": "MP-06",
     "trigger": "Crisis fires in multiplayer",
-    "line": "Crisis alert for all players: [CRISIS NAME]. Your private information is visible only to you — but the decision belongs to everyone. Ninety seconds. Discuss if you can. Vote before the clock expires."
+    "line": "Crisis alert for all players: [CRISIS NAME]. Your private information is visible only to you, but the decision belongs to everyone. Ninety seconds. Discuss if you can. Vote before the clock expires."
   },
   {
     "id": "MP-07",
-    "trigger": "Information asymmetry reminder — 3+ roles in session",
-    "line": "Each of you sees something the others don't. What your role knows about this crisis could change the vote. Share it — now."
+    "trigger": "Information asymmetry reminder, 3+ roles in session",
+    "line": "Each of you sees something the others don't. What your role knows about this crisis could change the vote. Share it, now."
   },
   {
     "id": "MP-08",
-    "trigger": "Multiplayer win — Terra reaches 70%",
-    "line": "Terra is restored. Together, [PLAYER COUNT] stakeholders — each with a different view, each with a different piece of the truth — chose well enough to heal a planet. That is what collaboration at scale looks like. Well done."
+    "trigger": "Multiplayer win, Terra reaches 70%",
+    "line": "Terra is restored. Together, [PLAYER COUNT] stakeholders, each with a different view, each with a different piece of the truth, chose well enough to heal a planet. That is what collaboration at scale looks like. Well done."
   },
   {
     "id": "FAC-01",
     "trigger": "Facilitator session created",
-    "line": "Session live. Your host dashboard is active — players cannot see this. You can trigger crises manually, pause for debrief, observe any player's screen, and extend the crisis timer. Your job is to guide the experience, not control the outcome."
+    "line": "Session live. Your host dashboard is active, players cannot see this. You can trigger crises manually, pause for debrief, observe any player's screen, and extend the crisis timer. Your job is to guide the experience, not control the outcome."
   },
   {
     "id": "FAC-02",
-    "trigger": "Crisis approaching — 1 mystery remaining before trigger",
+    "trigger": "Crisis approaching, 1 mystery remaining before trigger",
     "line": "One more mystery until the next crisis fires. If you want to set up the group for a debrief conversation, now is the time. You can delay the crisis trigger via the dashboard, or let it fire naturally."
   },
   {
@@ -887,52 +887,52 @@
   {
     "id": "FAC-05",
     "trigger": "Session report export ready",
-    "line": "Session complete. Your report is ready to download — it includes all crisis votes by role, marketplace purchases with timestamps, Terra Health progression, mystery solve order, and CAP totals. Share it with your participants as a record of their collective decisions."
+    "line": "Session complete. Your report is ready to download, it includes all crisis votes by role, marketplace purchases with timestamps, Terra Health progression, mystery solve order, and CAP totals. Share it with your participants as a record of their collective decisions."
   },
   {
     "id": "WIN-01",
     "trigger": "Terra health reaches 70% before 2050",
-    "line": "Seventy percent. Terra is restored. You crossed the threshold. The planet that was falling apart when you arrived is — against the odds — healing. This is what it looks like when people understand systems and act on them. You did that."
+    "line": "Seventy percent. Terra is restored. You crossed the threshold. The planet that was falling apart when you arrived is, against the odds, healing. This is what it looks like when people understand systems and act on them. You did that."
   },
   {
     "id": "WIN-02",
     "trigger": "Terra health reaches 85%+",
-    "line": "Eighty-five percent — and climbing. This isn't just restored. This is thriving. You didn't just solve the crisis — you rebuilt the system. [PLAYER COUNT/ROLE NAME], what you've modelled here is what genuine climate leadership looks like."
+    "line": "Eighty-five percent, and climbing. This isn't just restored. This is thriving. You didn't just solve the crisis, you rebuilt the system. [PLAYER COUNT/ROLE NAME], what you've modelled here is what genuine climate leadership looks like."
   },
   {
     "id": "WIN-03",
-    "trigger": "M60 solved — Planetary Boundaries Breach",
-    "line": "Planetary Boundaries Breach — solved. You mapped the entire system. From the first crack in the Arctic ice to the final boundary of what Earth can sustain — you traced every link in the chain and held the line. This is the endgame. Terra remembers."
+    "trigger": "M60 solved, Planetary Boundaries Breach",
+    "line": "Planetary Boundaries Breach, solved. You mapped the entire system. From the first crack in the Arctic ice to the final boundary of what Earth can sustain, you traced every link in the chain and held the line. This is the endgame. Terra remembers."
   },
   {
     "id": "WIN-04",
-    "trigger": "2050 reached — Terra between 60-70%",
-    "line": "2050. Terra reached sixty-[X] percent. The target was seventy. You were close — closer than most who start where you started. The systems you understood are real. The interventions you chose were right. The timing was the challenge. Go again."
+    "trigger": "2050 reached, Terra between 60-70%",
+    "line": "2050. Terra reached sixty-[X] percent. The target was seventy. You were close, closer than most who start where you started. The systems you understood are real. The interventions you chose were right. The timing was the challenge. Go again."
   },
   {
     "id": "WIN-05",
-    "trigger": "2050 reached — Terra between 50-59%",
-    "line": "2050. Terra is at [%]. Still in the warning zone. The planet held together — but only barely. Some systems you investigated, some crises you navigated well. But others slipped. Look at the planetary indicators. The ones in red tell the story of what needed more attention."
+    "trigger": "2050 reached, Terra between 50-59%",
+    "line": "2050. Terra is at [%]. Still in the warning zone. The planet held together, but only barely. Some systems you investigated, some crises you navigated well. But others slipped. Look at the planetary indicators. The ones in red tell the story of what needed more attention."
   },
   {
     "id": "FAIL-01",
     "trigger": "Terra health drops below 20%",
-    "line": "Critical. Terra's health is below twenty percent. The planet is in cascading failure. You have not lost yet — but every decision from this point must count more than any that came before. The Marketplace and your remaining mysteries are your only path."
+    "line": "Critical. Terra's health is below twenty percent. The planet is in cascading failure. You have not lost yet, but every decision from this point must count more than any that came before. The Marketplace and your remaining mysteries are your only path."
   },
   {
     "id": "FAIL-02",
-    "trigger": "2050 reached — Terra below 50%",
-    "line": "2050. Terra is at [%]. The target wasn't reached. What happened here is not a failure of understanding — it is a lesson in timing, prioritisation, and connection. The planet's problems were real. The solutions were real. The gap between them is what you need to close. Try again — you'll see it differently now."
+    "trigger": "2050 reached, Terra below 50%",
+    "line": "2050. Terra is at [%]. The target wasn't reached. What happened here is not a failure of understanding, it is a lesson in timing, prioritisation, and connection. The planet's problems were real. The solutions were real. The gap between them is what you need to close. Try again, you'll see it differently now."
   },
   {
     "id": "SUMMARY-01",
     "trigger": "Post-game summary screen loads",
-    "line": "Here is what you built. [X] mysteries solved. [Y] crises faced. [Z] Climate Action Points earned. [N] interventions purchased. Terra's final health: [TERRA HEALTH %]. These are not game statistics — they are a record of how you see climate systems. Every session teaches you something the last one couldn't."
+    "line": "Here is what you built. [X] mysteries solved. [Y] crises faced. [Z] Climate Action Points earned. [N] interventions purchased. Terra's final health: [TERRA HEALTH %]. These are not game statistics, they are a record of how you see climate systems. Every session teaches you something the last one couldn't."
   },
   {
     "id": "SUMMARY-02",
     "trigger": "Replay CTA appears",
-    "line": "Play again. Different role. Different mode. Different choices. The mysteries are the same — but who you play as changes everything you see. That's the point. Terra still needs you."
+    "line": "Play again. Different role. Different mode. Different choices. The mysteries are the same, but who you play as changes everything you see. That's the point. Terra still needs you."
   },
   {
     "id": "SYS-DRAW-01",
@@ -962,16 +962,16 @@
   {
     "id": "SYS-MILE-02",
     "trigger": "10 total mysteries solved",
-    "line": "Ten mysteries. You've mapped an entire tier's worth of interconnected climate failures — and you've started the process of undoing them. Terra has noticed."
+    "line": "Ten mysteries. You've mapped an entire tier's worth of interconnected climate failures, and you've started the process of undoing them. Terra has noticed."
   },
   {
     "id": "SYS-MILE-03",
     "trigger": "25 total mysteries solved",
-    "line": "Twenty-five. Halfway through the mystery library. You're operating in the hard tier now — where every system is entangled with at least three others. This is where real systems thinkers emerge."
+    "line": "Twenty-five. Halfway through the mystery library. You're operating in the hard tier now, where every system is entangled with at least three others. This is where real systems thinkers emerge."
   },
   {
     "id": "SYS-MILE-04",
     "trigger": "50 total mysteries solved",
-    "line": "Fifty mysteries. You've reached the Expert tier. Ten mysteries remain — but these are the foundations: tipping points, cascades, planetary boundaries. What you understand now is rare. Use it."
+    "line": "Fifty mysteries. You've reached the Expert tier. Ten mysteries remain, but these are the foundations: tipping points, cascades, planetary boundaries. What you understand now is rare. Use it."
   }
 ]

@@ -176,7 +176,7 @@ export function InterventionDetail({
                           tone === "flat" && "text-white/40",
                         )}
                       >
-                        {tone === "up" ? "▲" : tone === "down" ? "▼" : "—"}
+                        {tone === "up" ? "▲" : tone === "down" ? "▼" : "-"}
                         {v !== 0 && <span className="ml-1">{Math.abs(v)}</span>}
                       </span>
                     </div>
@@ -273,7 +273,7 @@ export function InterventionDetail({
               This intervention operates as a systems lever: its {intervention.ripples?.length ?? 0} ripple
               connection{intervention.ripples?.length === 1 ? "" : "s"} across the Butterfly Network mean the
               gains compound beyond its immediate indicator effects. Systems thinkers call this a{" "}
-              <em>leverage point</em> — a small, well-placed shift that reshapes many downstream outcomes.
+              <em>leverage point</em>, a small, well-placed shift that reshapes many downstream outcomes.
             </p>
           </section>
 

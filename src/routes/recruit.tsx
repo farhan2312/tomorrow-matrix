@@ -7,7 +7,7 @@ import { AI_ROSTER } from "@/lib/game/ai-team";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/recruit")({
-  head: () => ({ meta: [{ title: "Recruit Your AI Team — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Recruit Your AI Team, Tomorrow Matrix" }] }),
   component: Recruit,
 });
 

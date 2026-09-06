@@ -80,7 +80,7 @@ export const SequenceCard = forwardRef<HTMLDivElement, Props>(function SequenceC
         )}
       </div>
 
-      {/* title — the artwork */}
+      {/* title, the artwork */}
       <div className="relative flex flex-1 items-end p-2.5">
         <div className={cn(
           "font-display font-semibold leading-tight drop-shadow-sm",

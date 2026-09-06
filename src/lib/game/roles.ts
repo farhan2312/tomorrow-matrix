@@ -1,14 +1,14 @@
 import type { RoleId } from "./types";
 
 /* ------------------------------------------------------------------ */
-/*  Role progression — 6-tier CAP-based titles                        */
+/*  Role progression, 6-tier CAP-based titles                        */
 /*  Thresholds: 0 / 200 / 500 / 900 / 1500 / 2500 CAP                 */
 /* ------------------------------------------------------------------ */
 
 export interface RoleLevel { level: number; title: string; minXp: number; }
 export interface RoleProgressionMeta { theme: string; bonusOnPromote: number; }
 
-/** CAP thresholds — used as `minXp` to keep call-sites unchanged. */
+/** CAP thresholds, used as `minXp` to keep call-sites unchanged. */
 const CAP = [0, 200, 500, 900, 1500, 2500];
 
 export const ROLE_LEVELS: Record<RoleId, RoleLevel[]> = {
@@ -90,7 +90,7 @@ export const ROLE_PROGRESSION_META: Record<RoleId, RoleProgressionMeta> = {
 };
 
 /**
- * Total CAP earned by the player (legacy XP callers still work — same thresholds).
+ * Total CAP earned by the player (legacy XP callers still work, same thresholds).
  */
 export function levelFor(role: RoleId, value: number): RoleLevel {
   const ladder = ROLE_LEVELS[role];
@@ -101,7 +101,7 @@ export function nextLevel(role: RoleId, value: number): RoleLevel | null {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Role missions (kept — passive secondary objectives)               */
+/*  Role missions (kept, passive secondary objectives)               */
 /* ------------------------------------------------------------------ */
 
 export type MissionTrigger =
@@ -165,7 +165,7 @@ export const ROLE_MISSIONS: Record<RoleId, RoleMission[]> = {
 };
 
 /* ------------------------------------------------------------------ */
-/*  Role Question Bank — sourced from Tomorrow_Matrix_Role_Questionnaires */
+/*  Role Question Bank, sourced from Tomorrow_Matrix_Role_Questionnaires */
 /*  36 questions per role across 3 phases (Foundational/Applied/Advanced) */
 /* ------------------------------------------------------------------ */
 
@@ -233,7 +233,7 @@ function buildQuestions(): RoleQuestion[] {
       } else if (q.kind === "fill") {
         kind = "mcq";
         const answer = q.answerText ?? (q.accept?.[0] ?? "");
-        // Present as MCQ with distractors "Not sure" — best-effort presentation
+        // Present as MCQ with distractors "Not sure", best-effort presentation
         options = [answer, "Not sure", "None of the above"];
         correctIndex = 0;
       } else if (q.kind === "multi") {
@@ -276,7 +276,7 @@ function buildQuestions(): RoleQuestion[] {
         explanation: q.explanation,
       });
     }
-    // Append two reflection questions per role — invariant across roles
+    // Append two reflection questions per role, invariant across roles
     out.push({
       id: `${roleKey}-r1`,
       role: roleKey,
@@ -340,7 +340,7 @@ export function unansweredQuestions(role: RoleId, answeredIds: string[]): RoleQu
 }
 
 /* ------------------------------------------------------------------ */
-/*  Challenge templates — define each of the 4 progression triggers   */
+/*  Challenge templates, define each of the 4 progression triggers   */
 /* ------------------------------------------------------------------ */
 
 export type ChallengeKind = "orientation" | "mission" | "reflection" | "assessment";
@@ -382,6 +382,6 @@ export function buildChallengeQuestionIds(
     const scen = unanswered.filter((q) => q.kind === "scenario");
     return (scen[0] ? [scen[0].id] : []);
   }
-  // assessment — everything left
+  // assessment, everything left
   return unanswered.map((q) => q.id);
 }

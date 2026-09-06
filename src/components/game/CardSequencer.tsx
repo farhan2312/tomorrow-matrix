@@ -136,7 +136,7 @@ export function CardSequencer({ canonical, hints = [], onSolved, onAttempt, alre
               })}
             </div>
             <p className="mt-3 text-center text-[11px] uppercase tracking-wider text-muted-foreground">
-              Arrange the climate story — first cause to final impact.
+              Arrange the climate story, first cause to final impact.
             </p>
           </div>
         </SortableContext>

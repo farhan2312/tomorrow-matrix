@@ -21,7 +21,7 @@ const LINES: Record<RoleId, Record<IndicatorKey | "default", string[]>> = {
     climate: ["This will hit our growing seasons hard.", "My neighbors are already feeling it."],
     water:   ["Without water, nothing else matters.", "Irrigation isn't the long-term answer."],
     bio:     ["Lose the pollinators and you lose the harvest.", "Healthy soil is living soil."],
-    food:    ["This is food security — full stop.", "We can adapt crops, but not overnight."],
+    food:    ["This is food security, full stop.", "We can adapt crops, but not overnight."],
     economy: ["Small farms will be the first to fold.", "Subsidies need to follow the climate, not the lobby."],
     default: ["Whatever we choose, it lands on the land first.", "I'll tell you what works on the ground."],
   },

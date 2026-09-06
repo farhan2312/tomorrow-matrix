@@ -43,7 +43,7 @@ function countInterventionsByCategory(s: GameState, cat: string): number {
 export const EXTENDED_INDICATORS: ExtendedIndicator[] = [
   {
     id: "terra", label: "Terra Health", emoji: "🌍",
-    shortDescription: "Overall health of the planet — the master indicator of the game.",
+    shortDescription: "Overall health of the planet, the master indicator of the game.",
     whyItMatters: "Reflects the combined state of climate, ecosystems, society and economy. Reach 70% by 2050 to win.",
     affectedByMysteries: ["All mysteries contribute when solved"],
     improvedByActions: ["Solving mysteries", "Best-answer crisis decisions", "Targeted interventions"],
@@ -53,7 +53,7 @@ export const EXTENDED_INDICATORS: ExtendedIndicator[] = [
   },
   {
     id: "climate", label: "Climate Stability", emoji: "🌡",
-    shortDescription: "Resilience of the climate system — temperature trends, carbon balance, storm frequency.",
+    shortDescription: "Resilience of the climate system, temperature trends, carbon balance, storm frequency.",
     whyItMatters: "Stable climate underpins every other system. Falling climate stability cascades into water, food and economic stress.",
     affectedByMysteries: ["Coral Reef Bleaching", "Methane Permafrost Release", "Glacial Retreat"],
     improvedByActions: ["Carbon capture", "Renewable rollouts", "Reforestation"],
@@ -83,7 +83,7 @@ export const EXTENDED_INDICATORS: ExtendedIndicator[] = [
   },
   {
     id: "bio", label: "Biodiversity", emoji: "🌿",
-    shortDescription: "Diversity and abundance of life — species, habitats, genetic variation.",
+    shortDescription: "Diversity and abundance of life, species, habitats, genetic variation.",
     whyItMatters: "Biodiversity is the safety net of every ecosystem service we depend on.",
     affectedByMysteries: ["Habitat Loss", "Coral Bleaching", "Deforestation"],
     improvedByActions: ["Coral restoration", "Reforestation", "Protected areas"],
@@ -104,7 +104,7 @@ export const EXTENDED_INDICATORS: ExtendedIndicator[] = [
   },
   {
     id: "air", label: "Air Quality", emoji: "🌬",
-    shortDescription: "Cleanliness of the air people breathe — particulate matter, ozone, smoke.",
+    shortDescription: "Cleanliness of the air people breathe, particulate matter, ozone, smoke.",
     whyItMatters: "Bad air drives heart and lung disease and signals deeper energy and industrial issues.",
     affectedByMysteries: ["Urban Smog", "Wildfire Smoke", "Industrial Pollution"],
     improvedByActions: ["Urban greening", "Clean energy transitions", "Public transit"],
@@ -137,7 +137,7 @@ export const EXTENDED_INDICATORS: ExtendedIndicator[] = [
   },
   {
     id: "ocean", label: "Ocean Health", emoji: "🐟",
-    shortDescription: "State of marine ecosystems — temperature, acidity, fish stocks, coral cover.",
+    shortDescription: "State of marine ecosystems, temperature, acidity, fish stocks, coral cover.",
     whyItMatters: "Oceans regulate climate and feed billions. Recovery times are measured in decades.",
     affectedByMysteries: ["Coral Reef Bleaching", "Ocean Acidification", "Plastic Pollution"],
     improvedByActions: ["Marine protected areas", "Sustainable fisheries", "Plastic reduction"],
@@ -147,7 +147,7 @@ export const EXTENDED_INDICATORS: ExtendedIndicator[] = [
   },
   {
     id: "forest", label: "Forest Health", emoji: "🌳",
-    shortDescription: "Extent and vitality of forests — old growth, regrowth, fire resilience.",
+    shortDescription: "Extent and vitality of forests, old growth, regrowth, fire resilience.",
     whyItMatters: "Forests store carbon, regulate water and host most terrestrial biodiversity.",
     affectedByMysteries: ["Deforestation", "Forest Die-back", "Wildfire"],
     improvedByActions: ["Reforestation", "Indigenous stewardship", "Fire management"],

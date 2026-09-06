@@ -73,7 +73,7 @@ export function RelationshipExplorer({ fromCode, toCode, onClose, onNavigate }: 
         </div>
 
         <div key={key} className="grid max-h-[calc(95vh-72px)] overflow-y-auto md:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] animate-[fade-in_0.35s_ease-out]">
-          {/* LEFT — hero cards + connection */}
+          {/* LEFT, hero cards + connection */}
           <div className="space-y-4 border-b border-white/10 bg-gradient-to-b from-slate-900/60 to-slate-950 p-6 md:border-b-0 md:border-r">
             <HeroCard mystery={from} tag="Source" />
             <div className="flex flex-col items-center gap-2 py-2">
@@ -135,7 +135,7 @@ export function RelationshipExplorer({ fromCode, toCode, onClose, onNavigate }: 
             )}
           </div>
 
-          {/* RIGHT — explanation */}
+          {/* RIGHT, explanation */}
           <div className="space-y-6 p-6">
             <Section title="Connection Explanation">
               <p className="text-sm leading-relaxed text-white/85">{linkage.explanation}</p>
@@ -171,7 +171,7 @@ export function RelationshipExplorer({ fromCode, toCode, onClose, onNavigate }: 
                 {linkage.kind === "cascade" && linkage.chain
                   ? `The doc records a direct causal chain: ${linkage.chain.join(" → ")}. Each step is a documented consequence of the previous one.`
                   : linkage.kind === "soft"
-                    ? `${from.title} doesn't unlock a specific card — it feeds ecological pressure into the nearest related mystery on the board.`
+                    ? `${from.title} doesn't unlock a specific card, it feeds ecological pressure into the nearest related mystery on the board.`
                     : `${from.title} is tagged as a direct upstream driver of ${toDisplayName}. Left unresolved, it removes a buffer that was holding ${toDisplayName} back.`}
               </p>
             </Section>
@@ -262,7 +262,7 @@ function CascadeSteps({ steps, onClickStep }: { steps: string[]; onClickStep?: (
   );
 }
 
-/** Convenience: find any Mystery by code — re-export so callers don't need linkages module. */
+/** Convenience: find any Mystery by code, re-export so callers don't need linkages module. */
 export function mysteryFromCode(code: string) {
   return MYSTERIES.find((m) => m.code === code);
 }

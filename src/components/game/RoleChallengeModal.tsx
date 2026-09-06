@@ -132,7 +132,7 @@ export function RoleChallengeModal() {
               <p className="text-[11px] text-muted-foreground">
                 {currentQ.kind === "mcq" && "Correct +5 CAP · Incorrect +1 CAP"}
                 {currentQ.kind === "scenario" && "Best answer +10 CAP · Other answer +5 CAP"}
-                {currentQ.kind === "reflection" && "Completing earns +5 CAP — no wrong answer."}
+                {currentQ.kind === "reflection" && "Completing earns +5 CAP, no wrong answer."}
               </p>
             </>
           ) : (
@@ -190,7 +190,7 @@ function ResultPanel({
         {kind === "reflection" ? <Check className="h-5 w-5" /> : correct ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
       </div>
       <div className="font-display text-lg font-semibold">
-        {kind === "reflection" ? `Reflection recorded — +${cap} CAP` : correct ? `Correct — +${cap} CAP` : `Alternative answer — +${cap} CAP`}
+        {kind === "reflection" ? `Reflection recorded, +${cap} CAP` : correct ? `Correct, +${cap} CAP` : `Alternative answer, +${cap} CAP`}
       </div>
       {explanation && <p className="text-sm text-muted-foreground">{explanation}</p>}
       <button

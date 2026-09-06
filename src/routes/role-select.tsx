@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/role-select")({
   head: () => ({
     meta: [
-      { title: "Choose Your Role — Tomorrow Matrix" },
+      { title: "Choose Your Role, Tomorrow Matrix" },
       { name: "description", content: "Pick a stakeholder. Each role sees a unique piece of the climate puzzle." },
     ],
   }),

@@ -8,7 +8,7 @@ import type { Mystery } from "@/lib/game/types";
 interface Props {
   mystery: Mystery;
   open: boolean;
-  /** Called when the intro is finished or skipped — the puzzle then begins. */
+  /** Called when the intro is finished or skipped, the puzzle then begins. */
   onDone: (info: { skipped: boolean }) => void;
 }
 
@@ -70,7 +70,7 @@ export function MysteryIntroOverlay({ mystery, open, onDone }: Props) {
         <div className="mt-3 flex items-center justify-between gap-3">
           <p className="text-xs text-white/55">
             {ended
-              ? "Briefing complete — the chain is yours to reconstruct."
+              ? "Briefing complete, the chain is yours to reconstruct."
               : "The briefing sets the real-world context. It never reveals the correct order."}
           </p>
           <button

@@ -74,7 +74,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
                 </div>
                 <h3 className="mt-1 font-display text-xl font-semibold md:text-2xl">Unlock the Science</h3>
                 <p className="mx-auto mt-1.5 max-w-md text-xs text-white/75">
-                  Solve the chain to earn this explanation — or want a hint? Unlock it now
+                  Solve the chain to earn this explanation, or want a hint? Unlock it now
                   using Climate Action Points.
                 </p>
                 <span className="mt-3 inline-flex items-center gap-1.5 rounded-xl bg-white/90 px-4 py-2 text-xs font-semibold text-black">
@@ -111,7 +111,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
                   </p>
                   {!affordable && (
                     <p className="flex items-center gap-1.5 text-[color:var(--destructive)]">
-                      <AlertTriangle className="h-3.5 w-3.5" /> Not enough CAP yet — solve a mystery to earn more.
+                      <AlertTriangle className="h-3.5 w-3.5" /> Not enough CAP yet, solve a mystery to earn more.
                     </p>
                   )}
                 </div>
@@ -149,7 +149,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
           </div>
           <h3 className="mt-0.5 font-display text-lg font-semibold">See How It All Connects</h3>
           <p className="text-xs text-muted-foreground">
-            Yours permanently — replay it any time, no further cost.
+            Yours permanently, replay it any time, no further cost.
           </p>
         </div>
         {!playing && (

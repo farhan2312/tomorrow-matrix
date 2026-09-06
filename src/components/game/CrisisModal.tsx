@@ -306,7 +306,7 @@ function RevealPanel({
 
   return (
     <div className="space-y-5 p-6 md:p-8 animate-fade-in">
-      {/* HERO — Your Decision + verdict + stars */}
+      {/* HERO, Your Decision + verdict + stars */}
       <div className={cn(
         "rounded-2xl border p-5 text-center",
         verdictTone === "terra" && "border-[color:var(--terra)]/30 bg-[color:var(--terra-soft)]/40",
@@ -315,7 +315,7 @@ function RevealPanel({
       )}>
         <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Your decision</div>
         <div className="mt-2 font-display text-2xl font-semibold leading-tight">
-          {pickedChoice?.label ?? `Default consequence — ${defaultLabel(crisis)}`}
+          {pickedChoice?.label ?? `Default consequence, ${defaultLabel(crisis)}`}
         </div>
         <div className="mt-3 flex items-center justify-center gap-0.5" aria-label={`${stars} of 5 stars`}>
           {[1,2,3,4,5].map((n) => (
@@ -332,7 +332,7 @@ function RevealPanel({
         {isBestPick && <div className="mt-1 inline-block pill chip-terra">★ Best available intervention</div>}
       </div>
 
-      {/* WHY YOUR CHOICE MATTERS — from the Crisis Event Library */}
+      {/* WHY YOUR CHOICE MATTERS, from the Crisis Event Library */}
       {pickedChoice && (
         <div className="rounded-xl border border-border bg-card p-4">
           <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Why your choice matters</div>
@@ -341,7 +341,7 @@ function RevealPanel({
         </div>
       )}
 
-      {/* BEST AVAILABLE INTERVENTION — from the Crisis Event Library */}
+      {/* BEST AVAILABLE INTERVENTION, from the Crisis Event Library */}
       {!isBestPick && (
         <div className="rounded-xl border border-[color:var(--terra)]/30 bg-[color:var(--terra-soft)]/50 p-4">
           <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[color:var(--terra-deep)]">

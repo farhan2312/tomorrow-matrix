@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Tomorrow Matrix" },
+      { title: "Privacy Policy, Tomorrow Matrix" },
       {
         name: "description",
         content:
@@ -113,14 +113,14 @@ function PrivacyPage() {
             </p>
             <ul className="ml-5 list-disc grid gap-1.5">
               <li>
-                <strong>Supabase</strong> — database, authentication, and real-time infrastructure
+                <strong>Supabase</strong>, database, authentication, and real-time infrastructure
                 that stores your account and gameplay data.
               </li>
               <li>
-                <strong>Vercel</strong> — application hosting and content delivery.
+                <strong>Vercel</strong>, application hosting and content delivery.
               </li>
               <li>
-                <strong>Google</strong> — optional "Sign in with Google" authentication, if you choose
+                <strong>Google</strong>, optional "Sign in with Google" authentication, if you choose
                 to use it.
               </li>
             </ul>

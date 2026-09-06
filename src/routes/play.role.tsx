@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/play/role")({
-  head: () => ({ meta: [{ title: "Role Dashboard — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Role Dashboard, Tomorrow Matrix" }] }),
   component: RoleDashboard,
 });
 
@@ -52,7 +52,7 @@ function RoleDashboard() {
   const toNext = next ? Math.max(0, next.minXp - xp) : 0;
   const pct = next ? Math.min(100, Math.round(((xp - current.minXp) / (next.minXp - current.minXp)) * 100)) : 100;
 
-  // Per-kind launchers — only enabled when there are unanswered questions of that template
+  // Per-kind launchers, only enabled when there are unanswered questions of that template
   const launchers: { kind: ChallengeKind; label: string; ready: boolean }[] = (
     ["orientation", "mission", "reflection", "assessment"] as ChallengeKind[]
   ).map((k) => ({
@@ -161,7 +161,7 @@ function RoleDashboard() {
               })}
             </ul>
             <p className="mt-3 text-[11px] text-muted-foreground">
-              Tip: challenges also appear automatically — after role select, every 2 mysteries, after each crisis, and at tier completion.
+              Tip: challenges also appear automatically, after role select, every 2 mysteries, after each crisis, and at tier completion.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ function RoleDashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="font-display text-lg font-semibold inline-flex items-center gap-2"><Target className="h-4 w-4" /> Role missions</h2>
-                <p className="text-xs text-muted-foreground">Passive objectives — completed by playing.</p>
+                <p className="text-xs text-muted-foreground">Passive objectives, completed by playing.</p>
               </div>
               <span className="pill chip-terra">{completedIds.size}/{missions.length}</span>
             </div>

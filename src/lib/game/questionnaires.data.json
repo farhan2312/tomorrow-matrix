@@ -1,6 +1,6 @@
 {
   "scientist": {
-    "tagline": "You investigate and communicate climate science — ecological systems, data, and evidence-based solutions.",
+    "tagline": "You investigate and communicate climate science, ecological systems, data, and evidence-based solutions.",
     "questions": [
       {
         "kind": "tf",
@@ -549,7 +549,7 @@
     ]
   },
   "farmer": {
-    "tagline": "You manage land and crops — your world is food systems, water access, and soil health.",
+    "tagline": "You manage land and crops, your world is food systems, water access, and soil health.",
     "questions": [
       {
         "kind": "tf",
@@ -1091,7 +1091,7 @@
     ]
   },
   "planner": {
-    "tagline": "You design urban environments — infrastructure, urban ecology, and liveable cities.",
+    "tagline": "You design urban environments, infrastructure, urban ecology, and liveable cities.",
     "questions": [
       {
         "kind": "tf",
@@ -1479,7 +1479,7 @@
         "kind": "scenario",
         "prompt": "Residents complain that a new highway expansion increased traffic instead of reducing congestion. What planning concept explains this?",
         "options": [
-          "Induced demand — more road capacity can encourage more driving over time",
+          "Induced demand, more road capacity can encourage more driving over time",
           "Roads always reduce traffic permanently",
           "This effect is impossible",
           "Public transit caused this issue"
@@ -1635,7 +1635,7 @@
     ]
   },
   "student": {
-    "tagline": "You are the next generation — your world is awareness, education, future systems, and youth power.",
+    "tagline": "You are the next generation, your world is awareness, education, future systems, and youth power.",
     "questions": [
       {
         "kind": "tf",
@@ -2024,7 +2024,7 @@
         "prompt": "A youth group wants to influence local policy on renewable energy access. What is the most effective long-term strategy?",
         "options": [
           "A single social media post",
-          "Sustained engagement — organizing, building coalitions, and engaging with decision-makers over time",
+          "Sustained engagement, organizing, building coalitions, and engaging with decision-makers over time",
           "Waiting passively for change",
           "Avoiding any contact with policymakers"
         ],
@@ -2038,7 +2038,7 @@
         "prompt": "A student notices that low-income neighborhoods in their city have far less tree cover and more heat exposure than wealthier ones. What concept does this best illustrate?",
         "options": [
           "Random chance with no pattern",
-          "Environmental/climate inequity — the uneven distribution of environmental burdens and benefits",
+          "Environmental/climate inequity, the uneven distribution of environmental burdens and benefits",
           "A coincidence unrelated to city planning",
           "Equal treatment of all neighborhoods"
         ],
@@ -2051,7 +2051,7 @@
         "kind": "scenario",
         "prompt": "A student is asked to fact-check the claim \"there's nothing an individual can do about climate change.\"",
         "options": [
-          "Fully agree — individuals are powerless",
+          "Fully agree, individuals are powerless",
           "Individual actions matter and add up, but systemic change is also essential for large-scale impact",
           "Deny that any collective action matters",
           "Say only governments can act, individuals should not try"
@@ -2173,7 +2173,7 @@
     ]
   },
   "policymaker": {
-    "tagline": "You hold power to create regulation and policy — governance, systemic change, and intervention.",
+    "tagline": "You hold power to create regulation and policy, governance, systemic change, and intervention.",
     "questions": [
       {
         "kind": "tf",
@@ -2717,7 +2717,7 @@
     ]
   },
   "business": {
-    "tagline": "You lead organisations and shape markets — corporate responsibility, supply chains, and green economy.",
+    "tagline": "You lead organisations and shape markets, corporate responsibility, supply chains, and green economy.",
     "questions": [
       {
         "kind": "tf",
@@ -3801,7 +3801,7 @@
     ]
   },
   "activist": {
-    "tagline": "You mobilise communities and push for change — advocacy, justice, resistance, and transformation.",
+    "tagline": "You mobilise communities and push for change, advocacy, justice, resistance, and transformation.",
     "questions": [
       {
         "kind": "tf",

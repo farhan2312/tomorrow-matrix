@@ -73,7 +73,7 @@ function Dashboard() {
             </div>
           </div>
 
-          {/* Crisis analytics — from Crisis Event Library */}
+          {/* Crisis analytics, from Crisis Event Library */}
           <div className="surface-card p-5">
             <div className="flex items-baseline justify-between">
               <h2 className="font-display text-lg font-semibold inline-flex items-center gap-2">
@@ -85,7 +85,7 @@ function Dashboard() {
               <StatTile icon={AlertTriangle} label="Faced"     value={String(crisisStats.faced)} tone="warmth" />
               <StatTile icon={Check}         label="Resolved"  value={`${crisisStats.resolved}/${CRISES.length}`} tone="terra" />
               <StatTile icon={ShieldCheck}   label="Best picks" value={String(crisisStats.bestPicks)} tone="terra" />
-              <StatTile icon={Clock}         label="Avg resp." value={crisisStats.resolved ? `${(crisisStats.totalResponseMs / crisisStats.resolved / 1000).toFixed(1)}s` : "—"} />
+              <StatTile icon={Clock}         label="Avg resp." value={crisisStats.resolved ? `${(crisisStats.totalResponseMs / crisisStats.resolved / 1000).toFixed(1)}s` : "-"} />
             </div>
             {resolvedCrises.length > 0 && (
               <ul className="mt-4 divide-y divide-border/60 text-sm">
@@ -103,7 +103,7 @@ function Dashboard() {
                       </div>
                       {isBest
                         ? <span className="pill chip-terra shrink-0"><ShieldCheck className="h-3 w-3" /> Best</span>
-                        : <span className="pill chip-stone shrink-0">{ch?.planetHealth ?? "—"} Hp</span>}
+                        : <span className="pill chip-stone shrink-0">{ch?.planetHealth ?? "-"} Hp</span>}
                     </li>
                   );
                 })}

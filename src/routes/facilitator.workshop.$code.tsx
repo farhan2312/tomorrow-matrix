@@ -13,7 +13,7 @@ import { MYSTERIES, ROLES } from "@/lib/game/data";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/facilitator/workshop/$code")({
-  head: () => ({ meta: [{ title: "Workshop Console — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Workshop Console, Tomorrow Matrix" }] }),
   component: WorkshopConsole,
 });
 

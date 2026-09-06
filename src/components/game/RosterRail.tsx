@@ -59,7 +59,7 @@ export function RosterRail() {
                       {p.name}
                       {p.is_host && <Crown className="h-3 w-3 text-[color:var(--warmth)]" />}
                     </div>
-                    <div className="truncate text-[10px] text-muted-foreground">{r?.name ?? "—"}</div>
+                    <div className="truncate text-[10px] text-muted-foreground">{r?.name ?? "-"}</div>
                   </div>
                 </li>
               );

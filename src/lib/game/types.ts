@@ -25,7 +25,7 @@ export interface Role {
 
 export interface SequenceStep {
   id: string;
-  label: string;        // shown on the card face — this IS the artwork content
+  label: string;        // shown on the card face, this IS the artwork content
   icon: string;         // legacy field, no longer used on play cards
   tone: "climate" | "heat" | "water" | "ice" | "bio" | "industry" | "human" | "policy";
 }
@@ -84,7 +84,7 @@ export interface InterventionRipple {
 export interface Intervention {
   id: string;
   name: string;
-  /** Legacy narrow category — kept for missions / dashboards. */
+  /** Legacy narrow category, kept for missions / dashboards. */
   category: "energy" | "nature" | "policy" | "tech" | "agriculture";
   /** Library category id (energy, water, food, nature, cities, economy, society, ai, systemic). */
   categoryId?: string;

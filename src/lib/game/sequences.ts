@@ -75,13 +75,13 @@ export const SEQUENCES: Record<string, SequenceStep[]> = {
   ],
 };
 
-// Progressive hints per mystery — never reveal the full answer.
+// Progressive hints per mystery, never reveal the full answer.
 // Index 0 = subtle (attempt 2), Index 1 = moderate (attempt 3),
 // Index 2 = stronger (attempt 4+).
 export const HINTS: Record<string, string[]> = {
   arctic: [
     "Human activity sits at the very start of this chain.",
-    "Sea ice melt happens before albedo loss — not after.",
+    "Sea ice melt happens before albedo loss, not after.",
     "The final card is the visible outcome the mystery is named after.",
   ],
   coral: [
@@ -100,7 +100,7 @@ export const HINTS: Record<string, string[]> = {
     "Migration and wildfire are downstream, not upstream.",
   ],
   heat: [
-    "Built environment matters first here — think city surfaces.",
+    "Built environment matters first here, think city surfaces.",
     "The heat dome forms before the grid feels it.",
     "Mortality is the final, human consequence.",
   ],

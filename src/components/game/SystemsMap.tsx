@@ -217,7 +217,7 @@ export function SystemsMap({
                     style={{ fontSize: 10.5, fontFamily: "var(--font-sans)", fontWeight: 500 }}>
                     {m.code} · {m.title.length > 26 ? m.title.slice(0, 24) + "…" : m.title}
                   </text>
-                  <title>{m.title} — {m.brief}</title>
+                  <title>{m.title}, {m.brief}</title>
                 </g>
               );
             })}
@@ -326,8 +326,8 @@ function NodeDetail({
 
       <div className="rounded-lg border border-border bg-card p-3 text-xs">
         <div className="uppercase tracking-wider text-muted-foreground">Stakeholder ownership</div>
-        <div className="mt-1.5"><strong>Primary:</strong> {primaryRoleNames.join(", ") || "—"}</div>
-        <div className="mt-0.5"><strong>Also see:</strong> {secondaryRoleNames.join(", ") || "—"}</div>
+        <div className="mt-1.5"><strong>Primary:</strong> {primaryRoleNames.join(", ") || "-"}</div>
+        <div className="mt-0.5"><strong>Also see:</strong> {secondaryRoleNames.join(", ") || "-"}</div>
       </div>
 
 

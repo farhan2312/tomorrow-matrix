@@ -45,7 +45,7 @@ function MysteriesIndex() {
           <h1 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">Climate Mysteries</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             {role
-              ? <>Your stakeholder lens — <strong>{roleName}</strong> — surfaces {visible.length} of {MYSTERIES.length} mysteries. ★ = bonus territory.</>
+              ? <>Your stakeholder lens, <strong>{roleName}</strong>, surfaces {visible.length} of {MYSTERIES.length} mysteries. ★ = bonus territory.</>
               : <>Each mystery is a system puzzle. Solve them to unlock cascades across Terra.</>}
           </p>
         </div>

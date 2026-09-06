@@ -1,6 +1,6 @@
 {
   "_readme": [
-    "Mystery media registry — keyed by mystery CODE (M01 … M66).",
+    "Mystery media registry, keyed by mystery CODE (M01 … M66).",
     "Drop in one entry per mystery. No frontend changes are required when adding",
     "media: the Mystery Engine reads this file at runtime.",
     "",
@@ -11,7 +11,7 @@
     "    \"extra\": [ { \"kind\": \"interview\", \"label\": \"Expert Interview\", \"src\": \"…\" } ]",
     "  }",
     "",
-    "\"kind\" for extras is free-form (interview | simulation | visualization | …) —",
+    "\"kind\" for extras is free-form (interview | simulation | visualization | …),",
     "the UI renders any extras generically."
   ]
 }

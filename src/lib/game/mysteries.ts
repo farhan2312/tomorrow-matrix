@@ -57,7 +57,7 @@ const RARITY_BY_TIER: Record<number, Mystery["rarity"]> = {
   1: "common", 2: "uncommon", 3: "rare", 4: "epic",
 };
 
-// For pretty regions — derive from domain
+// For pretty regions, derive from domain
 const REGION_BY_DOMAIN: Record<string, string> = {
   climate: "Atmospheric Systems",
   oceans: "Global Oceans",
@@ -168,7 +168,7 @@ export function isTier1RolePriority(role: RoleId | null, m: Mystery): boolean {
 /**
  * Visibility rules (Tomorrow Matrix MVP):
  * - Tier 1: role-gated to the 10 allocated mysteries.
- * - Tier 2/3/4: common — visible to every role.
+ * - Tier 2/3/4: common, visible to every role.
  */
 export function isMysteryVisibleForRole(role: RoleId | null, m: Mystery): boolean {
   if (!role) return true;
@@ -219,7 +219,7 @@ export function bonusForRole(role: RoleId | null, m: Mystery): number {
   return roleRelationship(role, m) === "primary" ? 25 : 0;
 }
 
-/** Build region hotspots dynamically — distribute across the world map by tier ring. */
+/** Build region hotspots dynamically, distribute across the world map by tier ring. */
 export function buildRegions(): Region[] {
   const ringRadius = { 1: 0.32, 2: 0.40, 3: 0.46, 4: 0.50 } as const;
   const cx = 50, cy = 50;

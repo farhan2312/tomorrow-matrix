@@ -60,7 +60,7 @@ export function MysteryCompleteModal({
         </div>
 
         <div className="space-y-5 p-6">
-          {/* STAGE 1+ — chain reveal */}
+          {/* STAGE 1+, chain reveal */}
           <div>
             <div className="mb-2 text-[10px] uppercase tracking-wider text-muted-foreground">The system chain</div>
             <div className="flex flex-wrap items-center gap-2">
@@ -86,7 +86,7 @@ export function MysteryCompleteModal({
             </div>
           </div>
 
-          {/* STAGE 3 — CAP breakdown */}
+          {/* STAGE 3, CAP breakdown */}
           <div
             className={`grid gap-3 sm:grid-cols-2 transition-opacity duration-500 ${stage >= 3 ? "opacity-100" : "opacity-0"}`}
           >
@@ -99,7 +99,7 @@ export function MysteryCompleteModal({
               </div>
               <div className="mt-1 text-xs text-muted-foreground">
                 {alreadySolvedBefore ? (
-                  "Already solved — no payout this time."
+                  "Already solved, no payout this time."
                 ) : (
                   <>
                     Base {payout.base} (attempt {attempts})
@@ -119,7 +119,7 @@ export function MysteryCompleteModal({
             </div>
           </div>
 
-          {/* STAGE 4 — unlocks */}
+          {/* STAGE 4, unlocks */}
           <div
             className={`rounded-xl border border-border bg-muted/30 p-4 transition-opacity duration-500 ${stage >= 4 ? "opacity-100" : "opacity-0"}`}
           >
@@ -139,7 +139,7 @@ export function MysteryCompleteModal({
               <div className="mt-1 text-sm text-muted-foreground">
                 {mystery.unlocks
                   ? `Building toward: ${mystery.unlocks}`
-                  : "No new mysteries unlock from this one — but Terra Health rises."}
+                  : "No new mysteries unlock from this one, but Terra Health rises."}
               </div>
             )}
           </div>

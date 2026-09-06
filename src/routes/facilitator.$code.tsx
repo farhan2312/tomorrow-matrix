@@ -20,7 +20,7 @@ const FacilitatorSystemsMap = () => <SystemsMap forceShowAll height={520} />;
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/facilitator/$code")({
-  head: () => ({ meta: [{ title: "Facilitator Console — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Facilitator Console, Tomorrow Matrix" }] }),
   component: FacilitatorConsole,
 });
 
@@ -170,7 +170,7 @@ function FacilitatorConsole() {
 
           {!isFacilitator && hydrated && (
             <div className="rounded-xl border border-[color:var(--warmth)]/30 bg-[color:var(--warmth-soft)] px-3 py-2 text-sm">
-              You are not the facilitator of this session — controls are read-only.
+              You are not the facilitator of this session, controls are read-only.
             </div>
           )}
 
@@ -201,10 +201,10 @@ function FacilitatorConsole() {
           <StatCard icon={<Users className="h-4 w-4" />} label="Players" value={`${active}/${lobby.players.length} active`} accent="terra" />
           <StatCard icon={<Gauge className="h-4 w-4" />} label="Mysteries solved" value={`${analytics.uniqueMysteriesSolved}`} sub={`${analytics.totalSolveActions} total solves`} accent="terra" />
           <StatCard icon={<Zap className="h-4 w-4" />} label="Crises" value={`${analytics.crisesResolved}/${analytics.crisesFaced}`} sub={`${analytics.successRate}% success`} accent="warmth" />
-          <StatCard icon={<Timer className="h-4 w-4" />} label="Avg crisis response" value={analytics.avgResponseMs ? `${(analytics.avgResponseMs / 1000).toFixed(1)}s` : "—"} accent="stone" />
-          <StatCard icon={<Timer className="h-4 w-4" />} label="Avg completion" value={analytics.avgCompletionMs ? `${(analytics.avgCompletionMs / 1000).toFixed(0)}s` : "—"} accent="stone" />
-          <StatCard icon={<Target className="h-4 w-4" />} label="Avg attempts / mystery" value={analytics.avgAttempts ? analytics.avgAttempts.toFixed(1) : "—"} accent="stone" />
-          <StatCard icon={<Heart className="h-4 w-4" />} label="Avg Terra health" value={analytics.avgTerraHealth ? `${analytics.avgTerraHealth.toFixed(0)}%` : "—"} accent="terra" />
+          <StatCard icon={<Timer className="h-4 w-4" />} label="Avg crisis response" value={analytics.avgResponseMs ? `${(analytics.avgResponseMs / 1000).toFixed(1)}s` : "-"} accent="stone" />
+          <StatCard icon={<Timer className="h-4 w-4" />} label="Avg completion" value={analytics.avgCompletionMs ? `${(analytics.avgCompletionMs / 1000).toFixed(0)}s` : "-"} accent="stone" />
+          <StatCard icon={<Target className="h-4 w-4" />} label="Avg attempts / mystery" value={analytics.avgAttempts ? analytics.avgAttempts.toFixed(1) : "-"} accent="stone" />
+          <StatCard icon={<Heart className="h-4 w-4" />} label="Avg Terra health" value={analytics.avgTerraHealth ? `${analytics.avgTerraHealth.toFixed(0)}%` : "-"} accent="terra" />
           <StatCard icon={<Coins className="h-4 w-4" />} label="Total CAP" value={`${analytics.totalCap}`} accent="warmth" />
         </div>
 
@@ -495,7 +495,7 @@ function ParticipantsPanel({ players, analytics }: { players: PlayerLite[]; anal
                 const snap = analytics.snapshots[p.client_id] ?? {};
                 const r = ROLES.find((x) => x.id === (snap.role ?? p.role));
                 const roleTitle = snap.roleTitle
-                  ?? (p.role ? levelFor(p.role as RoleId, snap.cap ?? 0).title : "—");
+                  ?? (p.role ? levelFor(p.role as RoleId, snap.cap ?? 0).title : "-");
                 const assigned = snap.mysteriesAssigned
                   ?? (p.role ? MYSTERIES.filter((m) => isMysteryVisibleForRole(p.role as RoleId, m)).length : MYSTERIES.length);
                 const solvedCount = analytics.solvesByPlayer[p.client_id]?.length ?? snap.solvedCount ?? 0;
@@ -513,7 +513,7 @@ function ParticipantsPanel({ players, analytics }: { players: PlayerLite[]; anal
                       </div>
                     </td>
                     <td className="py-2 pr-3">
-                      <div className="text-xs">{r?.name ?? "—"}</div>
+                      <div className="text-xs">{r?.name ?? "-"}</div>
                       <div className="text-[10px] text-muted-foreground">{roleTitle}</div>
                     </td>
                     <td className="py-2 pr-3 font-mono">T{snap.tier ?? 1}</td>
@@ -732,7 +732,7 @@ function describeEvent(kind: string, payload: Record<string, unknown>): string {
 }
 
 function fmtDuration(ms: number): string {
-  if (!ms || ms < 0) return "—";
+  if (!ms || ms < 0) return "-";
   const s = Math.round(ms / 1000);
   if (s < 60) return `${s}s`;
   return `${Math.floor(s / 60)}m ${s % 60}s`;

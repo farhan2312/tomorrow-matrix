@@ -69,7 +69,7 @@ function MysteryDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mystery.id]);
 
-  // Facilitator video commands (multiplayer only) — force play / skip / replay.
+  // Facilitator video commands (multiplayer only), force play / skip / replay.
   const events = useLobby((s) => s.events);
   const lastVideoCmd = useMemo(
     () => events.find((e) => e.kind === "video_cmd"),
@@ -172,7 +172,7 @@ function MysteryDetail() {
             <div className="mb-4 flex items-center justify-between gap-3">
               <div>
                 <h2 className="font-display text-lg font-semibold">System chain puzzle</h2>
-                <p className="text-xs text-muted-foreground">Arrange the climate story — first cause to final impact.</p>
+                <p className="text-xs text-muted-foreground">Arrange the climate story, first cause to final impact.</p>
               </div>
               <div className="flex items-center gap-2">
                 {introExists && (
@@ -203,7 +203,7 @@ function MysteryDetail() {
             )}
           </div>
 
-          {/* Explanatory video — locked until solved (or unlocked with CAP) */}
+          {/* Explanatory video, locked until solved (or unlocked with CAP) */}
           <div id="mystery-explainer">
 
             <div className="mb-2 flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -270,7 +270,7 @@ function MysteryDetail() {
               </div>
             )}
             {upstream.length === 0 && downstream.length === 0 && (
-              <p className="mt-2 text-xs text-muted-foreground">Root cause — no upstream mysteries yet.</p>
+              <p className="mt-2 text-xs text-muted-foreground">Root cause, no upstream mysteries yet.</p>
             )}
             {mystery.butterfly && mystery.butterfly.length > 1 && (
               <div className="mt-3 border-t border-border pt-2 text-[11px] text-muted-foreground">

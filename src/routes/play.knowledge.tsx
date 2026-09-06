@@ -13,8 +13,8 @@ const ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 export const Route = createFileRoute("/play/knowledge")({
   head: () => ({
     meta: [
-      { title: "Terra Knowledge Hub — Tomorrow Matrix" },
-      { name: "description", content: "Your in-game encyclopedia — every climate term, mystery, and mechanic." },
+      { title: "Terra Knowledge Hub, Tomorrow Matrix" },
+      { name: "description", content: "Your in-game encyclopedia, every climate term, mystery, and mechanic." },
     ],
   }),
   component: KnowledgeHub,
@@ -48,7 +48,7 @@ function KnowledgeHub() {
         <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Encyclopedia · {TERMS.length} terms</div>
         <h1 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">Terra Knowledge Hub</h1>
         <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-          Every climate concept, mystery, mechanic, and framework you'll meet in Terra — cross-linked and searchable.
+          Every climate concept, mystery, mechanic, and framework you'll meet in Terra, cross-linked and searchable.
         </p>
       </header>
 

@@ -46,7 +46,7 @@ function coreEffects(e: Partial<Record<ExtEffectKey, number>>): Partial<Record<I
 function shortRipple(r: RawIntervention): string {
   if (r.ripple && r.ripple.length > 0) {
     const first = r.ripple[0];
-    return `${first.name} — ${first.explanation.split(".")[0]}`;
+    return `${first.name}, ${first.explanation.split(".")[0]}`;
   }
   return `Ripples across ${r.linkedMysteries?.length ?? 0} linked mysteries`;
 }

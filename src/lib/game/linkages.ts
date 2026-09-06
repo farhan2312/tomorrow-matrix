@@ -30,20 +30,20 @@ export function mysteryByCode(code: string): Mystery | undefined {
 /** Plain-English rewrite of the doc explanation for the "Why does this happen?" toggle. */
 export function plainEnglish(l: Linkage, fromTitle: string, toTitle: string): string {
   if (l.kind === "cascade" && l.chain && l.chain.length > 1) {
-    return `Think of it like a line of dominoes. ${l.chain[0]} tips over first, then each step pushes the next — ${l.chain.slice(1, -1).join(", ")}${l.chain.length > 2 ? "," : ""} and finally ${l.chain[l.chain.length - 1]}. Each link is small on its own, but together they add up to a big shift.`;
+    return `Think of it like a line of dominoes. ${l.chain[0]} tips over first, then each step pushes the next, ${l.chain.slice(1, -1).join(", ")}${l.chain.length > 2 ? "," : ""} and finally ${l.chain[l.chain.length - 1]}. Each link is small on its own, but together they add up to a big shift.`;
   }
   if (l.kind === "soft") {
-    return `${fromTitle} doesn't unlock a specific card on the board — instead it adds ecological pressure that flows into whichever related mystery is closest, like Biodiversity Collapse or Fish Population Decline.`;
+    return `${fromTitle} doesn't unlock a specific card on the board, instead it adds ecological pressure that flows into whichever related mystery is closest, like Biodiversity Collapse or Fish Population Decline.`;
   }
   return `${fromTitle} acts like a support beam holding ${toTitle} back. When it fails or gets ignored, ${toTitle} arrives sooner and hits harder. Solving ${fromTitle} well buys ${toTitle} more time.`;
 }
 
 /** Short "systems thinking" line explaining why the two seem unrelated but aren't. */
 export function systemsInsight(fromTitle: string, toTitle: string): string {
-  return `Although ${fromTitle} and ${toTitle} may appear unrelated, Earth's systems are tightly coupled — a shift in one biome, market, or policy propagates through feedback loops until it reshapes another domain entirely. This is systems thinking in action.`;
+  return `Although ${fromTitle} and ${toTitle} may appear unrelated, Earth's systems are tightly coupled, a shift in one biome, market, or policy propagates through feedback loops until it reshapes another domain entirely. This is systems thinking in action.`;
 }
 
-/** Follow outgoing edges up to `maxHops` starting from `code` — for "Explore Full Cascade". */
+/** Follow outgoing edges up to `maxHops` starting from `code`, for "Explore Full Cascade". */
 export function fullCascade(code: string, maxHops = 6): string[] {
   const seen = new Set<string>([code]);
   const path: string[] = [code];

@@ -5,7 +5,7 @@ import type { GameMode } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/mode-select")({
-  head: () => ({ meta: [{ title: "Choose Game Mode — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Choose Game Mode, Tomorrow Matrix" }] }),
   component: ModeSelect,
 });
 

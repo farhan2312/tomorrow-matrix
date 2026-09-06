@@ -4,7 +4,7 @@ import { useAudioPrefs, useNarration } from "@/lib/voice/store";
 import { useGame } from "@/lib/game/store";
 
 export const Route = createFileRoute("/settings")({
-  head: () => ({ meta: [{ title: "Settings — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Settings, Tomorrow Matrix" }] }),
   component: SettingsPage,
 });
 
@@ -60,7 +60,7 @@ function SettingsPage() {
           label="Autoplay mystery intro videos"
           hint={
             watchedIntros > 0
-              ? `Turn this off to skip straight to the puzzle. You've watched ${watchedIntros} intro${watchedIntros === 1 ? "" : "s"} — intros stay replayable any time.`
+              ? `Turn this off to skip straight to the puzzle. You've watched ${watchedIntros} intro${watchedIntros === 1 ? "" : "s"}, intros stay replayable any time.`
               : "Plays the cinematic briefing when you open a mystery. Available to switch off once you've watched one."
           }
           checked={autoplayIntro}
@@ -94,10 +94,10 @@ function SettingsPage() {
           className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
         >
           <option value="en">English</option>
-          <option value="ar" disabled>العربية — coming soon</option>
-          <option value="fr" disabled>Français — coming soon</option>
-          <option value="es" disabled>Español — coming soon</option>
-          <option value="hi" disabled>हिन्दी — coming soon</option>
+          <option value="ar" disabled>العربية, coming soon</option>
+          <option value="fr" disabled>Français, coming soon</option>
+          <option value="es" disabled>Español, coming soon</option>
+          <option value="hi" disabled>हिन्दी, coming soon</option>
         </select>
       </section>
 

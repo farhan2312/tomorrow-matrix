@@ -40,7 +40,7 @@ function entry(code: string): MysteryMedia {
 export function introVideo(m: Pick<Mystery, "code" | "title">): MediaItem {
   const e = entry(m.code).intro ?? {};
   return {
-    title: e.title ?? `${m.title} — Introduction`,
+    title: e.title ?? `${m.title}, Introduction`,
     ...e,
   };
 }
@@ -48,7 +48,7 @@ export function introVideo(m: Pick<Mystery, "code" | "title">): MediaItem {
 export function explainerVideo(m: Pick<Mystery, "code" | "title">): MediaItem {
   const e = entry(m.code).explainer ?? {};
   return {
-    title: e.title ?? `${m.title} — The Science`,
+    title: e.title ?? `${m.title}, The Science`,
     ...e,
   };
 }
@@ -80,7 +80,7 @@ export function learningPoints(m: Mystery): string[] {
   return out.slice(0, 4);
 }
 
-/** Total media slots defined across the library — used for dashboard progress copy. */
+/** Total media slots defined across the library, used for dashboard progress copy. */
 export function mediaCoverage(): { withIntro: number; withExplainer: number; total: number } {
   let withIntro = 0;
   let withExplainer = 0;

@@ -7,7 +7,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign In — Tomorrow Matrix" },
+      { title: "Sign In, Tomorrow Matrix" },
       { name: "description", content: "Sign in to save your Terra progress across devices." },
     ],
   }),

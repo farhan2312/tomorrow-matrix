@@ -4,7 +4,7 @@ import { HealthGauge } from "@/components/game/HealthGauge";
 import terraGlobe from "@/assets/terra-globe.jpg";
 
 export const Route = createFileRoute("/endgame")({
-  head: () => ({ meta: [{ title: "Endgame — Tomorrow Matrix" }] }),
+  head: () => ({ meta: [{ title: "Endgame, Tomorrow Matrix" }] }),
   component: Endgame,
 });
 
@@ -17,7 +17,7 @@ function Endgame() {
     ? "Terra is restored."
     : partial
       ? "A fragile recovery."
-      : "The choices weren't enough — yet.";
+      : "The choices weren't enough, yet.";
 
   return (
     <main className="min-h-screen bg-background">
@@ -33,7 +33,7 @@ function Endgame() {
             {won
               ? "Through investigation, investment and timely crisis response, you brought Terra back from the brink. Future generations will study how this turned around."
               : partial
-                ? "Terra is healing, but the recovery is fragile. Another session — different choices — could push it further."
+                ? "Terra is healing, but the recovery is fragile. Another session, different choices, could push it further."
                 : "Terra needs more decisive action. Replay with a different role to see how the system responds to a new perspective."}
           </p>
           <div className="mt-6 flex items-center gap-6">

@@ -170,7 +170,7 @@ export interface GameState {
 
   /** Full per-crisis outcome history (newest first). */
   crisisLog: CrisisOutcome[];
-  /** Pending promotion banner — set when a role level threshold is crossed. */
+  /** Pending promotion banner, set when a role level threshold is crossed. */
   pendingPromotion: PendingPromotion | null;
 
   /** History of every indicator/Terra change with a human reason (newest first). */
@@ -266,7 +266,7 @@ const initial = {
     { from: "ocean", to: "ice", label: "melts" },
   ],
   feed: [
-    { id: "f0", text: "Terra Initiative session started — Year 2025", tone: "info" as const, ts: Date.now() },
+    { id: "f0", text: "Terra Initiative session started, Year 2025", tone: "info" as const, ts: Date.now() },
   ],
 };
 
@@ -365,7 +365,7 @@ function applyMissionProgress(get: () => GameState, set: (p: Partial<GameState>)
     feed: [
       ...completed.map((m) => ({
         id: `f${Date.now()}-${m.id}`,
-        text: `Role mission complete — ${m.title} (+${m.reward} CAP)`,
+        text: `Role mission complete, ${m.title} (+${m.reward} CAP)`,
         tone: "good" as const,
         ts: Date.now(),
       })),
@@ -394,7 +394,7 @@ function checkPromotion(get: () => GameState, set: (p: Partial<GameState>) => vo
       theme: meta?.theme ?? "", ts: Date.now(),
     },
     feed: [
-      { id: `f${Date.now()}-promo`, text: `Promotion — ${after.title} (+${bonus} CAP)`, tone: "good" as const, ts: Date.now() },
+      { id: `f${Date.now()}-promo`, text: `Promotion, ${after.title} (+${bonus} CAP)`, tone: "good" as const, ts: Date.now() },
       ...s.feed,
     ].slice(0, 30),
   });
@@ -441,7 +441,7 @@ function maybeActivateNextChallenge(get: () => GameState, set: (p: Partial<GameS
   const answeredIds = progress.attempts.map((a) => a.questionId);
   const ids = buildChallengeQuestionIds(next.kind, s.role, answeredIds);
   if (ids.length === 0) {
-    // Nothing left to ask — skip silently
+    // Nothing left to ask, skip silently
     set({ challengeQueue: rest });
     maybeActivateNextChallenge(get, set);
     return;
@@ -568,13 +568,13 @@ export const useGame = create<GameState>()(
         }
         applyMissionProgress(get, set);
 
-        // Trigger 2 — Role Mission after every 2 mysteries
+        // Trigger 2, Role Mission after every 2 mysteries
         if (get().mysteriesSinceLastMission >= 2) {
           set({ mysteriesSinceLastMission: 0 });
           get().queueChallenge("mission");
         }
 
-        // Trigger 4 — Tier completion → Role Assessment
+        // Trigger 4, Tier completion → Role Assessment
         if (role) {
           const tier = m.tier;
           const allTier = MYSTERIES.filter((x) => x.tier === tier);
@@ -702,7 +702,7 @@ export const useGame = create<GameState>()(
           edges: [...s.edges, { from: newNode.id, to: "co2", label: "reduces" }],
           indicatorLog: [...changes, ...s.indicatorLog].slice(0, 200),
           feed: [
-            { id: `f${now}`, text: `Invested in ${i.name} — ripple in motion`, tone: "good" as const, ts: now },
+            { id: `f${now}`, text: `Invested in ${i.name}, ripple in motion`, tone: "good" as const, ts: now },
             ...s.feed,
           ].slice(0, 30),
         });
@@ -742,14 +742,14 @@ export const useGame = create<GameState>()(
         const isPositive = choice.planetHealth >= 0;
         const isBest = choice.id === c.bestChoiceId;
 
-        // CAP breakdown — every reason a player gains or loses CAP from this crisis.
+        // CAP breakdown, every reason a player gains or loses CAP from this crisis.
         const breakdown: { label: string; value: number }[] = [];
         if (choice.cost) breakdown.push({ label: "Intervention cost", value: -choice.cost });
         if (isPositive) breakdown.push({ label: "Positive outcome bonus", value: 25 });
         if (isBest) breakdown.push({ label: "Best decision bonus", value: 15 });
         if (timedOut) breakdown.push({ label: "Timeout penalty", value: -10 });
 
-        // Role bonus — player's role is a primary stakeholder of a linked mystery.
+        // Role bonus, player's role is a primary stakeholder of a linked mystery.
         const role = s.role;
         if (role && c.linkedMysteryCodes?.length) {
           const matched = MYSTERIES.some(
@@ -761,7 +761,7 @@ export const useGame = create<GameState>()(
         const capPositive = breakdown.filter((b) => b.value > 0).reduce((a, b) => a + b.value, 0);
         const capNegative = -breakdown.filter((b) => b.value < 0).reduce((a, b) => a + b.value, 0);
 
-        // Stakeholder impact — derived from per-indicator deltas.
+        // Stakeholder impact, derived from per-indicator deltas.
         const benefited = new Set<RoleId>();
         const harmed = new Set<RoleId>();
         (Object.keys(ind) as IndicatorKey[]).forEach((k) => {
@@ -772,7 +772,7 @@ export const useGame = create<GameState>()(
         // Roles in both → treat net by total delta sign per role
         const harmedFinal = [...harmed].filter((r) => !benefited.has(r));
 
-        // Butterfly effects — per indicator with significant change.
+        // Butterfly effects, per indicator with significant change.
         const butterflyEffects = (Object.keys(ind) as IndicatorKey[])
           .map((k) => {
             const d = ind[k] - indicatorsBefore[k];
@@ -781,7 +781,7 @@ export const useGame = create<GameState>()(
           })
           .filter((x): x is { label: string; direction: "up" | "down" } => x !== null);
 
-        // Future consequences — based on outcome quality and butterfly effects.
+        // Future consequences, based on outcome quality and butterfly effects.
         const futureConsequences: string[] = [];
         if (isBest || isPositive) {
           if (butterflyEffects.some((b) => b.direction === "up"))
@@ -796,7 +796,7 @@ export const useGame = create<GameState>()(
 
         const status = classifyOutcome(choice.planetHealth, isBest, timedOut);
         const insight = c.bestReasoning ?? c.indicatorNarrative
-          ?? "Every crisis you face is connected — fast root-cause action beats waiting for symptoms.";
+          ?? "Every crisis you face is connected, fast root-cause action beats waiting for symptoms.";
 
         const outcome: CrisisOutcome = {
           id: `co-${Date.now()}-${id}`,
@@ -883,7 +883,7 @@ export const useGame = create<GameState>()(
         applyMissionProgress(get, set);
         checkPromotion(get, set, prevCap);
 
-        // Trigger 3 — Stakeholder Reflection after every crisis
+        // Trigger 3, Stakeholder Reflection after every crisis
         if (get().role) get().queueChallenge("reflection");
       },
 
@@ -989,7 +989,7 @@ export const useGame = create<GameState>()(
           xpBonus += 20;
           completionBonusGranted = true;
           newBadges.push("questionnaire-complete");
-          feedLines.push("Full questionnaire bonus — +20 CAP");
+          feedLines.push("Full questionnaire bonus, +20 CAP");
         }
 
         // Perfect MCQ score = every MCQ answered correctly
@@ -1001,7 +1001,7 @@ export const useGame = create<GameState>()(
           xpBonus += 30;
           perfectBonusGranted = true;
           newBadges.push("perfect-score");
-          feedLines.push("Perfect score — +30 CAP");
+          feedLines.push("Perfect score, +30 CAP");
         }
 
         const nextProgress: RoleProgress = {

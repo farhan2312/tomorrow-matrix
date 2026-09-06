@@ -16,7 +16,7 @@ import { narrate } from "@/lib/voice/store";
 export const Route = createFileRoute("/play")({
   head: () => ({
     meta: [
-      { title: "Play — Tomorrow Matrix" },
+      { title: "Play, Tomorrow Matrix" },
       { name: "description", content: "Restore Terra. Solve mysteries, respond to crises, invest in interventions." },
     ],
   }),
