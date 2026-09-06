@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as RoleSelectRouteImport } from './routes/role-select'
 import { Route as RecruitRouteImport } from './routes/recruit'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PlayRouteImport } from './routes/play'
 import { Route as ModeSelectRouteImport } from './routes/mode-select'
 import { Route as EndgameRouteImport } from './routes/endgame'
@@ -47,6 +48,11 @@ const RoleSelectRoute = RoleSelectRouteImport.update({
 const RecruitRoute = RecruitRouteImport.update({
   id: '/recruit',
   path: '/recruit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlayRoute = PlayRouteImport.update({
@@ -162,6 +168,7 @@ export interface FileRoutesByFullPath {
   '/endgame': typeof EndgameRoute
   '/mode-select': typeof ModeSelectRoute
   '/play': typeof PlayRouteWithChildren
+  '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
   '/role-select': typeof RoleSelectRoute
   '/settings': typeof SettingsRoute
@@ -187,6 +194,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/endgame': typeof EndgameRoute
   '/mode-select': typeof ModeSelectRoute
+  '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
   '/role-select': typeof RoleSelectRoute
   '/settings': typeof SettingsRoute
@@ -214,6 +222,7 @@ export interface FileRoutesById {
   '/endgame': typeof EndgameRoute
   '/mode-select': typeof ModeSelectRoute
   '/play': typeof PlayRouteWithChildren
+  '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
   '/role-select': typeof RoleSelectRoute
   '/settings': typeof SettingsRoute
@@ -242,6 +251,7 @@ export interface FileRouteTypes {
     | '/endgame'
     | '/mode-select'
     | '/play'
+    | '/privacy'
     | '/recruit'
     | '/role-select'
     | '/settings'
@@ -267,6 +277,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/endgame'
     | '/mode-select'
+    | '/privacy'
     | '/recruit'
     | '/role-select'
     | '/settings'
@@ -293,6 +304,7 @@ export interface FileRouteTypes {
     | '/endgame'
     | '/mode-select'
     | '/play'
+    | '/privacy'
     | '/recruit'
     | '/role-select'
     | '/settings'
@@ -320,6 +332,7 @@ export interface RootRouteChildren {
   EndgameRoute: typeof EndgameRoute
   ModeSelectRoute: typeof ModeSelectRoute
   PlayRoute: typeof PlayRouteWithChildren
+  PrivacyRoute: typeof PrivacyRoute
   RecruitRoute: typeof RecruitRoute
   RoleSelectRoute: typeof RoleSelectRoute
   SettingsRoute: typeof SettingsRoute
@@ -350,6 +363,13 @@ declare module '@tanstack/react-router' {
       path: '/recruit'
       fullPath: '/recruit'
       preLoaderRoute: typeof RecruitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/play': {
@@ -539,6 +559,7 @@ const rootRouteChildren: RootRouteChildren = {
   EndgameRoute: EndgameRoute,
   ModeSelectRoute: ModeSelectRoute,
   PlayRoute: PlayRouteWithChildren,
+  PrivacyRoute: PrivacyRoute,
   RecruitRoute: RecruitRoute,
   RoleSelectRoute: RoleSelectRoute,
   SettingsRoute: SettingsRoute,
