@@ -86,11 +86,6 @@ function AccountPage() {
               <input value={displayName} onChange={(e) => setDisplayName(e.target.value)}
                 className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
             </label>
-            <label className="grid gap-1 text-xs">
-              <span className="uppercase tracking-wider text-muted-foreground">Avatar URL</span>
-              <input value={avatarUrl} onChange={(e) => setAvatarUrl(e.target.value)} placeholder="https://…"
-                className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
-            </label>
 
             <div className="flex items-center gap-2 pt-2">
               <button onClick={save} disabled={saving}
