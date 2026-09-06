@@ -82,6 +82,20 @@ function AuthPage() {
     }
   };
 
+  const sendReset = async () => {
+    if (!email) { toast.error("Enter your email above first."); return; }
+    setBusy("reset");
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      });
+      if (error) throw error;
+      toast.success("Password reset link sent. Check your email.");
+    } catch (err) {
+      toast.error((err as Error).message);
+    } finally { setBusy(null); }
+  };
+
   const sendOtp = async () => {
     setBusy("phone");
     try {
@@ -159,6 +173,12 @@ function AuthPage() {
                 className="text-xs text-muted-foreground hover:text-foreground">
                 {mode === "signup" ? "Already have an account? Sign in" : "New here? Create an account"}
               </button>
+              {mode === "signin" && (
+                <button type="button" onClick={sendReset} disabled={busy === "reset"}
+                  className="text-xs text-muted-foreground hover:text-foreground">
+                  {busy === "reset" ? "Sending reset link…" : "Forgot password?"}
+                </button>
+              )}
             </form>
           ) : (
             <div className="grid gap-2">

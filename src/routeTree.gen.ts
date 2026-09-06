@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as RoleSelectRouteImport } from './routes/role-select'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as RecruitRouteImport } from './routes/recruit'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PlayRouteImport } from './routes/play'
@@ -43,6 +44,11 @@ const SettingsRoute = SettingsRouteImport.update({
 const RoleSelectRoute = RoleSelectRouteImport.update({
   id: '/role-select',
   path: '/role-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RecruitRoute = RecruitRouteImport.update({
@@ -170,6 +176,7 @@ export interface FileRoutesByFullPath {
   '/play': typeof PlayRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/role-select': typeof RoleSelectRoute
   '/settings': typeof SettingsRoute
   '/facilitator/$code': typeof FacilitatorCodeRoute
@@ -196,6 +203,7 @@ export interface FileRoutesByTo {
   '/mode-select': typeof ModeSelectRoute
   '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/role-select': typeof RoleSelectRoute
   '/settings': typeof SettingsRoute
   '/facilitator/$code': typeof FacilitatorCodeRoute
@@ -224,6 +232,7 @@ export interface FileRoutesById {
   '/play': typeof PlayRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/role-select': typeof RoleSelectRoute
   '/settings': typeof SettingsRoute
   '/facilitator/$code': typeof FacilitatorCodeRoute
@@ -253,6 +262,7 @@ export interface FileRouteTypes {
     | '/play'
     | '/privacy'
     | '/recruit'
+    | '/reset-password'
     | '/role-select'
     | '/settings'
     | '/facilitator/$code'
@@ -279,6 +289,7 @@ export interface FileRouteTypes {
     | '/mode-select'
     | '/privacy'
     | '/recruit'
+    | '/reset-password'
     | '/role-select'
     | '/settings'
     | '/facilitator/$code'
@@ -306,6 +317,7 @@ export interface FileRouteTypes {
     | '/play'
     | '/privacy'
     | '/recruit'
+    | '/reset-password'
     | '/role-select'
     | '/settings'
     | '/facilitator/$code'
@@ -334,6 +346,7 @@ export interface RootRouteChildren {
   PlayRoute: typeof PlayRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   RecruitRoute: typeof RecruitRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   RoleSelectRoute: typeof RoleSelectRoute
   SettingsRoute: typeof SettingsRoute
   FacilitatorCodeRoute: typeof FacilitatorCodeRoute
@@ -356,6 +369,13 @@ declare module '@tanstack/react-router' {
       path: '/role-select'
       fullPath: '/role-select'
       preLoaderRoute: typeof RoleSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/recruit': {
@@ -561,6 +581,7 @@ const rootRouteChildren: RootRouteChildren = {
   PlayRoute: PlayRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   RecruitRoute: RecruitRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   RoleSelectRoute: RoleSelectRoute,
   SettingsRoute: SettingsRoute,
   FacilitatorCodeRoute: FacilitatorCodeRoute,
