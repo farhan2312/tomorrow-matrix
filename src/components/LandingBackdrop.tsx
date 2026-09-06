@@ -13,15 +13,26 @@ function LeafShape({ className, style }: { className?: string; style?: React.CSS
 type Leaf = { top: string; left: string; size: number; color: string; dur: number; delay: number; kind: "float" | "fall" };
 
 const LEAVES: Leaf[] = [
+  // gently bobbing in place
   { top: "14%", left: "9%",  size: 26, color: "var(--terra)",      dur: 9,   delay: 0,   kind: "float" },
-  { top: "24%", left: "38%", size: 18, color: "var(--terra-deep)", dur: 11,  delay: 1.5, kind: "float" },
-  { top: "66%", left: "15%", size: 22, color: "var(--terra)",      dur: 10,  delay: 0.8, kind: "float" },
-  { top: "74%", left: "46%", size: 16, color: "var(--warmth)",     dur: 12,  delay: 2.2, kind: "float" },
-  { top: "44%", left: "58%", size: 20, color: "var(--terra-deep)", dur: 9.5, delay: 0.4, kind: "float" },
-  { top: "0%",  left: "22%", size: 20, color: "var(--terra)",      dur: 17,  delay: 0,   kind: "fall"  },
-  { top: "0%",  left: "54%", size: 15, color: "var(--terra-deep)", dur: 21,  delay: 6,   kind: "fall"  },
-  { top: "0%",  left: "80%", size: 24, color: "var(--terra)",      dur: 19,  delay: 10,  kind: "fall"  },
-  { top: "0%",  left: "68%", size: 14, color: "var(--warmth)",     dur: 23,  delay: 3,   kind: "fall"  },
+  { top: "24%", left: "34%", size: 18, color: "var(--terra-deep)", dur: 11,  delay: 1.5, kind: "float" },
+  { top: "66%", left: "13%", size: 22, color: "var(--terra)",      dur: 10,  delay: 0.8, kind: "float" },
+  { top: "72%", left: "44%", size: 16, color: "var(--warmth)",     dur: 12,  delay: 2.2, kind: "float" },
+  { top: "44%", left: "55%", size: 20, color: "var(--terra-deep)", dur: 9.5, delay: 0.4, kind: "float" },
+  { top: "34%", left: "6%",  size: 15, color: "var(--terra-deep)", dur: 10.5,delay: 3.1, kind: "float" },
+  { top: "84%", left: "28%", size: 19, color: "var(--terra)",      dur: 11.5,delay: 1.1, kind: "float" },
+  { top: "54%", left: "40%", size: 13, color: "var(--warmth)",     dur: 8.5, delay: 2.7, kind: "float" },
+  { top: "8%",  left: "48%", size: 17, color: "var(--terra)",      dur: 12.5,delay: 0.6, kind: "float" },
+  // drifting down
+  { top: "0%",  left: "14%", size: 20, color: "var(--terra)",      dur: 17,  delay: 0,   kind: "fall"  },
+  { top: "0%",  left: "26%", size: 14, color: "var(--terra-deep)", dur: 22,  delay: 8,   kind: "fall"  },
+  { top: "0%",  left: "38%", size: 18, color: "var(--terra)",      dur: 19,  delay: 4,   kind: "fall"  },
+  { top: "0%",  left: "52%", size: 15, color: "var(--terra-deep)", dur: 21,  delay: 11,  kind: "fall"  },
+  { top: "0%",  left: "63%", size: 22, color: "var(--terra)",      dur: 18,  delay: 2,   kind: "fall"  },
+  { top: "0%",  left: "72%", size: 14, color: "var(--warmth)",     dur: 23,  delay: 7,   kind: "fall"  },
+  { top: "0%",  left: "82%", size: 24, color: "var(--terra)",      dur: 20,  delay: 13,  kind: "fall"  },
+  { top: "0%",  left: "90%", size: 16, color: "var(--terra-deep)", dur: 24,  delay: 5,   kind: "fall"  },
+  { top: "0%",  left: "45%", size: 12, color: "var(--warmth)",     dur: 26,  delay: 16,  kind: "fall"  },
 ];
 
 /** Deterministic (seeded) network so SSR and client render identically. */
@@ -32,7 +43,7 @@ function useNetwork() {
       s = (s * 1103515245 + 12345) & 0x7fffffff;
       return s / 0x7fffffff;
     };
-    const nodes = Array.from({ length: 26 }, () => ({
+    const nodes = Array.from({ length: 14 }, () => ({
       x: +(rnd() * 100).toFixed(2),
       y: +(rnd() * 100).toFixed(2),
       r: +(1.3 + rnd() * 2.3).toFixed(2),
@@ -41,7 +52,7 @@ function useNetwork() {
     for (let i = 0; i < nodes.length; i++)
       for (let j = i + 1; j < nodes.length; j++) {
         const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-        if (d < 23) edges.push([i, j]);
+        if (d < 30) edges.push([i, j]);
       }
     return { nodes, edges };
   }, []);
