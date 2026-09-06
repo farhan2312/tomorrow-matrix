@@ -23,6 +23,33 @@ for (const [path, url] of Object.entries(COVER_MODULES)) {
   if (m) COVERS[m[1]] = url;
 }
 
+// Per-mystery full-art solving cards: src/assets/cards/M01/1.webp … 8.webp.
+// Card order (1…8) is the canonical (correct) causal chain. Building the
+// sequence straight from the art gives every mystery a real 8-card puzzle.
+const CARD_MODULES = import.meta.glob("../../assets/cards/*/*.webp", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+const CARD_SEQUENCES: Record<string, SequenceStep[]> = {};
+for (const [path, url] of Object.entries(CARD_MODULES)) {
+  const m = path.match(/(M\d{2})\/(\d+)\.webp$/);
+  if (!m) continue;
+  const [, code, n] = m;
+  (CARD_SEQUENCES[code] ??= []).push({
+    id: `${code}-c${n}`,
+    label: "",
+    icon: "",
+    tone: "climate",
+    image: url,
+    _order: Number(n),
+  } as SequenceStep & { _order: number });
+}
+for (const code of Object.keys(CARD_SEQUENCES)) {
+  CARD_SEQUENCES[code].sort(
+    (a, b) => (a as { _order: number })._order - (b as { _order: number })._order,
+  );
+}
+
 interface RawMystery {
   code: string;
   id: string;
@@ -110,9 +137,8 @@ function toMystery(r: RawMystery): Mystery {
   const domain = DOMAIN_NORMALIZE(r.category);
   const indicator = DOMAIN_TO_INDICATOR[domain] ?? "climate";
   const useLegacy = LEGACY_SEQ_ID[r.code];
-  const sequence = useLegacy
-    ? SEQUENCES[useLegacy]
-    : synthSequence(r.sequence, r.code);
+  const sequence = CARD_SEQUENCES[r.code]
+    ?? (useLegacy ? SEQUENCES[useLegacy] : synthSequence(r.sequence, r.code));
   const hints = useLegacy ? HINTS[LEGACY_HINT_ID[r.code]] : undefined;
 
   return {

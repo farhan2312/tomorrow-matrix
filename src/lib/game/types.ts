@@ -25,9 +25,11 @@ export interface Role {
 
 export interface SequenceStep {
   id: string;
-  label: string;        // shown on the card face, this IS the artwork content
+  label: string;        // shown on the card face when there's no art
   icon: string;         // legacy field, no longer used on play cards
   tone: "climate" | "heat" | "water" | "ice" | "bio" | "industry" | "human" | "policy";
+  /** Full-art card image (WebP). When set, it replaces the gradient/label face. */
+  image?: string;
 }
 
 export type MysteryDomain =

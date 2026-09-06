@@ -72,7 +72,9 @@ export function learningPoints(m: Mystery): string[] {
   const chain = m.butterfly ?? [];
   const out: string[] = [];
   if (m.sequence?.length) {
-    out.push(`The chain runs ${m.sequence[0].label} → ${m.sequence[m.sequence.length - 1].label}.`);
+    const first = m.sequence[0].label;
+    const last = m.sequence[m.sequence.length - 1].label;
+    if (first && last) out.push(`The chain runs ${first} → ${last}.`);
   }
   if (chain.length > 1) out.push(`Butterfly cascade: ${chain.join(" → ")}.`);
   if (m.aiConnection) out.push(m.aiConnection);

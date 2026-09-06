@@ -38,6 +38,40 @@ export const SequenceCard = forwardRef<HTMLDivElement, Props>(function SequenceC
     size === "lg" ? "h-52 w-40 text-base" :
                     "h-40 w-28 text-xs";
 
+  // Full-art card: the image already carries the title + description.
+  if (step.image) {
+    const imgDim = size === "sm" ? "h-24 w-24" : size === "lg" ? "h-52 w-52" : "h-40 w-40";
+    return (
+      <div
+        ref={ref}
+        style={style}
+        className={cn(
+          "relative overflow-hidden rounded-2xl border shadow-lg transition-all select-none",
+          imgDim,
+          state === "correct" && "ring-2 ring-[color:var(--terra)] ring-offset-2 ring-offset-background",
+          state === "wrong"   && "ring-2 ring-destructive ring-offset-2 ring-offset-background animate-pulse",
+          state === "hint"    && "ring-2 ring-[color:var(--warmth)] ring-offset-2 ring-offset-background",
+          dragging            && "scale-105 shadow-2xl rotate-[-1.5deg]",
+          "border-white/15",
+          className,
+        )}
+        {...rest}
+      >
+        <img
+          src={step.image}
+          alt={step.label || "sequence card"}
+          draggable={false}
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        />
+        {typeof positionIndex === "number" && (
+          <span className="absolute right-1.5 top-1.5 grid h-5 w-5 place-items-center rounded-full bg-black/50 font-mono text-[10px] text-white backdrop-blur-sm">
+            {positionIndex + 1}
+          </span>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       ref={ref}
