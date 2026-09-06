@@ -65,7 +65,7 @@ function Landing() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background">
+    <main className="relative isolate min-h-screen overflow-hidden bg-background">
       <LandingBackdrop />
 
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
