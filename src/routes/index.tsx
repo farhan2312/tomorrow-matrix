@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles, Network as NetIcon, Map as MapIcon, AlertTriangle, LogIn, UserCircle } from "lucide-react";
 import { useGame } from "@/lib/game/store";
 import { supabase } from "@/integrations/supabase/client";
+import { LandingBackdrop } from "@/components/LandingBackdrop";
 import terraGlobe from "@/assets/terra-globe.png";
 
 
@@ -65,13 +66,7 @@ function Landing() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background">
-      {/* Decorative background graphics: soft color blobs + faint dot grid */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-32 -top-24 h-[26rem] w-[26rem] rounded-full bg-[color:var(--terra-soft)] opacity-70 blur-3xl" />
-        <div className="absolute right-[-8rem] top-24 h-[30rem] w-[30rem] rounded-full bg-[color:var(--warmth-soft)] opacity-60 blur-3xl" />
-        <div className="absolute bottom-[-6rem] left-1/3 h-[24rem] w-[24rem] rounded-full bg-[color:var(--terra-soft)] opacity-50 blur-3xl" />
-        <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle,color-mix(in_oklab,var(--foreground)_9%,transparent)_1px,transparent_1.4px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
-      </div>
+      <LandingBackdrop />
 
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-2">
