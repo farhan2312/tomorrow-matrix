@@ -11,6 +11,18 @@ import imgDrought  from "@/assets/mystery-drought.jpg";
 import imgHeat     from "@/assets/mystery-heat.jpg";
 import imgMangrove from "@/assets/mystery-mangrove.jpg";
 
+// Per-mystery cover art (M01…M66). Bundled via Vite glob so adding/removing a
+// cover needs no code change. Falls back to the domain image below when absent.
+const COVER_MODULES = import.meta.glob("../../assets/covers/*.webp", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+const COVERS: Record<string, string> = {};
+for (const [path, url] of Object.entries(COVER_MODULES)) {
+  const m = path.match(/(M\d{2})\.webp$/);
+  if (m) COVERS[m[1]] = url;
+}
+
 interface RawMystery {
   code: string;
   id: string;
@@ -124,7 +136,7 @@ function toMystery(r: RawMystery): Mystery {
     linkedCrises: r.linkedCrises ?? [],
     linkedInterventions: r.linkedInterventions ?? [],
     aiConnection: r.aiConnection,
-    image: IMG_BY_DOMAIN[domain] ?? imgArctic,
+    image: COVERS[r.code] ?? IMG_BY_DOMAIN[domain] ?? imgArctic,
   };
 }
 
