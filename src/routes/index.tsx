@@ -153,6 +153,16 @@ function Landing() {
           ))}
         </div>
       </section>
+
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
+          <span>© {new Date().getFullYear()} Tomorrow Matrix</span>
+          <nav className="flex items-center gap-4">
+            <Link to="/privacy" className="hover:text-foreground">Privacy Policy</Link>
+            <Link to="/auth" className="hover:text-foreground">Sign in</Link>
+          </nav>
+        </div>
+      </footer>
     </main>
   );
 }
