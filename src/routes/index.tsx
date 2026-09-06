@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Globe2, ArrowRight, Sparkles, Network as NetIcon, Map as MapIcon, AlertTriangle, LogIn, UserCircle } from "lucide-react";
+import { ArrowRight, Sparkles, Network as NetIcon, Map as MapIcon, AlertTriangle, LogIn, UserCircle } from "lucide-react";
 import { useGame } from "@/lib/game/store";
 import { supabase } from "@/integrations/supabase/client";
 import terraGlobe from "@/assets/terra-globe.jpg";
@@ -52,9 +52,7 @@ function Landing() {
     <main className="min-h-screen overflow-hidden bg-background">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-xl bg-[image:var(--gradient-terra)] text-white shadow-sm">
-            <Globe2 className="h-4 w-4" />
-          </div>
+          <img src="/icon-512.png" alt="Tomorrow Matrix" className="h-8 w-8 object-contain" />
           <span className="font-display text-base font-semibold">Tomorrow Matrix</span>
         </div>
         <div className="flex items-center gap-4">

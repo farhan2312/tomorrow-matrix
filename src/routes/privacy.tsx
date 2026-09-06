@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Globe2, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -25,9 +25,7 @@ function PrivacyPage() {
     <main className="min-h-screen bg-background">
       <nav className="mx-auto flex h-16 max-w-3xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-xl bg-[image:var(--gradient-terra)] text-white">
-            <Globe2 className="h-4 w-4" />
-          </div>
+          <img src="/icon-512.png" alt="Tomorrow Matrix" className="h-8 w-8 object-contain" />
           <span className="font-display text-base font-semibold">Tomorrow Matrix</span>
         </Link>
         <Link

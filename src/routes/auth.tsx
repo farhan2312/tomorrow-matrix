@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Globe2, Mail, Phone, ArrowLeft, Loader2 } from "lucide-react";
+import { Mail, Phone, ArrowLeft, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -108,9 +108,7 @@ function AuthPage() {
     <main className="min-h-screen bg-background">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-xl bg-[image:var(--gradient-terra)] text-white">
-            <Globe2 className="h-4 w-4" />
-          </div>
+          <img src="/icon-512.png" alt="Tomorrow Matrix" className="h-8 w-8 object-contain" />
           <span className="font-display text-base font-semibold">Tomorrow Matrix</span>
         </Link>
         <Link to="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">

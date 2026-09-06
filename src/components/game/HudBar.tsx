@@ -24,9 +24,7 @@ export function HudBar() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-[1400px] items-center gap-4 px-4 md:px-6">
         <Link to="/play" className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-xl bg-[image:var(--gradient-terra)] text-white shadow-sm">
-            <Globe2 className="h-4 w-4" />
-          </div>
+          <img src="/icon-512.png" alt="Tomorrow Matrix" className="h-8 w-8 object-contain" />
           <span className="font-display text-sm font-semibold tracking-tight">Tomorrow Matrix</span>
         </Link>
 
