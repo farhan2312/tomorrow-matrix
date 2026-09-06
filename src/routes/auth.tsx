@@ -29,13 +29,20 @@ function AuthPage() {
   const [busy, setBusy] = useState<null | string>(null);
   // When an email has been dispatched, show a confirmation panel instead of the form.
   const [sent, setSent] = useState<null | { kind: "signup" | "reset"; email: string }>(null);
+  const [formError, setFormError] = useState<string | null>(null);
 
   useEffect(() => {
+    // First-time users (profile not yet onboarded) land on the profile page to
+    // set up their name + photo; returning users go straight to the home page.
+    const routeAfterLogin = async (userId: string) => {
+      const { data: prof } = await supabase.from("profiles").select("onboarded").eq("id", userId).maybeSingle();
+      navigate({ to: prof?.onboarded ? "/" : "/account" });
+    };
     supabase.auth.getSession().then(({ data }) => {
-      if (data.session) navigate({ to: "/account" });
+      if (data.session) void routeAfterLogin(data.session.user.id);
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
-      if (session) navigate({ to: "/account" });
+      if (session) void routeAfterLogin(session.user.id);
     });
     return () => sub.subscription.unsubscribe();
   }, [navigate]);
@@ -61,6 +68,7 @@ function AuthPage() {
 
   const emailAuth = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError(null);
     setBusy("email");
     try {
       if (mode === "signup") {
@@ -78,7 +86,15 @@ function AuthPage() {
         if (error) throw error;
       }
     } catch (err) {
-      toast.error((err as Error).message);
+      const msg = (err as Error).message || "Something went wrong. Please try again.";
+      // Supabase returns a generic "Invalid login credentials" — make it human.
+      const friendly = /invalid login credentials/i.test(msg)
+        ? "Incorrect email or password."
+        : /email not confirmed/i.test(msg)
+        ? "Please confirm your email first — check your inbox for the link."
+        : msg;
+      setFormError(friendly);
+      toast.error(friendly);
     } finally {
       setBusy(null);
     }
@@ -171,7 +187,11 @@ function AuthPage() {
             <p className="text-xs text-muted-foreground">
               The link expires in <strong>2 minutes</strong>. If it&apos;s not in your inbox, check your spam folder.
             </p>
-            <div className="mt-1 flex items-center justify-center gap-2">
+            <button onClick={() => { setSent(null); setMode("signin"); setFormError(null); }}
+              className="mt-1 inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white">
+              Back to sign in
+            </button>
+            <div className="flex items-center justify-center gap-2">
               <button onClick={resend} disabled={busy === "resend"}
                 className="inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-input bg-card px-3 text-xs font-medium hover:bg-muted disabled:opacity-60">
                 {busy === "resend" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : null} Resend email
@@ -211,13 +231,16 @@ function AuthPage() {
               )}
               <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
                 className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
-              <input type="password" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"
+              <input type="password" required minLength={6} value={password} onChange={(e) => { setPassword(e.target.value); if (formError) setFormError(null); }} placeholder="Password"
                 className="h-10 rounded-lg border border-input bg-card px-3 text-sm" />
+              {formError && (
+                <p className="rounded-lg bg-destructive/10 px-3 py-2 text-xs text-destructive">{formError}</p>
+              )}
               <button disabled={!!busy} type="submit"
                 className="mt-1 inline-flex h-10 items-center justify-center rounded-lg bg-[image:var(--gradient-terra)] text-sm font-medium text-white disabled:opacity-60">
                 {busy === "email" ? <Loader2 className="h-4 w-4 animate-spin" /> : mode === "signup" ? "Create account" : "Sign in"}
               </button>
-              <button type="button" onClick={() => setMode(mode === "signup" ? "signin" : "signup")}
+              <button type="button" onClick={() => { setMode(mode === "signup" ? "signin" : "signup"); setFormError(null); }}
                 className="text-xs text-muted-foreground hover:text-foreground">
                 {mode === "signup" ? "Already have an account? Sign in" : "New here? Create an account"}
               </button>
