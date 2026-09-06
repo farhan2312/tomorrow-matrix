@@ -80,7 +80,7 @@ function Landing() {
           <span className="font-display text-base font-semibold">Tomorrow Matrix</span>
         </div>
         <div className="flex items-center gap-4">
-          <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">How it works</a>
+          <Link to="/how-to-play" className="text-sm text-muted-foreground hover:text-foreground">How to play</Link>
           {signedIn ? (
             <Link to="/account" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-[color:var(--terra-deep)]">
               {signedIn.avatar

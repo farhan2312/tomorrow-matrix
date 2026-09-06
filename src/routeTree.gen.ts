@@ -16,6 +16,7 @@ import { Route as RecruitRouteImport } from './routes/recruit'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PlayRouteImport } from './routes/play'
 import { Route as ModeSelectRouteImport } from './routes/mode-select'
+import { Route as HowToPlayRouteImport } from './routes/how-to-play'
 import { Route as EndgameRouteImport } from './routes/endgame'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AccountRouteImport } from './routes/account'
@@ -69,6 +70,11 @@ const PlayRoute = PlayRouteImport.update({
 const ModeSelectRoute = ModeSelectRouteImport.update({
   id: '/mode-select',
   path: '/mode-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowToPlayRoute = HowToPlayRouteImport.update({
+  id: '/how-to-play',
+  path: '/how-to-play',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EndgameRoute = EndgameRouteImport.update({
@@ -172,6 +178,7 @@ export interface FileRoutesByFullPath {
   '/account': typeof AccountRoute
   '/auth': typeof AuthRoute
   '/endgame': typeof EndgameRoute
+  '/how-to-play': typeof HowToPlayRoute
   '/mode-select': typeof ModeSelectRoute
   '/play': typeof PlayRouteWithChildren
   '/privacy': typeof PrivacyRoute
@@ -200,6 +207,7 @@ export interface FileRoutesByTo {
   '/account': typeof AccountRoute
   '/auth': typeof AuthRoute
   '/endgame': typeof EndgameRoute
+  '/how-to-play': typeof HowToPlayRoute
   '/mode-select': typeof ModeSelectRoute
   '/privacy': typeof PrivacyRoute
   '/recruit': typeof RecruitRoute
@@ -228,6 +236,7 @@ export interface FileRoutesById {
   '/account': typeof AccountRoute
   '/auth': typeof AuthRoute
   '/endgame': typeof EndgameRoute
+  '/how-to-play': typeof HowToPlayRoute
   '/mode-select': typeof ModeSelectRoute
   '/play': typeof PlayRouteWithChildren
   '/privacy': typeof PrivacyRoute
@@ -258,6 +267,7 @@ export interface FileRouteTypes {
     | '/account'
     | '/auth'
     | '/endgame'
+    | '/how-to-play'
     | '/mode-select'
     | '/play'
     | '/privacy'
@@ -286,6 +296,7 @@ export interface FileRouteTypes {
     | '/account'
     | '/auth'
     | '/endgame'
+    | '/how-to-play'
     | '/mode-select'
     | '/privacy'
     | '/recruit'
@@ -313,6 +324,7 @@ export interface FileRouteTypes {
     | '/account'
     | '/auth'
     | '/endgame'
+    | '/how-to-play'
     | '/mode-select'
     | '/play'
     | '/privacy'
@@ -342,6 +354,7 @@ export interface RootRouteChildren {
   AccountRoute: typeof AccountRoute
   AuthRoute: typeof AuthRoute
   EndgameRoute: typeof EndgameRoute
+  HowToPlayRoute: typeof HowToPlayRoute
   ModeSelectRoute: typeof ModeSelectRoute
   PlayRoute: typeof PlayRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
@@ -404,6 +417,13 @@ declare module '@tanstack/react-router' {
       path: '/mode-select'
       fullPath: '/mode-select'
       preLoaderRoute: typeof ModeSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-play': {
+      id: '/how-to-play'
+      path: '/how-to-play'
+      fullPath: '/how-to-play'
+      preLoaderRoute: typeof HowToPlayRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/endgame': {
@@ -577,6 +597,7 @@ const rootRouteChildren: RootRouteChildren = {
   AccountRoute: AccountRoute,
   AuthRoute: AuthRoute,
   EndgameRoute: EndgameRoute,
+  HowToPlayRoute: HowToPlayRoute,
   ModeSelectRoute: ModeSelectRoute,
   PlayRoute: PlayRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
