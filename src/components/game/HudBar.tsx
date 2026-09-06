@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Globe2, Map, Sparkles, Store, Library, LogOut, UserCircle2, Network, BookOpen, Settings } from "lucide-react";
 import { useGame } from "@/lib/game/store";
+import { supabase } from "@/integrations/supabase/client";
 import { ROLES } from "@/lib/game/data";
 import { cn } from "@/lib/utils";
 
@@ -19,10 +21,18 @@ export function HudBar() {
   const { planetHealth, year, cap, role, playerName, reset } = useGame();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const roleData = ROLES.find((r) => r.id === role);
+  const [avatar, setAvatar] = useState<string | null>(null);
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      const meta = data.user?.user_metadata ?? {};
+      setAvatar(meta.avatar_url ?? meta.picture ?? null);
+    });
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-[1400px] items-center gap-4 px-4 md:px-6">
+      <div className="flex h-14 w-full items-center gap-4 px-4 md:px-6">
         <Link to="/play" className="flex items-center gap-2">
           <img src="/icon-512.png" alt="Tomorrow Matrix" className="h-8 w-8 object-contain" />
           <span className="font-display text-sm font-semibold tracking-tight">Tomorrow Matrix</span>
@@ -57,6 +67,7 @@ export function HudBar() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2 lg:ml-2">
+          {avatar && <img src={avatar} alt="" referrerPolicy="no-referrer" className="h-6 w-6 rounded-full object-cover" />}
           <span className="hidden text-xs text-muted-foreground md:inline">{playerName}</span>
           <Link
             to="/settings"
