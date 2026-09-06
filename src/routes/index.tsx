@@ -22,7 +22,7 @@ function Landing() {
   const navigate = useNavigate();
   const { setPlayer, reset } = useGame();
   const [name, setName] = useState("");
-  const [signedIn, setSignedIn] = useState<null | { email: string | null; display: string | null }>(null);
+  const [signedIn, setSignedIn] = useState<null | { email: string | null; display: string | null; avatar: string | null }>(null);
 
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data }) => {
@@ -31,13 +31,23 @@ function Landing() {
         import("@/lib/voice/store").then((m) => m.narrate("OB-01"));
         return;
       }
-      const { data: prof } = await supabase.from("profiles").select("display_name").eq("id", data.user.id).maybeSingle();
-      setSignedIn({ email: data.user.email ?? null, display: prof?.display_name ?? null });
+      const meta = data.user.user_metadata ?? {};
+      const { data: prof } = await supabase.from("profiles").select("display_name, avatar_url").eq("id", data.user.id).maybeSingle();
+      setSignedIn({
+        email: data.user.email ?? null,
+        display: prof?.display_name ?? null,
+        avatar: prof?.avatar_url ?? meta.avatar_url ?? meta.picture ?? null,
+      });
       import("@/lib/voice/store").then((m) => m.narrate("OB-02"));
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
-      if (!session) setSignedIn(null);
-      else setSignedIn({ email: session.user.email ?? null, display: null });
+      if (!session) { setSignedIn(null); return; }
+      const meta = session.user.user_metadata ?? {};
+      setSignedIn({
+        email: session.user.email ?? null,
+        display: meta.full_name ?? meta.name ?? null,
+        avatar: meta.avatar_url ?? meta.picture ?? null,
+      });
     });
     return () => sub.subscription.unsubscribe();
   }, []);
@@ -59,7 +69,10 @@ function Landing() {
           <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">How it works</a>
           {signedIn ? (
             <Link to="/account" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-[color:var(--terra-deep)]">
-              <UserCircle className="h-4 w-4" /> {signedIn.display || signedIn.email || "Account"}
+              {signedIn.avatar
+                ? <img src={signedIn.avatar} alt="" referrerPolicy="no-referrer" className="h-5 w-5 rounded-full object-cover" />
+                : <UserCircle className="h-4 w-4" />}
+              {signedIn.display || signedIn.email || "Account"}
             </Link>
           ) : (
             <Link to="/auth" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-[color:var(--terra-deep)]">
