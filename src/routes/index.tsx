@@ -27,35 +27,41 @@ function Landing() {
   const [signedIn, setSignedIn] = useState<null | { email: string | null; display: string | null; avatar: string | null }>(null);
 
   useEffect(() => {
-    supabase.auth.getUser().then(async ({ data }) => {
-      if (!data.user) {
-        // First-time / signed-out landing
-        import("@/lib/voice/store").then((m) => m.narrate("OB-01"));
-        return;
-      }
-      const meta = data.user.user_metadata ?? {};
-      const { data: prof } = await supabase.from("profiles").select("display_name, avatar_url").eq("id", data.user.id).maybeSingle();
+    let cancelled = false;
+
+    // Single source of truth: the saved profile display name wins, falling back
+    // to the provider's name only if the profile has none.
+    type AuthUser = { id: string; email?: string | null; user_metadata?: Record<string, unknown> };
+    const hydrate = async (user: AuthUser) => {
+      const meta = (user.user_metadata ?? {}) as { full_name?: string; name?: string; avatar_url?: string; picture?: string };
+      const { data: prof } = await supabase
+        .from("profiles")
+        .select("display_name, avatar_url")
+        .eq("id", user.id)
+        .maybeSingle();
+      if (cancelled) return;
       const dn = prof?.display_name ?? meta.full_name ?? meta.name ?? null;
       setSignedIn({
-        email: data.user.email ?? null,
+        email: user.email ?? null,
         display: dn,
         avatar: prof?.avatar_url ?? meta.avatar_url ?? meta.picture ?? null,
       });
       if (dn) setName((n) => n || dn);
-      import("@/lib/voice/store").then((m) => m.narrate("OB-02"));
+    };
+
+    supabase.auth.getUser().then(({ data }) => {
+      if (!data.user) {
+        import("@/lib/voice/store").then((m) => m.narrate("OB-01"));
+        return;
+      }
+      void hydrate(data.user).then(() => import("@/lib/voice/store").then((m) => m.narrate("OB-02")));
     });
+
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
       if (!session) { setSignedIn(null); return; }
-      const meta = session.user.user_metadata ?? {};
-      const dn = meta.full_name ?? meta.name ?? null;
-      setSignedIn({
-        email: session.user.email ?? null,
-        display: dn,
-        avatar: meta.avatar_url ?? meta.picture ?? null,
-      });
-      if (dn) setName((n) => n || dn);
+      void hydrate(session.user);
     });
-    return () => sub.subscription.unsubscribe();
+    return () => { cancelled = true; sub.subscription.unsubscribe(); };
   }, []);
 
   const startGuest = () => {
