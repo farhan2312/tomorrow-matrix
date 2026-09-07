@@ -1,17 +1,996 @@
 {
   "_readme": [
-    "Mystery media registry, keyed by mystery CODE (M01 … M66).",
-    "Drop in one entry per mystery. No frontend changes are required when adding",
-    "media: the Mystery Engine reads this file at runtime.",
-    "",
-    "Shape:",
-    "  \"M01\": {",
-    "    \"intro\":     { \"src\": \"https://…/m01-intro.mp4\", \"poster\": \"…jpg\", \"captions\": \"…vtt\", \"title\": \"…\", \"durationLabel\": \"1:20\" },",
-    "    \"explainer\": { \"src\": \"…\", \"poster\": \"…\", \"captions\": \"…\", \"keyPoints\": [\"…\", \"…\"] },",
-    "    \"extra\": [ { \"kind\": \"interview\", \"label\": \"Expert Interview\", \"src\": \"…\" } ]",
-    "  }",
-    "",
-    "\"kind\" for extras is free-form (interview | simulation | visualization | …),",
-    "the UI renders any extras generically."
-  ]
+    "Auto-generated media registry. Keyed by mystery CODE (M01-M66).",
+    "Videos hosted on Cloudflare R2. Regenerate if the video set changes."
+  ],
+  "M01": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M01-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M01-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M01-animation.mp4"
+      }
+    ]
+  },
+  "M02": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M02-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M02-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M02-animation.mp4"
+      }
+    ]
+  },
+  "M03": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M03-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M03-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M03-animation.mp4"
+      }
+    ]
+  },
+  "M04": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M04-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M04-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M04-animation.mp4"
+      }
+    ]
+  },
+  "M05": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M05-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M05-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M05-animation.mp4"
+      }
+    ]
+  },
+  "M06": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M06-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M06-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M06-animation.mp4"
+      }
+    ]
+  },
+  "M07": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M07-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M07-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M07-animation.mp4"
+      }
+    ]
+  },
+  "M08": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M08-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M08-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M08-animation.mp4"
+      }
+    ]
+  },
+  "M09": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M09-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M09-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M09-animation.mp4"
+      }
+    ]
+  },
+  "M10": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M10-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M10-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M10-animation.mp4"
+      }
+    ]
+  },
+  "M11": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M11-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M11-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M11-animation.mp4"
+      }
+    ]
+  },
+  "M12": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M12-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M12-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M12-animation.mp4"
+      }
+    ]
+  },
+  "M13": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M13-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M13-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M13-animation.mp4"
+      }
+    ]
+  },
+  "M14": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M14-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M14-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M14-animation.mp4"
+      }
+    ]
+  },
+  "M15": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M15-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M15-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M15-animation.mp4"
+      }
+    ]
+  },
+  "M16": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M16-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M16-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M16-animation.mp4"
+      }
+    ]
+  },
+  "M17": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M17-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M17-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M17-animation.mp4"
+      }
+    ]
+  },
+  "M18": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M18-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M18-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M18-animation.mp4"
+      }
+    ]
+  },
+  "M19": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M19-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M19-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M19-animation.mp4"
+      }
+    ]
+  },
+  "M20": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M20-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M20-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M20-animation.mp4"
+      }
+    ]
+  },
+  "M21": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M21-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M21-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M21-animation.mp4"
+      }
+    ]
+  },
+  "M22": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M22-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M22-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M22-animation.mp4"
+      }
+    ]
+  },
+  "M23": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M23-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M23-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M23-animation.mp4"
+      }
+    ]
+  },
+  "M24": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M24-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M24-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M24-animation.mp4"
+      }
+    ]
+  },
+  "M25": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M25-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M25-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M25-animation.mp4"
+      }
+    ]
+  },
+  "M26": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M26-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M26-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M26-animation.mp4"
+      }
+    ]
+  },
+  "M27": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M27-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M27-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M27-animation.mp4"
+      }
+    ]
+  },
+  "M28": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M28-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M28-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M28-animation.mp4"
+      }
+    ]
+  },
+  "M29": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M29-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M29-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M29-animation.mp4"
+      }
+    ]
+  },
+  "M30": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M30-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M30-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M30-animation.mp4"
+      }
+    ]
+  },
+  "M31": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M31-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M31-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M31-animation.mp4"
+      }
+    ]
+  },
+  "M32": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M32-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M32-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M32-animation.mp4"
+      }
+    ]
+  },
+  "M33": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M33-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M33-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M33-animation.mp4"
+      }
+    ]
+  },
+  "M34": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M34-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M34-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M34-animation.mp4"
+      }
+    ]
+  },
+  "M35": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M35-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M35-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M35-animation.mp4"
+      }
+    ]
+  },
+  "M36": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M36-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M36-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M36-animation.mp4"
+      }
+    ]
+  },
+  "M37": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M37-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M37-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M37-animation.mp4"
+      }
+    ]
+  },
+  "M38": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M38-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M38-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M38-animation.mp4"
+      }
+    ]
+  },
+  "M39": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M39-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M39-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M39-animation.mp4"
+      }
+    ]
+  },
+  "M40": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M40-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M40-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M40-animation.mp4"
+      }
+    ]
+  },
+  "M41": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M41-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M41-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M41-animation.mp4"
+      }
+    ]
+  },
+  "M42": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M42-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M42-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M42-animation.mp4"
+      }
+    ]
+  },
+  "M43": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M43-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M43-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M43-animation.mp4"
+      }
+    ]
+  },
+  "M44": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M44-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M44-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M44-animation.mp4"
+      }
+    ]
+  },
+  "M45": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M45-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M45-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M45-animation.mp4"
+      }
+    ]
+  },
+  "M46": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M46-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M46-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M46-animation.mp4"
+      }
+    ]
+  },
+  "M47": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M47-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M47-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M47-animation.mp4"
+      }
+    ]
+  },
+  "M48": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M48-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M48-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M48-animation.mp4"
+      }
+    ]
+  },
+  "M49": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M49-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M49-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M49-animation.mp4"
+      }
+    ]
+  },
+  "M50": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M50-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M50-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M50-animation.mp4"
+      }
+    ]
+  },
+  "M51": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M51-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M51-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M51-animation.mp4"
+      }
+    ]
+  },
+  "M52": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M52-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M52-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M52-animation.mp4"
+      }
+    ]
+  },
+  "M53": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M53-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M53-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M53-animation.mp4"
+      }
+    ]
+  },
+  "M54": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M54-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M54-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M54-animation.mp4"
+      }
+    ]
+  },
+  "M55": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M55-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M55-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M55-animation.mp4"
+      }
+    ]
+  },
+  "M56": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M56-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M56-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M56-animation.mp4"
+      }
+    ]
+  },
+  "M57": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M57-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M57-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M57-animation.mp4"
+      }
+    ]
+  },
+  "M58": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M58-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M58-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M58-animation.mp4"
+      }
+    ]
+  },
+  "M59": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M59-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M59-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M59-animation.mp4"
+      }
+    ]
+  },
+  "M60": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M60-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M60-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M60-animation.mp4"
+      }
+    ]
+  },
+  "M61": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M61-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M61-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M61-animation.mp4"
+      }
+    ]
+  },
+  "M62": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M62-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M62-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M62-animation.mp4"
+      }
+    ]
+  },
+  "M63": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M63-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M63-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M63-animation.mp4"
+      }
+    ]
+  },
+  "M64": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M64-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M64-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M64-animation.mp4"
+      }
+    ]
+  },
+  "M65": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M65-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M65-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M65-animation.mp4"
+      }
+    ]
+  },
+  "M66": {
+    "intro": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/intro/M66-intro.mp4"
+    },
+    "explainer": {
+      "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/explainer/M66-explainer.mp4"
+    },
+    "extra": [
+      {
+        "kind": "animation",
+        "label": "Animation",
+        "src": "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/animation/M66-animation.mp4"
+      }
+    ]
+  }
 }
