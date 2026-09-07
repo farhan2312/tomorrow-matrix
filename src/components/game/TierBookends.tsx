@@ -61,6 +61,12 @@ export function TierBookends() {
     }
   }, [queue, current]);
 
+  // Preview any bookend directly, e.g. /play?bookend=intro-T2 (handy for QA).
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get("bookend");
+    if (p && /^(intro|outro)-T[1-4]$/.test(p)) setCurrent(p);
+  }, []);
+
   if (!current) return null;
 
   const isIntro = current.startsWith("intro");
