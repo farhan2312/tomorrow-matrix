@@ -229,7 +229,7 @@ export interface GameState {
 }
 
 const initial = {
-  playerName: "Guest",
+  playerName: "", // empty = player hasn't named themselves yet (mode-select prompts)
   role: null as RoleId | null,
   mode: null as GameMode | null,
   aiTeam: [] as AiTeammate[],

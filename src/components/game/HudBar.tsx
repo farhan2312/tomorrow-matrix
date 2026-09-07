@@ -69,7 +69,7 @@ export function HudBar() {
 
         <div className="ml-auto flex items-center gap-2 lg:ml-2">
           {avatar && <img src={avatar} alt="" referrerPolicy="no-referrer" className="h-6 w-6 rounded-full object-cover" />}
-          <span className="hidden text-xs text-muted-foreground md:inline">{playerName}</span>
+          <span className="hidden text-xs text-muted-foreground md:inline">{playerName || "Guest"}</span>
           <Link
             to="/settings"
             className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"

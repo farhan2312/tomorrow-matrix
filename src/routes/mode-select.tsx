@@ -1,6 +1,8 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { User, Bot, Users, ClipboardCheck, ArrowRight, ArrowLeft } from "lucide-react";
 import { useGame } from "@/lib/game/store";
+import { supabase } from "@/integrations/supabase/client";
 import type { GameMode } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
 
@@ -35,8 +37,31 @@ const MODES: ModeOption[] = [
 function ModeSelect() {
   const navigate = useNavigate();
   const setMode = useGame((s) => s.setMode);
+  const setPlayer = useGame((s) => s.setPlayer);
+  const playerName = useGame((s) => s.playerName);
+
+  // Prompt for a name when the player hasn't set one yet (e.g. they came in via
+  // the How-to-Play page and skipped the landing name entry).
+  const needsName = !playerName;
+  const [name, setName] = useState("");
+  const [display, setDisplay] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!needsName) return;
+    let cancelled = false;
+    supabase.auth.getUser().then(async ({ data }) => {
+      if (!data.user || cancelled) return;
+      const meta = (data.user.user_metadata ?? {}) as { full_name?: string; name?: string };
+      const { data: prof } = await supabase
+        .from("profiles").select("display_name").eq("id", data.user.id).maybeSingle();
+      const dn = prof?.display_name ?? meta.full_name ?? meta.name ?? null;
+      if (dn && !cancelled) { setDisplay(dn); setName((n) => n || dn); }
+    });
+    return () => { cancelled = true; };
+  }, [needsName]);
 
   const choose = (m: ModeOption["id"]) => {
+    if (needsName) setPlayer(name.trim() || display || "Guest");
     if (m === "facilitator") {
       navigate({ to: "/lobby", search: { facilitator: true } });
       return;
@@ -63,6 +88,24 @@ function ModeSelect() {
             Tomorrow Matrix is built for solo discovery, AI-augmented sessions and team workshops.
           </p>
         </header>
+
+        {needsName && (
+          <div className="mt-8 max-w-md">
+            <label htmlFor="tm-player-name" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              Your player name
+            </label>
+            <input
+              id="tm-player-name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Choose a player name (optional)"
+              className="mt-2 h-12 w-full rounded-xl border border-input bg-card px-4 text-sm outline-none ring-ring/30 transition-all focus:border-[color:var(--terra)] focus:ring-2"
+            />
+            <p className="mt-2 text-xs text-muted-foreground">
+              This is how you'll appear in the game. Pick a mode below to begin.
+            </p>
+          </div>
+        )}
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {MODES.map((m) => {
