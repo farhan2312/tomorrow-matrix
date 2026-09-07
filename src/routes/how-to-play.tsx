@@ -8,6 +8,15 @@ import terraGlobe from "@/assets/terra-globe.png";
 import card1 from "@/assets/cards/M01/1.webp";
 import card2 from "@/assets/cards/M01/2.webp";
 import card3 from "@/assets/cards/M01/3.webp";
+import shotHud from "@/assets/how-to/hud.webp";
+import shotMode from "@/assets/how-to/mode-select.webp";
+import shotRole from "@/assets/how-to/role-select.webp";
+import shotPuzzle from "@/assets/how-to/card-puzzle.webp";
+import shotNetwork from "@/assets/how-to/network.webp";
+import shotCrisis from "@/assets/how-to/crisis.webp";
+import shotMarket from "@/assets/how-to/marketplace.webp";
+import shotDashboard from "@/assets/how-to/dashboard.webp";
+import shotMulti from "@/assets/how-to/multiplayer-lobby.webp";
 
 export const Route = createFileRoute("/how-to-play")({
   head: () => ({
@@ -33,17 +42,20 @@ const SECTIONS = [
   { id: "tips", label: "Tips", icon: Sparkles },
 ];
 
-/** Placeholder figure for a screenshot the team will drop in later.
- *  When src is provided it renders the image; otherwise a labeled slot. */
-function Shot({ name, caption }: { name: string; caption: string }) {
+/** A captioned screenshot. Falls back to a labeled placeholder when no image. */
+function Shot({ name, caption, src }: { name: string; caption: string; src?: string }) {
   return (
     <figure className="my-4 overflow-hidden rounded-xl border border-border bg-muted/40">
-      <div className="grid aspect-[16/9] place-items-center bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,color-mix(in_oklab,var(--foreground)_4%,transparent)_10px,color-mix(in_oklab,var(--foreground)_4%,transparent)_20px)]">
-        <div className="flex flex-col items-center gap-1 text-muted-foreground">
-          <Camera className="h-6 w-6" />
-          <span className="text-xs font-medium">Screenshot: {name}</span>
+      {src ? (
+        <img src={src} alt={name} loading="lazy" className="aspect-[16/9] w-full object-cover object-top" />
+      ) : (
+        <div className="grid aspect-[16/9] place-items-center bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,color-mix(in_oklab,var(--foreground)_4%,transparent)_10px,color-mix(in_oklab,var(--foreground)_4%,transparent)_20px)]">
+          <div className="flex flex-col items-center gap-1 text-muted-foreground">
+            <Camera className="h-6 w-6" />
+            <span className="text-xs font-medium">Screenshot: {name}</span>
+          </div>
         </div>
-      </div>
+      )}
       <figcaption className="border-t border-border px-3 py-2 text-xs text-muted-foreground">{caption}</figcaption>
     </figure>
   );
@@ -107,7 +119,7 @@ function HowToPlay() {
           <Section id="goal" title="The Goal" icon={Trophy}>
             <p>Every game centers on one number: <strong>Terra Health</strong>, shown as a percentage in the top bar. It starts at 40%. Your mission is to lift it to <strong>70% before the year 2050</strong>.</p>
             <p>Terra Health is driven by five interconnected <strong>indicators</strong>, Climate, Food, Water, Biodiversity, and Economy. Improving one often ripples into the others (sometimes for better, sometimes worse), which is the heart of the game.</p>
-            <Shot name="Game HUD (top bar)" caption="The top bar shows Terra Health, the current Year, and your Climate Action Points (CAP)." />
+            <Shot src={shotHud} name="Game HUD (top bar)" caption="The top bar shows Terra Health, the current Year, and your Climate Action Points (CAP). Below it, the Terra map with each mystery as a hotspot." />
           </Section>
 
           <Section id="start" title="Getting Started" icon={Play}>
@@ -118,13 +130,13 @@ function HowToPlay() {
               <li><strong>Multiplayer</strong>, 2–6 players share one Terra and solve together.</li>
               <li><strong>Workshop / Facilitator</strong>, run a guided session for a room, pacing crises and watching analytics live.</li>
             </ul>
-            <Shot name="Mode select screen" caption="Choose how you play: Solo, Solo with AI Team, Multiplayer, or Workshop." />
+            <Shot src={shotMode} name="Mode select screen" caption="Choose how you play: Solo, Solo with AI Team, Multiplayer, or Workshop." />
           </Section>
 
           <Section id="role" title="Your Role" icon={Users}>
             <p>You play as one of <strong>8 stakeholders</strong>, Scientist, Farmer, Policymaker, Activist, Business Leader, City Planner, Community Representative, or Student. Each role sees a unique slice of the data and gets a bonus for mysteries in its domain.</p>
             <p>When you pick a role you'll answer a short <strong>role orientation challenge</strong> (a few true/false and multiple-choice questions). Correct answers earn bonus CAP, and every answer teaches something real about climate systems.</p>
-            <Shot name="Role select + orientation" caption="Pick your stakeholder, then answer the orientation questions to earn starting CAP." />
+            <Shot src={shotRole} name="Role select + orientation" caption="Pick your stakeholder, then answer the orientation questions to earn starting CAP." />
           </Section>
 
           <Section id="mysteries" title="Solving Mysteries" icon={Layers}>
@@ -143,22 +155,22 @@ function HowToPlay() {
               </div>
             </div>
             <p><strong>Stuck?</strong> Use a <strong>Hint</strong> (costs a little CAP) to reveal a card that's out of place, or <strong>Shuffle</strong> to reset. Fewer attempts and fewer hints = a higher score.</p>
-            <Shot name="Card sequence puzzle" caption="Drag the 8 cards into the correct cause-to-impact order, then Validate." />
+            <Shot src={shotPuzzle} name="Card sequence puzzle" caption="Drag the 8 cards into the correct cause-to-impact order, then Validate." />
           </Section>
 
           <Section id="network" title="The Butterfly Network" icon={NetIcon}>
             <p>Nothing on Terra happens in isolation, that's the <strong>butterfly effect</strong>. Solving one mystery can unlock others and shift indicators far away. The <strong>Butterfly Network</strong> view maps these connections so you can plan which chains to tackle first.</p>
-            <Shot name="Butterfly Network view" caption="See how mysteries connect and cascade across the planet." />
+            <Shot src={shotNetwork} name="Butterfly Network view" caption="See how mysteries connect and cascade across the planet." />
           </Section>
 
           <Section id="crises" title="Crises" icon={AlertTriangle}>
             <p>As the years advance, <strong>crises</strong> can strike, floods, heatwaves, supply shocks. When a crisis appears, you'll be prompted to respond; your choice affects Terra's indicators. Responding quickly and wisely limits the damage (and can even create positive turning points).</p>
-            <Shot name="Crisis prompt" caption="Respond to crises as they emerge, each choice ripples through Terra's health." />
+            <Shot src={shotCrisis} name="Crisis prompt" caption="Respond to crises as they emerge, each choice ripples through Terra's health." />
           </Section>
 
           <Section id="market" title="Interventions" icon={Store}>
             <p>Spend your Climate Action Points in the <strong>Marketplace</strong> on <strong>interventions</strong>, real-world solutions across energy, water, food, nature, cities, economy, society, and AI. Each intervention heals specific indicators. Building the right mix is how you push Terra toward 70%.</p>
-            <Shot name="Marketplace / interventions" caption="Invest CAP in interventions that restore Terra's indicators." />
+            <Shot src={shotMarket} name="Marketplace / interventions" caption="Invest CAP in interventions that restore Terra's indicators." />
           </Section>
 
           <Section id="cap" title="Climate Action Points (CAP)" icon={Coins}>
@@ -173,12 +185,12 @@ function HowToPlay() {
 
           <Section id="map" title="Map & Dashboard" icon={MapIcon}>
             <p>The <strong>World Map</strong> shows Terra's regions and where crises are active. The <strong>Dashboard</strong> tracks your five indicators over time so you can see the impact of every decision. Check them often to decide where to focus next.</p>
-            <Shot name="World map + dashboard" caption="Track regions on the map and indicator trends on the dashboard." />
+            <Shot src={shotDashboard} name="World map + dashboard" caption="The dashboard tracks all planetary indicators over time; the world map shows where crises are active." />
           </Section>
 
           <Section id="multi" title="Multiplayer" icon={Users}>
             <p>In multiplayer, one player <strong>creates a session</strong> and shares the 6-character code (or QR). Up to <strong>6 players</strong> join, each picks a stakeholder, and you solve mysteries and vote on crises together on a shared Terra, live.</p>
-            <Shot name="Multiplayer lobby" caption="Create or join a session with a code; play together in real time." />
+            <Shot src={shotMulti} name="Multiplayer lobby" caption="Create or join a session with a code; play together in real time." />
           </Section>
 
           <Section id="tips" title="Tips for a High Score" icon={Sparkles}>
