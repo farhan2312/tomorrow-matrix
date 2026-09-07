@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { Mystery } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
+import { mysteryCover } from "@/lib/game/media";
 import { Sparkles, Lock, Check } from "lucide-react";
 
 const TIER_LABEL = { 1: "Starter", 2: "Medium", 3: "Hard", 4: "Expert" } as const;
@@ -23,7 +24,7 @@ export function MysteryCard({
     <>
       <div className={cn("relative w-full overflow-hidden", compact ? "aspect-[16/10]" : "aspect-[5/3]")}>
         <img
-          src={mystery.image}
+          src={mysteryCover(mystery)}
           alt={mystery.title}
           loading="lazy"
           width={1024}

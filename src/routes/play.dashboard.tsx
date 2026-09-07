@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight, Lock, Check, Sparkles, Globe2, Coins, Activity, Trophy, AlertTriangle, ShieldCheck, Clock } from "lucide-react";
 import { useGame } from "@/lib/game/store";
 import { MYSTERIES, CRISES, isMysteryUnlocked } from "@/lib/game/data";
+import { mysteryCover } from "@/lib/game/media";
 import { HealthGauge } from "@/components/game/HealthGauge";
 import { PlanetaryIndicatorsPanel } from "@/components/game/PlanetaryIndicatorsPanel";
 import { cn } from "@/lib/utils";
@@ -153,7 +154,7 @@ function Dashboard() {
                 {recentlyUnlocked.slice(0, 4).map((m) => (
                   <Link key={m.id} to="/play/mysteries/$id" params={{ id: m.id }}
                     className="group flex items-center gap-3 rounded-xl border border-border p-2.5 transition-colors hover:bg-muted/60">
-                    <img src={m.image} alt="" className="h-14 w-14 rounded-lg object-cover" />
+                    <img src={mysteryCover(m)} alt="" className="h-14 w-14 rounded-lg object-cover" />
                     <div className="min-w-0 flex-1">
                       <div className="truncate text-sm font-medium">{m.title}</div>
                       <div className="text-[11px] text-muted-foreground">{m.region}</div>

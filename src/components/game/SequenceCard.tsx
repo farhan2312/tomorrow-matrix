@@ -1,6 +1,13 @@
 import { type CSSProperties, forwardRef } from "react";
 import { cn } from "@/lib/utils";
+import { resolveMedia } from "@/lib/media-overrides";
 import type { SequenceStep } from "@/lib/game/types";
+
+/** Full-art card id is `${code}-c${n}` -> override key `card/${code}/${n}`. */
+function cardMediaKey(id: string): string | null {
+  const m = /^(M\d{2})-c(\d+)$/.exec(id);
+  return m ? `card/${m[1]}/${m[2]}` : null;
+}
 
 // Tone → full-card gradient. The card title IS the artwork; no icons.
 const TONE_BG: Record<SequenceStep["tone"], string> = {
@@ -41,6 +48,8 @@ export const SequenceCard = forwardRef<HTMLDivElement, Props>(function SequenceC
   // Full-art card: the image already carries the title + description.
   if (step.image) {
     const imgDim = size === "sm" ? "h-24 w-24" : size === "lg" ? "h-52 w-52" : "h-40 w-40";
+    const k = cardMediaKey(step.id);
+    const imgSrc = k ? resolveMedia(k, step.image) : step.image;
     return (
       <div
         ref={ref}
@@ -58,7 +67,7 @@ export const SequenceCard = forwardRef<HTMLDivElement, Props>(function SequenceC
         {...rest}
       >
         <img
-          src={step.image}
+          src={imgSrc}
           alt={step.label || "sequence card"}
           draggable={false}
           className="pointer-events-none absolute inset-0 h-full w-full object-cover"

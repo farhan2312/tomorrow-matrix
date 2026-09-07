@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BarChart3, FolderCog, Lock, Loader2, LogOut, ShieldCheck } from "lucide-react";
 import { adminLogin, adminVerify } from "@/lib/admin/admin.functions";
 import { AnalyticsDashboard } from "@/components/admin/AnalyticsDashboard";
+import { ManagementConsole } from "@/components/admin/ManagementConsole";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({
@@ -103,7 +104,7 @@ function AdminShell({ onLogout }: { onLogout: () => void }) {
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="mx-auto flex min-h-screen max-w-7xl">
+      <div className="flex min-h-screen w-full">
         {/* sidebar */}
         <aside className="flex w-56 shrink-0 flex-col border-r border-border p-4">
           <div className="mb-6 flex items-center gap-2 px-2">
@@ -127,7 +128,7 @@ function AdminShell({ onLogout }: { onLogout: () => void }) {
 
         {/* content */}
         <section className="flex-1 p-8">
-          {tab === "analytics" ? <AnalyticsDashboard token={token} /> : <ManagementPlaceholder />}
+          {tab === "analytics" ? <AnalyticsDashboard token={token} /> : <ManagementConsole token={token} />}
         </section>
       </div>
     </main>
@@ -145,26 +146,3 @@ function SideLink({ active, onClick, icon: Icon, label }: { active: boolean; onC
   );
 }
 
-function AnalyticsPlaceholder() {
-  return (
-    <div>
-      <h1 className="font-display text-2xl font-semibold">Analytics</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Users, journey progress, activity, and sessions.</p>
-      <div className="mt-6 grid place-items-center rounded-xl border border-dashed border-border bg-muted/30 p-16 text-sm text-muted-foreground">
-        Analytics dashboard coming in the next step.
-      </div>
-    </div>
-  );
-}
-
-function ManagementPlaceholder() {
-  return (
-    <div>
-      <h1 className="font-display text-2xl font-semibold">Media Management</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Upload, update, and delete videos and images by mystery / module.</p>
-      <div className="mt-6 grid place-items-center rounded-xl border border-dashed border-border bg-muted/30 p-16 text-sm text-muted-foreground">
-        Management console coming after analytics.
-      </div>
-    </div>
-  );
-}

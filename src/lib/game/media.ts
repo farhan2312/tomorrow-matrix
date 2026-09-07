@@ -1,9 +1,15 @@
 import raw from "./media.data.json";
 import { MYSTERIES } from "./mysteries";
 import type { Mystery } from "./types";
+import { mediaOverride, resolveMedia } from "@/lib/media-overrides";
 
 /** Cost (in Climate Action Points) to unlock an explanation video before solving. */
 export const EXPLAINER_UNLOCK_COST = 25;
+
+/** Cover art for a mystery, preferring a runtime admin override (key `cover/${code}`). */
+export function mysteryCover(m: Pick<Mystery, "code" | "image">): string {
+  return resolveMedia(`cover/${m.code}`, m.image);
+}
 
 export type MediaKind = "intro" | "explainer" | string;
 
@@ -42,6 +48,7 @@ export function introVideo(m: Pick<Mystery, "code" | "title">): MediaItem {
   return {
     title: e.title ?? `${m.title}, Introduction`,
     ...e,
+    src: mediaOverride(`video/${m.code}/intro`) ?? e.src,
   };
 }
 
@@ -50,19 +57,22 @@ export function explainerVideo(m: Pick<Mystery, "code" | "title">): MediaItem {
   return {
     title: e.title ?? `${m.title}, The Science`,
     ...e,
+    src: mediaOverride(`video/${m.code}/explainer`) ?? e.src,
   };
 }
 
 export function extraMedia(code: string): MediaItem[] {
-  return entry(code).extra ?? [];
+  return (entry(code).extra ?? []).map((x) =>
+    x.kind === "animation" ? { ...x, src: mediaOverride(`video/${code}/animation`) ?? x.src } : x,
+  );
 }
 
 export function hasIntroVideo(code: string): boolean {
-  return !!entry(code).intro?.src;
+  return !!(mediaOverride(`video/${code}/intro`) ?? entry(code).intro?.src);
 }
 
 export function hasExplainerVideo(code: string): boolean {
-  return !!entry(code).explainer?.src;
+  return !!(mediaOverride(`video/${code}/explainer`) ?? entry(code).explainer?.src);
 }
 
 /** Learning points shown after the explanatory video. Uses media data, else derives from the mystery. */

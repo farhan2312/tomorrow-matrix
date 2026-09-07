@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SkipForward, Play, Film } from "lucide-react";
 import { VideoPlayer } from "./VideoPlayer";
-import { introVideo } from "@/lib/game/media";
+import { introVideo, mysteryCover } from "@/lib/game/media";
 import { useGame } from "@/lib/game/store";
 import type { Mystery } from "@/lib/game/types";
 
@@ -57,7 +57,7 @@ export function MysteryIntroOverlay({ mystery, open, onDone }: Props) {
 
         <VideoPlayer
           src={media.src}
-          poster={media.poster ?? mystery.image}
+          poster={media.poster ?? mysteryCover(mystery)}
           captions={media.captions}
           title={media.title}
           autoPlay

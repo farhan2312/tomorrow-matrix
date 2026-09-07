@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Activity, Coins, Trophy, ArrowRight } from "lucide-react";
 import { useGame } from "@/lib/game/store";
 import { MYSTERIES, isMysteryUnlocked } from "@/lib/game/data";
+import { mysteryCover } from "@/lib/game/media";
 import { WorldMap } from "@/components/game/WorldMap";
 import { cn } from "@/lib/utils";
 
@@ -48,7 +49,7 @@ function WorldView() {
               {available.slice(0, 4).map((m) => (
                 <Link key={m.id} to="/play/mysteries/$id" params={{ id: m.id }}
                   className="group flex items-center gap-3 rounded-xl border border-border p-2.5 transition-colors hover:bg-muted/60">
-                  <img src={m.image} alt="" className="h-14 w-14 rounded-lg object-cover" />
+                  <img src={mysteryCover(m)} alt="" className="h-14 w-14 rounded-lg object-cover" />
                   <div className="min-w-0 flex-1">
                     <div className="truncate text-sm font-medium">{m.title}</div>
                     <div className="text-[11px] text-muted-foreground">{m.region}</div>

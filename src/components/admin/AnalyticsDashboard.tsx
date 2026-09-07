@@ -136,7 +136,7 @@ export function AnalyticsDashboard({ token }: { token: string }) {
           </div>
           {data.events.recent.length === 0 ? <Empty label="No events yet." /> : (
             <ul className="space-y-1.5 text-xs">
-              {data.events.recent.map((e, i) => (
+              {data.events.recent.map((e: { event: string; created_at: string }, i: number) => (
                 <li key={i} className="flex items-center justify-between gap-2">
                   <span className="font-medium">{EVENT_LABEL[e.event] ?? e.event}</span>
                   <span className="text-muted-foreground">{new Date(e.created_at).toLocaleString()}</span>
@@ -146,6 +146,42 @@ export function AnalyticsDashboard({ token }: { token: string }) {
           )}
         </Panel>
       </div>
+
+      {/* users table (newest first) */}
+      <Panel title={`Users (${data.usersList.length})`}>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b border-border text-left text-muted-foreground">
+                <th className="py-2 pr-4 font-medium">User</th>
+                <th className="py-2 pr-4 font-medium">Provider</th>
+                <th className="py-2 pr-4 font-medium">Role</th>
+                <th className="py-2 pr-4 font-medium">Progress</th>
+                <th className="py-2 pr-4 font-medium">Terra</th>
+                <th className="py-2 pr-4 font-medium">Joined</th>
+                <th className="py-2 font-medium">Last active</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.usersList.map((u) => (
+                <tr key={u.id} className="border-b border-border/60 hover:bg-muted/40">
+                  <td className="py-2 pr-4">
+                    <div className="font-medium text-foreground">{u.name ?? "—"}</div>
+                    <div className="text-[11px] text-muted-foreground">{u.email ?? u.id.slice(0, 8)}</div>
+                  </td>
+                  <td className="py-2 pr-4"><span className="rounded bg-muted px-1.5 py-0.5 text-[10px]">{u.provider}</span></td>
+                  <td className="py-2 pr-4">{u.role ? roleName(u.role) : "—"}</td>
+                  <td className="py-2 pr-4">{u.tier ? `Tier ${u.tier} · ${u.solved} solved` : "—"}</td>
+                  <td className="py-2 pr-4 font-mono tabular-nums">{u.health != null ? `${u.health}%` : "—"}</td>
+                  <td className="py-2 pr-4 text-muted-foreground">{u.createdAt ? new Date(u.createdAt).toLocaleDateString() : "—"}</td>
+                  <td className="py-2 text-muted-foreground">{u.lastSignIn ? new Date(u.lastSignIn).toLocaleDateString() : "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {data.usersList.length === 0 && <Empty label="No users yet." />}
+        </div>
+      </Panel>
     </div>
   );
 }

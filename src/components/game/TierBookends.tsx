@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Sparkles, Trophy } from "lucide-react";
 import { useGame } from "@/lib/game/store";
 import { MYSTERIES } from "@/lib/game/data";
+import { resolveMedia } from "@/lib/media-overrides";
 import { VideoPlayer } from "./VideoPlayer";
 
 const BASE = "https://pub-69120684814b4cf79407e38e0e03c45f.r2.dev/videos/bookend";
@@ -88,7 +89,7 @@ export function TierBookends() {
         </div>
 
         <VideoPlayer
-          src={`${BASE}/${current}.mp4`}
+          src={resolveMedia(`video/bookend/${current}`, `${BASE}/${current}.mp4`)}
           title={isIntro ? `Tier ${tier}` : `Tier ${tier} complete`}
           autoPlay
           onEnded={done}

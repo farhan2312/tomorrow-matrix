@@ -6,7 +6,7 @@ import {
   MYSTERIES, isMysteryUnlocked, isMysteryVisibleForRole,
   roleRelationship, bonusForRole, influencesOf, influencedBy, ROLES,
 } from "@/lib/game/data";
-import { hasIntroVideo } from "@/lib/game/media";
+import { hasIntroVideo, mysteryCover } from "@/lib/game/media";
 import { useGame } from "@/lib/game/store";
 import { useLobby } from "@/lib/multiplayer/store";
 import { getClientId } from "@/lib/multiplayer/identity";
@@ -162,7 +162,7 @@ function MysteryDetail() {
           {/* Hero */}
           <div className="surface-lift relative overflow-hidden">
             <div className="relative aspect-[16/9] w-full">
-              <img src={mystery.image} alt={mystery.title} className="absolute inset-0 h-full w-full object-cover" />
+              <img src={mysteryCover(mystery)} alt={mystery.title} className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
               <div className="absolute left-5 top-5 flex flex-wrap gap-1.5">
                 <span className="pill chip-warmth"><Sparkles className="h-3 w-3" />{mystery.rarity}</span>

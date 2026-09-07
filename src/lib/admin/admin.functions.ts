@@ -20,6 +20,79 @@ export const adminVerify = createServerFn({ method: "POST" })
     return { ok: validToken(data.token) };
   });
 
+/** Presign a direct-to-R2 upload (browser PUTs the file, bypassing Vercel's size limit). */
+export const adminMediaPresign = createServerFn({ method: "POST" })
+  .inputValidator(z.object({
+    token: z.string().min(1),
+    key: z.string().min(1).max(200),
+    contentType: z.string().min(1).max(120),
+    ext: z.string().min(1).max(8),
+  }))
+  .handler(async ({ data }) => {
+    const { requireAdmin } = await import("./admin.server");
+    requireAdmin(data.token);
+    const { presignPut, publicUrl } = await import("./r2.server");
+    const safeKey = data.key.replace(/[^\w/\-.]/g, "_");
+    const safeExt = data.ext.replace(/[^\w]/g, "").slice(0, 8) || "bin";
+    const path = `overrides/${safeKey}/${Date.now()}.${safeExt}`;
+    const uploadUrl = await presignPut(path, data.contentType);
+    return { uploadUrl, url: publicUrl(path), path };
+  });
+
+/** Record (or update) the override URL for a media key. */
+export const adminMediaSetOverride = createServerFn({ method: "POST" })
+  .inputValidator(z.object({ token: z.string().min(1), key: z.string().min(1).max(200), url: z.string().url() }))
+  .handler(async ({ data }) => {
+    const { requireAdmin } = await import("./admin.server");
+    requireAdmin(data.token);
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { error } = await (supabaseAdmin as any)
+      .from("media_overrides")
+      .upsert({ key: data.key, url: data.url, updated_at: new Date().toISOString() });
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
+
+/** List every current media override (key -> url). Token-gated. */
+export const adminMediaList = createServerFn({ method: "POST" })
+  .inputValidator(z.object({ token: z.string().min(1) }))
+  .handler(async ({ data }) => {
+    const { requireAdmin } = await import("./admin.server");
+    requireAdmin(data.token);
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data: rows } = await (supabaseAdmin as any)
+      .from("media_overrides").select("key, url, updated_at");
+    const map: Record<string, { url: string; updatedAt: string | null }> = {};
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    for (const r of (rows ?? []) as any[]) map[r.key] = { url: r.url, updatedAt: r.updated_at ?? null };
+    return { map };
+  });
+
+/** Remove an override (revert to the bundled default); deletes the uploaded R2 object. */
+export const adminMediaDelete = createServerFn({ method: "POST" })
+  .inputValidator(z.object({ token: z.string().min(1), key: z.string().min(1).max(200) }))
+  .handler(async ({ data }) => {
+    const { requireAdmin } = await import("./admin.server");
+    requireAdmin(data.token);
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const db = supabaseAdmin as any;
+    const { data: row } = await db.from("media_overrides").select("url").eq("key", data.key).maybeSingle();
+    if (row?.url) {
+      const base = (process.env.R2_PUBLIC_BASE ?? "").replace(/\/$/, "");
+      const path = base && row.url.startsWith(base) ? row.url.slice(base.length + 1) : "";
+      // Only ever delete objects we uploaded (never the original media set).
+      if (path.startsWith("overrides/")) {
+        const { deleteObject } = await import("./r2.server");
+        try { await deleteObject(path); } catch { /* object may already be gone */ }
+      }
+    }
+    await db.from("media_overrides").delete().eq("key", data.key);
+    return { ok: true };
+  });
+
 const THRESH: Record<number, number> = { 1: 0, 2: 4, 3: 12, 4: 22 };
 
 /** Aggregated analytics for the admin dashboard. Token-gated; reads via service_role. */
@@ -54,12 +127,15 @@ export const adminAnalytics = createServerFn({ method: "POST" })
     for (const u of users) { const p = u.app_metadata?.provider ?? "email"; provMap[p] = (provMap[p] || 0) + 1; }
 
     // --- Game saves (progress) ---
-    const { data: saves } = await db.from("game_saves").select("state");
+    const { data: saves } = await db.from("game_saves").select("id, state");
     const roleMap: Record<string, number> = {};
     const tierMap: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0 };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const saveById: Record<string, any> = {};
     let totalSolved = 0, healthSum = 0, healthN = 0;
     for (const s of saves ?? []) {
       const st = (s.state ?? {}) as Record<string, unknown>;
+      if (s.id) saveById[s.id] = st;
       const role = st.role as string | undefined;
       if (role) roleMap[role] = (roleMap[role] || 0) + 1;
       const solved = Array.isArray(st.solvedMysteries) ? (st.solvedMysteries as unknown[]).length : 0;
@@ -69,6 +145,32 @@ export const adminAnalytics = createServerFn({ method: "POST" })
       for (const t of [2, 3, 4]) if (solved >= THRESH[t]) tier = t;
       tierMap[tier]++;
     }
+
+    // --- Per-user table (newest first) ---
+    const { data: profiles } = await db.from("profiles").select("id, display_name");
+    const profMap: Record<string, string> = {};
+    for (const p of profiles ?? []) if (p.display_name) profMap[p.id] = p.display_name;
+    const usersList = users
+      .map((u) => {
+        const st = saveById[u.id] ?? {};
+        const solved = Array.isArray(st.solvedMysteries) ? st.solvedMysteries.length : 0;
+        let tier = 1;
+        for (const t of [2, 3, 4]) if (solved >= THRESH[t]) tier = t;
+        const started = solved > 0 || !!st.role;
+        return {
+          id: u.id,
+          name: profMap[u.id] ?? u.user_metadata?.full_name ?? u.user_metadata?.name ?? null,
+          email: u.email ?? null,
+          provider: u.app_metadata?.provider ?? "email",
+          role: (st.role as string) ?? null,
+          solved,
+          tier: started ? tier : null,
+          health: typeof st.planetHealth === "number" ? st.planetHealth : null,
+          createdAt: u.created_at ?? null,
+          lastSignIn: u.last_sign_in_at ?? null,
+        };
+      })
+      .sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""));
 
     // --- Sessions + events ---
     const { count: lobbyCount } = await db.from("lobbies").select("id", { count: "exact", head: true });
@@ -95,5 +197,6 @@ export const adminAnalytics = createServerFn({ method: "POST" })
       progress: { players: saves?.length ?? 0, totalSolved, avgHealth: healthN ? Math.round(healthSum / healthN) : 0 },
       sessions: { multiplayer: lobbyCount ?? 0 },
       events: { total: totalEvents ?? 0, last7d: ev7Map, recent: recent ?? [] },
+      usersList,
     };
   });

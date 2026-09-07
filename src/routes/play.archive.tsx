@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Sparkles, ArrowLeft } from "lucide-react";
 import { MYSTERIES } from "@/lib/game/data";
+import { mysteryCover } from "@/lib/game/media";
 import { useGame } from "@/lib/game/store";
 import { SequenceCard } from "@/components/game/SequenceCard";
 import { cn } from "@/lib/utils";
@@ -38,7 +39,7 @@ function Archive() {
           </button>
           <div className="grid gap-6 p-5 lg:grid-cols-[420px_1fr] lg:items-start">
             <div className="overflow-hidden rounded-2xl">
-              <img src={open.image} alt={open.title} className="aspect-[4/5] w-full object-cover" />
+              <img src={mysteryCover(open)} alt={open.title} className="aspect-[4/5] w-full object-cover" />
             </div>
             <div>
               <div className="pill chip-terra w-fit"><Sparkles className="h-3 w-3" /> {open.rarity}</div>
@@ -64,7 +65,7 @@ function Archive() {
             <button key={m.id} onClick={() => setOpenId(m.id)}
               className={cn("surface-card card-hover group overflow-hidden text-left")}>
               <div className="relative aspect-[4/5]">
-                <img src={m.image} alt={m.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={mysteryCover(m)} alt={m.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
                   <div className="text-[10px] uppercase tracking-wider opacity-80">{m.region}</div>

@@ -8,7 +8,7 @@ import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter,
 } from "@/components/ui/dialog";
 import { VideoPlayer } from "./VideoPlayer";
-import { EXPLAINER_UNLOCK_COST, explainerVideo, extraMedia, learningPoints } from "@/lib/game/media";
+import { EXPLAINER_UNLOCK_COST, explainerVideo, extraMedia, learningPoints, mysteryCover } from "@/lib/game/media";
 import { influencesOf, influencedBy } from "@/lib/game/data";
 import { useGame } from "@/lib/game/store";
 import type { Mystery } from "@/lib/game/types";
@@ -59,7 +59,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
         >
           <div className="relative aspect-[16/7] w-full">
             <img
-              src={media.poster ?? mystery.image}
+              src={media.poster ?? mysteryCover(mystery)}
               alt=""
               className="absolute inset-0 h-full w-full scale-105 object-cover blur-[6px] brightness-[0.45] transition-transform duration-500 group-hover:scale-110"
             />
@@ -166,7 +166,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
         <div className="p-4">
           <VideoPlayer
             src={media.src}
-            poster={media.poster ?? mystery.image}
+            poster={media.poster ?? mysteryCover(mystery)}
             captions={media.captions}
             title={media.title}
             autoPlay
@@ -193,7 +193,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
                     <div className="mb-1 text-xs font-medium">{x.label ?? x.kind ?? "Extra"}</div>
                     <VideoPlayer
                       src={x.src}
-                      poster={x.poster ?? mystery.image}
+                      poster={x.poster ?? mysteryCover(mystery)}
                       captions={x.captions}
                       title={x.title ?? x.label}
                       startAt={mediaState?.positions?.[`extra-${i}`] ?? 0}

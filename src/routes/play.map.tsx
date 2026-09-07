@@ -2,6 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Check, Lock, Sparkles } from "lucide-react";
 import { useGame } from "@/lib/game/store";
 import { MYSTERIES, isMysteryUnlocked, isMysteryVisibleForRole } from "@/lib/game/data";
+import { mysteryCover } from "@/lib/game/media";
 
 export const Route = createFileRoute("/play/map")({
   component: DependencyMap,
@@ -92,7 +93,7 @@ function DependencyMap() {
                 style={{ left: p.x, top: p.y, width: NODE_W, height: NODE_H }}
               >
                 <div className="relative h-12 w-full overflow-hidden">
-                  <img src={m.image} alt="" className="h-full w-full object-cover" />
+                  <img src={mysteryCover(m)} alt="" className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <span className="pill absolute right-1.5 top-1.5 bg-white/85 text-foreground border-white/50 backdrop-blur-sm text-[10px]">T{m.tier}</span>
                   {isSolved && <span className="absolute left-1.5 top-1.5 grid h-5 w-5 place-items-center rounded-full bg-[color:var(--terra)] text-white"><Check className="h-3 w-3" /></span>}

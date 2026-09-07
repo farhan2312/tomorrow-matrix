@@ -6,6 +6,7 @@ import { Star, Check, X, ArrowRight, Loader2, Sparkles, Zap, Users, Target, Book
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { artFor, CATEGORY_TINT } from "@/lib/game/intervention-art";
 import { INTERVENTIONS } from "@/lib/game/data";
+import { mysteryCover } from "@/lib/game/media";
 
 const INDICATOR_META: Record<ExtEffectKey, { label: string; emoji: string }> = {
   terra:      { label: "Terra Health",             emoji: "🌍" },
@@ -213,7 +214,7 @@ export function InterventionDetail({
                     <div key={r.code} className="overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur transition-colors hover:bg-white/10">
                       {mystery && (
                         <div className="flex items-center gap-3 border-b border-white/10 bg-black/30 p-3">
-                          <img src={mystery.image} alt="" className="h-12 w-16 rounded-lg object-cover ring-1 ring-white/10" />
+                          <img src={mysteryCover(mystery)} alt="" className="h-12 w-16 rounded-lg object-cover ring-1 ring-white/10" />
                           <div className="min-w-0 flex-1">
                             <div className="text-[10px] font-medium uppercase tracking-wider text-white/50">
                               {r.code} · Tier {mystery.tier}
