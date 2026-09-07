@@ -13,6 +13,7 @@ import { getClientId } from "@/lib/multiplayer/identity";
 import { pushEvent } from "@/lib/multiplayer/api.functions";
 import { CardSequencer } from "@/components/game/CardSequencer";
 import { runTourOnce } from "@/lib/tour";
+import { logEvent } from "@/lib/analytics";
 import { AiTeamPanel } from "@/components/game/AiTeamPanel";
 import { MysteryCompleteModal } from "@/components/game/MysteryCompleteModal";
 import { MysteryIntroOverlay } from "@/components/game/MysteryIntroOverlay";
@@ -132,6 +133,7 @@ function MysteryDetail() {
     const totalTimeMs = Date.now() - startedAtRef.current;
     if (!alreadySolved) {
       solveMystery(mystery.id, attempts, hintsUsed);
+      logEvent("mystery_solved", { code: mystery.code, tier: mystery.tier, attempts, hintsUsed });
       if (mode === "multiplayer" && lobbyId) {
         broadcast({ data: {
           lobbyId, clientId: getClientId(),

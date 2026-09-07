@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BarChart3, FolderCog, Lock, Loader2, LogOut, ShieldCheck } from "lucide-react";
 import { adminLogin, adminVerify } from "@/lib/admin/admin.functions";
+import { AnalyticsDashboard } from "@/components/admin/AnalyticsDashboard";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({
@@ -98,6 +99,7 @@ type Tab = "analytics" | "management";
 
 function AdminShell({ onLogout }: { onLogout: () => void }) {
   const [tab, setTab] = useState<Tab>("analytics");
+  const token = getToken() ?? "";
 
   return (
     <main className="min-h-screen bg-background">
@@ -125,7 +127,7 @@ function AdminShell({ onLogout }: { onLogout: () => void }) {
 
         {/* content */}
         <section className="flex-1 p-8">
-          {tab === "analytics" ? <AnalyticsPlaceholder /> : <ManagementPlaceholder />}
+          {tab === "analytics" ? <AnalyticsDashboard token={token} /> : <ManagementPlaceholder />}
         </section>
       </div>
     </main>

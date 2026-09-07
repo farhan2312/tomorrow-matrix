@@ -5,6 +5,7 @@ import { ROLES } from "@/lib/game/data";
 import { useGame } from "@/lib/game/store";
 import type { RoleId } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
+import { logEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/role-select")({
   head: () => ({
@@ -99,7 +100,7 @@ function RoleSelect() {
                 </div>
 
                 <button
-                  onClick={() => { setRole(current.id); navigate({ to: "/play" }); }}
+                  onClick={() => { setRole(current.id); logEvent("game_start", { role: current.id }); navigate({ to: "/play" }); }}
                   className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-terra)] px-5 py-3 text-sm font-medium text-white shadow-sm transition-transform hover:scale-[1.02]"
                 >
                   Confirm role <ArrowRight className="h-4 w-4" />
