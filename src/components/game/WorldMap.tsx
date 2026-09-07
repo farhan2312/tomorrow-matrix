@@ -38,6 +38,7 @@ export function WorldMap() {
   const solved = useGame((s) => s.solvedMysteries);
   const pendingCrisisId = useGame((s) => s.pendingCrisisId);
   const role = useGame((s) => s.role);
+  const planetHealth = useGame((s) => s.planetHealth);
 
   // Track newly-solved mysteries for celebration burst
   const prevSolvedRef = useRef<string[]>(solved);
@@ -73,18 +74,72 @@ export function WorldMap() {
     ? Math.round((restoredCount / visibleRegions.length) * 100)
     : 0;
 
+  // --- Living map: reveal vibrant colour exactly where mysteries are solved ---
+  const solvedRegions = visibleRegions.filter((r) => solved.includes(r.mysteryId!));
+  // Gentle GLOBAL recovery as Terra heals (kept subtle so solved spots dominate).
+  const healthReveal = Math.max(0, Math.min(0.36, ((planetHealth - 40) / 32) * 0.32 + restoredCount * 0.006));
+  // Ashy (barren) at the start, alive (blue-green) as Terra comes back.
+  const aliveT = Math.max(0, Math.min(1, (planetHealth - 40) / 32 + restoredCount * 0.02));
+  const revealLayers = [
+    `linear-gradient(rgba(0,0,0,${healthReveal.toFixed(3)}), rgba(0,0,0,${healthReveal.toFixed(3)}))`,
+    ...solvedRegions.map(
+      (r) => `radial-gradient(circle at ${r.x}% ${r.y}%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,0.8) 13%, rgba(0,0,0,0) 26%)`,
+    ),
+  ];
+  const revealMask = revealLayers.join(", ");
+  const revealRepeat = revealLayers.map(() => "no-repeat").join(", ");
+
   return (
     <div className="surface-lift relative overflow-hidden">
       <div className="relative aspect-[16/9] w-full">
+        {/* Base layer: barren, ashy Terra (desaturated) — the planet at rest */}
         <img
           src={worldMap}
           alt="Terra world map showing active climate mysteries"
           loading="lazy"
           width={1920} height={1080}
           className="absolute inset-0 h-full w-full object-cover"
+          style={{ filter: "grayscale(1) sepia(0.28) brightness(0.82) contrast(1.03)" }}
         />
-        {/* Base atmospheric wash */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-transparent to-[color:var(--terra-soft)]/55" />
+        {/* Reveal layer: full colour, masked to show only where mysteries are solved
+            (plus a gentle global lift as Terra Health recovers) */}
+        <div
+          className="pointer-events-none absolute inset-0 transition-[mask-image] duration-700"
+          style={{
+            WebkitMaskImage: revealMask,
+            maskImage: revealMask,
+            WebkitMaskRepeat: revealRepeat,
+            maskRepeat: revealRepeat,
+            WebkitMaskSize: "100% 100%",
+            maskSize: "100% 100%",
+          }}
+        >
+          <img
+            src={worldMap}
+            alt=""
+            aria-hidden
+            width={1920} height={1080}
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ filter: "saturate(1.35) brightness(1.05)" }}
+          />
+        </div>
+        {/* Ashy vignette that lifts as Terra recovers */}
+        <div
+          className="pointer-events-none absolute inset-0 transition-opacity duration-1000"
+          style={{
+            opacity: 1 - aliveT,
+            background: "radial-gradient(130% 100% at 50% 42%, rgba(70,64,56,0.10), rgba(38,35,32,0.42))",
+            mixBlendMode: "multiply",
+          }}
+        />
+        {/* Healthy blue-green atmosphere that grows as Terra recovers */}
+        <div
+          className="pointer-events-none absolute inset-0 transition-opacity duration-1000"
+          style={{
+            opacity: aliveT,
+            background: "linear-gradient(160deg, rgba(56,189,248,0.16), rgba(16,185,129,0.10) 55%, rgba(255,255,255,0.05))",
+          }}
+        />
 
         {/* Restoration heal layers, drawn under hotspots so pins stay clickable */}
         <div className="pointer-events-none absolute inset-0">
