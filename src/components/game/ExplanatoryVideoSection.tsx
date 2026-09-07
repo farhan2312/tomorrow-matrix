@@ -193,7 +193,7 @@ export function ExplanatoryVideoSection({ mystery, onEvent, autoOpen }: Props) {
                     <div className="mb-1 text-xs font-medium">{x.label ?? x.kind ?? "Extra"}</div>
                     <VideoPlayer
                       src={x.src}
-                      poster={x.poster}
+                      poster={x.poster ?? mystery.image}
                       captions={x.captions}
                       title={x.title ?? x.label}
                       startAt={mediaState?.positions?.[`extra-${i}`] ?? 0}

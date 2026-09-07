@@ -8,6 +8,7 @@ import { PromotionModal } from "@/components/game/PromotionModal";
 import { RosterRail, MultiplayerBridge } from "@/components/game/RosterRail";
 import { NarrationOverlay } from "@/components/game/NarrationOverlay";
 import { GameTour } from "@/components/game/GameTour";
+import { TierBookends } from "@/components/game/TierBookends";
 import { useGame } from "@/lib/game/store";
 import { useLobby } from "@/lib/multiplayer/store";
 import { getClientId } from "@/lib/multiplayer/identity";
@@ -77,6 +78,7 @@ function PlayLayout() {
     <div className="min-h-screen bg-background">
       <HudBar />
       <GameTour />
+      <TierBookends />
       <Outlet />
       <RosterRail />
       <MultiplayerBridge />
