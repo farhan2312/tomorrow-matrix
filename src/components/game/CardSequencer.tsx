@@ -7,9 +7,10 @@ import {
   SortableContext, useSortable, arrayMove, horizontalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { Lightbulb, RotateCcw, Sparkles } from "lucide-react";
+import { Lightbulb, RotateCcw, Sparkles, X } from "lucide-react";
 import type { SequenceStep } from "@/lib/game/types";
-import { SequenceCard } from "./SequenceCard";
+import { SequenceCard, cardMediaKey } from "./SequenceCard";
+import { resolveMedia } from "@/lib/media-overrides";
 import { cn } from "@/lib/utils";
 
 function shuffle<T>(arr: T[]): T[] {
@@ -22,9 +23,9 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function SortableCell({
-  step, index, status,
+  step, index, status, onExpand,
 }: {
-  step: SequenceStep; index: number; status: "default" | "correct" | "wrong" | "hint";
+  step: SequenceStep; index: number; status: "default" | "correct" | "wrong" | "hint"; onExpand?: () => void;
 }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: step.id });
   const style = {
@@ -34,7 +35,34 @@ function SortableCell({
   };
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing touch-none">
-      <SequenceCard step={step} positionIndex={index} state={status} />
+      <SequenceCard step={step} positionIndex={index} state={status} onExpand={onExpand} />
+    </div>
+  );
+}
+
+/** Full-size, readable view of a single card. */
+function CardLightbox({ step, onClose }: { step: SequenceStep; onClose: () => void }) {
+  const k = cardMediaKey(step.id);
+  const src = step.image ? (k ? resolveMedia(k, step.image) : step.image) : undefined;
+  return (
+    <div
+      className="fixed inset-0 z-[80] grid place-items-center bg-black/80 p-6 backdrop-blur-sm animate-[fade-in_150ms_ease-out]"
+      onClick={onClose}
+    >
+      <div className="relative" onClick={(e) => e.stopPropagation()}>
+        {src ? (
+          <img src={src} alt={step.label || "card"} className="max-h-[80vh] w-auto rounded-2xl border border-white/15 shadow-2xl" />
+        ) : (
+          <div className="w-[min(90vw,420px)]"><SequenceCard step={step} size="lg" /></div>
+        )}
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute -right-3 -top-3 grid h-8 w-8 place-items-center rounded-full bg-white text-black shadow-lg hover:scale-105"
+        >
+          <X className="h-4 w-4" />
+        </button>
+      </div>
     </div>
   );
 }
@@ -61,6 +89,7 @@ export function CardSequencer({ canonical, hints = [], onSolved, onAttempt, alre
   const [attempts, setAttempts] = useState(0);
   const [hintsUsed, setHintsUsed] = useState(0);
   const [solved, setSolved] = useState(alreadySolved ?? false);
+  const [expanded, setExpanded] = useState<SequenceStep | null>(null);
   const [startedAt] = useState(() => Date.now());
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 4 } }));
 
@@ -132,7 +161,7 @@ export function CardSequencer({ canonical, hints = [], onSolved, onAttempt, alre
                 let status: "default" | "correct" | "wrong" | "hint" = "default";
                 if (check) status = check.wrongIds.includes(s.id) ? "wrong" : "correct";
                 if (hintTargetId === s.id) status = "hint";
-                return <SortableCell key={s.id} step={s} index={i} status={status} />;
+                return <SortableCell key={s.id} step={s} index={i} status={status} onExpand={() => setExpanded(s)} />;
               })}
             </div>
             <p className="mt-3 text-center text-[11px] uppercase tracking-wider text-muted-foreground">
@@ -197,6 +226,8 @@ export function CardSequencer({ canonical, hints = [], onSolved, onAttempt, alre
           <Sparkles className="h-4 w-4" /> Validate sequence
         </button>
       </div>
+
+      {expanded && <CardLightbox step={expanded} onClose={() => setExpanded(null)} />}
     </div>
   );
 }

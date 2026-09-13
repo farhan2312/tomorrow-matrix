@@ -42,6 +42,7 @@ export function CrisisModal({
   const role = useGame((s) => s.role);
   const mode = useGame((s) => s.mode);
   const lobbyId = useLobby((s) => s.lobbyId);
+  const lobbyMode = useLobby((s) => s.mode);
   const votes = useLobby((s) => s.votes);
   const players = useLobby((s) => s.players);
 
@@ -449,7 +450,8 @@ function RevealPanel({
         <p className="mt-2 text-sm leading-relaxed">{outcome?.insight ?? crisis.bestReasoning}</p>
       </div>
 
-      {crisis.debrief && crisis.debrief.length > 0 && (
+      {/* Facilitator debrief is a workshop-only tool; hide it in solo / AI / plain multiplayer. */}
+      {lobbyMode === "workshop" && crisis.debrief && crisis.debrief.length > 0 && (
         <div className="rounded-xl border border-border bg-card p-4">
           <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Facilitator debrief</div>
           <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm">

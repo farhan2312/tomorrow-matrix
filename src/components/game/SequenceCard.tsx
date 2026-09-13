@@ -1,10 +1,11 @@
 import { type CSSProperties, forwardRef } from "react";
+import { Maximize2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { resolveMedia } from "@/lib/media-overrides";
 import type { SequenceStep } from "@/lib/game/types";
 
 /** Full-art card id is `${code}-c${n}` -> override key `card/${code}/${n}`. */
-function cardMediaKey(id: string): string | null {
+export function cardMediaKey(id: string): string | null {
   const m = /^(M\d{2})-c(\d+)$/.exec(id);
   return m ? `card/${m[1]}/${m[2]}` : null;
 }
@@ -34,10 +35,12 @@ interface Props {
   className?: string;
   style?: CSSProperties;
   dragging?: boolean;
+  /** Show an expand button that opens a readable full-size view of the card. */
+  onExpand?: () => void;
 }
 
 export const SequenceCard = forwardRef<HTMLDivElement, Props>(function SequenceCard(
-  { step, size = "md", state = "default", positionIndex, className, style, dragging, ...rest },
+  { step, size = "md", state = "default", positionIndex, className, style, dragging, onExpand, ...rest },
   ref,
 ) {
   const dim =
@@ -76,6 +79,17 @@ export const SequenceCard = forwardRef<HTMLDivElement, Props>(function SequenceC
           <span className="absolute right-1.5 top-1.5 grid h-5 w-5 place-items-center rounded-full bg-black/50 font-mono text-[10px] text-white backdrop-blur-sm">
             {positionIndex + 1}
           </span>
+        )}
+        {onExpand && (
+          <button
+            type="button"
+            aria-label="Expand card"
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={(e) => { e.stopPropagation(); onExpand(); }}
+            className="absolute left-1.5 top-1.5 grid h-5 w-5 place-items-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/75"
+          >
+            <Maximize2 className="h-2.5 w-2.5" />
+          </button>
         )}
       </div>
     );
