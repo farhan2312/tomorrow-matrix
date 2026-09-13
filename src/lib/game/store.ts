@@ -226,7 +226,7 @@ export interface GameState {
   // Role challenge system
   queueChallenge: (kind: ChallengeKind) => void;
   startNextChallenge: () => void;
-  answerChallengeQuestion: (choiceIndex: number | null, reflection?: string) => { cap: number; correct: boolean };
+  answerChallengeQuestion: (choiceIndex: number | null, reflection?: string, interactiveCorrect?: boolean) => { cap: number; correct: boolean };
   /** Move to the next question (or finish). Split from answering so the player
    *  can see whether their answer was right before advancing. */
   advanceChallenge: () => void;
@@ -934,7 +934,7 @@ export const useGame = create<GameState>()(
 
       startNextChallenge: () => maybeActivateNextChallenge(get, set),
 
-      answerChallengeQuestion: (choiceIndex, reflection) => {
+      answerChallengeQuestion: (choiceIndex, reflection, interactiveCorrect) => {
         const s = get();
         const ch = s.pendingChallenge;
         if (!ch || !s.role) return { cap: 0, correct: false };
@@ -942,7 +942,7 @@ export const useGame = create<GameState>()(
         const qn = ROLE_QUESTIONS.find((x) => x.id === qid);
         if (!qn) return { cap: 0, correct: false };
 
-        const { cap, correct } = rewardForAnswer(qn, choiceIndex, reflection);
+        const { cap, correct } = rewardForAnswer(qn, choiceIndex, reflection, interactiveCorrect);
 
         const progress = s.roleProgress[s.role] ?? emptyProgress();
         const attempt: QuestionAttempt = {

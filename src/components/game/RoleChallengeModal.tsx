@@ -3,8 +3,17 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useGame } from "@/lib/game/store";
 import { ROLE_QUESTIONS } from "@/lib/game/roles";
 import { ROLES } from "@/lib/game/data";
-import { BookOpen, Check, X, Sparkles, Target, Award, Trophy } from "lucide-react";
+import { BookOpen, Check, X, Sparkles, Target, Award, Trophy, ArrowUp, ArrowDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 export function RoleChallengeModal() {
   const pending = useGame((s) => s.pendingChallenge);
@@ -24,13 +33,26 @@ export function RoleChallengeModal() {
   const [selected, setSelected] = useState<number | null>(null);
   const [text, setText] = useState("");
   const [feedback, setFeedback] = useState<{ correct: boolean; cap: number } | null>(null);
+  // Interactive-question state: match = chosen def index per term (-1 = none);
+  // order = current arrangement of the original option indices.
+  const [matchAssign, setMatchAssign] = useState<number[]>([]);
+  const [matchDefs, setMatchDefs] = useState<number[]>([]);   // display order of definitions
+  const [orderArr, setOrderArr] = useState<number[]>([]);
 
   // Reset per-question UI whenever the cursor advances
   useEffect(() => {
     setSelected(null);
     setText("");
     setFeedback(null);
-  }, [pending?.cursor, pending?.kind]);
+    // Seed interactive questions from the new current question.
+    const q = pending && ROLE_QUESTIONS.find((x) => x.id === pending.questionIds[pending.cursor]);
+    if (q?.kind === "match" && q.pairs) {
+      setMatchAssign(new Array(q.pairs.length).fill(-1));
+      setMatchDefs(shuffle(q.pairs.map((_, i) => i)));
+    } else if (q?.kind === "order" && q.options) {
+      setOrderArr(shuffle(q.options.map((_, i) => i)));
+    }
+  }, [pending?.cursor, pending?.kind]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!pending || !currentQ) return null;
 
@@ -42,11 +64,31 @@ export function RoleChallengeModal() {
     if (currentQ.kind === "reflection") {
       const r = answer(null, text);
       setFeedback({ correct: r.correct, cap: r.cap });
+    } else if (currentQ.kind === "match") {
+      if (matchAssign.some((v) => v < 0)) return;
+      const correct = matchAssign.every((defIdx, termIdx) => defIdx === termIdx);
+      const r = answer(null, undefined, correct);
+      setFeedback({ correct: r.correct, cap: r.cap });
+    } else if (currentQ.kind === "order") {
+      const target = currentQ.correctOrder ?? [];
+      const correct = orderArr.length === target.length && orderArr.every((v, i) => v === target[i]);
+      const r = answer(null, undefined, correct);
+      setFeedback({ correct: r.correct, cap: r.cap });
     } else {
       if (selected == null) return;
       const r = answer(selected, undefined);
       setFeedback({ correct: r.correct, cap: r.cap });
     }
+  };
+
+  const moveOrder = (from: number, dir: -1 | 1) => {
+    const to = from + dir;
+    if (to < 0 || to >= orderArr.length) return;
+    setOrderArr((arr) => {
+      const next = [...arr];
+      [next[from], next[to]] = [next[to], next[from]];
+      return next;
+    });
   };
 
   const onContinue = () => {
@@ -96,6 +138,69 @@ export function RoleChallengeModal() {
               disabled={!!feedback}
               className="w-full resize-none rounded-xl border border-border bg-card p-3 text-sm outline-none focus:border-[color:var(--terra)] disabled:opacity-70"
             />
+          ) : currentQ.kind === "match" ? (
+            <div className="space-y-2">
+              {(currentQ.pairs ?? []).map((p, termIdx) => {
+                const chosen = matchAssign[termIdx] ?? -1;
+                const right = feedback && chosen === termIdx;
+                const wrong = feedback && chosen !== termIdx;
+                return (
+                  <div key={termIdx} className={cn(
+                    "flex flex-wrap items-center gap-2 rounded-xl border p-2.5 text-sm",
+                    !feedback && "border-border bg-card",
+                    right && "border-[color:var(--terra)] bg-[color:var(--terra-soft)]",
+                    wrong && "border-destructive bg-destructive/10",
+                  )}>
+                    <span className="min-w-[96px] shrink-0 font-medium">{p.term}</span>
+                    <span className="text-muted-foreground">→</span>
+                    <select
+                      value={chosen}
+                      disabled={!!feedback}
+                      onChange={(e) => setMatchAssign((a) => { const n = [...a]; n[termIdx] = Number(e.target.value); return n; })}
+                      className="h-9 min-w-0 flex-1 rounded-lg border border-input bg-card px-2 text-sm disabled:opacity-80"
+                    >
+                      <option value={-1} disabled>Choose…</option>
+                      {matchDefs.map((defIdx) => (
+                        <option key={defIdx} value={defIdx}>{(currentQ.pairs ?? [])[defIdx]?.def}</option>
+                      ))}
+                    </select>
+                    {right && <Check className="h-4 w-4 shrink-0 text-[color:var(--terra-deep)]" />}
+                    {wrong && <X className="h-4 w-4 shrink-0 text-destructive" />}
+                    {wrong && <span className="w-full pl-[104px] text-[11px] text-[color:var(--terra-deep)]">Correct: {p.def}</span>}
+                  </div>
+                );
+              })}
+            </div>
+          ) : currentQ.kind === "order" ? (
+            <div className="space-y-2">
+              {orderArr.map((optIdx, pos) => {
+                const target = currentQ.correctOrder ?? [];
+                const right = feedback && optIdx === target[pos];
+                const wrong = feedback && optIdx !== target[pos];
+                return (
+                  <div key={optIdx} className={cn(
+                    "flex items-center gap-2 rounded-xl border p-2.5 text-sm",
+                    !feedback && "border-border bg-card",
+                    right && "border-[color:var(--terra)] bg-[color:var(--terra-soft)]",
+                    wrong && "border-destructive bg-destructive/10",
+                  )}>
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-muted font-mono text-xs">{pos + 1}</span>
+                    <span className="min-w-0 flex-1">{(currentQ.options ?? [])[optIdx]}</span>
+                    {!feedback && (
+                      <div className="flex shrink-0 flex-col gap-0.5">
+                        <button type="button" aria-label="Move up" onClick={() => moveOrder(pos, -1)} disabled={pos === 0}
+                          className="grid h-5 w-6 place-items-center rounded border border-border hover:bg-muted disabled:opacity-30"><ArrowUp className="h-3 w-3" /></button>
+                        <button type="button" aria-label="Move down" onClick={() => moveOrder(pos, 1)} disabled={pos === orderArr.length - 1}
+                          className="grid h-5 w-6 place-items-center rounded border border-border hover:bg-muted disabled:opacity-30"><ArrowDown className="h-3 w-3" /></button>
+                      </div>
+                    )}
+                    {right && <Check className="h-4 w-4 shrink-0 text-[color:var(--terra-deep)]" />}
+                    {wrong && <X className="h-4 w-4 shrink-0 text-destructive" />}
+                  </div>
+                );
+              })}
+              {!feedback && <p className="text-[11px] text-muted-foreground">Use the arrows to arrange from first cause to final impact.</p>}
+            </div>
           ) : (
             <div className="space-y-2">
               {(currentQ.options ?? []).map((opt, i) => {
@@ -139,7 +244,12 @@ export function RoleChallengeModal() {
                 </button>
                 <button
                   onClick={onSubmit}
-                  disabled={currentQ.kind === "reflection" ? text.trim().length < 3 : selected == null}
+                  disabled={
+                    currentQ.kind === "reflection" ? text.trim().length < 3
+                      : currentQ.kind === "match" ? matchAssign.some((v) => v < 0)
+                      : currentQ.kind === "order" ? false
+                      : selected == null
+                  }
                   className="rounded-lg bg-[image:var(--gradient-terra)] px-4 py-2 text-sm font-medium text-white shadow-sm disabled:opacity-50"
                 >
                   {currentQ.kind === "reflection" ? "Submit reflection" : "Submit answer"}
@@ -149,6 +259,7 @@ export function RoleChallengeModal() {
               <p className="text-[11px] text-muted-foreground">
                 {currentQ.kind === "mcq" && "Correct +5 CAP · Incorrect +1 CAP"}
                 {currentQ.kind === "scenario" && "Best answer +10 CAP · Other answer +5 CAP"}
+                {(currentQ.kind === "match" || currentQ.kind === "order") && "All correct +10 CAP · Otherwise +3 CAP"}
                 {currentQ.kind === "reflection" && "Completing earns +5 CAP, no wrong answer."}
               </p>
             </>
@@ -174,7 +285,7 @@ export function RoleChallengeModal() {
 function ResultPanel({
   correct, cap, kind, explanation, isLast, earnedCap, correctMcq, totalMcq, onContinue,
 }: {
-  correct: boolean; cap: number; kind: "mcq" | "scenario" | "reflection";
+  correct: boolean; cap: number; kind: "mcq" | "scenario" | "reflection" | "match" | "order";
   explanation?: string; isLast: boolean; earnedCap: number; correctMcq: number; totalMcq: number;
   onContinue: () => void;
 }) {

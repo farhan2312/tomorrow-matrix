@@ -171,7 +171,7 @@ export const ROLE_MISSIONS: Record<RoleId, RoleMission[]> = {
 
 import questionnaireData from "./questionnaires.data.json";
 
-export type RoleQuestionKind = "mcq" | "scenario" | "reflection";
+export type RoleQuestionKind = "mcq" | "scenario" | "reflection" | "match" | "order";
 export type QuestionPhase = 1 | 2 | 3;
 
 export interface RoleQuestion {
@@ -240,21 +240,19 @@ function buildQuestions(): RoleQuestion[] {
         kind = "mcq";
         options = q.options;
         correctIndex = q.correctIndices?.[0] ?? 0;
-      } else if (q.kind === "match" || q.kind === "order") {
-        // Present as scenario asking to choose the best-first item
-        kind = "scenario";
-        if (q.kind === "match") {
-          const pairs = q.pairs ?? [];
-          if (pairs.length < 2) continue;
-          options = pairs.map((p) => `${p.term} → ${p.def}`);
-          correctIndex = 0; // all pairs are correct as displayed
-        } else {
-          const order = q.correctOrder ?? [];
-          const opts = q.options ?? [];
-          if (order.length < 2 || opts.length < 2) continue;
-          options = opts;
-          correctIndex = order[0];
-        }
+      } else if (q.kind === "match") {
+        // Interactive "match the following": rendered from `pairs`.
+        const pairs = q.pairs ?? [];
+        if (pairs.length < 2) continue;
+        kind = "match";
+        options = pairs.map((p) => p.def);
+      } else if (q.kind === "order") {
+        // Interactive "drag & arrange": rendered from `options` + `correctOrder`.
+        const order = q.correctOrder ?? [];
+        const opts = q.options ?? [];
+        if (order.length < 2 || opts.length < 2) continue;
+        kind = "order";
+        options = opts;
       } else {
         continue;
       }
@@ -316,10 +314,20 @@ export function questionsByPhase(role: RoleId, phase: QuestionPhase): RoleQuesti
 /* ------------------------------------------------------------------ */
 
 /** CAP awarded for a single answer. */
-export function rewardForAnswer(qn: RoleQuestion, choiceIndex: number | null, reflectionText?: string): { cap: number; correct: boolean } {
+export function rewardForAnswer(
+  qn: RoleQuestion,
+  choiceIndex: number | null,
+  reflectionText?: string,
+  interactiveCorrect?: boolean,
+): { cap: number; correct: boolean } {
   if (qn.kind === "reflection") {
     const ok = !!(reflectionText && reflectionText.trim().length >= 3);
     return { cap: ok ? 5 : 0, correct: ok };
+  }
+  // Interactive match / drag-arrange: correctness is computed in the UI.
+  if (qn.kind === "match" || qn.kind === "order") {
+    const ok = !!interactiveCorrect;
+    return { cap: ok ? 10 : 3, correct: ok };
   }
   if (choiceIndex == null) return { cap: 0, correct: false };
   const isCorrect = qn.correctIndex === choiceIndex;
