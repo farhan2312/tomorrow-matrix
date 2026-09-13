@@ -117,7 +117,7 @@ export function CardSequencer({ canonical, hints = [], onSolved, onAttempt, alre
       <div className="rounded-2xl border border-[color:var(--terra)]/40 bg-[color:var(--terra-soft)]/50 p-6 text-center">
         <Sparkles className="mx-auto h-6 w-6 text-[color:var(--terra-deep)]" />
         <div className="mt-2 font-display text-lg font-semibold text-[color:var(--terra-deep)]">Chain validated!</div>
-        <div className="text-xs text-muted-foreground">Calculating Terra impact…</div>
+        <div className="text-xs text-muted-foreground">Your results are ready, see the recap.</div>
       </div>
     );
   }

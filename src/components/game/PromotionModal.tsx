@@ -4,7 +4,10 @@ import { Award, Sparkles, Trophy } from "lucide-react";
 export function PromotionModal() {
   const promo = useGame((s) => s.pendingPromotion);
   const dismiss = useGame((s) => s.dismissPromotion);
-  if (!promo) return null;
+  const resultOpen = useGame((s) => s.resultModalOpen);
+  // Wait until the mystery-result modal is closed; otherwise it renders on top of
+  // that modal but is made inert by it, so its "Continue" button does nothing.
+  if (!promo || resultOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[90] grid place-items-center bg-background/90 backdrop-blur-md animate-fade-in">

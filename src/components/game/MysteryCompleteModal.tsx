@@ -15,8 +15,11 @@ interface Props {
   hintsUsed: number;
   alreadySolvedBefore: boolean;
   newlySolvedIds: string[];   // mysteries solved in this run (for unlock check)
+  /** Primary action: close the recap and stay on the mystery page. */
   onContinue: () => void;
   onClose: () => void;
+  /** Secondary action: leave for the world map. */
+  onWorldMap?: () => void;
   /** Reveal the newly unlocked explanatory video on this page. */
   onWatchExplanation?: () => void;
 }
@@ -25,7 +28,7 @@ const STAGE_DURATION = 900;
 
 export function MysteryCompleteModal({
   open, mystery, attempts, hintsUsed, alreadySolvedBefore, newlySolvedIds, onContinue, onClose,
-  onWatchExplanation,
+  onWorldMap, onWatchExplanation,
 }: Props) {
 
   const [stage, setStage] = useState(0);
@@ -50,7 +53,7 @@ export function MysteryCompleteModal({
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="max-w-3xl overflow-hidden border-border p-0 sm:rounded-2xl">
+      <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto border-border p-0 sm:rounded-2xl">
         <div className="relative bg-[image:var(--gradient-terra)] px-6 py-5 text-white">
           <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] opacity-85">
             <Sparkles className="h-3 w-3" /> Mystery resolved
@@ -146,10 +149,10 @@ export function MysteryCompleteModal({
 
           <div className="flex flex-wrap items-center justify-between gap-2">
             <button
-              onClick={onClose}
-              className="text-xs text-muted-foreground hover:text-foreground"
+              onClick={onWorldMap ?? onContinue}
+              className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
             >
-              Stay here
+              <ArrowRight className="h-3 w-3" /> Back to world map
             </button>
             <div className="flex flex-wrap items-center gap-2">
               {onWatchExplanation && hasExplainerVideo(mystery.code) && (
@@ -164,7 +167,7 @@ export function MysteryCompleteModal({
                 onClick={onContinue}
                 className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-terra)] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:scale-[1.02] transition-transform"
               >
-                Back to world map <ArrowRight className="h-4 w-4" />
+                Continue <ArrowRight className="h-4 w-4" />
               </button>
             </div>
           </div>

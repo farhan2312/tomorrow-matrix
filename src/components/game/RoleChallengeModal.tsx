@@ -10,6 +10,7 @@ export function RoleChallengeModal() {
   const pending = useGame((s) => s.pendingChallenge);
   const role = useGame((s) => s.role);
   const answer = useGame((s) => s.answerChallengeQuestion);
+  const advance = useGame((s) => s.advanceChallenge);
   const skip = useGame((s) => s.skipCurrentQuestion);
   const dismiss = useGame((s) => s.dismissChallenge);
 
@@ -49,8 +50,10 @@ export function RoleChallengeModal() {
   };
 
   const onContinue = () => {
-    // useEffect on cursor change clears local state; nothing else to do
+    // Advance to the next question (or finish). The cursor-change effect clears
+    // the local feedback/selection for the next question.
     setFeedback(null);
+    advance();
   };
 
   const kindIcon =
@@ -80,42 +83,56 @@ export function RoleChallengeModal() {
 
         {/* Body */}
         <div className="space-y-4 p-6">
+          <h2 className="font-display text-lg font-semibold leading-snug">
+            {currentQ.prompt}
+          </h2>
+
+          {currentQ.kind === "reflection" ? (
+            <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder={currentQ.placeholder ?? "Your reflection…"}
+              rows={5}
+              disabled={!!feedback}
+              className="w-full resize-none rounded-xl border border-border bg-card p-3 text-sm outline-none focus:border-[color:var(--terra)] disabled:opacity-70"
+            />
+          ) : (
+            <div className="space-y-2">
+              {(currentQ.options ?? []).map((opt, i) => {
+                const isSel = selected === i;
+                const isAnswer = currentQ.correctIndex === i;
+                // Once answered, reveal correctness: chosen option turns green/red,
+                // and the right answer is highlighted even if it wasn't chosen.
+                let tone: "idle" | "sel" | "correct" | "wrong" = "idle";
+                if (feedback) tone = isSel ? (feedback.correct ? "correct" : "wrong") : (isAnswer ? "correct" : "idle");
+                else if (isSel) tone = "sel";
+                return (
+                  <button
+                    key={i}
+                    onClick={() => { if (!feedback) setSelected(i); }}
+                    disabled={!!feedback}
+                    className={cn(
+                      "flex w-full items-center gap-2 rounded-xl border p-3 text-left text-sm transition-all",
+                      tone === "sel" && "border-[color:var(--terra)] bg-[color:var(--terra-soft)]",
+                      tone === "idle" && "border-border bg-card" + (feedback ? " opacity-60" : " hover:border-[color:var(--terra)]"),
+                      tone === "correct" && "border-[color:var(--terra)] bg-[color:var(--terra-soft)] text-[color:var(--terra-deep)]",
+                      tone === "wrong" && "border-destructive bg-destructive/10 text-destructive",
+                    )}
+                  >
+                    <span className="font-mono text-xs text-muted-foreground">
+                      {String.fromCharCode(65 + i)}.
+                    </span>
+                    <span className="flex-1">{opt}</span>
+                    {tone === "correct" && <Check className="h-4 w-4 shrink-0 text-[color:var(--terra-deep)]" />}
+                    {tone === "wrong" && <X className="h-4 w-4 shrink-0 text-destructive" />}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
           {!feedback ? (
             <>
-              <h2 className="font-display text-lg font-semibold leading-snug">
-                {currentQ.prompt}
-              </h2>
-
-              {currentQ.kind === "reflection" ? (
-                <textarea
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                  placeholder={currentQ.placeholder ?? "Your reflection…"}
-                  rows={5}
-                  className="w-full resize-none rounded-xl border border-border bg-card p-3 text-sm outline-none focus:border-[color:var(--terra)]"
-                />
-              ) : (
-                <div className="space-y-2">
-                  {(currentQ.options ?? []).map((opt, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setSelected(i)}
-                      className={cn(
-                        "w-full rounded-xl border p-3 text-left text-sm transition-all",
-                        selected === i
-                          ? "border-[color:var(--terra)] bg-[color:var(--terra-soft)]"
-                          : "border-border bg-card hover:border-[color:var(--terra)]",
-                      )}
-                    >
-                      <span className="mr-2 font-mono text-xs text-muted-foreground">
-                        {String.fromCharCode(65 + i)}.
-                      </span>
-                      {opt}
-                    </button>
-                  ))}
-                </div>
-              )}
-
               <div className="flex items-center justify-between pt-1">
                 <button onClick={skip} className="text-xs text-muted-foreground hover:text-foreground">
                   Skip question
@@ -141,7 +158,7 @@ export function RoleChallengeModal() {
               cap={feedback.cap}
               kind={currentQ.kind}
               explanation={currentQ.explanation}
-              isLast={pending.cursor >= totalQs}
+              isLast={pending.cursor + 1 >= totalQs}
               earnedCap={pending.earnedCap}
               correctMcq={pending.correctMcq}
               totalMcq={pending.totalMcq}
@@ -174,6 +191,13 @@ function ResultPanel({
           You earned <span className="font-semibold text-foreground">+{earnedCap} CAP</span>
           {totalMcq > 0 && <> · MCQ score <span className="font-mono">{correctMcq}/{totalMcq}</span></>}
         </div>
+        {explanation && <p className="text-sm text-muted-foreground">{explanation}</p>}
+        <button
+          onClick={onContinue}
+          className="mt-1 inline-flex w-full justify-center rounded-lg bg-[image:var(--gradient-terra)] px-4 py-2 text-sm font-medium text-white"
+        >
+          Finish
+        </button>
       </div>
     );
   }

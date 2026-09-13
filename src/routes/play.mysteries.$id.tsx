@@ -65,9 +65,16 @@ function MysteryDetail() {
   const upstream = influencedBy(mystery);
 
   const [completion, setCompletion] = useState<null | {
-    attempts: number; hintsUsed: number; newlySolvedIds: string[];
+    attempts: number; hintsUsed: number; newlySolvedIds: string[]; wasSolvedBefore: boolean;
   }>(null);
+  const setResultModalOpen = useGame((s) => s.setResultModalOpen);
   const startedAtRef = useRef<number>(Date.now());
+
+  // Keep the promotion banner waiting behind the recap, and never leave the flag stuck on.
+  useEffect(() => {
+    setResultModalOpen(!!completion);
+    return () => setResultModalOpen(false);
+  }, [completion, setResultModalOpen]);
 
   // ---------------------------- Intro video ----------------------------
   const autoplayIntro = useGame((s) => s.autoplayIntro);
@@ -131,6 +138,7 @@ function MysteryDetail() {
 
   const onSolved = ({ attempts, hintsUsed }: { attempts: number; hintsUsed: number }) => {
     const totalTimeMs = Date.now() - startedAtRef.current;
+    const wasSolvedBefore = alreadySolved; // capture before solveMystery mutates the set
     if (!alreadySolved) {
       solveMystery(mystery.id, attempts, hintsUsed);
       logEvent("mystery_solved", { code: mystery.code, tier: mystery.tier, attempts, hintsUsed });
@@ -146,6 +154,7 @@ function MysteryDetail() {
     setCompletion({
       attempts,
       hintsUsed,
+      wasSolvedBefore,
       newlySolvedIds: alreadySolved ? solvedMysteries : [...solvedMysteries, mystery.id],
     });
   };
@@ -362,9 +371,10 @@ function MysteryDetail() {
           mystery={mystery}
           attempts={completion.attempts}
           hintsUsed={completion.hintsUsed}
-          alreadySolvedBefore={alreadySolved}
+          alreadySolvedBefore={completion.wasSolvedBefore}
           newlySolvedIds={completion.newlySolvedIds}
-          onContinue={() => { setCompletion(null); navigate({ to: "/play" }); }}
+          onContinue={() => setCompletion(null)}
+          onWorldMap={() => { setCompletion(null); navigate({ to: "/play" }); }}
           onClose={() => setCompletion(null)}
           onWatchExplanation={() => {
             setCompletion(null);

@@ -39,7 +39,7 @@ function mysteryGroup(m: (typeof MYSTERIES)[number]): MediaGroup {
     { key: `video/${m.code}/explainer`, label: "Explainer video", kind: "video", default: hasExplainerVideo(m.code) ? "bundled" : undefined },
   ];
   if (extraMedia(m.code).some((x) => x.kind === "animation")) {
-    slots.push({ key: `video/${m.code}/animation`, label: "Animation", kind: "video", default: "bundled" });
+    slots.push({ key: `video/${m.code}/animation`, label: "Mystery Teaser", kind: "video", default: "bundled" });
   }
   // Full-art solving cards, in chain order.
   for (const step of m.sequence ?? []) {

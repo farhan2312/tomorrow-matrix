@@ -172,6 +172,10 @@ export interface GameState {
   crisisLog: CrisisOutcome[];
   /** Pending promotion banner, set when a role level threshold is crossed. */
   pendingPromotion: PendingPromotion | null;
+  /** True while the mystery-result modal is open, so the promotion banner waits
+   *  behind it instead of appearing on top and swallowing its own click. */
+  resultModalOpen: boolean;
+  setResultModalOpen: (open: boolean) => void;
 
   /** History of every indicator/Terra change with a human reason (newest first). */
   indicatorLog: IndicatorChange[];
@@ -220,6 +224,9 @@ export interface GameState {
   queueChallenge: (kind: ChallengeKind) => void;
   startNextChallenge: () => void;
   answerChallengeQuestion: (choiceIndex: number | null, reflection?: string) => { cap: number; correct: boolean };
+  /** Move to the next question (or finish). Split from answering so the player
+   *  can see whether their answer was right before advancing. */
+  advanceChallenge: () => void;
   skipCurrentQuestion: () => void;
   finishChallenge: () => void;
   dismissChallenge: () => void;
@@ -247,6 +254,7 @@ const initial = {
   crisisProbability: 1,
   crisisLog: [] as CrisisOutcome[],
   pendingPromotion: null as PendingPromotion | null,
+  resultModalOpen: false,
   indicatorLog: [] as IndicatorChange[],
   lastMysteryDelta: null as MysteryDelta | null,
   roleProgress: {} as Partial<Record<RoleId, RoleProgress>>,
@@ -933,9 +941,11 @@ export const useGame = create<GameState>()(
           capFromRole: progress.capFromRole + cap,
           xp: progress.xp + Math.max(1, Math.floor(cap / 2)),
         };
+        // Record the answer but stay on this question so the result (correct /
+        // incorrect, with the right answer revealed) can be shown. Advancing is
+        // done separately by advanceChallenge().
         const nextCh: PendingChallenge = {
           ...ch,
-          cursor: ch.cursor + 1,
           earnedCap: ch.earnedCap + cap,
           correctMcq: ch.correctMcq + (qn.kind === "mcq" && correct ? 1 : 0),
         };
@@ -944,14 +954,20 @@ export const useGame = create<GameState>()(
           pendingChallenge: nextCh,
           roleProgress: { ...s.roleProgress, [s.role]: nextProgress },
         });
+        applyMissionProgress(get, set);
+        return { cap, correct };
+      },
 
-        // Auto-finish when last question answered
-        if (nextCh.cursor >= nextCh.questionIds.length) {
+      advanceChallenge: () => {
+        const s = get();
+        const ch = s.pendingChallenge;
+        if (!ch) return;
+        const next = { ...ch, cursor: ch.cursor + 1 };
+        if (next.cursor >= next.questionIds.length) {
           get().finishChallenge();
         } else {
-          applyMissionProgress(get, set);
+          set({ pendingChallenge: next });
         }
-        return { cap, correct };
       },
 
       skipCurrentQuestion: () => {
@@ -959,8 +975,11 @@ export const useGame = create<GameState>()(
         const ch = s.pendingChallenge;
         if (!ch) return;
         const next = { ...ch, cursor: ch.cursor + 1 };
-        set({ pendingChallenge: next });
-        if (next.cursor >= next.questionIds.length) get().finishChallenge();
+        if (next.cursor >= next.questionIds.length) {
+          get().finishChallenge();
+        } else {
+          set({ pendingChallenge: next });
+        }
       },
 
       finishChallenge: () => {
@@ -1039,6 +1058,7 @@ export const useGame = create<GameState>()(
       },
 
       dismissPromotion: () => set({ pendingPromotion: null }),
+      setResultModalOpen: (open) => set({ resultModalOpen: open }),
     }),
     { name: "tomorrow-matrix-game" },
   ),
