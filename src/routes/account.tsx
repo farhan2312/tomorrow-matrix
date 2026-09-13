@@ -18,15 +18,19 @@ function AccountPage() {
   const [avatarUrl, setAvatarUrl] = useState("");
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  // First-time users are routed here to onboard; after they save we send them
+  // on to the game. Returning users editing their profile just stay put.
+  const isOnboarding = useRef(false);
 
   useEffect(() => {
     (async () => {
       const { data } = await supabase.auth.getUser();
       if (!data.user) { navigate({ to: "/auth" }); return; }
       setEmail(data.user.email ?? "");
-      const { data: prof } = await supabase.from("profiles").select("display_name, avatar_url").eq("id", data.user.id).maybeSingle();
+      const { data: prof } = await supabase.from("profiles").select("display_name, avatar_url, onboarded").eq("id", data.user.id).maybeSingle();
       setDisplayName(prof?.display_name ?? "");
       setAvatarUrl(prof?.avatar_url ?? "");
+      isOnboarding.current = !prof?.onboarded;
       setLoading(false);
     })();
   }, [navigate]);
@@ -70,6 +74,11 @@ function AccountPage() {
       // Ignored if the `onboarded` column hasn't been added yet.
       await supabase.from("profiles").update({ onboarded: true }).eq("id", data.user.id);
       toast.success("Profile saved");
+      // First-time setup: drop the player into the game once their name is saved.
+      if (isOnboarding.current) {
+        isOnboarding.current = false;
+        navigate({ to: "/mode-select" });
+      }
     } catch (err) {
       toast.error((err as Error).message);
     } finally { setSaving(false); }

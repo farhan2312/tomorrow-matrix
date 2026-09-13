@@ -91,34 +91,38 @@ function Marketplace() {
 
       {/* Controls */}
       <div className="surface-card flex flex-wrap items-center gap-3 p-3">
-        <div className="relative flex-1 min-w-[220px]">
+        <div className="relative h-10 flex-1 min-w-[220px]">
           <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search interventions…"
-            className="w-full rounded-xl border border-border bg-background py-2 pl-9 pr-3 text-sm outline-none focus:border-[color:var(--terra)]"
+            className="h-10 w-full rounded-xl border border-border bg-background pl-9 pr-3 text-sm outline-none focus:border-[color:var(--terra)]"
           />
         </div>
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value as SortKey)}
-          className="rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none"
+          className="h-10 rounded-xl border border-border bg-background px-3 text-sm outline-none"
         >
           <option value="recommended">Recommended</option>
           <option value="cost-asc">CAP: low to high</option>
           <option value="cost-desc">CAP: high to low</option>
           <option value="name">Name</option>
         </select>
-        <label className="flex items-center gap-2 text-xs text-muted-foreground">
-          <input
-            type="checkbox"
-            checked={showOwned}
-            onChange={(e) => setShowOwned(e.target.checked)}
-            className="h-4 w-4 rounded border-border"
-          />
-          Show invested
-        </label>
+        <button
+          type="button"
+          onClick={() => setShowOwned((v) => !v)}
+          aria-pressed={!showOwned}
+          className={cn(
+            "inline-flex h-10 shrink-0 items-center gap-2 rounded-xl border px-3.5 text-xs font-medium transition-colors",
+            !showOwned
+              ? "border-[color:var(--terra)] bg-[color:var(--terra-soft)] text-[color:var(--terra-deep)]"
+              : "border-border bg-background text-muted-foreground hover:bg-muted",
+          )}
+        >
+          {showOwned ? "Hide invested" : "Invested hidden"}
+        </button>
       </div>
 
       {/* Category chips */}
