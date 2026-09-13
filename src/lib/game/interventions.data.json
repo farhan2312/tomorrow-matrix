@@ -30,17 +30,17 @@
       {
         "code": "M01",
         "name": "Arctic Ice Loss",
-        "explanation": "that drives ice melt, reducing albedo loss and breaking the warming feedback loop."
+        "explanation": "Cutting fossil fuel emissions slows the warming that drives ice melt, reducing albedo loss and breaking the warming feedback loop."
       },
       {
         "code": "M02",
         "name": "Extreme Heatwave",
-        "explanation": "over time, reducing the frequency and intensity of extreme heat events."
+        "explanation": "Lower emissions reduce global mean temperatures over time, reducing the frequency and intensity of extreme heat events."
       },
       {
         "code": "M25",
         "name": "Renewable Energy Transition Barriers",
-        "explanation": "renewable capacity removes the dependency on Barriers fossil fuel infrastructure. +: : : :+: :+ ⚡ Carbon Tax Energy & 55 Climate"
+        "explanation": "Directly addresses the core barrier — deploying renewable capacity removes the dependency on fossil fuel infrastructure."
       }
     ]
   },
@@ -74,12 +74,12 @@
       {
         "code": "M01",
         "name": "Arctic Ice Loss",
-        "explanation": "reducing the emissions that drive Arctic warming and ice loss."
+        "explanation": "A carbon price discourages fossil fuel use, reducing the emissions that drive Arctic warming and ice loss."
       },
       {
         "code": "M19",
         "name": "Climate Policy Inaction",
-        "explanation": "policy mechanism that outlasts political cycles, countering the gridlock driving inaction. +: : : :+: :+ ⚡ Electric Mobility Energy & 50 Climate"
+        "explanation": "Establishing carbon pricing creates a durable policy mechanism that outlasts political cycles, countering the gridlock driving inaction."
       }
     ]
   },
@@ -114,17 +114,17 @@
       {
         "code": "M01",
         "name": "Arctic Ice Loss",
-        "explanation": "contributing to slower warming and reduced Arctic ice melt."
+        "explanation": "Transport electrification reduces tailpipe CO₂, contributing to slower warming and reduced Arctic ice melt."
       },
       {
         "code": "M09",
         "name": "Air Pollution",
-        "explanation": "emissions the primary driver of urban air pollution and associated health crises."
+        "explanation": "Replacing combustion vehicles eliminates exhaust emissions — the primary driver of urban air pollution and associated health crises."
       },
       {
         "code": "M30",
         "name": "Transport Emissions Lock-In",
-        "explanation": "transport dependency, unlocking the transition to clean mobility at city scale. +: : : :+: :+ ⚡ Emission Standards Energy & 45 Climate"
+        "explanation": "EV deployment directly breaks the fossil fuel transport dependency, unlocking the transition to clean mobility at city scale."
       }
     ]
   },
@@ -157,7 +157,7 @@
       {
         "code": "M09",
         "name": "Air Pollution",
-        "explanation": "industrial and transport pollutants causing dangerous air quality levels in cities. +: : : :+: :+ ⚡ Clean Energy Energy & 55 Climate"
+        "explanation": "Binding emission limits directly cut the industrial and transport pollutants causing dangerous air quality levels in cities."
       }
     ]
   },
@@ -190,7 +190,7 @@
       {
         "code": "M09",
         "name": "Air Pollution",
-        "explanation": "eliminates the emissions that create toxic urban smog and particulate matter. +: : : :+: :+ ⚡ Carbon Pricing Energy & 60 Climate"
+        "explanation": "Transitioning industry and power to clean energy eliminates the emissions that create toxic urban smog and particulate matter."
       }
     ]
   },
@@ -223,13 +223,13 @@
       {
         "code": "M55",
         "name": "Amazon Dieback",
-        "explanation": "investment less profitable, accelerating stranded asset risk and breaking the carbon lock-in. +: : : :+: :+ ⚡ Fossil Fuel Subsidy Removal Energy & 65 Climate"
+        "explanation": "Economy-wide carbon pricing makes fossil fuel investment less profitable, accelerating stranded asset risk and breaking the carbon lock-in."
       }
     ]
   },
   {
     "id": "I-007",
-    "name": "Fossil Fuel Subsidy",
+    "name": "Fossil Fuel Subsidy Removal",
     "categoryLabel": "Energy & Climate",
     "categoryId": "energy",
     "categoryEmoji": "⚡",
@@ -256,7 +256,7 @@
       {
         "code": "M55",
         "name": "Amazon Dieback",
-        "explanation": "fossil fuels, making clean energy economically competitive and unlocking rapid transition. +: : : :+: :+ ⚡ Clean Energy Mandate Energy & 65 Climate"
+        "explanation": "Removing subsidies exposes the true cost of fossil fuels, making clean energy economically competitive and unlocking rapid transition."
       }
     ]
   },
@@ -289,7 +289,7 @@
       {
         "code": "M55",
         "name": "Amazon Dieback",
-        "explanation": "lobby resistance, forcing the energy transition regardless of fossil fuel economic incumbency. +: : : :+: :+ ⚡ Emission Reduction Energy & 55 Climate"
+        "explanation": "A legal mandate overrides market inertia and lobby resistance, forcing the energy transition regardless of fossil fuel economic incumbency."
       }
     ]
   },
@@ -323,12 +323,12 @@
       {
         "code": "M33",
         "name": "Ocean Acidification",
-        "explanation": "acidification, allowing marine ecosystems time to adapt and recover."
+        "explanation": "Reducing CO₂ emissions slows the rate of ocean acidification, allowing marine ecosystems time to adapt and recover."
       },
       {
         "code": "M34",
         "name": "Wildfire Outbreaks",
-        "explanation": "reducing the temperature anomalies that are driving glacier melt. +: : : :+: :+ ⚡ Emergency Emissions Cut Energy & 80 Climate"
+        "explanation": "Lower atmospheric CO₂ slows global warming, reducing the temperature anomalies that are driving glacier melt."
       }
     ]
   },
@@ -361,7 +361,7 @@
       {
         "code": "M56",
         "name": "Methane Surge",
-        "explanation": "warming trajectory fast enough to prevent irreversible tipping point activation in climate systems. +: : : :+: :+ ⚡ Carbon Dioxide Removal Energy & 75 Climate"
+        "explanation": "Only emergency-level emissions cuts can halt the warming trajectory fast enough to prevent irreversible tipping point activation in climate systems."
       }
     ]
   },
@@ -394,7 +394,7 @@
       {
         "code": "M56",
         "name": "Methane Surge",
-        "explanation": "concentrations, lowering the likelihood of triggering self-reinforcing warming feedbacks. +: : : :+: :+ ⚡ Grid Modernisation Energy & 55 Climate"
+        "explanation": "Carbon removal reduces atmospheric CO₂ concentrations, lowering the likelihood of triggering self-reinforcing warming feedbacks."
       }
     ]
   },
@@ -427,7 +427,7 @@
       {
         "code": "M25",
         "name": "Renewable Energy Transition Barriers",
-        "explanation": "renewable deployment modernising the grid Barriers removes the infrastructure bottleneck blocking the energy transition. +: : : :+: :+ ⚡ Feed-in Tariffs Energy & 45 Climate"
+        "explanation": "Grid limitations are a primary barrier to renewable deployment — modernising the grid removes the infrastructure bottleneck blocking the energy transition."
       }
     ]
   },
@@ -460,13 +460,13 @@
       {
         "code": "M25",
         "name": "Renewable Energy Transition Barriers",
-        "explanation": "unlocks private investment in renewables, Barriers overcoming the investment uncertainty barrier. +: : : :+: :+ ⚡ Renewable Portfolio Standards Energy & 50 Climate"
+        "explanation": "Financial certainty from feed-in tariffs directly unlocks private investment in renewables, overcoming the investment uncertainty barrier."
       }
     ]
   },
   {
     "id": "I-014",
-    "name": "Renewable Portfolio",
+    "name": "Renewable Portfolio Standards",
     "categoryLabel": "Energy & Climate",
     "categoryId": "energy",
     "categoryEmoji": "⚡",
@@ -493,13 +493,13 @@
       {
         "code": "M25",
         "name": "Renewable Energy Transition Barriers",
-        "explanation": "fossil fuel lobby resistance and policy Barriers uncertainty, directly dismantling the transition barrier. +: : : :+: :+ ⚡ Renewable Energy Investment Energy & 60 Climate"
+        "explanation": "Mandated market demand for renewables counters fossil fuel lobby resistance and policy uncertainty, directly dismantling the transition barrier."
       }
     ]
   },
   {
     "id": "I-015",
-    "name": "Renewable Energy",
+    "name": "Renewable Energy Investment",
     "categoryLabel": "Energy & Climate",
     "categoryId": "energy",
     "categoryEmoji": "⚡",
@@ -526,7 +526,7 @@
       {
         "code": "M45",
         "name": "Biodiversity Collapse",
-        "explanation": "dependence on volatile fossil fuel imports, directly addressing energy security vulnerabilities. +: : : :+: :+ ⚡ Energy Storage Energy & 55 Climate"
+        "explanation": "Building domestic renewable capacity reduces dependence on volatile fossil fuel imports, directly addressing energy security vulnerabilities."
       }
     ]
   },
@@ -559,7 +559,7 @@
       {
         "code": "M45",
         "name": "Biodiversity Collapse",
-        "explanation": "renewables, enabling reliable clean energy supply that doesn\\'t depend on fossil fuel backup. +: : : :+: :+ ⚡ EV Transition Support Energy & 50 Climate"
+        "explanation": "Storage removes the intermittency challenge of renewables, enabling reliable clean energy supply that doesn't depend on fossil fuel backup."
       }
     ]
   },
@@ -592,13 +592,13 @@
       {
         "code": "M30",
         "name": "Transport Emissions Lock-In",
-        "explanation": "directly remove the adoption barriers keeping consumers tied to fossil fuel vehicles. +: : : :+: :+ ⚡ Public Transport Investment Energy & 55 Climate"
+        "explanation": "Purchase incentives and charging infrastructure directly remove the adoption barriers keeping consumers tied to fossil fuel vehicles."
       }
     ]
   },
   {
     "id": "I-018",
-    "name": "Public Transport",
+    "name": "Public Transport Investment",
     "categoryLabel": "Energy & Climate",
     "categoryId": "energy",
     "categoryEmoji": "⚡",
@@ -625,7 +625,7 @@
       {
         "code": "M30",
         "name": "Transport Emissions Lock-In",
-        "explanation": "away from private vehicles, reducing total road emissions without requiring consumers to buy EVs. +: : : :+: :+ ⚡ Low Emission Zones Energy & 40 Climate"
+        "explanation": "High-quality public transit shifts modal share away from private vehicles, reducing total road emissions without requiring consumers to buy EVs."
       }
     ]
   },
@@ -658,7 +658,7 @@
       {
         "code": "M30",
         "name": "Transport Emissions Lock-In",
-        "explanation": "geographically bounded emission cuts and create economic pressure that accelerates EV fleet transition. +: : : :+: :+ ⚡ Rapid Decarbonisation Energy & 75 Climate"
+        "explanation": "Low emission zones create immediate, geographically bounded emission cuts and create economic pressure that accelerates EV fleet transition."
       }
     ]
   },
@@ -691,7 +691,7 @@
       {
         "code": "M58",
         "name": "Antarctic Ice Sheet Collapse",
-        "explanation": "reducing the freshwater influx into the North Disruption Atlantic that is weakening ocean circulation. +: : : :+: :+ ⚡ Arctic Protection Energy & 65 Climate"
+        "explanation": "Rapid decarbonisation slows Arctic ice melt, reducing the freshwater influx into the North Atlantic that is weakening ocean circulation."
       }
     ]
   },
@@ -724,13 +724,13 @@
       {
         "code": "M58",
         "name": "Antarctic Ice Sheet Collapse",
-        "explanation": "influx driving AMOC slowdown, preserving ocean Disruption circulation and the heat distribution it provides. +: :+ 💧 Water & Ocean 21 interventions in this category +: : : :+: :+ 💧 Water Conservation Program Water & 40 Ocean"
+        "explanation": "Protecting Arctic ice reduces the freshwater influx driving AMOC slowdown, preserving ocean circulation and the heat distribution it provides."
       }
     ]
   },
   {
     "id": "I-022",
-    "name": "Water Conservation",
+    "name": "Water Conservation Program",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -757,7 +757,7 @@
       {
         "code": "M03",
         "name": "Water Scarcity",
-        "explanation": "shrinking reservoirs and aquifers, buying time for climate adaptation while reducing supply pressure. +: : : :+: :+ 💧 Drip Irrigation Water & 35 Ocean"
+        "explanation": "Reducing demand directly extends the life of shrinking reservoirs and aquifers, buying time for climate adaptation while reducing supply pressure."
       }
     ]
   },
@@ -793,22 +793,22 @@
       {
         "code": "M03",
         "name": "Water Scarcity",
-        "explanation": "which accounts for 70% of global freshwater use directly alleviating scarcity pressure on communities."
+        "explanation": "Drip irrigation slashes agricultural water demand — which accounts for 70% of global freshwater use — directly alleviating scarcity pressure on communities."
       },
       {
         "code": "M07",
         "name": "Crop Yield Decline",
-        "explanation": "under drought stress, improving yields even when total water availability is reduced."
+        "explanation": "Precision water delivery maintains crop hydration under drought stress, improving yields even when total water availability is reduced."
       },
       {
         "code": "M24",
         "name": "Groundwater Over-Extraction",
-        "explanation": "rate of aquifer depletion, extending the lifespan of groundwater resources."
+        "explanation": "Lower per-hectare water application reduces the rate of aquifer depletion, extending the lifespan of groundwater resources."
       },
       {
         "code": "M35",
         "name": "Reservoir Depletion",
-        "explanation": "recharge rates to catch up with demand, slowing the rate of groundwater decline. +: : : :+: :+ 💧 Wetland Restoration Water & 45 Ocean"
+        "explanation": "Reduced extraction pressure allows aquifer recharge rates to catch up with demand, slowing the rate of groundwater decline."
       }
     ]
   },
@@ -842,12 +842,12 @@
       {
         "code": "M03",
         "name": "Water Scarcity",
-        "explanation": "recharge groundwater and buffer drought conditions building natural water security."
+        "explanation": "Restored wetlands increase local water retention, recharge groundwater and buffer drought conditions — building natural water security."
       },
       {
         "code": "M10",
         "name": "Flood Risk",
-        "explanation": "act as natural sponges that absorb flood peaks and slow storm water, reducing downstream flood risk without hard infrastructure. +: : : :+: :+ 💧 Pollution Standards Water & 45 Ocean"
+        "explanation": "Wetlands act as natural sponges that absorb flood peaks and slow storm water, reducing downstream flood risk without hard infrastructure."
       }
     ]
   },
@@ -880,7 +880,7 @@
       {
         "code": "M15",
         "name": "Industrial Water Contamination",
-        "explanation": "chemical pollutants entering waterways that are poisoning drinking water and aquatic ecosystems. +: : : :+: :+ 💧 Wastewater Treatment Water & 45 Ocean"
+        "explanation": "Binding discharge limits directly prevent the chemical pollutants entering waterways that are poisoning drinking water and aquatic ecosystems."
       }
     ]
   },
@@ -913,7 +913,7 @@
       {
         "code": "M15",
         "name": "Industrial Water Contamination",
-        "explanation": "from effluent before it enters waterways, protecting drinking water sources and aquatic life. +: : : :+: :+ 💧 Wetland Buffer Zones Water & 35 Ocean"
+        "explanation": "Treatment infrastructure removes contaminants from effluent before it enters waterways, protecting drinking water sources and aquatic life."
       }
     ]
   },
@@ -946,13 +946,13 @@
       {
         "code": "M15",
         "name": "Industrial Water Contamination",
-        "explanation": "and industrial runoff before it reaches waterways, reducing contamination at source. +: : : :+: :+ 💧 Aquifer Recharge Programs Water & 45 Ocean"
+        "explanation": "Buffer zones physically intercept agricultural and industrial runoff before it reaches waterways, reducing contamination at source."
       }
     ]
   },
   {
     "id": "I-028",
-    "name": "Aquifer Recharge",
+    "name": "Aquifer Recharge Programs",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -980,12 +980,12 @@
       {
         "code": "M24",
         "name": "Groundwater Over-Extraction",
-        "explanation": "partially offsetting over-extraction and buying critical time for demand reduction measures."
+        "explanation": "Active recharge replenishes aquifer levels, partially offsetting over-extraction and buying critical time for demand reduction measures."
       },
       {
         "code": "M35",
         "name": "Reservoir Depletion",
-        "explanation": "reserves, reducing subsidence risk and extending water availability for dependent communities. +: : : :+: :+ 💧 Water Metering Water & 30 Ocean"
+        "explanation": "Managed recharge directly restores groundwater reserves, reducing subsidence risk and extending water availability for dependent communities."
       }
     ]
   },
@@ -1018,7 +1018,7 @@
       {
         "code": "M35",
         "name": "Reservoir Depletion",
-        "explanation": "pricing signals that reduce over-extraction, slowing aquifer depletion without restricting productive use. +: : : :+: :+ 💧 Water Pricing Water & 35 Ocean"
+        "explanation": "Real-time metering exposes waste and enables pricing signals that reduce over-extraction, slowing aquifer depletion without restricting productive use."
       }
     ]
   },
@@ -1051,13 +1051,13 @@
       {
         "code": "M24",
         "name": "Groundwater Over-Extraction",
-        "explanation": "wasteful usage and incentivise investment in water-efficient technologies across agriculture and industry. +: : : :+: :+ 💧 Water Storage Infrastructure Water & 50 Ocean"
+        "explanation": "Price signals reflecting water scarcity reduce wasteful usage and incentivise investment in water-efficient technologies across agriculture and industry."
       }
     ]
   },
   {
     "id": "I-031",
-    "name": "Water Storage",
+    "name": "Water Storage Infrastructure",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -1084,7 +1084,7 @@
       {
         "code": "M34",
         "name": "Wildfire Outbreaks",
-        "explanation": "that would otherwise be lost, redistributing it to communities and farms during dry seasons. +: : : :+: :+ 💧 Glacier Monitoring Water & 25 Ocean"
+        "explanation": "Storage infrastructure captures glacial meltwater that would otherwise be lost, redistributing it to communities and farms during dry seasons."
       }
     ]
   },
@@ -1117,7 +1117,7 @@
       {
         "code": "M34",
         "name": "Wildfire Outbreaks",
-        "explanation": "seasonal water shortfalls, adapt agricultural practices and plan storage before crisis hits. +: : : :+: :+ 💧 Marine Protected Areas Water & 45 Ocean"
+        "explanation": "Monitoring data enables communities to anticipate seasonal water shortfalls, adapt agricultural practices and plan storage before crisis hits."
       }
     ]
   },
@@ -1153,22 +1153,22 @@
       {
         "code": "M05",
         "name": "Coral Reef Bleaching",
-        "explanation": "fishing and pollution, giving coral reef ecosystems a better chance of recovering from bleaching events."
+        "explanation": "Protected areas reduce local stressors like fishing and pollution, giving coral reef ecosystems a better chance of recovering from bleaching events."
       },
       {
         "code": "M06",
         "name": "Fish Population Decline",
-        "explanation": "by protecting breeding grounds, spilling adult fish into surrounding waters to replenish stocks."
+        "explanation": "No-take zones allow fish populations to recover by protecting breeding grounds, spilling adult fish into surrounding waters to replenish stocks."
       },
       {
         "code": "M33",
         "name": "Ocean Acidification",
-        "explanation": "stressors like overfishing increases their resilience to the acidification stress already underway."
+        "explanation": "Protecting marine ecosystems from additional stressors like overfishing increases their resilience to the acidification stress already underway."
       },
       {
         "code": "M49",
         "name": "Ecosystem Collapse",
-        "explanation": "recovery protecting spawning areas and allowing populations to rebuild before collapse becomes irreversible. +: : : :+: :+ 💧 Blue Carbon Projects Water & 40 Ocean"
+        "explanation": "MPAs are the most evidence-based tool for stock recovery — protecting spawning areas and allowing populations to rebuild before collapse becomes irreversible."
       }
     ]
   },
@@ -1201,7 +1201,7 @@
       {
         "code": "M05",
         "name": "Coral Reef Bleaching",
-        "explanation": "and reduces coastal warming, creating healthier conditions for adjacent coral reef recovery. +: : : :+: :+ 💧 Mangrove Restoration Water & 40 Ocean"
+        "explanation": "Blue carbon restoration improves water quality and reduces coastal warming, creating healthier conditions for adjacent coral reef recovery."
       }
     ]
   },
@@ -1236,17 +1236,17 @@
       {
         "code": "M05",
         "name": "Coral Reef Bleaching",
-        "explanation": "reaches reefs, reducing the nutrient and sediment pollution that compounds bleaching stress."
+        "explanation": "Mangroves filter land-based runoff before it reaches reefs, reducing the nutrient and sediment pollution that compounds bleaching stress."
       },
       {
         "code": "M06",
         "name": "Fish Population Decline",
-        "explanation": "commercially important fish species their restoration is essential to stock recovery."
+        "explanation": "Mangrove forests are nursery habitat for 80% of commercially important fish species — their restoration is essential to stock recovery."
       },
       {
         "code": "M39",
         "name": "Sea Level Rise",
-        "explanation": "rebuilding coastal carbon stores, fishery habitat and storm protection simultaneously. +: : : :+: :+ 💧 Ocean Cleanup Water & 40 Ocean"
+        "explanation": "Direct restoration addresses the root problem, rebuilding coastal carbon stores, fishery habitat and storm protection simultaneously."
       }
     ]
   },
@@ -1279,13 +1279,13 @@
       {
         "code": "M12",
         "name": "Plastic Pollution In Oceans",
-        "explanation": "in Oceans marine environments, limiting ongoing microplastic fragmentation and ingestion by marine life. +: : : :+: :+ 💧 Ocean Alkalinity Enhancement Water & 50 Ocean"
+        "explanation": "Active cleanup reduces existing plastic load in marine environments, limiting ongoing microplastic fragmentation and ingestion by marine life."
       }
     ]
   },
   {
     "id": "I-037",
-    "name": "Ocean Alkalinity",
+    "name": "Ocean Alkalinity Enhancement",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -1312,7 +1312,7 @@
       {
         "code": "M33",
         "name": "Ocean Acidification",
-        "explanation": "calcifying organisms like shellfish and corals from shell dissolution caused by lowered pH. +: : : :+: :+ 💧 Sustainable Fisheries Water & 40 Ocean"
+        "explanation": "Directly neutralises oceanic acidity, protecting calcifying organisms like shellfish and corals from shell dissolution caused by lowered pH."
       }
     ]
   },
@@ -1345,7 +1345,7 @@
       {
         "code": "M06",
         "name": "Fish Population Decline",
-        "explanation": "rebuild by preventing extraction beyond natural replenishment rates. +: : : :+: :+ 💧 Fishing Quotas Water & 40 Ocean"
+        "explanation": "Science-based quotas allow fish populations to rebuild by preventing extraction beyond natural replenishment rates."
       }
     ]
   },
@@ -1378,13 +1378,13 @@
       {
         "code": "M49",
         "name": "Ecosystem Collapse",
-        "explanation": "driver of stock collapse alongside climate stress, giving populations time to recover. +: : : :+: :+ 💧 Coastal Management Policy Water & 45 Ocean"
+        "explanation": "Binding quotas halt overexploitation, the primary driver of stock collapse alongside climate stress, giving populations time to recover."
       }
     ]
   },
   {
     "id": "I-040",
-    "name": "Coastal Management",
+    "name": "Coastal Management Policy",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -1411,13 +1411,13 @@
       {
         "code": "M39",
         "name": "Sea Level Rise",
-        "explanation": "development pressures that are the primary driver of mangrove clearing, protecting remaining stands. +: : : :+: :+ 💧 Transboundary Water Treaties Water & 55 Ocean"
+        "explanation": "Coastal management policy prevents the development pressures that are the primary driver of mangrove clearing, protecting remaining stands."
       }
     ]
   },
   {
     "id": "I-041",
-    "name": "Transboundary Water",
+    "name": "Transboundary Water Treaties",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -1444,13 +1444,13 @@
       {
         "code": "M50",
         "name": "Food Insecurity",
-        "explanation": "cooperation, establishing a legal framework for shared water governance that prevents conflict from escalating. +: : : :+: :+ 💧 Water Efficiency Programs Water & 35 Ocean"
+        "explanation": "Binding treaties replace competition with cooperation, establishing a legal framework for shared water governance that prevents conflict from escalating."
       }
     ]
   },
   {
     "id": "I-042",
-    "name": "Water Efficiency",
+    "name": "Water Efficiency Programs",
     "categoryLabel": "Water & Ocean",
     "categoryId": "water",
     "categoryEmoji": "💧",
@@ -1477,7 +1477,7 @@
       {
         "code": "M50",
         "name": "Food Insecurity",
-        "explanation": "sectors eases pressure on shared resources, reducing the scarcity that is the root cause of water conflict. +: :+ 🌾 Food & Agriculture 16 interventions in this category +: : : :+: :+ 🌾 Sustainable Agriculture Food & 45 Agriculture"
+        "explanation": "Reducing per-capita demand for water in all sectors eases pressure on shared resources, reducing the scarcity that is the root cause of water conflict."
       }
     ]
   },
@@ -1510,7 +1510,7 @@
       {
         "code": "M07",
         "name": "Crop Yield Decline",
-        "explanation": "retention and pest resistance the underlying ecological foundations of crop productivity. +: : : :+: :+ 🌾 Regenerative Agriculture Food & 45 Agriculture"
+        "explanation": "Sustainable practices rebuild soil health, water retention and pest resistance — the underlying ecological foundations of crop productivity."
       }
     ]
   },
@@ -1544,12 +1544,12 @@
       {
         "code": "M07",
         "name": "Crop Yield Decline",
-        "explanation": "microbiome, water-holding capacity and nutrient cycling that underpin long-term agricultural productivity."
+        "explanation": "Regenerative practices rebuild the soil microbiome, water-holding capacity and nutrient cycling that underpin long-term agricultural productivity."
       },
       {
         "code": "M08",
         "name": "Soil Degradation",
-        "explanation": "to soil degradation directly rebuilding organic matter, structure and biological activity. +: : : :+: :+ 🌾 Cover Cropping Food & 30 Agriculture"
+        "explanation": "Regenerative agriculture is the primary solution to soil degradation — directly rebuilding organic matter, structure and biological activity."
       }
     ]
   },
@@ -1582,7 +1582,7 @@
       {
         "code": "M08",
         "name": "Soil Degradation",
-        "explanation": "add organic matter directly addressing the primary drivers of soil degradation. +: : : :+: :+ 🌾 Agroforestry Food & 40 Agriculture"
+        "explanation": "Cover crops protect bare soil from erosion and add organic matter — directly addressing the primary drivers of soil degradation."
       }
     ]
   },
@@ -1616,12 +1616,12 @@
       {
         "code": "M04",
         "name": "Deforestation",
-        "explanation": "tree-based farming, reducing the economic pressure that drives deforestation for agricultural land conversion."
+        "explanation": "Agroforestry provides economic returns from tree-based farming, reducing the economic pressure that drives deforestation for agricultural land conversion."
       },
       {
         "code": "M08",
         "name": "Soil Degradation",
-        "explanation": "cycle deep nutrients, rebuilding soil health in degraded agricultural landscapes. +: : : :+: :+ 🌾 Seed Banks Food & 30 Agriculture"
+        "explanation": "Tree roots stabilise soil, prevent erosion and cycle deep nutrients, rebuilding soil health in degraded agricultural landscapes."
       }
     ]
   },
@@ -1654,13 +1654,13 @@
       {
         "code": "M17",
         "name": "Loss Of Traditional Farming Knowledge",
-        "explanation": "embodied in traditional crop varieties, Knowledge maintaining options for resilient food systems even as farming knowledge is lost. +: : : :+: :+ 🌾 Indigenous Agriculture Programs Food & 35 Agriculture"
+        "explanation": "Seed banks preserve the genetic diversity embodied in traditional crop varieties, maintaining options for resilient food systems even as farming knowledge is lost."
       }
     ]
   },
   {
     "id": "I-048",
-    "name": "Indigenous Agriculture",
+    "name": "Indigenous Agriculture Programs",
     "categoryLabel": "Food & Agriculture",
     "categoryId": "food",
     "categoryEmoji": "🌾",
@@ -1687,7 +1687,7 @@
       {
         "code": "M17",
         "name": "Loss Of Traditional Farming Knowledge",
-        "explanation": "economic and cultural pathways for traditional Knowledge agricultural wisdom to pass to future generations. +: : : :+: :+ 🌾 Food Reserves Food & 40 Agriculture"
+        "explanation": "Directly supports the knowledge holders, creating economic and cultural pathways for traditional agricultural wisdom to pass to future generations."
       }
     ]
   },
@@ -1720,7 +1720,7 @@
       {
         "code": "M31",
         "name": "Glacier Retreat",
-        "explanation": "shocks to dampen price spikes, protecting food affordability for low-income populations. +: : : :+: :+ 🌾 Urban Farms Food & 35 Agriculture"
+        "explanation": "Strategic reserves can be released during supply shocks to dampen price spikes, protecting food affordability for low-income populations."
       }
     ]
   },
@@ -1753,7 +1753,7 @@
       {
         "code": "M26",
         "name": "Urban Food Desert",
-        "explanation": "directly provide fresh food access, bypassing the retail supply chains that have abandoned those communities. +: : : :+: :+ 🌾 Food Subsidy Policy Food & 40 Agriculture"
+        "explanation": "Urban farms placed in food desert neighbourhoods directly provide fresh food access, bypassing the retail supply chains that have abandoned those communities."
       }
     ]
   },
@@ -1786,7 +1786,7 @@
       {
         "code": "M26",
         "name": "Urban Food Desert",
-        "explanation": "accessible in low-income urban areas where affordability is the primary barrier to healthy diets. +: : : :+: :+ 🌾 Community Gardens Food & 25 Agriculture"
+        "explanation": "Price subsidies make fresh food economically accessible in low-income urban areas where affordability is the primary barrier to healthy diets."
       }
     ]
   },
@@ -1819,13 +1819,13 @@
       {
         "code": "M26",
         "name": "Urban Food Desert",
-        "explanation": "food production while rebuilding social capital and food literacy in underserved urban communities. +: : : :+: :+ 🌾 Food Sovereignty Programs Food & 50 Agriculture"
+        "explanation": "Community gardens provide neighbourhood-scale food production while rebuilding social capital and food literacy in underserved urban communities."
       }
     ]
   },
   {
     "id": "I-053",
-    "name": "Food Sovereignty",
+    "name": "Food Sovereignty Programs",
     "categoryLabel": "Food & Agriculture",
     "categoryId": "food",
     "categoryEmoji": "🌾",
@@ -1852,7 +1852,7 @@
       {
         "code": "M53",
         "name": "Multi-Hazard Cascades",
-        "explanation": "inherently more resilient to global supply chain collapse, maintaining food access even when globalised systems fail. +: : : :+: :+ 🌾 Diversified Agriculture Food & 35 Agriculture"
+        "explanation": "Localised, sovereignty-based food systems are inherently more resilient to global supply chain collapse, maintaining food access even when globalised systems fail."
       }
     ]
   },
@@ -1885,7 +1885,7 @@
       {
         "code": "M53",
         "name": "Multi-Hazard Cascades",
-        "explanation": "different climate tolerances when one fails, others survive, maintaining food supply during climate shocks. +: : : :+: :+ 🌾 Emergency Food Reserves Food & 45 Agriculture"
+        "explanation": "Diversified farms produce multiple crops with different climate tolerances — when one fails, others survive, maintaining food supply during climate shocks."
       }
     ]
   },
@@ -1918,7 +1918,7 @@
       {
         "code": "M53",
         "name": "Multi-Hazard Cascades",
-        "explanation": "defence against acute food system failure, ensuring minimum nutrition during the period before recovery systems are established. +: : : :+: :+ 🌾 Pesticide Reduction Food & 35 Agriculture"
+        "explanation": "Pre-positioned reserves provide a last line of defence against acute food system failure, ensuring minimum nutrition during the period before recovery systems are established."
       }
     ]
   },
@@ -1951,7 +1951,7 @@
       {
         "code": "M38",
         "name": "Climate Migration",
-        "explanation": "landscapes is the single most effective intervention to halt insecticide-driven bee and pollinator colony collapse. +: : : :+: :+ 🌾 Wildflower Corridors Food & 25 Agriculture"
+        "explanation": "Removing systemic pesticides from farming landscapes is the single most effective intervention to halt insecticide-driven bee and pollinator colony collapse."
       }
     ]
   },
@@ -1984,7 +1984,7 @@
       {
         "code": "M38",
         "name": "Climate Migration",
-        "explanation": "habitat that pollinators depend on for food addressing the habitat loss driving pollinator decline across agricultural landscapes. +: : : :+: :+ 🌾 Bee Habitat Programs Food & 30 Agriculture"
+        "explanation": "Wildflower corridors restore the flowering habitat that pollinators depend on for food — addressing the habitat loss driving pollinator decline across agricultural landscapes."
       }
     ]
   },
@@ -2017,7 +2017,7 @@
       {
         "code": "M38",
         "name": "Climate Migration",
-        "explanation": "the nesting site crisis particularly for solitary native bees which are critical pollinators but have no managed population support. +: :+ 🌿 Biodiversity & Land 20 interventions in this category +: : : :+: :+ 🌿 Reforestation Biodiversity 40 & Land"
+        "explanation": "Dedicated bee habitat programs directly address the nesting site crisis — particularly for solitary native bees which are critical pollinators but have no managed population support."
       }
     ]
   },
@@ -2051,12 +2051,12 @@
       {
         "code": "M04",
         "name": "Deforestation",
-        "explanation": "restoring carbon storage, biodiversity habitat and the water cycle functions that deforestation destroys."
+        "explanation": "Reforestation directly reverses tree cover loss, restoring carbon storage, biodiversity habitat and the water cycle functions that deforestation destroys."
       },
       {
         "code": "M42",
         "name": "Carbon Lock-In",
-        "explanation": "erosion and restores local rainfall patterns reversing the conditions that allow productive land to become desert. +: : : :+: :+ 🌿 Protected Areas Biodiversity 45 & Land"
+        "explanation": "Tree planting stabilises soil, reduces wind erosion and restores local rainfall patterns — reversing the conditions that allow productive land to become desert."
       }
     ]
   },
@@ -2090,12 +2090,12 @@
       {
         "code": "M04",
         "name": "Deforestation",
-        "explanation": "for agricultural or industrial conversion the primary driver of deforestation."
+        "explanation": "Legal protection removes forests from the market for agricultural or industrial conversion — the primary driver of deforestation."
       },
       {
         "code": "M43",
         "name": "Energy Security Crisis",
-        "explanation": "can maintain function even as surrounding landscapes are degraded, preventing total collapse. +: : : :+: :+ 🌿 Wildlife Corridors Biodiversity 40 & Land"
+        "explanation": "Protected areas provide refugia where ecosystems can maintain function even as surrounding landscapes are degraded, preventing total collapse."
       }
     ]
   },
@@ -2128,7 +2128,7 @@
       {
         "code": "M27",
         "name": "Species Habitat Fragmentation",
-        "explanation": "patches, restoring gene flow and allowing Fragmentation populations to achieve viable size preventing local extinction. +: : : :+: :+ 🌿 Conservation Easements Biodiversity 35 & Land"
+        "explanation": "Corridors directly reconnect fragmented habitat patches, restoring gene flow and allowing populations to achieve viable size — preventing local extinction."
       }
     ]
   },
@@ -2161,7 +2161,7 @@
       {
         "code": "M27",
         "name": "Species Habitat Fragmentation",
-        "explanation": "public reserves, creating connected habitat Fragmentation networks that reduce fragmentation at landscape scale. +: : : :+: :+ 🌿 Habitat Restoration Biodiversity 45 & Land"
+        "explanation": "Easements on private lands fill the gaps between public reserves, creating connected habitat networks that reduce fragmentation at landscape scale."
       }
     ]
   },
@@ -2194,7 +2194,7 @@
       {
         "code": "M27",
         "name": "Species Habitat Fragmentation",
-        "explanation": "patches increases connectivity, creating viable Fragmentation habitat for more species and reducing fragmentation pressure. +: : : :+: :+ 🌿 Rewilding Biodiversity 50 & Land"
+        "explanation": "Restoring degraded land between existing habitat patches increases connectivity, creating viable habitat for more species and reducing fragmentation pressure."
       }
     ]
   },
@@ -2227,13 +2227,13 @@
       {
         "code": "M43",
         "name": "Energy Security Crisis",
-        "explanation": "processes that sustain biodiversity allowing ecosystems to recover function without permanent human management. +: : : :+: :+ 🌿 Keystone Species Recovery Biodiversity 45 & Land"
+        "explanation": "Rewilding restores the self-organising ecological processes that sustain biodiversity — allowing ecosystems to recover function without permanent human management."
       }
     ]
   },
   {
     "id": "I-065",
-    "name": "Keystone Species",
+    "name": "Keystone Species Recovery",
     "categoryLabel": "Biodiversity & Land",
     "categoryId": "nature",
     "categoryEmoji": "🌿",
@@ -2260,7 +2260,7 @@
       {
         "code": "M43",
         "name": "Energy Security Crisis",
-        "explanation": "cascades that stabilise food webs and rebuild ecosystem function preventing the cascade that leads to collapse. +: : : :+: :+ 🌿 Land Rehabilitation Biodiversity 45 & Land"
+        "explanation": "Restoring keystone species triggers trophic cascades that stabilise food webs and rebuild ecosystem function — preventing the cascade that leads to collapse."
       }
     ]
   },
@@ -2293,7 +2293,7 @@
       {
         "code": "M42",
         "name": "Carbon Lock-In",
-        "explanation": "degradation and vegetation loss that allows desertification to advance, restoring productive capacity. +: : : :+: :+ 🌿 Sustainable Grazing Biodiversity 35 & Land"
+        "explanation": "Land rehabilitation directly reverses the soil degradation and vegetation loss that allows desertification to advance, restoring productive capacity."
       }
     ]
   },
@@ -2326,7 +2326,7 @@
       {
         "code": "M42",
         "name": "Carbon Lock-In",
-        "explanation": "strips vegetation and triggers soil erosion the primary human-driven pathway to desertification. +: : : :+: :+ 🌿 30x30 Protected Areas Biodiversity 65 & Land"
+        "explanation": "Rotational grazing prevents the overgrazing that strips vegetation and triggers soil erosion — the primary human-driven pathway to desertification."
       }
     ]
   },
@@ -2359,7 +2359,7 @@
       {
         "code": "M54",
         "name": "Tipping Point Activation",
-        "explanation": "habitat network required to halt the sixth mass extinction, providing refugia for species under climate and exploitation pressure. +: : : :+: :+ 🌿 Rewilding at Scale Biodiversity 65 & Land"
+        "explanation": "Protecting 30% of land and ocean creates the habitat network required to halt the sixth mass extinction, providing refugia for species under climate and exploitation pressure."
       }
     ]
   },
@@ -2392,7 +2392,7 @@
       {
         "code": "M54",
         "name": "Tipping Point Activation",
-        "explanation": "connected ecosystems needed for viable wild populations, preventing the cascade from biodiversity decline to full collapse. +: : : :+: :+ 🌿 Nature-Positive Finance Biodiversity 55 & Land"
+        "explanation": "Landscape-scale rewilding creates the vast connected ecosystems needed for viable wild populations, preventing the cascade from biodiversity decline to full collapse."
       }
     ]
   },
@@ -2425,7 +2425,7 @@
       {
         "code": "M54",
         "name": "Tipping Point Activation",
-        "explanation": "investment away from nature-destructive activities, reducing the economic drivers of habitat loss and species decline. +: : : :+: :+ 🌿 Deforestation Moratorium Biodiversity 60 & Land"
+        "explanation": "Nature-positive finance redirects trillions in investment away from nature-destructive activities, reducing the economic drivers of habitat loss and species decline."
       }
     ]
   },
@@ -2458,13 +2458,13 @@
       {
         "code": "M57",
         "name": "Ocean Circulation Disruption",
-        "explanation": "reducing rainfall and drying the Amazon, directly preventing the forest from crossing the tipping point into irreversible savannification. +: : : :+: :+ 🌿 Forest Restoration at Scale Biodiversity 65 & Land"
+        "explanation": "A moratorium stops the deforestation that is reducing rainfall and drying the Amazon, directly preventing the forest from crossing the tipping point into irreversible savannification."
       }
     ]
   },
   {
     "id": "I-072",
-    "name": "Forest Restoration at",
+    "name": "Forest Restoration at Scale",
     "categoryLabel": "Biodiversity & Land",
     "categoryId": "nature",
     "categoryEmoji": "🌿",
@@ -2491,7 +2491,7 @@
       {
         "code": "M57",
         "name": "Ocean Circulation Disruption",
-        "explanation": "increases forest cover, restores rainfall recycling patterns and reduces the temperature anomalies triggering dieback. +: : : :+: :+ 🌿 Indigenous Land Rights Biodiversity 50 & Land"
+        "explanation": "Restoring cleared areas within and around the Amazon increases forest cover, restores rainfall recycling patterns and reduces the temperature anomalies triggering dieback."
       }
     ]
   },
@@ -2525,12 +2525,12 @@
       {
         "code": "M29",
         "name": "Loss Of Indigenous Land Rights",
-        "explanation": "dispossession that leads to extractive land use Rights Indigenous-managed territories have demonstrably better biodiversity outcomes than other land categories."
+        "explanation": "Legal recognition directly prevents the dispossession that leads to extractive land use — Indigenous-managed territories have demonstrably better biodiversity outcomes than other land categories."
       },
       {
         "code": "M57",
         "name": "Ocean Circulation Disruption",
-        "explanation": "effective deforestation barriers securing land rights is simultaneously a biodiversity and climate intervention. +: : : :+: :+ 🌿 Prescribed Burns Biodiversity 35 & Land"
+        "explanation": "Indigenous territories are the Amazon's most effective deforestation barriers — securing land rights is simultaneously a biodiversity and climate intervention."
       }
     ]
   },
@@ -2563,7 +2563,7 @@
       {
         "code": "M37",
         "name": "Land-Use Conflict",
-        "explanation": "loads that allow wildfires to reach catastrophic intensity and spread beyond control. +: : : :+: :+ 🌿 Firebreak Infrastructure Biodiversity 35 & Land"
+        "explanation": "Prescribed burns reduce the accumulated dry fuel loads that allow wildfires to reach catastrophic intensity and spread beyond control."
       }
     ]
   },
@@ -2596,7 +2596,7 @@
       {
         "code": "M37",
         "name": "Land-Use Conflict",
-        "explanation": "individual fires to smaller areas and protecting both communities and intact forest from destruction. +: : : :+: :+ 🌿 Green Corridors Biodiversity 35 & Land"
+        "explanation": "Physical firebreaks limit fire spread, containing individual fires to smaller areas and protecting both communities and intact forest from destruction."
       }
     ]
   },
@@ -2629,7 +2629,7 @@
       {
         "code": "M20",
         "name": "Loss Of Urban Biodiversity",
-        "explanation": "cities, allowing recolonisation of restored habitats and maintaining viable populations in urban landscapes. +: : : :+: :+ 🌿 Native Planting Policy Biodiversity 30 & Land"
+        "explanation": "Green corridors enable species movement through cities, allowing recolonisation of restored habitats and maintaining viable populations in urban landscapes."
       }
     ]
   },
@@ -2662,7 +2662,7 @@
       {
         "code": "M20",
         "name": "Loss Of Urban Biodiversity",
-        "explanation": "and nesting habitats that urban wildlife depends on non-native ornamental plants largely fail to support local ecological webs. +: : : :+: :+ 🌿 Pesticide Restrictions Biodiversity 35 & Land"
+        "explanation": "Native plants provide the specific food sources and nesting habitats that urban wildlife depends on — non-native ornamental plants largely fail to support local ecological webs."
       }
     ]
   },
@@ -2695,7 +2695,7 @@
       {
         "code": "M20",
         "name": "Loss Of Urban Biodiversity",
-        "explanation": "major cause of insect and pollinator decline, allowing invertebrate populations to recover in city ecosystems. +: :+ 🏙️ Cities & Infrastructure 18 interventions in this category +: : : :+: :+ 🏙️ Urban Cooling Cities & 40 Infrastructure"
+        "explanation": "Banning harmful pesticides in urban areas removes a major cause of insect and pollinator decline, allowing invertebrate populations to recover in city ecosystems."
       }
     ]
   },
@@ -2728,7 +2728,7 @@
       {
         "code": "M02",
         "name": "Extreme Heatwave",
-        "explanation": "in cities by 1--5°C, directly protecting residents from heat-related illness and death during extreme heat events. +: : : :+: :+ 🏙️ Green Infrastructure Cities & 45 Infrastructure"
+        "explanation": "Urban cooling measures reduce peak temperatures in cities by 1–5°C, directly protecting residents from heat-related illness and death during extreme heat events."
       }
     ]
   },
@@ -2762,12 +2762,12 @@
       {
         "code": "M10",
         "name": "Flood Risk",
-        "explanation": "infrastructure intercepts and absorbs stormwater, reducing runoff volumes that overwhelm drainage systems and cause urban flooding."
+        "explanation": "Green infrastructure intercepts and absorbs stormwater, reducing runoff volumes that overwhelm drainage systems and cause urban flooding."
       },
       {
         "code": "M11",
         "name": "Urban Green Space Loss",
-        "explanation": "functionality in built-up areas, providing nature services to communities even in densely developed urban environments. +: : : :+: :+ 🏙️ Urban Rewilding Cities & 40 Infrastructure"
+        "explanation": "Green infrastructure increases ecological functionality in built-up areas, providing nature services to communities even in densely developed urban environments."
       }
     ]
   },
@@ -2800,7 +2800,7 @@
       {
         "code": "M11",
         "name": "Urban Green Space Loss",
-        "explanation": "habitat that manicured parks cannot supporting a far greater range of species in the urban ecosystem. +: : : :+: :+ 🏙️ Parks Policy Cities & 30 Infrastructure"
+        "explanation": "Rewilded urban areas provide high-biodiversity habitat that manicured parks cannot — supporting a far greater range of species in the urban ecosystem."
       }
     ]
   },
@@ -2833,7 +2833,7 @@
       {
         "code": "M11",
         "name": "Urban Green Space Loss",
-        "explanation": "prevent the development-driven green space loss that is reducing urban biodiversity and community wellbeing. +: : : :+: :+ 🏙️ Flood Barriers Cities & 50 Infrastructure"
+        "explanation": "Legal protections and minimum ratios directly prevent the development-driven green space loss that is reducing urban biodiversity and community wellbeing."
       }
     ]
   },
@@ -2866,7 +2866,7 @@
       {
         "code": "M10",
         "name": "Flood Risk",
-        "explanation": "flood defences provide immediate protection for communities and infrastructure against flood events, though they must be combined with nature-based solutions for long-term resilience. +: : : :+: :+ 🏙️ Green Roofs Cities & 35 Infrastructure"
+        "explanation": "Hard flood defences provide immediate protection for communities and infrastructure against flood events, though they must be combined with nature-based solutions for long-term resilience."
       }
     ]
   },
@@ -2899,7 +2899,7 @@
       {
         "code": "M36",
         "name": "Urban Heat Island",
-        "explanation": "with vegetation that cools through evapotranspiration, reducing the heat island effect building by building. +: : : :+: :+ 🏙️ Cool Pavements Cities & 30 Infrastructure"
+        "explanation": "Green roofs replace heat-absorbing black surfaces with vegetation that cools through evapotranspiration, reducing the heat island effect building by building."
       }
     ]
   },
@@ -2932,7 +2932,7 @@
       {
         "code": "M36",
         "name": "Urban Heat Island",
-        "explanation": "at city scale, directly lowering daytime and nighttime temperatures in densely built areas. +: : : :+: :+ 🏙️ Urban Forest Policy Cities & 35 Infrastructure"
+        "explanation": "Reflective pavements reduce solar heat absorption at city scale, directly lowering daytime and nighttime temperatures in densely built areas."
       }
     ]
   },
@@ -2965,7 +2965,7 @@
       {
         "code": "M36",
         "name": "Urban Heat Island",
-        "explanation": "cooling and reduced albedo collectively reducing city temperatures by up to 8°C in tree-covered areas. +: : : :+: :+ 🏙️ Early Warning Systems Cities & 35 Infrastructure"
+        "explanation": "Urban trees provide shade, evapotranspiration cooling and reduced albedo — collectively reducing city temperatures by up to 8°C in tree-covered areas."
       }
     ]
   },
@@ -2999,18 +2999,18 @@
       {
         "code": "M37",
         "name": "Land-Use Conflict",
-        "explanation": "and fire response, dramatically reducing fatalities and infrastructure losses when wildfires do occur."
+        "explanation": "Early warning systems enable timely evacuation and fire response, dramatically reducing fatalities and infrastructure losses when wildfires do occur."
       },
       {
         "code": "M47",
         "name": "Water Conflict",
-        "explanation": "action like heatwave health alerts before extreme events cause preventable deaths. +: : : :+: :+ 🏙️ Climate-Proof Infrastructure Cities & 55 Infrastructure"
+        "explanation": "Health-specific early warning enables preventive action — like heatwave health alerts — before extreme events cause preventable deaths."
       }
     ]
   },
   {
     "id": "I-088",
-    "name": "Climate-Proof",
+    "name": "Climate-Proof Infrastructure",
     "categoryLabel": "Cities & Infrastructure",
     "categoryId": "cities",
     "categoryEmoji": "🏙",
@@ -3037,7 +3037,7 @@
       {
         "code": "M46",
         "name": "Fisheries Collapse",
-        "explanation": "failures that occur when infrastructure not Failure designed for current conditions is hit by climate events. +: : : :+: :+ 🏙️ Resilience Investment Cities & 55 Infrastructure"
+        "explanation": "Proactive climate-proofing prevents the cascading failures that occur when infrastructure not designed for current conditions is hit by climate events."
       }
     ]
   },
@@ -3070,7 +3070,7 @@
       {
         "code": "M46",
         "name": "Fisheries Collapse",
-        "explanation": "funding gaps and maintenance neglect that allow Failure infrastructure to deteriorate to the point of climate-driven failure. +: : : :+: :+ 🏙️ Maintenance Funding Cities & 40 Infrastructure"
+        "explanation": "Systematic resilience investment addresses the funding gaps and maintenance neglect that allow infrastructure to deteriorate to the point of climate-driven failure."
       }
     ]
   },
@@ -3103,7 +3103,7 @@
       {
         "code": "M46",
         "name": "Fisheries Collapse",
-        "explanation": "degradation that allows infrastructure to reach Failure crisis point an ounce of prevention worth pounds of emergency repair. +: : : :+: :+ 🏙️ Managed Retreat Cities & 60 Infrastructure"
+        "explanation": "Regular maintenance prevents the incremental degradation that allows infrastructure to reach crisis point — an ounce of prevention worth pounds of emergency repair."
       }
     ]
   },
@@ -3137,12 +3137,12 @@
       {
         "code": "M32",
         "name": "Permafrost Thaw",
-        "explanation": "displacement into planned, supported relocation protecting community cohesion and economic stability during transition."
+        "explanation": "Managed retreat converts chaotic forced displacement into planned, supported relocation — protecting community cohesion and economic stability during transition."
       },
       {
         "code": "M44",
         "name": "Supply Chain Disruption",
-        "explanation": "assets from the erosion zone, making the coast more resilient and allowing natural processes to function. +: : : :+: :+ 🏙️ Coastal Defences Cities & 55 Infrastructure"
+        "explanation": "Retreating from the coastline removes people and assets from the erosion zone, making the coast more resilient and allowing natural processes to function."
       }
     ]
   },
@@ -3175,7 +3175,7 @@
       {
         "code": "M44",
         "name": "Supply Chain Disruption",
-        "explanation": "protecting homes, infrastructure and arable coastal land from sea-level rise and storm surge damage. +: : : :+: :+ 🏙️ Heat Safety Regulations Cities & 35 Infrastructure"
+        "explanation": "Physical defences slow shoreline retreat, protecting homes, infrastructure and arable coastal land from sea-level rise and storm surge damage."
       }
     ]
   },
@@ -3208,7 +3208,7 @@
       {
         "code": "M21",
         "name": "Heat Stress On Workers",
-        "explanation": "on Workers protections for the most vulnerable workers outdoor agricultural and construction labourers who face the greatest heat exposure. +: : : :+: :+ 🏙️ Shade Structures Cities & 25 Infrastructure"
+        "explanation": "Mandatory regulations create enforceable protections for the most vulnerable workers — outdoor agricultural and construction labourers — who face the greatest heat exposure."
       }
     ]
   },
@@ -3241,7 +3241,7 @@
       {
         "code": "M21",
         "name": "Heat Stress On Workers",
-        "explanation": "on Workers ground level, directly protecting workers from the temperature levels that cause heat exhaustion and productivity loss. +: : : :+: :+ 🏙️ Shift Timing Policy Cities & 20 Infrastructure"
+        "explanation": "Physical shade reduces heat stress by 5–10°C at ground level, directly protecting workers from the temperature levels that cause heat exhaustion and productivity loss."
       }
     ]
   },
@@ -3274,7 +3274,7 @@
       {
         "code": "M21",
         "name": "Heat Stress On Workers",
-        "explanation": "on Workers simplest, zero-cost intervention that can immediately reduce heat-related illness without requiring infrastructure investment. +: : : :+: :+ 🏙️ Urban Cooling (Heat Safety) Cities & 35 Infrastructure"
+        "explanation": "Rescheduling work to cooler hours is the simplest, zero-cost intervention that can immediately reduce heat-related illness without requiring infrastructure investment."
       }
     ]
   },
@@ -3307,7 +3307,7 @@
       {
         "code": "M16",
         "name": "Sustainable Business Transition",
-        "explanation": "accountability, removing the information asymmetry that allows companies to project green credentials without backing them with performance. +: : : :+: :+ 💼 Green Finance Economy 50 &"
+        "explanation": "Mandatory reporting creates transparent accountability, removing the information asymmetry that allows companies to project green credentials without backing them with performance."
       }
     ]
   },
@@ -3340,7 +3340,7 @@
       {
         "code": "M16",
         "name": "Sustainable Business Transition",
-        "explanation": "businesses to invest in sustainable transformation, removing the cost barrier that prevents voluntary transition. +: : : :+: :+ 💼 Carbon Disclosure Economy 35 &"
+        "explanation": "Green finance provides the capital that allows businesses to invest in sustainable transformation, removing the cost barrier that prevents voluntary transition."
       }
     ]
   },
@@ -3373,7 +3373,7 @@
       {
         "code": "M16",
         "name": "Sustainable Business Transition",
-        "explanation": "investor, consumer and regulatory scrutiny creating market incentives for businesses to reduce their carbon footprint. +: : : :+: :+ 💼 Plastic Bans Economy 40 &"
+        "explanation": "Disclosure requirements expose emissions to investor, consumer and regulatory scrutiny — creating market incentives for businesses to reduce their carbon footprint."
       }
     ]
   },
@@ -3406,13 +3406,13 @@
       {
         "code": "M12",
         "name": "Plastic Pollution In Oceans",
-        "explanation": "in Oceans the millions of tonnes entering waterways annually the most upstream solution to ocean plastic pollution. +: : : :+: :+ 💼 Extended Producer Responsibility Economy 45 &"
+        "explanation": "Banning single-use plastics at source prevents the millions of tonnes entering waterways annually — the most upstream solution to ocean plastic pollution."
       }
     ]
   },
   {
     "id": "I-100",
-    "name": "Extended Producer",
+    "name": "Extended Producer Responsibility",
     "categoryLabel": "Economy & Finance",
     "categoryId": "economy",
     "categoryEmoji": "💼",
@@ -3440,12 +3440,12 @@
       {
         "code": "M12",
         "name": "Plastic Pollution In Oceans",
-        "explanation": "in Oceans creates financial incentives to reduce packaging, improve recyclability and fund proper waste collection."
+        "explanation": "Making producers responsible for product waste creates financial incentives to reduce packaging, improve recyclability and fund proper waste collection."
       },
       {
         "code": "M18",
         "name": "E-Waste Crisis",
-        "explanation": "fund collection and recycling programs, preventing toxic e-waste from reaching informal dumping and communities. +: : : :+: :+ 💼 Right to Repair Laws Economy 35 &"
+        "explanation": "EPR for electronics requires manufacturers to fund collection and recycling programs, preventing toxic e-waste from reaching informal dumping and communities."
       }
     ]
   },
@@ -3478,7 +3478,7 @@
       {
         "code": "M18",
         "name": "E-Waste Crisis",
-        "explanation": "reducing the replacement rate that drives e-waste generation and the toxic impacts of informal recycling. +: : : :+: :+ 💼 Circular Electronics Economy 40 &"
+        "explanation": "Enabling repair extends electronics lifespans, reducing the replacement rate that drives e-waste generation and the toxic impacts of informal recycling."
       }
     ]
   },
@@ -3511,7 +3511,7 @@
       {
         "code": "M18",
         "name": "E-Waste Crisis",
-        "explanation": "material content of devices, improve recyclability and build the infrastructure for responsible end-of-life material recovery. +: : : :+: :+ 💼 Slow Fashion Movement Economy 30 &"
+        "explanation": "Circular design principles reduce the hazardous material content of devices, improve recyclability and build the infrastructure for responsible end-of-life material recovery."
       }
     ]
   },
@@ -3544,13 +3544,13 @@
       {
         "code": "M22",
         "name": "Fast Fashion Environmental Impact",
-        "explanation": "production, cutting associated water use, Impact chemical dye runoff and carbon emissions at source. +: : : :+: :+ 💼 Textile Take-Back Programs Economy 30 &"
+        "explanation": "Slowing consumption rates reduces total garment production, cutting associated water use, chemical dye runoff and carbon emissions at source."
       }
     ]
   },
   {
     "id": "I-104",
-    "name": "Textile Take-Back",
+    "name": "Textile Take-Back Programs",
     "categoryLabel": "Economy & Finance",
     "categoryId": "economy",
     "categoryEmoji": "💼",
@@ -3577,7 +3577,7 @@
       {
         "code": "M22",
         "name": "Fast Fashion Environmental Impact",
-        "explanation": "landfill and incineration, extending garment life Impact and recovering fibres that reduce demand for virgin material production. +: : : :+: :+ 💼 Circular Fashion Economy 35 &"
+        "explanation": "Take-back programs divert textile waste from landfill and incineration, extending garment life and recovering fibres that reduce demand for virgin material production."
       }
     ]
   },
@@ -3610,13 +3610,13 @@
       {
         "code": "M22",
         "name": "Fast Fashion Environmental Impact",
-        "explanation": "production eliminating waste and dramatically Impact reducing the water, chemical and carbon intensity of clothing. +: : : :+: :+ 💼 Supply Chain Diversification Economy 50 &"
+        "explanation": "A circular fashion economy closes the loop on production — eliminating waste and dramatically reducing the water, chemical and carbon intensity of clothing."
       }
     ]
   },
   {
     "id": "I-106",
-    "name": "Supply Chain",
+    "name": "Supply Chain Diversification",
     "categoryLabel": "Economy & Finance",
     "categoryId": "economy",
     "categoryEmoji": "💼",
@@ -3643,7 +3643,7 @@
       {
         "code": "M40",
         "name": "Food Price Spike",
-        "explanation": "failure, making businesses more resilient to climate-driven disruptions at any one geographic location. +: : : :+: :+ 💼 Local Production Economy 40 &"
+        "explanation": "Diversified supply chains reduce single points of failure, making businesses more resilient to climate-driven disruptions at any one geographic location."
       }
     ]
   },
@@ -3676,7 +3676,7 @@
       {
         "code": "M40",
         "name": "Food Price Spike",
-        "explanation": "reduces climate exposure across the supply chain, maintaining availability of critical goods during disruption events. +: : : :+: :+ 💼 Climate Risk Insurance Economy 45 &"
+        "explanation": "Localised production shortens supply lines and reduces climate exposure across the supply chain, maintaining availability of critical goods during disruption events."
       }
     ]
   },
@@ -3709,7 +3709,7 @@
       {
         "code": "M40",
         "name": "Food Price Spike",
-        "explanation": "climate disruptions, reducing the cascading economic effects when events disrupt critical supply networks. +: : : :+: :+ 💼 Public Insurance Schemes Economy 50 &"
+        "explanation": "Insurance enables faster business recovery after climate disruptions, reducing the cascading economic effects when events disrupt critical supply networks."
       }
     ]
   },
@@ -3742,7 +3742,7 @@
       {
         "code": "M41",
         "name": "Public Health Emergency",
-        "explanation": "private insurers withdraw from high-risk zones, preventing households and businesses from being left entirely without financial protection. +: : : :+: :+ 💼 Risk Disclosure Rules Economy 40 &"
+        "explanation": "Public insurance fills the market gap when private insurers withdraw from high-risk zones, preventing households and businesses from being left entirely without financial protection."
       }
     ]
   },
@@ -3775,7 +3775,7 @@
       {
         "code": "M41",
         "name": "Public Health Emergency",
-        "explanation": "price climate risk accurately, creating early warning signals before risks become uninsurable crises. +: : : :+: :+ 💼 Climate Risk Pricing Economy 45 &"
+        "explanation": "Mandatory risk disclosure enables markets to price climate risk accurately, creating early warning signals before risks become uninsurable crises."
       }
     ]
   },
@@ -3808,7 +3808,7 @@
       {
         "code": "M41",
         "name": "Public Health Emergency",
-        "explanation": "solvency in high-risk markets and incentivises risk reduction by property owners and municipalities. +: : : :+: :+ 💼 Subsidy Programs Economy 45 &"
+        "explanation": "Accurate risk pricing helps insurers maintain solvency in high-risk markets and incentivises risk reduction by property owners and municipalities."
       }
     ]
   },
@@ -3841,7 +3841,7 @@
       {
         "code": "M31",
         "name": "Glacier Retreat",
-        "explanation": "households from the full impact of food price spikes, preventing the hunger and social unrest that follow unmitigated price increases. +: : : :+: :+ 💼 Trade Reform Economy 50 &"
+        "explanation": "Targeted food subsidies protect lower-income households from the full impact of food price spikes, preventing the hunger and social unrest that follow unmitigated price increases."
       }
     ]
   },
@@ -3874,7 +3874,7 @@
       {
         "code": "M31",
         "name": "Glacier Retreat",
-        "explanation": "supplies to flow where they are needed, dampening price spikes that result from market segmentation. +: : : :+: :+ 💼 Blue Carbon Finance Economy 45 &"
+        "explanation": "Removing trade barriers during food crises allows supplies to flow where they are needed, dampening price spikes that result from market segmentation."
       }
     ]
   },
@@ -3907,7 +3907,7 @@
       {
         "code": "M39",
         "name": "Sea Level Rise",
-        "explanation": "from standing mangroves, making their preservation financially competitive with conversion to shrimp ponds or coastal development. +: : : :+: :+ 💼 Climate Risk Finance Economy 60 &"
+        "explanation": "Carbon finance creates sustainable economic value from standing mangroves, making their preservation financially competitive with conversion to shrimp ponds or coastal development."
       }
     ]
   },
@@ -3940,7 +3940,7 @@
       {
         "code": "M51",
         "name": "Economic Instability",
-        "explanation": "amplification of physical climate losses into financial system failure, containing contagion from climate events. +: : : :+: :+ 💼 Just Transition Economy 55 &"
+        "explanation": "Systemic climate risk management prevents the amplification of physical climate losses into financial system failure, containing contagion from climate events."
       }
     ]
   },
@@ -3973,7 +3973,7 @@
       {
         "code": "M51",
         "name": "Economic Instability",
-        "explanation": "instability that rapid economic restructuring causes, maintaining the political support base needed for continued climate action. +: : : :+: :+ 💼 Green New Deal Economy 70 &"
+        "explanation": "Just transition prevents the social and political instability that rapid economic restructuring causes, maintaining the political support base needed for continued climate action."
       }
     ]
   },
@@ -4006,13 +4006,13 @@
       {
         "code": "M51",
         "name": "Economic Instability",
-        "explanation": "in clean industries, replacing the stranded asset losses from fossil fuel phase-out with new job-creating investment. +: :+ ⚖️ Society & Governance 33 interventions in this category +: : : :+: :+ ⚖️ Public Awareness Campaign Society & 25 Governance"
+        "explanation": "A Green New Deal creates new economic foundations in clean industries, replacing the stranded asset losses from fossil fuel phase-out with new job-creating investment."
       }
     ]
   },
   {
     "id": "I-118",
-    "name": "Public Awareness",
+    "name": "Public Awareness Campaign",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -4039,7 +4039,7 @@
       {
         "code": "M02",
         "name": "Extreme Heatwave",
-        "explanation": "during heatwaves knowing to avoid sun exposure, stay hydrated and check on vulnerable neighbours reduces casualties. +: : : :+: :+ ⚖️ Off-Grid Solar Society & 35 Governance"
+        "explanation": "Public awareness enables protective behaviour during heatwaves — knowing to avoid sun exposure, stay hydrated and check on vulnerable neighbours reduces casualties."
       }
     ]
   },
@@ -4072,7 +4072,7 @@
       {
         "code": "M13",
         "name": "Energy Access Inequality",
-        "explanation": "communities beyond the grid, enabling lighting, phone charging and powering basic health and education services. +: : : :+: :+ ⚖️ Energy Subsidy Policy Society & 40 Governance"
+        "explanation": "Off-grid solar directly provides electricity to communities beyond the grid, enabling lighting, phone charging and powering basic health and education services."
       }
     ]
   },
@@ -4105,7 +4105,7 @@
       {
         "code": "M13",
         "name": "Energy Access Inequality",
-        "explanation": "electricity access for low-income households, enabling clean energy adoption that wouldn\\'t occur at market prices. +: : : :+: :+ ⚖️ Community Microgrids Society & 45 Governance"
+        "explanation": "Energy subsidies reduce the cost barrier to electricity access for low-income households, enabling clean energy adoption that wouldn't occur at market prices."
       }
     ]
   },
@@ -4138,7 +4138,7 @@
       {
         "code": "M13",
         "name": "Energy Access Inequality",
-        "explanation": "community scale, enabling energy-poor communities to leapfrog centralised grid infrastructure entirely. +: : : :+: :+ ⚖️ Climate Education Society & 30 Governance"
+        "explanation": "Community microgrids provide electricity at community scale, enabling energy-poor communities to leapfrog centralised grid infrastructure entirely."
       }
     ]
   },
@@ -4171,13 +4171,13 @@
       {
         "code": "M14",
         "name": "Youth Climate Anxiety",
-        "explanation": "young people with knowledge and skills for climate action are more resilient to climate grief and more motivated to act. +: : : :+: :+ ⚖️ Youth Leadership Programs Society & 30 Governance"
+        "explanation": "Education transforms anxiety into informed agency — young people with knowledge and skills for climate action are more resilient to climate grief and more motivated to act."
       }
     ]
   },
   {
     "id": "I-123",
-    "name": "Youth Leadership",
+    "name": "Youth Leadership Programs",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -4204,7 +4204,7 @@
       {
         "code": "M14",
         "name": "Youth Climate Anxiety",
-        "explanation": "active engagement youth with agency and community connection show better mental health outcomes alongside greater climate impact. +: : : :+: :+ ⚖️ Community Action Spaces Society & 25 Governance"
+        "explanation": "Leadership pathways convert passive anxiety into active engagement — youth with agency and community connection show better mental health outcomes alongside greater climate impact."
       }
     ]
   },
@@ -4237,7 +4237,7 @@
       {
         "code": "M14",
         "name": "Youth Climate Anxiety",
-        "explanation": "amplifies climate anxiety connecting young people with peers, mentors and action networks transforms individual despair into collective purpose. +: : : :+: :+ ⚖️ Citizens Assembly Society & 35 Governance"
+        "explanation": "Community spaces reduce the isolation that amplifies climate anxiety — connecting young people with peers, mentors and action networks transforms individual despair into collective purpose."
       }
     ]
   },
@@ -4270,7 +4270,7 @@
       {
         "code": "M19",
         "name": "Climate Policy Inaction",
-        "explanation": "building public consensus outside the political system their recommendations carry democratic legitimacy that enables bolder policy. +: : : :+: :+ ⚖️ Carbon Legislation Society & 55 Governance"
+        "explanation": "Citizens Assemblies bypass partisan gridlock by building public consensus outside the political system — their recommendations carry democratic legitimacy that enables bolder policy."
       }
     ]
   },
@@ -4303,13 +4303,13 @@
       {
         "code": "M19",
         "name": "Climate Policy Inaction",
-        "explanation": "act, removing the discretion that allows short-term political interests to override climate commitments. +: : : :+: :+ ⚖️ International Climate Pacts Society & 60 Governance"
+        "explanation": "Binding legislation creates a legal obligation to act, removing the discretion that allows short-term political interests to override climate commitments."
       }
     ]
   },
   {
     "id": "I-127",
-    "name": "International Climate",
+    "name": "International Climate Pacts",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -4336,7 +4336,7 @@
       {
         "code": "M19",
         "name": "Climate Policy Inaction",
-        "explanation": "accountability and domestic political pressure that is harder to ignore than purely domestic policy debates. +: : : :+: :+ ⚖️ Climate Curriculum Society & 30 Governance"
+        "explanation": "International commitments create peer accountability and domestic political pressure that is harder to ignore than purely domestic policy debates."
       }
     ]
   },
@@ -4369,7 +4369,7 @@
       {
         "code": "M23",
         "name": "Climate Education Gap",
-        "explanation": "literacy across all students, regardless of school or teacher closing the inconsistent patchwork of climate education that creates the gap. +: : : :+: :+ ⚖️ Media Literacy Programs Society & 25 Governance"
+        "explanation": "Mandatory curricula ensure consistent climate literacy across all students, regardless of school or teacher — closing the inconsistent patchwork of climate education that creates the gap."
       }
     ]
   },
@@ -4403,12 +4403,12 @@
       {
         "code": "M23",
         "name": "Climate Education Gap",
-        "explanation": "misinformation vulnerability that climate education gaps create, building the critical thinking needed to resist denial campaigns."
+        "explanation": "Media literacy directly addresses the misinformation vulnerability that climate education gaps create, building the critical thinking needed to resist denial campaigns."
       },
       {
         "code": "M28",
         "name": "Climate Misinformation Spread",
-        "explanation": "resistant to algorithmic misinformation, reducing Spread the virality of climate denial content. +: : : :+: :+ ⚖️ Community Dialogues Society & 20 Governance"
+        "explanation": "Populations with media literacy skills are resistant to algorithmic misinformation, reducing the virality of climate denial content."
       }
     ]
   },
@@ -4441,7 +4441,7 @@
       {
         "code": "M23",
         "name": "Climate Education Gap",
-        "explanation": "connecting abstract science to community lived experience in ways that formal education cannot replicate. +: : : :+: :+ ⚖️ Fact-Checking Networks Society & 30 Governance"
+        "explanation": "Local dialogues build contextual climate literacy — connecting abstract science to community lived experience in ways that formal education cannot replicate."
       }
     ]
   },
@@ -4474,7 +4474,7 @@
       {
         "code": "M28",
         "name": "Climate Misinformation Spread",
-        "explanation": "spread rapid debunking limits the half-life Spread of viral climate denial content before it shapes public perception. +: : : :+: :+ ⚖️ Media Regulation Society & 40 Governance"
+        "explanation": "Fact-checking creates friction for misinformation spread — rapid debunking limits the half-life of viral climate denial content before it shapes public perception."
       }
     ]
   },
@@ -4507,7 +4507,7 @@
       {
         "code": "M28",
         "name": "Climate Misinformation Spread",
-        "explanation": "amplification that turns individual Spread misinformation posts into viral narratives reducing the reach and impact of climate denial. +: : : :+: :+ ⚖️ Science Communication Society & 25 Governance"
+        "explanation": "Platform regulation removes the algorithmic amplification that turns individual misinformation posts into viral narratives — reducing the reach and impact of climate denial."
       }
     ]
   },
@@ -4540,7 +4540,7 @@
       {
         "code": "M28",
         "name": "Climate Misinformation Spread",
-        "explanation": "builds the climate credibility that makes Spread populations more resistant to misinformation campaigns. +: : : :+: :+ ⚖️ Land Rights Legislation Society & 45 Governance"
+        "explanation": "Trusted scientists engaging public audiences builds the climate credibility that makes populations more resistant to misinformation campaigns."
       }
     ]
   },
@@ -4573,13 +4573,13 @@
       {
         "code": "M29",
         "name": "Loss Of Indigenous Land Rights",
-        "explanation": "that allows Indigenous communities to defend Rights their land from encroachment and continue sustainable land stewardship. +: : : :+: :+ ⚖️ Free Prior and Informed Consent Society & 35 Governance"
+        "explanation": "Legal recognition creates the security of tenure that allows Indigenous communities to defend their land from encroachment and continue sustainable land stewardship."
       }
     ]
   },
   {
     "id": "I-135",
-    "name": "Free Prior and Informed",
+    "name": "Free Prior and Informed Consent",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -4606,7 +4606,7 @@
       {
         "code": "M29",
         "name": "Loss Of Indigenous Land Rights",
-        "explanation": "extractive projects on their lands, providing a Rights practical mechanism to prevent dispossession from resource exploitation. +: : : :+: :+ ⚖️ Land Trusts Society & 35 Governance"
+        "explanation": "FPIC gives Indigenous communities veto power over extractive projects on their lands, providing a practical mechanism to prevent dispossession from resource exploitation."
       }
     ]
   },
@@ -4639,7 +4639,7 @@
       {
         "code": "M29",
         "name": "Loss Of Indigenous Land Rights",
-        "explanation": "lands from market forces that would Rights otherwise drive conversion to extractive uses. +: : : :+: :+ ⚖️ Climate Refugee Policy Society & 55 Governance"
+        "explanation": "Land trusts permanently protect community and Indigenous lands from market forces that would otherwise drive conversion to extractive uses."
       }
     ]
   },
@@ -4672,7 +4672,7 @@
       {
         "code": "M32",
         "name": "Permafrost Thaw",
-        "explanation": "rights, reducing the vulnerability that makes forced displacement so devastating for affected communities. +: : : :+: :+ ⚖️ Climate Financing Society & 60 Governance"
+        "explanation": "Legal frameworks protect climate migrants' rights, reducing the vulnerability that makes forced displacement so devastating for affected communities."
       }
     ]
   },
@@ -4705,7 +4705,7 @@
       {
         "code": "M32",
         "name": "Permafrost Thaw",
-        "explanation": "to invest in the climate resilience measures that reduce displacement pressure, addressing migration at source rather than managing flows. +: : : :+: :+ ⚖️ Health System Investment Society & 55 Governance"
+        "explanation": "Adaptation financing enables vulnerable countries to invest in the climate resilience measures that reduce displacement pressure, addressing migration at source rather than managing flows."
       }
     ]
   },
@@ -4738,13 +4738,13 @@
       {
         "code": "M47",
         "name": "Water Conflict",
-        "explanation": "impacts more beds, more trained workers, better supply chains reducing mortality and economic burden during health crises. +: : : :+: :+ ⚖️ Environmental Health Policy Society & 45 Governance"
+        "explanation": "Stronger health systems can absorb climate health impacts — more beds, more trained workers, better supply chains — reducing mortality and economic burden during health crises."
       }
     ]
   },
   {
     "id": "I-140",
-    "name": "Environmental Health",
+    "name": "Environmental Health Policy",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -4771,13 +4771,13 @@
       {
         "code": "M47",
         "name": "Water Conflict",
-        "explanation": "pollution, contamination, heat prevents climate-related health crises from arising rather than treating them after the fact. +: : : :+: :+ ⚖️ Climate Refugee Convention Society & 60 Governance"
+        "explanation": "Addressing environmental drivers of ill health — pollution, contamination, heat — prevents climate-related health crises from arising rather than treating them after the fact."
       }
     ]
   },
   {
     "id": "I-141",
-    "name": "Climate Refugee",
+    "name": "Climate Refugee Convention",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -4804,7 +4804,7 @@
       {
         "code": "M48",
         "name": "Infrastructure Failure",
-        "explanation": "from a stateless population without rights into a legally recognised group with international protection and resettlement entitlements. +: : : :+: :+ ⚖️ Managed Resettlement Society & 55 Governance"
+        "explanation": "A legal convention transforms climate refugees from a stateless population without rights into a legally recognised group with international protection and resettlement entitlements."
       }
     ]
   },
@@ -4837,7 +4837,7 @@
       {
         "code": "M48",
         "name": "Infrastructure Failure",
-        "explanation": "cohesion, cultural continuity and economic stability compared to chaotic displacement transforming a humanitarian crisis into a managed transition. +: : : :+: :+ ⚖️ International Aid Society & 50 Governance"
+        "explanation": "Planned resettlement preserves community cohesion, cultural continuity and economic stability compared to chaotic displacement — transforming a humanitarian crisis into a managed transition."
       }
     ]
   },
@@ -4870,7 +4870,7 @@
       {
         "code": "M48",
         "name": "Infrastructure Failure",
-        "explanation": "resources food, shelter, healthcare that prevent humanitarian crises from escalating into mass mortality in the wake of displacement. +: : : :+: :+ ⚖️ Rural Development Society & 45 Governance"
+        "explanation": "International aid provides the immediate resources — food, shelter, healthcare — that prevent humanitarian crises from escalating into mass mortality in the wake of displacement."
       }
     ]
   },
@@ -4903,7 +4903,7 @@
       {
         "code": "M17",
         "name": "Loss Of Traditional Farming Knowledge",
-        "explanation": "livelihood for younger generations, reducing the Knowledge outmigration that causes traditional agricultural knowledge to disappear with departing elders. +: : : :+: :+ ⚖️ Just Transition Programs Society & 55 Governance"
+        "explanation": "Rural development makes farming a viable livelihood for younger generations, reducing the outmigration that causes traditional agricultural knowledge to disappear with departing elders."
       }
     ]
   },
@@ -4936,7 +4936,7 @@
       {
         "code": "M52",
         "name": "Social Inequality",
-        "explanation": "concentration of transition costs on already-disadvantaged communities, reducing the inequality that makes climate action politically unsustainable. +: : : :+: :+ ⚖️ Universal Basic Services Society & 60 Governance"
+        "explanation": "Just transition programs prevent the concentration of transition costs on already-disadvantaged communities, reducing the inequality that makes climate action politically unsustainable."
       }
     ]
   },
@@ -4969,7 +4969,7 @@
       {
         "code": "M52",
         "name": "Social Inequality",
-        "explanation": "income, ensuring that those least responsible for climate change are not most exposed to its impacts. +: : : :+: :+ ⚖️ Climate Justice Policy Society & 55 Governance"
+        "explanation": "Universal services decouple basic wellbeing from income, ensuring that those least responsible for climate change are not most exposed to its impacts."
       }
     ]
   },
@@ -5002,7 +5002,7 @@
       {
         "code": "M52",
         "name": "Social Inequality",
-        "explanation": "resources flow to the most vulnerable rather than the most politically powerful addressing the equity dimension of climate response. +: : : :+: :+ ⚖️ Community Co-Management Society & 35 Governance"
+        "explanation": "Justice frameworks ensure that adaptation resources flow to the most vulnerable rather than the most politically powerful — addressing the equity dimension of climate response."
       }
     ]
   },
@@ -5035,7 +5035,7 @@
       {
         "code": "M49",
         "name": "Ecosystem Collapse",
-        "explanation": "incentives with long-term sustainability communities dependent on fish stocks for their livelihoods have strong motivations to prevent overexploitation. +: : : :+: :+ ⚖️ Water Diplomacy Society & 50 Governance"
+        "explanation": "Community co-management aligns stewardship incentives with long-term sustainability — communities dependent on fish stocks for their livelihoods have strong motivations to prevent overexploitation."
       }
     ]
   },
@@ -5068,13 +5068,13 @@
       {
         "code": "M50",
         "name": "Food Insecurity",
-        "explanation": "conflict over water, establishing the trust and institutional mechanisms needed for durable water sharing agreements. +: : : :+: :+ ⚖️ International Climate Cooperation Society & 65 Governance"
+        "explanation": "Diplomacy creates non-violent channels for conflict over water, establishing the trust and institutional mechanisms needed for durable water sharing agreements."
       }
     ]
   },
   {
     "id": "I-150",
-    "name": "International Climate",
+    "name": "International Climate Cooperation",
     "categoryLabel": "Society & Governance",
     "categoryId": "society",
     "categoryEmoji": "⚖",
@@ -5101,7 +5101,7 @@
       {
         "code": "M58",
         "name": "Antarctic Ice Sheet Collapse",
-        "explanation": "rapid decarbonisation needed to prevent AMOC Disruption collapse no single nation can address a planetary-scale tipping point alone. +: :+ 🤖 AI & Technology 12 interventions in this category +: : : :+: :+ 🤖 Green AI Standards AI & 45 Technology"
+        "explanation": "Global cooperation is required to achieve the rapid decarbonisation needed to prevent AMOC collapse — no single nation can address a planetary-scale tipping point alone."
       }
     ]
   },
@@ -5134,13 +5134,13 @@
       {
         "code": "M61",
         "name": "AI Energy Consumption Crisis",
-        "explanation": "training and inference, forcing the sector to run on clean energy and improve computational efficiency before scaling. +: : : :+: :+ 🤖 Renewable-Powered Data Centres AI & 50 Technology"
+        "explanation": "Mandatory standards cap the carbon intensity of AI training and inference, forcing the sector to run on clean energy and improve computational efficiency before scaling."
       }
     ]
   },
   {
     "id": "I-152",
-    "name": "Renewable-Powered Data",
+    "name": "Renewable-Powered Data Centres",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5167,7 +5167,7 @@
       {
         "code": "M61",
         "name": "AI Energy Consumption Crisis",
-        "explanation": "fossil fuel demand enabling AI scaling without undermining renewable energy targets or stressing fossil-dependent grids. +: : : :+: :+ 🤖 AI Efficiency Mandates AI & 40 Technology"
+        "explanation": "Clean power sourcing decouples AI growth from fossil fuel demand — enabling AI scaling without undermining renewable energy targets or stressing fossil-dependent grids."
       }
     ]
   },
@@ -5200,7 +5200,7 @@
       {
         "code": "M61",
         "name": "AI Energy Consumption Crisis",
-        "explanation": "hardware innovation that reduces energy consumption per unit of AI output allowing capability to scale without proportional energy growth. +: : : :+: :+ 🤖 AI Audit Requirements AI & 40 Technology"
+        "explanation": "Efficiency mandates drive algorithmic and hardware innovation that reduces energy consumption per unit of AI output — allowing capability to scale without proportional energy growth."
       }
     ]
   },
@@ -5233,13 +5233,13 @@
       {
         "code": "M62",
         "name": "Algorithmic Greenwashing",
-        "explanation": "generated sustainability claims if the AI can be audited, fabrications can be detected and those responsible held liable. +: : : :+: :+ 🤖 ESG Verification Standards AI & 40 Technology"
+        "explanation": "Independent AI audits create accountability for AI-generated sustainability claims — if the AI can be audited, fabrications can be detected and those responsible held liable."
       }
     ]
   },
   {
     "id": "I-155",
-    "name": "ESG Verification",
+    "name": "ESG Verification Standards",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5266,13 +5266,13 @@
       {
         "code": "M62",
         "name": "Algorithmic Greenwashing",
-        "explanation": "to publish false ESG claims removing the financial incentive for algorithmic greenwashing by creating credible enforcement. +: : : :+: :+ 🤖 Digital Accountability Law AI & 45 Technology"
+        "explanation": "Mandatory verification makes it costly and risky to publish false ESG claims — removing the financial incentive for algorithmic greenwashing by creating credible enforcement."
       }
     ]
   },
   {
     "id": "I-156",
-    "name": "Digital Accountability",
+    "name": "Digital Accountability Law",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5299,13 +5299,13 @@
       {
         "code": "M62",
         "name": "Algorithmic Greenwashing",
-        "explanation": "friction for AI-enabled greenwashing investors and regulators can identify AI-generated claims and apply heightened scrutiny. +: : : :+: :+ 🤖 AI Impact Assessment Mandates AI & 45 Technology"
+        "explanation": "Labelling and liability requirements create friction for AI-enabled greenwashing — investors and regulators can identify AI-generated claims and apply heightened scrutiny."
       }
     ]
   },
   {
     "id": "I-157",
-    "name": "AI Impact Assessment",
+    "name": "AI Impact Assessment Mandates",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5332,7 +5332,7 @@
       {
         "code": "M63",
         "name": "AI-Driven Resource Extraction Surge",
-        "explanation": "optimised extraction deployment creates a Surge regulatory checkpoint that can halt or modify the most ecologically damaging applications. +: : : :+: :+ 🤖 Extraction Moratoriums AI & 55 Technology"
+        "explanation": "Mandatory environmental assessment before AI-optimised extraction deployment creates a regulatory checkpoint that can halt or modify the most ecologically damaging applications."
       }
     ]
   },
@@ -5365,13 +5365,13 @@
       {
         "code": "M63",
         "name": "AI-Driven Resource Extraction Surge",
-        "explanation": "marginal reserves that AI optimisation has made Surge accessible, halting the rebound effect at source. +: : : :+: :+ 🤖 Nature-Positive AI Policy AI & 45 Technology"
+        "explanation": "Moratoriums directly prevent the exploitation of marginal reserves that AI optimisation has made accessible, halting the rebound effect at source."
       }
     ]
   },
   {
     "id": "I-159",
-    "name": "Nature-Positive AI",
+    "name": "Nature-Positive AI Policy",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5398,7 +5398,7 @@
       {
         "code": "M63",
         "name": "AI-Driven Resource Extraction Surge",
-        "explanation": "systems prevent optimisation for purely economic Surge extraction metrics ecological values become inbuilt decision constraints rather than afterthoughts. +: : : :+: :+ 🤖 Ecological AI Audits AI & 40 Technology"
+        "explanation": "Nature-positive constraints embedded in AI systems prevent optimisation for purely economic extraction metrics — ecological values become inbuilt decision constraints rather than afterthoughts."
       }
     ]
   },
@@ -5431,13 +5431,13 @@
       {
         "code": "M64",
         "name": "Autonomous Systems & Ecological Blind Spots",
-        "explanation": "that autonomous systems create the first step Blind Spots to correcting blind spots is visibility into what the system is actually doing to ecosystems. +: : : :+: :+ 🤖 Nature-Inclusive Algorithm Design AI & 40 Technology"
+        "explanation": "Ecological audits surface the unintended impacts that autonomous systems create — the first step to correcting blind spots is visibility into what the system is actually doing to ecosystems."
       }
     ]
   },
   {
     "id": "I-161",
-    "name": "Nature-Inclusive",
+    "name": "Nature-Inclusive Algorithm Design",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5464,13 +5464,13 @@
       {
         "code": "M64",
         "name": "Autonomous Systems & Ecological Blind Spots",
-        "explanation": "training removes the fundamental blind spot Blind Spots systems trained on ecological value can\\'t make decisions that systematically ignore it. +: : : :+: :+ 🤖 AI Environmental Impact Assessment AI & 35 Technology"
+        "explanation": "Embedding ecological data and constraints into AI training removes the fundamental blind spot — systems trained on ecological value can't make decisions that systematically ignore it."
       }
     ]
   },
   {
     "id": "I-162",
-    "name": "AI Environmental Impact",
+    "name": "AI Environmental Impact Assessment",
     "categoryLabel": "AI & Technology",
     "categoryId": "ai",
     "categoryEmoji": "🤖",
@@ -5497,13 +5497,13 @@
       {
         "code": "M64",
         "name": "Autonomous Systems & Ecological Blind Spots",
-        "explanation": "into the ecological consequences of AI deployment Blind Spots decisions enabling regulators and developers to address harms before they become entrenched. +: :+ 🌍 Systemic & Global 14 interventions in this category +: : : :+: :+ 🌍 Open-Source Climate AI Verification Systemic 60 & Global"
+        "explanation": "Systematic impact assessment creates visibility into the ecological consequences of AI deployment decisions — enabling regulators and developers to address harms before they become entrenched."
       }
     ]
   },
   {
     "id": "I-163",
-    "name": "Open-Source Climate AI",
+    "name": "Open-Source Climate AI Verification",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5530,13 +5530,13 @@
       {
         "code": "M65",
         "name": "AI Climate Model Manipulation",
-        "explanation": "tamper-resistant system for detecting model poisoning adversarial attacks become visible before they corrupt global climate consensus. +: : : :+: :+ 🌍 International AI Security Treaty Systemic 70 & Global"
+        "explanation": "Open-source verification creates a distributed, tamper-resistant system for detecting model poisoning — adversarial attacks become visible before they corrupt global climate consensus."
       }
     ]
   },
   {
     "id": "I-164",
-    "name": "International AI",
+    "name": "International AI Security Treaty",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5563,13 +5563,13 @@
       {
         "code": "M65",
         "name": "AI Climate Model Manipulation",
-        "explanation": "and deterrence against adversarial AI attacks on climate science making model manipulation a sanctionable act under international law. +: : : :+: :+ 🌍 Federated Model Integrity Protocols Systemic 55 & Global"
+        "explanation": "A treaty creates international legal prohibition and deterrence against adversarial AI attacks on climate science — making model manipulation a sanctionable act under international law."
       }
     ]
   },
   {
     "id": "I-165",
-    "name": "Federated Model",
+    "name": "Federated Model Integrity Protocols",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5596,13 +5596,13 @@
       {
         "code": "M65",
         "name": "AI Climate Model Manipulation",
-        "explanation": "mathematically detectable when model inputs or outputs have been manipulated creating security at the algorithmic level. +: : : :+: :+ 🌍 Open AI for Climate Commons Systemic 60 & Global"
+        "explanation": "Technical integrity protocols make it mathematically detectable when model inputs or outputs have been manipulated — creating security at the algorithmic level."
       }
     ]
   },
   {
     "id": "I-166",
-    "name": "Open AI for Climate",
+    "name": "Open AI for Climate Commons",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5629,13 +5629,13 @@
       {
         "code": "M66",
         "name": "AI-Accelerated Inequality in Climate Adaptation",
-        "explanation": "communities and countries without the resources Adaptation to develop proprietary AI can access the same Inequality adaptation intelligence as wealthy nations. +: : : :+: :+ 🌍 Technology Transfer Mandates Systemic 60 & Global"
+        "explanation": "Open-access AI tools level the playing field — communities and countries without the resources to develop proprietary AI can access the same adaptation intelligence as wealthy nations."
       }
     ]
   },
   {
     "id": "I-167",
-    "name": "Technology Transfer",
+    "name": "Technology Transfer Mandates",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5662,13 +5662,13 @@
       {
         "code": "M66",
         "name": "AI-Accelerated Inequality in Climate Adaptation",
-        "explanation": "the access gap requiring the most AI-capable Adaptation actors to share their tools with those who need Inequality them most but can least afford them. +: : : :+: :+ 🌍 Global South AI Capacity Programmes Systemic 55 & Global"
+        "explanation": "Mandatory technology transfer directly addresses the access gap — requiring the most AI-capable actors to share their tools with those who need them most but can least afford them."
       }
     ]
   },
   {
     "id": "I-168",
-    "name": "Global South AI Capacity",
+    "name": "Global South AI Capacity Programmes",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5695,13 +5695,13 @@
       {
         "code": "M66",
         "name": "AI-Accelerated Inequality in Climate Adaptation",
-        "explanation": "in vulnerable nations rather than dependency Adaptation on foreign tools, communities develop AI adapted Inequality to their specific contexts and needs. +: : : :+: :+ 🌍 Climate Refugee Convention Systemic 65 & Global"
+        "explanation": "Capacity building creates sovereign AI capability in vulnerable nations — rather than dependency on foreign tools, communities develop AI adapted to their specific contexts and needs."
       }
     ]
   },
   {
     "id": "I-169",
-    "name": "Climate Refugee",
+    "name": "Climate Refugee Convention",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5728,13 +5728,13 @@
       {
         "code": "M48",
         "name": "Infrastructure Failure",
-        "explanation": "enforceable rights to protection, non-refoulement and resettlement assistance transforming a legal void into a framework for dignified transition. +: : : :+: :+ 🌍 Global Emergency Cooperation Systemic 80 & Global"
+        "explanation": "Legal convention status gives climate refugees enforceable rights to protection, non-refoulement and resettlement assistance — transforming a legal void into a framework for dignified transition."
       }
     ]
   },
   {
     "id": "I-170",
-    "name": "Global Emergency",
+    "name": "Global Emergency Cooperation",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5761,7 +5761,7 @@
       {
         "code": "M59",
         "name": "Resource Conflict",
-        "explanation": "mechanism capable of coordinating response to simultaneous crises across multiple systems national responses are individually insufficient. +: : : :+: :+ 🌍 Climate Resilience Fund Systemic 70 & Global"
+        "explanation": "Global emergency cooperation is the only mechanism capable of coordinating response to simultaneous crises across multiple systems — national responses are individually insufficient."
       }
     ]
   },
@@ -5794,7 +5794,7 @@
       {
         "code": "M59",
         "name": "Resource Conflict",
-        "explanation": "response to cascading crises before they compound speed of financial response is critical when multiple hazards strike simultaneously. +: : : :+: :+ 🌍 Systemic Transformation Systemic 90 & Global"
+        "explanation": "A pre-capitalised resilience fund enables rapid response to cascading crises before they compound — speed of financial response is critical when multiple hazards strike simultaneously."
       }
     ]
   },
@@ -5827,7 +5827,7 @@
       {
         "code": "M59",
         "name": "Resource Conflict",
-        "explanation": "of environmental crisis can prevent cascading failures from recurring symptom management cannot address fundamental system dysfunction. +: : : :+: :+ 🌍 Global Governance Reform Systemic 80 & Global"
+        "explanation": "Only systemic transformation of the root causes of environmental crisis can prevent cascading failures from recurring — symptom management cannot address fundamental system dysfunction."
       }
     ]
   },
@@ -5860,7 +5860,7 @@
       {
         "code": "M60",
         "name": "Planetary Boundaries Breach",
-        "explanation": "institutions coordinating global economic activity are aligned with rather than working against planetary boundaries. +: : : :+: :+ 🌍 Planetary Stewardship Systemic 90 & Global"
+        "explanation": "Governance reform ensures that the international institutions coordinating global economic activity are aligned with — rather than working against — planetary boundaries."
       }
     ]
   },
@@ -5893,13 +5893,13 @@
       {
         "code": "M60",
         "name": "Planetary Boundaries Breach",
-        "explanation": "intervention redesigning human civilisation to fit within Earth\\'s safe operating space rather than continuously testing and exceeding its limits. +: : : :+: :+ 🌍 Full System Transformation Systemic 100 & Global"
+        "explanation": "Planetary stewardship is the ultimate intervention — redesigning human civilisation to fit within Earth's safe operating space rather than continuously testing and exceeding its limits."
       }
     ]
   },
   {
     "id": "I-175",
-    "name": "Full System",
+    "name": "Full System Transformation",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5926,13 +5926,13 @@
       {
         "code": "M60",
         "name": "Planetary Boundaries Breach",
-        "explanation": "permanently resolving the Planetary Boundaries Breach incremental improvements within the existing system cannot address a systemic failure of civilisation\\'s relationship with Earth. +: : : :+: :+ 🌍 International Climate Pact Systemic 70 & Global"
+        "explanation": "Full system transformation is the only path to permanently resolving the Planetary Boundaries Breach — incremental improvements within the existing system cannot address a systemic failure of civilisation's relationship with Earth."
       }
     ]
   },
   {
     "id": "I-176",
-    "name": "Urban Cooling (Heat",
+    "name": "Urban Cooling (Heat Safety)",
     "categoryLabel": "Cities & Infrastructure",
     "categoryId": "cities",
     "categoryEmoji": "🏙",
@@ -5959,13 +5959,13 @@
       {
         "code": "M21",
         "name": "Heat Stress On Workers",
-        "explanation": "on Workers directly reduce the thermal load on workers the difference between safe and dangerous work conditions during heatwaves. +: :+ 💼 Economy & Finance 22 interventions in this category +: : : :+: :+ 💼 ESG Reporting Mandates Economy 40 &"
+        "explanation": "Cooling solutions in outdoor work environments directly reduce the thermal load on workers — the difference between safe and dangerous work conditions during heatwaves."
       }
     ]
   },
   {
     "id": "I-177",
-    "name": "International Climate",
+    "name": "International Climate Pact",
     "categoryLabel": "Systemic & Global",
     "categoryId": "systemic",
     "categoryEmoji": "🌍",
@@ -5992,7 +5992,7 @@
       {
         "code": "M56",
         "name": "Methane Surge",
-        "explanation": "all major emitters toward emergency-level action is the prerequisite for the emission cuts needed to prevent tipping point activation."
+        "explanation": "A binding international climate pact that aligns all major emitters toward emergency-level action is the prerequisite for the emission cuts needed to prevent tipping point activation."
       }
     ]
   }
