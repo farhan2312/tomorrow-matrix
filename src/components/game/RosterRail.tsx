@@ -49,14 +49,22 @@ export function RosterRail() {
           <ul className="space-y-1.5">
             {players.map((p) => {
               const r = ROLES.find((x) => x.id === p.role);
+              const isMe = p.client_id === getClientId();
               return (
-                <li key={p.id} className="flex items-center gap-2 rounded-lg bg-background p-1.5">
+                <li
+                  key={p.id}
+                  className={cn(
+                    "flex items-center gap-2 rounded-lg p-1.5",
+                    isMe ? "bg-[color:var(--terra-soft)] ring-1 ring-[color:var(--terra)]/40" : "bg-background",
+                  )}
+                >
                   <div className="grid h-7 w-7 place-items-center rounded-full bg-[color:var(--terra-soft)] text-[10px] font-semibold text-[color:var(--terra-deep)]">
                     {p.name.slice(0, 2).toUpperCase()}
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1 truncate text-xs font-medium">
                       {p.name}
+                      {isMe && <span className="text-[10px] font-semibold text-[color:var(--terra-deep)]">(you)</span>}
                       {p.is_host && <Crown className="h-3 w-3 text-[color:var(--warmth)]" />}
                     </div>
                     <div className="truncate text-[10px] text-muted-foreground">{r?.name ?? "-"}</div>
@@ -86,12 +94,13 @@ export function MultiplayerBridge() {
         if (id && !game.solvedMysteries.includes(id)) {
           const attempts = ((e.payload as { attempts?: number }).attempts) ?? 1;
           const hintsUsed = ((e.payload as { hintsUsed?: number }).hintsUsed) ?? 0;
-          game.solveMystery(id, attempts, hintsUsed);
+          // Teammate's solve: sync the shared board only, no CAP/XP/promotion for me.
+          game.solveMystery(id, attempts, hintsUsed, { remote: true });
         }
       }
       if (e.kind === "intervention_bought") {
         const id = (e.payload as { interventionId?: string }).interventionId;
-        if (id && !game.purchasedInterventions.includes(id)) game.buyIntervention(id);
+        if (id && !game.purchasedInterventions.includes(id)) game.buyIntervention(id, { remote: true });
       }
       if (e.kind === "crisis_injected") {
         const id = (e.payload as { crisisId?: string }).crisisId;

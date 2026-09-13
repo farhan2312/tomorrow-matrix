@@ -201,8 +201,11 @@ export interface GameState {
   setRole: (role: RoleId) => void;
   setMode: (mode: GameMode) => void;
   setAiTeam: (team: AiTeammate[]) => void;
-  solveMystery: (id: string, attempts?: number, hintsUsed?: number) => SolveRecord | null;
-  buyIntervention: (id: string) => void;
+  /** `opts.remote` = another player solved it in multiplayer: sync the shared
+   *  board (solved list, indicators, Terra) but don't credit this player with
+   *  CAP, XP, challenges or a promotion. */
+  solveMystery: (id: string, attempts?: number, hintsUsed?: number, opts?: { remote?: boolean }) => SolveRecord | null;
+  buyIntervention: (id: string, opts?: { remote?: boolean }) => void;
   triggerCrisis: (id?: string) => void;
   dismissCrisis: () => void;
   resolveCrisis: (id: string, choiceId: string, responseMs?: number) => void;
@@ -493,9 +496,10 @@ export const useGame = create<GameState>()(
       setMode: (mode) => set({ mode }),
       setAiTeam: (aiTeam) => set({ aiTeam }),
 
-      solveMystery: (id, attempts = 1, hintsUsed = 0) => {
+      solveMystery: (id, attempts = 1, hintsUsed = 0, opts) => {
         const m = MYSTERIES.find((x) => x.id === id);
         if (!m || get().solvedMysteries.includes(id)) return null;
+        const remote = !!opts?.remote;
         const s = get();
         const prevCap = s.cap;
         const { base, total } = computePayout(attempts, hintsUsed);
@@ -510,7 +514,8 @@ export const useGame = create<GameState>()(
         const nextSolved = [...s.solvedMysteries, id];
 
         // Library trigger: every 4 solves evaluate; library-aware picker handles weighting.
-        const shouldTriggerCrisis = nextSolved.length % 4 === 0 && !s.pendingCrisisId;
+        // Skip for remote solves so each client doesn't independently fire crises.
+        const shouldTriggerCrisis = !remote && nextSolved.length % 4 === 0 && !s.pendingCrisisId;
         const newCrisisId = shouldTriggerCrisis
           ? pickCrisis({ ...s, solvedMysteries: nextSolved } as GameState)
           : s.pendingCrisisId;
@@ -539,8 +544,8 @@ export const useGame = create<GameState>()(
         const roleLabel = roleRelationship(s.role, m) === "primary" ? " ★ Primary role bonus" : "";
         set({
           solvedMysteries: nextSolved,
-          solveRecords: [...s.solveRecords, record],
-          cap: s.cap + grand,
+          solveRecords: remote ? s.solveRecords : [...s.solveRecords, record],
+          cap: remote ? s.cap : s.cap + grand,
           indicators: indicatorsAfter,
           planetHealth: planetAfter,
           nodes: [...s.nodes, newNode],
@@ -551,7 +556,7 @@ export const useGame = create<GameState>()(
             : s.crisisStats,
           mysteriesSinceLastMission: s.mysteriesSinceLastMission + 1,
           indicatorLog: [...changes, ...s.indicatorLog].slice(0, 200),
-          lastMysteryDelta: {
+          lastMysteryDelta: remote ? s.lastMysteryDelta : {
             mysteryId: id, mysteryTitle: m.title,
             capDelta: grand,
             planetBefore, planetAfter,
@@ -559,10 +564,18 @@ export const useGame = create<GameState>()(
             reasonByKey: { planet: reason, [m.category]: reason } as MysteryDelta["reasonByKey"],
           },
           feed: [
-            { id: `f${Date.now()}`, text: `Mystery solved: ${m.title} (+${grand} CAP${roleLabel})`, tone: "good" as const, ts: Date.now() },
+            {
+              id: `f${Date.now()}`,
+              text: remote ? `Teammate solved: ${m.title}` : `Mystery solved: ${m.title} (+${grand} CAP${roleLabel})`,
+              tone: "good" as const, ts: Date.now(),
+            },
             ...s.feed,
           ].slice(0, 30),
         });
+
+        // Remote (teammate's) solve: the shared board is now synced; the personal
+        // rewards below belong to the solver, so stop here.
+        if (remote) return record;
 
         // Solving the puzzle permanently unlocks the explanatory video.
         get().markExplainerUnlocked(id, "solve");
@@ -668,11 +681,14 @@ export const useGame = create<GameState>()(
       setAutoplayIntro: (on) => set({ autoplayIntro: on }),
 
 
-      buyIntervention: (id) => {
+      buyIntervention: (id, opts) => {
         const i = INTERVENTIONS.find((x) => x.id === id);
         const s = get();
+        const remote = !!opts?.remote;
         const prevCap = s.cap;
-        if (!i || s.cap < i.cost || s.purchasedInterventions.includes(id)) return;
+        // A teammate's purchase syncs the shared board but costs this player nothing;
+        // only a local purchase requires (and spends) this player's CAP.
+        if (!i || s.purchasedInterventions.includes(id) || (!remote && s.cap < i.cost)) return;
         const before = { ...s.indicators };
         const ind = { ...s.indicators };
         (Object.keys(i.effects) as IndicatorKey[]).forEach((k) => {
@@ -702,7 +718,7 @@ export const useGame = create<GameState>()(
         });
         const newNode: NetworkNode = { id: `i-${id}`, label: i.name, group: "economy" };
         set({
-          cap: s.cap - i.cost,
+          cap: remote ? s.cap : s.cap - i.cost,
           indicators: ind,
           planetHealth: planetAfter,
           purchasedInterventions: [...s.purchasedInterventions, id],
@@ -714,6 +730,7 @@ export const useGame = create<GameState>()(
             ...s.feed,
           ].slice(0, 30),
         });
+        if (remote) return; // teammate's purchase: no personal mission/promotion effects
         applyMissionProgress(get, set);
         checkPromotion(get, set, prevCap);
       },
