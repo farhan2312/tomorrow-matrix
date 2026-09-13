@@ -122,37 +122,42 @@ function LobbyIndex() {
             </button>
           </div>
 
-          {!isFacilitator && (
-            <div className="surface-card p-6">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">Join code</div>
-              <input
-                value={code}
-                onChange={(e) => setCode(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6))}
-                placeholder="ABCD23"
-                className="mt-2 w-full rounded-xl border border-border bg-background px-3 py-2 font-mono text-lg tracking-[0.3em] outline-none focus:border-[color:var(--terra)]"
-              />
-              <button
-                onClick={handleJoin}
-                disabled={code.length < 4 || !name.trim() || busy !== null}
-                className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-medium hover:border-[color:var(--terra)] disabled:opacity-60"
-              >
-                <LogIn className="h-4 w-4" /> {busy === "join" ? "Joining…" : "Join session"}
-              </button>
+          <div className="surface-card p-6">
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">
+              {isFacilitator ? "Joining a workshop? Enter the code" : "Join code"}
             </div>
-          )}
-
-          {isFacilitator && (
-            <div className="surface-card flex flex-col justify-center gap-2 p-6">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">How it works</div>
-              <ol className="space-y-2 text-sm text-muted-foreground">
-                <li>1. Open the facilitator console.</li>
-                <li>2. Share the 6-character code with participants.</li>
-                <li>3. Players join at <span className="font-mono">/lobby</span> and pick stakeholder roles.</li>
-                <li>4. Pace the session: pause, inject crises, end on time.</li>
-              </ol>
-            </div>
-          )}
+            <input
+              value={code}
+              onChange={(e) => setCode(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6))}
+              placeholder="ABCD23"
+              className="mt-2 w-full rounded-xl border border-border bg-background px-3 py-2 font-mono text-lg tracking-[0.3em] outline-none focus:border-[color:var(--terra)]"
+            />
+            <button
+              onClick={handleJoin}
+              disabled={code.length < 4 || !name.trim() || busy !== null}
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-medium hover:border-[color:var(--terra)] disabled:opacity-60"
+            >
+              <LogIn className="h-4 w-4" /> {busy === "join" ? "Joining…" : (isFacilitator ? "Join workshop" : "Join session")}
+            </button>
+            {isFacilitator && (
+              <p className="mt-3 text-xs text-muted-foreground">
+                Participants: enter the facilitator's code here to join from a laptop. The facilitator uses <b>Create workshop</b>.
+              </p>
+            )}
+          </div>
         </div>
+
+        {isFacilitator && (
+          <div className="surface-card mt-5 p-5">
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">How it works</div>
+            <ol className="mt-2 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
+              <li>1. The facilitator clicks <b>Create workshop</b> to open the console.</li>
+              <li>2. Share the 6-character code (or QR) with participants.</li>
+              <li>3. Participants join here with the code, or scan the QR, then pick stakeholder roles.</li>
+              <li>4. Pace the session: pause, inject crises, end on time.</li>
+            </ol>
+          </div>
+        )}
 
         {error && <div className="mt-4 rounded-xl border border-[color:var(--warmth)]/30 bg-[color:var(--warmth-soft)] p-3 text-sm">{error}</div>}
       </section>
