@@ -260,9 +260,9 @@
         "kind": "fill",
         "prompt": "The scientific study of the distribution and abundance of living organisms is called ______.",
         "accept": [
-          "ecology # matching"
+          "ecology"
         ],
-        "answerText": "ecology # Matching",
+        "answerText": "ecology",
         "phase": 2,
         "num": 21,
         "id": "scientist-21"
@@ -809,9 +809,9 @@
         "kind": "fill",
         "prompt": "The process of plants losing water vapor through their leaves is called ______.",
         "accept": [
-          "transpiration ### matching"
+          "transpiration"
         ],
-        "answerText": "transpiration ### Matching",
+        "answerText": "transpiration",
         "phase": 2,
         "num": 21,
         "id": "farmer-21"
@@ -1351,9 +1351,9 @@
         "kind": "fill",
         "prompt": "The relocation of people and infrastructure away from high-risk areas (like coastlines) is known as managed __________.",
         "accept": [
-          "retreat ### matching"
+          "retreat"
         ],
-        "answerText": "retreat ### Matching",
+        "answerText": "retreat",
         "phase": 2,
         "num": 21,
         "id": "planner-21"
@@ -2433,9 +2433,9 @@
         "kind": "fill",
         "prompt": "Rules created and enforced by government bodies to manage behavior or industry are called ________.",
         "accept": [
-          "regulations ### matching"
+          "regulations"
         ],
-        "answerText": "regulations ### Matching",
+        "answerText": "regulations",
         "phase": 2,
         "num": 21,
         "id": "policymaker-21"
@@ -2977,9 +2977,9 @@
         "kind": "fill",
         "prompt": "A business's plan for managing financial exposure to climate-related risks is called climate risk __________.",
         "accept": [
-          "management (or pricing) ### matching"
+          "management (or pricing)"
         ],
-        "answerText": "management (or pricing) ### Matching",
+        "answerText": "management (or pricing)",
         "phase": 2,
         "num": 21,
         "id": "business-21"
@@ -3520,9 +3520,9 @@
         "kind": "fill",
         "prompt": "Traditional rights held by indigenous communities over their ancestral lands are called indigenous land ________.",
         "accept": [
-          "rights ### matching"
+          "rights"
         ],
-        "answerText": "rights ### Matching",
+        "answerText": "rights",
         "phase": 2,
         "num": 21,
         "id": "citizen-21"
