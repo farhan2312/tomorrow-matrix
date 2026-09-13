@@ -14,7 +14,7 @@
       "citizen"
     ],
     "sequence": [
-      "CO\u2082 Emissions",
+      "CO₂ Emissions",
       "Global Warming",
       "Arctic Temperature Rise",
       "Sea Ice Melt",
@@ -242,7 +242,7 @@
       "activist"
     ],
     "sequence": [
-      "CO\u2082 Emissions",
+      "CO₂ Emissions",
       "Ocean Warming",
       "Ocean Acidification",
       "Coral Stress",
@@ -440,7 +440,7 @@
     "title": "Air Pollution",
     "category": "cities",
     "categoryLabel": "Cities",
-    "brief": "Primary Roles:.",
+    "brief": "Dangerous pollution levels detected in major cities. Health impacts are increasing.",
     "primaryRoles": [
       "planner",
       "policymaker"
@@ -589,7 +589,7 @@
     "title": "Plastic Pollution In Oceans",
     "category": "oceans",
     "categoryLabel": "Oceans",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Massive accumulations of plastic waste are threatening marine life and entering the food chain.",
     "primaryRoles": [
       "activist",
       "business"
@@ -643,7 +643,7 @@
     "title": "Energy Access Inequality",
     "category": "society",
     "categoryLabel": "Society",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Millions lack reliable electricity, limiting education, health services and economic opportunity.",
     "primaryRoles": [
       "policymaker",
       "activist"
@@ -700,7 +700,7 @@
     "title": "Youth Climate Anxiety",
     "category": "society",
     "categoryLabel": "Society",
-    "brief": "Factory discharge and agricultural runoff are poisoning rivers and groundwater that communities depend on.",
+    "brief": "Students and young people worldwide report growing climate grief and mental health stress, risking disengagement.",
     "primaryRoles": [
       "student",
       "activist"
@@ -758,7 +758,7 @@
     "title": "Industrial Water Contamination",
     "category": "water",
     "categoryLabel": "Water",
-    "brief": "SUSTAINABLE BUSINESS TRANSITION.",
+    "brief": "Factory discharge and agricultural runoff are poisoning rivers and groundwater that communities depend on.",
     "primaryRoles": [
       "business",
       "policymaker"
@@ -815,7 +815,7 @@
     "title": "Sustainable Business Transition",
     "category": "economy",
     "categoryLabel": "Economy",
-    "brief": "Indigenous and generational farming wisdom is disappearing as younger generations migrate to cities, reducing agricultural resilience.",
+    "brief": "Companies face mounting pressure from investors, regulators and consumers to adopt sustainable practices, but many resist change.",
     "primaryRoles": [
       "business",
       "policymaker"
@@ -859,7 +859,7 @@
     "title": "Loss Of Traditional Farming Knowledge",
     "category": "food",
     "categoryLabel": "Food",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Indigenous and generational farming wisdom is disappearing as younger generations migrate to cities, reducing agricultural resilience.",
     "primaryRoles": [
       "farmer",
       "citizen"
@@ -914,7 +914,7 @@
     "title": "E-Waste Crisis",
     "category": "economy",
     "categoryLabel": "Economy",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Discarded electronics are piling up, releasing toxic materials and creating health hazards especially in developing countries.",
     "primaryRoles": [
       "business",
       "planner"
@@ -972,7 +972,7 @@
     "title": "Climate Policy Inaction",
     "category": "governance",
     "categoryLabel": "Governance",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Political gridlock and lobbying are blocking the climate policies needed to meet global temperature targets.",
     "primaryRoles": [
       "policymaker",
       "activist"
@@ -1029,7 +1029,7 @@
     "title": "Loss Of Urban Biodiversity",
     "category": "bio",
     "categoryLabel": "Biodiversity",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Cities are losing insects, birds and plant species as development eliminates habitats and green corridors.",
     "primaryRoles": [
       "planner",
       "scientist"
@@ -1086,7 +1086,7 @@
     "title": "Heat Stress On Workers",
     "category": "society",
     "categoryLabel": "Society",
-    "brief": "Butterfly Network.",
+    "brief": "Rising temperatures are making outdoor work dangerous. Agricultural and construction workers face life-threatening heat exposure.",
     "primaryRoles": [
       "citizen",
       "planner"
@@ -1143,7 +1143,7 @@
     "title": "Fast Fashion Environmental Impact",
     "category": "economy",
     "categoryLabel": "Economy",
-    "brief": "Linked Crisis Events:.",
+    "brief": "The clothing industry is generating enormous waste, water use and emissions through rapid production cycles.",
     "primaryRoles": [
       "business",
       "activist"
@@ -1198,7 +1198,7 @@
     "title": "Climate Education Gap",
     "category": "society",
     "categoryLabel": "Society",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Lack of climate literacy in schools and communities is slowing the public understanding needed for action.",
     "primaryRoles": [
       "student",
       "activist"
@@ -1256,7 +1256,7 @@
     "title": "Groundwater Over-Extraction",
     "category": "water",
     "categoryLabel": "Water",
-    "brief": "You design urban environments. Your mysteries focus on infrastructure, urban ecology, and liveable cities.",
+    "brief": "Farms and cities are draining underground aquifers faster than they can recharge, putting long-term water supply at risk.",
     "primaryRoles": [
       "farmer",
       "scientist"
@@ -1299,7 +1299,7 @@
     "title": "Renewable Energy Transition Barriers",
     "category": "economy",
     "categoryLabel": "Economy",
-    "brief": "Rationale:.",
+    "brief": "Despite falling costs, renewable energy adoption is being slowed by grid limitations, policy gaps and fossil fuel interests.",
     "primaryRoles": [
       "business",
       "policymaker"
@@ -1342,7 +1342,7 @@
     "title": "Urban Food Desert",
     "category": "food",
     "categoryLabel": "Food",
-    "brief": "Rationale:.",
+    "brief": "Low-income urban neighbourhoods lack access to affordable fresh food, creating health and equity crises.",
     "primaryRoles": [
       "planner",
       "citizen"
@@ -1386,7 +1386,7 @@
     "title": "Species Habitat Fragmentation",
     "category": "bio",
     "categoryLabel": "Biodiversity",
-    "brief": "Rationale:.",
+    "brief": "Roads, farms and cities are splitting wildlife habitats into isolated patches, threatening species survival.",
     "primaryRoles": [
       "scientist",
       "activist"
@@ -1429,7 +1429,7 @@
     "title": "Climate Misinformation Spread",
     "category": "governance",
     "categoryLabel": "Governance",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Social media and vested interests are amplifying climate denial, confusing the public and stalling action.",
     "primaryRoles": [
       "activist",
       "policymaker"
@@ -1487,7 +1487,7 @@
     "title": "Loss Of Indigenous Land Rights",
     "category": "society",
     "categoryLabel": "Society",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Indigenous communities are losing custodianship of lands they have sustainably managed for generations, leading to ecological damage.",
     "primaryRoles": [
       "citizen",
       "activist"
@@ -1541,7 +1541,7 @@
     "title": "Transport Emissions Lock-In",
     "category": "cities",
     "categoryLabel": "Cities",
-    "brief": "Linked Crisis Events:.",
+    "brief": "Car-dependent city planning and slow EV transition are keeping transport as a major source of emissions.",
     "primaryRoles": [
       "planner",
       "policymaker"
@@ -1596,10 +1596,10 @@
   {
     "code": "M31",
     "id": "m31",
-    "title": "Glacier Retreat",
-    "category": "water",
-    "categoryLabel": "Water",
-    "brief": "Mountain glaciers feeding major rivers are retreating, threatening downstream water supply.",
+    "title": "Food Price Spike",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Food prices are surging globally. Lower-income communities are most at risk.",
     "primaryRoles": [
       "scientist",
       "farmer"
@@ -1628,10 +1628,10 @@
   {
     "code": "M32",
     "id": "m32",
-    "title": "Permafrost Thaw",
-    "category": "climate",
-    "categoryLabel": "Climate",
-    "brief": "Thawing permafrost releases trapped methane, accelerating warming in a vicious feedback loop.",
+    "title": "Climate Migration",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Millions are being displaced by climate impacts — floods, droughts and rising seas.",
     "primaryRoles": [
       "scientist"
     ],
@@ -1662,7 +1662,7 @@
     "title": "Ocean Acidification",
     "category": "oceans",
     "categoryLabel": "Oceans",
-    "brief": "Excess CO\u2082 acidifies ocean water, dissolving shellfish and reef structures.",
+    "brief": "Rising CO₂ is making oceans more acidic, threatening shellfish, coral and marine food webs.",
     "primaryRoles": [
       "scientist",
       "business"
@@ -1691,10 +1691,10 @@
   {
     "code": "M34",
     "id": "m34",
-    "title": "Wildfire Outbreaks",
-    "category": "cities",
-    "categoryLabel": "Cities",
-    "brief": "Hotter, drier seasons expand wildfire reach into communities and carbon sinks.",
+    "title": "Glacier Retreat",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "Glaciers that supply freshwater to hundreds of millions are shrinking at record rates.",
     "primaryRoles": [
       "planner",
       "scientist"
@@ -1723,10 +1723,10 @@
   {
     "code": "M35",
     "id": "m35",
-    "title": "Reservoir Depletion",
+    "title": "Groundwater Depletion",
     "category": "water",
     "categoryLabel": "Water",
-    "brief": "Major reservoirs are dropping below operational thresholds during prolonged droughts.",
+    "brief": "Underground aquifers supplying billions of people are being drained faster than they can replenish.",
     "primaryRoles": [
       "planner",
       "farmer"
@@ -1758,7 +1758,7 @@
     "title": "Urban Heat Island",
     "category": "cities",
     "categoryLabel": "Cities",
-    "brief": "Cities trap heat through asphalt and concrete, amplifying heatwave mortality.",
+    "brief": "Cities are significantly hotter than surrounding areas, amplifying heat stress and energy demand.",
     "primaryRoles": [
       "planner",
       "policymaker"
@@ -1787,10 +1787,10 @@
   {
     "code": "M37",
     "id": "m37",
-    "title": "Land-Use Conflict",
+    "title": "Wildfire Risk",
     "category": "bio",
-    "categoryLabel": "Bio",
-    "brief": "Competing demands for land between farming, housing and conservation are escalating.",
+    "categoryLabel": "Land Use",
+    "brief": "Hotter, drier conditions are expanding wildfire seasons and increasing fire intensity.",
     "primaryRoles": [
       "farmer",
       "policymaker"
@@ -1819,10 +1819,10 @@
   {
     "code": "M38",
     "id": "m38",
-    "title": "Climate Migration",
-    "category": "society",
-    "categoryLabel": "Society",
-    "brief": "Communities displaced by drought, flood and sea rise create unprecedented migration pressure.",
+    "title": "Pollinator Loss",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "Bee and insect populations are collapsing due to pesticides, habitat loss and climate stress.",
     "primaryRoles": [
       "citizen",
       "policymaker"
@@ -1851,10 +1851,10 @@
   {
     "code": "M39",
     "id": "m39",
-    "title": "Sea Level Rise",
-    "category": "oceans",
-    "categoryLabel": "Oceans",
-    "brief": "Rising seas inundate coastal cities and erode shoreline communities.",
+    "title": "Mangrove Loss",
+    "category": "bio",
+    "categoryLabel": "Biodiversity",
+    "brief": "Coastal mangrove forests are being cleared, removing critical carbon stores and storm protection.",
     "primaryRoles": [
       "scientist",
       "planner"
@@ -1883,10 +1883,10 @@
   {
     "code": "M40",
     "id": "m40",
-    "title": "Food Price Spike",
+    "title": "Supply Chain Disruption",
     "category": "economy",
     "categoryLabel": "Economy",
-    "brief": "Shocks across breadbaskets cascade into global food price surges.",
+    "brief": "Climate events and resource shortages are breaking global supply chains, raising prices and causing shortages.",
     "primaryRoles": [
       "farmer",
       "business"
@@ -1915,10 +1915,10 @@
   {
     "code": "M41",
     "id": "m41",
-    "title": "Public Health Emergency",
-    "category": "health",
-    "categoryLabel": "Health",
-    "brief": "Heat, smoke and disease overwhelm public health systems simultaneously.",
+    "title": "AI Energy Consumption Crisis",
+    "category": "governance",
+    "categoryLabel": "Ai & Tech",
+    "brief": "The explosive growth of AI data centres is driving massive electricity demand, threatening renewable energy targets and straining national grids.",
     "primaryRoles": [
       "citizen",
       "policymaker"
@@ -1942,15 +1942,15 @@
     ],
     "success": {},
     "failure": {},
-    "tier": 3
+    "tier": 2
   },
   {
     "code": "M42",
     "id": "m42",
-    "title": "Carbon Lock-In",
-    "category": "climate",
-    "categoryLabel": "Climate",
-    "brief": "Long-lived fossil infrastructure locks in emissions for decades to come.",
+    "title": "Algorithmic Greenwashing",
+    "category": "governance",
+    "categoryLabel": "Ai & Governance",
+    "brief": "AI & SUSTAINABILITY MYSTERY   ·   This mystery explores the intersection of Artificial Intelligence and climate action.",
     "primaryRoles": [
       "business",
       "policymaker"
@@ -1974,15 +1974,15 @@
     ],
     "success": {},
     "failure": {},
-    "tier": 3
+    "tier": 2
   },
   {
     "code": "M43",
     "id": "m43",
-    "title": "Energy Security Crisis",
+    "title": "Insurance Crisis",
     "category": "economy",
     "categoryLabel": "Economy",
-    "brief": "Grid stress, fuel scarcity and price shocks destabilise national energy supply.",
+    "brief": "Insurers are withdrawing from high-risk climate zones, leaving communities financially exposed.",
     "primaryRoles": [
       "business",
       "policymaker"
@@ -2011,10 +2011,10 @@
   {
     "code": "M44",
     "id": "m44",
-    "title": "Supply Chain Disruption",
-    "category": "economy",
-    "categoryLabel": "Economy",
-    "brief": "Climate shocks ripple through globalised supply chains, breaking critical flows.",
+    "title": "Desertification",
+    "category": "bio",
+    "categoryLabel": "Land Use",
+    "brief": "Productive land is turning to desert as climate stress and poor land management combine.",
     "primaryRoles": [
       "business",
       "planner"
@@ -2043,10 +2043,10 @@
   {
     "code": "M45",
     "id": "m45",
-    "title": "Biodiversity Collapse",
+    "title": "Ecosystem Collapse",
     "category": "bio",
-    "categoryLabel": "Bio",
-    "brief": "Cumulative habitat loss triggers cascading species collapses across ecosystems.",
+    "categoryLabel": "Biodiversity",
+    "brief": "Interconnected ecological systems are failing as keystone species disappear and food webs unravel.",
     "primaryRoles": [
       "scientist",
       "activist"
@@ -2075,10 +2075,10 @@
   {
     "code": "M46",
     "id": "m46",
-    "title": "Fisheries Collapse",
-    "category": "oceans",
-    "categoryLabel": "Oceans",
-    "brief": "Overfishing combined with warming oceans collapses commercial stocks worldwide.",
+    "title": "Coastal Erosion",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Rising sea levels and intensifying storms are eating away coastlines, threatening communities and infrastructure.",
     "primaryRoles": [
       "business",
       "scientist"
@@ -2107,10 +2107,10 @@
   {
     "code": "M47",
     "id": "m47",
-    "title": "Water Conflict",
-    "category": "water",
-    "categoryLabel": "Water",
-    "brief": "Shared rivers and aquifers become flashpoints between nations under scarcity.",
+    "title": "Energy Security Crisis",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Dependence on fossil fuel imports and volatile energy markets is threatening national security and economic stability.",
     "primaryRoles": [
       "policymaker",
       "activist"
@@ -2142,7 +2142,7 @@
     "title": "Infrastructure Failure",
     "category": "cities",
     "categoryLabel": "Cities",
-    "brief": "Aging infrastructure fails under climate stress, disrupting essential services.",
+    "brief": "Ageing or climate-damaged infrastructure is breaking down, disrupting communities and economies.",
     "primaryRoles": [
       "planner",
       "business"
@@ -2171,10 +2171,10 @@
   {
     "code": "M49",
     "id": "m49",
-    "title": "Ecosystem Collapse",
-    "category": "bio",
-    "categoryLabel": "Bio",
-    "brief": "Key ecosystems pass tipping points beyond recovery, taking services with them.",
+    "title": "Public Health Emergency",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Climate-driven health crises — heatstroke, vector-borne disease, air pollution — are overwhelming health systems.",
     "primaryRoles": [
       "scientist",
       "activist"
@@ -2203,10 +2203,10 @@
   {
     "code": "M50",
     "id": "m50",
-    "title": "Food Insecurity",
-    "category": "food",
-    "categoryLabel": "Food",
-    "brief": "Persistent shortages turn into widespread food insecurity across regions.",
+    "title": "Climate Refugees",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Forced displacement from climate-impacted zones is creating one of the largest human migrations in history.",
     "primaryRoles": [
       "farmer",
       "citizen"
@@ -2235,10 +2235,10 @@
   {
     "code": "M51",
     "id": "m51",
-    "title": "Economic Instability",
-    "category": "economy",
-    "categoryLabel": "Economy",
-    "brief": "Economy.",
+    "title": "Fisheries Collapse",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "Commercial fish stocks are collapsing under the combined pressure of overfishing and climate change.",
     "primaryRoles": [
       "business",
       "policymaker"
@@ -2277,15 +2277,15 @@
     ],
     "success": {},
     "failure": {},
-    "tier": 4
+    "tier": 3
   },
   {
     "code": "M52",
     "id": "m52",
-    "title": "Social Inequality",
-    "category": "society",
-    "categoryLabel": "Society",
-    "brief": "Society.",
+    "title": "Water Conflict",
+    "category": "water",
+    "categoryLabel": "Water",
+    "brief": "Shrinking freshwater resources are fuelling international and community-level conflict.",
     "primaryRoles": [
       "citizen",
       "activist"
@@ -2312,15 +2312,15 @@
     ],
     "success": {},
     "failure": {},
-    "tier": 4
+    "tier": 3
   },
   {
     "code": "M53",
     "id": "m53",
-    "title": "Multi-Hazard Cascades",
-    "category": "climate",
-    "categoryLabel": "Climate",
-    "brief": "Compound disasters strike simultaneously, overwhelming response capacity.",
+    "title": "AI-Driven Resource Extraction Surge",
+    "category": "bio",
+    "categoryLabel": "Ai & Land Use",
+    "brief": "AI optimisation tools are making fossil fuel and mineral extraction dramatically more efficient and profitable, accelerating environmental damage beyond what regulation can keep pace with.",
     "primaryRoles": [
       "scientist",
       "policymaker"
@@ -2344,15 +2344,15 @@
     ],
     "success": {},
     "failure": {},
-    "tier": 4
+    "tier": 3
   },
   {
     "code": "M54",
     "id": "m54",
-    "title": "Tipping Point Activation",
-    "category": "climate",
-    "categoryLabel": "Climate",
-    "brief": "Earth system crosses a major tipping point, locking in self-amplifying change.",
+    "title": "Autonomous Systems & Ecological Blind Spots",
+    "category": "bio",
+    "categoryLabel": "Ai & Biodiversity",
+    "brief": "Autonomous drones, precision agriculture AI and smart infrastructure are making decisions that damage ecosystems and wildlife corridors without any ecological awareness built into their design.",
     "primaryRoles": [
       "scientist",
       "policymaker"
@@ -2375,15 +2375,15 @@
     ],
     "success": {},
     "failure": {},
-    "tier": 4
+    "tier": 3
   },
   {
     "code": "M55",
     "id": "m55",
-    "title": "Amazon Dieback",
-    "category": "bio",
-    "categoryLabel": "Bio",
-    "brief": "The Amazon shifts from rainforest to savanna, releasing massive carbon stocks.",
+    "title": "Economic Instability",
+    "category": "economy",
+    "categoryLabel": "Economy",
+    "brief": "Climate shocks and transition costs are destabilising global financial systems.",
     "primaryRoles": [
       "scientist",
       "activist"
@@ -2412,10 +2412,10 @@
   {
     "code": "M56",
     "id": "m56",
-    "title": "Methane Surge",
-    "category": "climate",
-    "categoryLabel": "Climate",
-    "brief": "Permafrost and ocean methane releases trigger rapid additional warming.",
+    "title": "Social Inequality",
+    "category": "society",
+    "categoryLabel": "Society",
+    "brief": "Climate change is deepening wealth and power gaps, with the poorest hit hardest and least able to adapt.",
     "primaryRoles": [
       "scientist"
     ],
@@ -2443,10 +2443,10 @@
   {
     "code": "M57",
     "id": "m57",
-    "title": "Ocean Circulation Disruption",
-    "category": "oceans",
-    "categoryLabel": "Oceans",
-    "brief": "Atlantic overturning weakens, scrambling regional climates worldwide.",
+    "title": "Food System Breakdown",
+    "category": "food",
+    "categoryLabel": "Food",
+    "brief": "The global food system is fracturing under climate, economic and ecological pressures.",
     "primaryRoles": [
       "scientist",
       "policymaker"
@@ -2475,10 +2475,10 @@
   {
     "code": "M58",
     "id": "m58",
-    "title": "Antarctic Ice Sheet Collapse",
-    "category": "oceans",
-    "categoryLabel": "Oceans",
-    "brief": "West Antarctic ice sheet destabilises, committing meters of sea level rise.",
+    "title": "Biodiversity Collapse",
+    "category": "bio",
+    "categoryLabel": "Biodiversity",
+    "brief": "The sixth mass extinction is accelerating as ecosystems unravel globally.",
     "primaryRoles": [
       "scientist",
       "planner"
@@ -2507,10 +2507,10 @@
   {
     "code": "M59",
     "id": "m59",
-    "title": "Resource Conflict",
-    "category": "society",
-    "categoryLabel": "Society",
-    "brief": "Climate-driven scarcity triggers conflict over water, food and energy resources.",
+    "title": "Carbon Lock-In",
+    "category": "climate",
+    "categoryLabel": "Climate",
+    "brief": "Fossil fuel infrastructure and economic dependency are preventing the clean energy transition.",
     "primaryRoles": [
       "policymaker",
       "activist"
@@ -2539,10 +2539,10 @@
   {
     "code": "M60",
     "id": "m60",
-    "title": "Planetary Boundaries Breach",
+    "title": "Tipping Point Activation",
     "category": "climate",
     "categoryLabel": "Climate",
-    "brief": "Multiple planetary boundaries breached simultaneously \u2014 Earth enters a new state.",
+    "brief": "Self-reinforcing feedback loops in the climate system are being triggered — reversal may be impossible.",
     "primaryRoles": [
       "scientist",
       "activist"
@@ -2571,85 +2571,239 @@
   {
     "code": "M61",
     "id": "m61",
-    "title": "AI Energy Consumption Crisis",
-    "category": "energy",
-    "categoryLabel": "AI & Tech",
-    "brief": "The explosive growth of AI data centres is driving massive electricity demand, threatening renewable energy targets and straining national grids.",
-    "primaryRoles": ["business", "policymaker"],
-    "secondaryRoles": ["scientist"],
-    "sequence": ["AI Model Scaling","Data Centre Proliferation","Energy Demand Surge","Grid Capacity Stress","Fossil Fuel Rebound Risk","Carbon Footprint Growth","Renewable Target Undermined","AI Energy Consumption Crisis"],
-    "unlocks": ["Carbon Lock-In","Energy Security Crisis","Supply Chain Disruption"],
-    "linkedCrises": ["Energy Security Crisis","Climate Target Failure"],
-    "linkedInterventions": ["Green AI Standards","Renewable-Powered Data Centres","AI Efficiency Mandates"],
-    "butterfly": ["AI Energy Surge","Grid Stress","Fossil Fuel Rebound","Climate Target Failure"],
+    "title": "Amazon Dieback",
+    "category": "bio",
+    "categoryLabel": "Land Use",
+    "brief": "The Amazon rainforest is approaching a tipping point beyond which it converts to savanna.",
+    "primaryRoles": [
+      "business",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "scientist"
+    ],
+    "sequence": [
+      "AI Model Scaling",
+      "Data Centre Proliferation",
+      "Energy Demand Surge",
+      "Grid Capacity Stress",
+      "Fossil Fuel Rebound Risk",
+      "Carbon Footprint Growth",
+      "Renewable Target Undermined",
+      "AI Energy Consumption Crisis"
+    ],
+    "unlocks": [
+      "Carbon Lock-In",
+      "Energy Security Crisis",
+      "Supply Chain Disruption"
+    ],
+    "linkedCrises": [
+      "Energy Security Crisis",
+      "Climate Target Failure"
+    ],
+    "linkedInterventions": [
+      "Green AI Standards",
+      "Renewable-Powered Data Centres",
+      "AI Efficiency Mandates"
+    ],
+    "butterfly": [
+      "AI Energy Surge",
+      "Grid Stress",
+      "Fossil Fuel Rebound",
+      "Climate Target Failure"
+    ],
     "aiConnection": "Training large AI models can consume as much electricity as hundreds of homes use in a year. As AI scales globally, data-centre demand could reach 10–20% of world electricity by 2030, AI's climate benefit depends entirely on whether its energy source is clean.",
-    "tier": 2
+    "tier": 4
   },
   {
     "code": "M62",
     "id": "m62",
-    "title": "Algorithmic Greenwashing",
-    "category": "governance",
-    "categoryLabel": "AI & Governance",
-    "brief": "Companies use AI-generated reports, deepfakes, and automated content to falsely project green credentials, misleading investors, consumers and regulators.",
-    "primaryRoles": ["activist", "policymaker"],
-    "secondaryRoles": ["business"],
-    "sequence": ["AI Content Generation","Fabricated ESG Reports","Investor Deception","Capital Misallocation","Real Climate Action Underfunded","Public Trust Erosion","Regulatory Backlash","Algorithmic Greenwashing"],
-    "unlocks": ["Economic Instability","Social Inequality","Climate Policy Inaction"],
-    "linkedCrises": ["Financial Fraud Crisis","Regulatory Failure"],
-    "linkedInterventions": ["AI Audit Requirements","ESG Verification Standards","Digital Accountability Law"],
-    "butterfly": ["Greenwash AI","Investor Deception","Capital Misallocation","Real Climate Action Underfunded"],
+    "title": "Ocean Circulation Disruption",
+    "category": "oceans",
+    "categoryLabel": "Oceans",
+    "brief": "The Atlantic Meridional Overturning Circulation (AMOC) is weakening, threatening global weather patterns.",
+    "primaryRoles": [
+      "activist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "business"
+    ],
+    "sequence": [
+      "AI Content Generation",
+      "Fabricated ESG Reports",
+      "Investor Deception",
+      "Capital Misallocation",
+      "Real Climate Action Underfunded",
+      "Public Trust Erosion",
+      "Regulatory Backlash",
+      "Algorithmic Greenwashing"
+    ],
+    "unlocks": [
+      "Economic Instability",
+      "Social Inequality",
+      "Climate Policy Inaction"
+    ],
+    "linkedCrises": [
+      "Financial Fraud Crisis",
+      "Regulatory Failure"
+    ],
+    "linkedInterventions": [
+      "AI Audit Requirements",
+      "ESG Verification Standards",
+      "Digital Accountability Law"
+    ],
+    "butterfly": [
+      "Greenwash AI",
+      "Investor Deception",
+      "Capital Misallocation",
+      "Real Climate Action Underfunded"
+    ],
     "aiConnection": "Generative AI makes it trivially easy to produce convincing sustainability reports and fabricated impact metrics at scale. Without mandatory AI audit trails and third-party ESG verification, bad actors can flood markets with false green claims, diverting billions from genuine climate solutions.",
-    "tier": 2
+    "tier": 4
   },
   {
     "code": "M63",
     "id": "m63",
-    "title": "AI-Driven Resource Extraction Surge",
-    "category": "pollution",
-    "categoryLabel": "AI & Land Use",
-    "brief": "AI is being used by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling, accelerating extraction and emissions.",
-    "primaryRoles": ["scientist", "activist"],
-    "secondaryRoles": ["policymaker", "citizen"],
-    "sequence": ["AI Exploration Tools","Fossil Reserve Discovery","Optimised Extraction","Rebound Effect","Emission Surge","Ecosystem Degradation","Climate Debt Accumulation","AI-Driven Resource Extraction Surge"],
-    "unlocks": ["Carbon Lock-In","Biodiversity Collapse","Tipping Point Activation"],
-    "linkedCrises": ["Ecological Emergency","Carbon Lock-In","Regulatory Failure"],
-    "linkedInterventions": ["AI Impact Assessment Mandates","Extraction Moratoriums","Nature-Positive AI Policy"],
-    "butterfly": ["AI Extraction Efficiency","Fossil Reserve Exploitation","Emission Surge","Tipping Point Risk"],
+    "title": "Multi-Hazard Cascades",
+    "category": "climate",
+    "categoryLabel": "Systemic",
+    "brief": "Multiple simultaneous climate crises are compounding each other beyond humanity's ability to respond.",
+    "primaryRoles": [
+      "scientist",
+      "activist"
+    ],
+    "secondaryRoles": [
+      "policymaker",
+      "citizen"
+    ],
+    "sequence": [
+      "AI Exploration Tools",
+      "Fossil Reserve Discovery",
+      "Optimised Extraction",
+      "Rebound Effect",
+      "Emission Surge",
+      "Ecosystem Degradation",
+      "Climate Debt Accumulation",
+      "AI-Driven Resource Extraction Surge"
+    ],
+    "unlocks": [
+      "Carbon Lock-In",
+      "Biodiversity Collapse",
+      "Tipping Point Activation"
+    ],
+    "linkedCrises": [
+      "Ecological Emergency",
+      "Carbon Lock-In",
+      "Regulatory Failure"
+    ],
+    "linkedInterventions": [
+      "AI Impact Assessment Mandates",
+      "Extraction Moratoriums",
+      "Nature-Positive AI Policy"
+    ],
+    "butterfly": [
+      "AI Extraction Efficiency",
+      "Fossil Reserve Exploitation",
+      "Emission Surge",
+      "Tipping Point Risk"
+    ],
     "aiConnection": "AI is being deployed by oil, gas and mining companies to locate previously uneconomical reserves and optimise drilling, producing a rebound effect where efficiency gains accelerate total extraction. The same tools that could model climate futures are making fossil-fuel exploitation cheaper and faster, a direct contradiction of decarbonisation goals.",
-    "tier": 3
+    "tier": 4
   },
   {
     "code": "M64",
     "id": "m64",
-    "title": "Autonomous Systems & Ecological Blind Spots",
-    "category": "bio",
-    "categoryLabel": "AI & Biodiversity",
-    "brief": "Autonomous drones, precision agriculture AI and smart infrastructure make decisions that damage ecosystems and wildlife corridors, with no ecological awareness in their design.",
-    "primaryRoles": ["scientist", "planner"],
-    "secondaryRoles": ["citizen", "activist"],
-    "sequence": ["Autonomous System Deployment","Efficiency-Only Optimisation","Ecological Blind Spots","Habitat Fragmentation","Pollinator Decline","Species Stress","Ecosystem Cascade","Autonomous Systems Ecological Blind Spots"],
-    "unlocks": ["Ecosystem Collapse","Biodiversity Collapse","Species Decline"],
-    "linkedCrises": ["Biodiversity Emergency","Ecosystem Failure","Regulatory Crisis"],
-    "linkedInterventions": ["Ecological AI Audits","Nature-Inclusive Algorithm Design","AI Environmental Impact Assessment"],
-    "butterfly": ["AI Blind Spots","Habitat Disruption","Species Stress","Ecosystem Cascade"],
+    "title": "Planetary Boundaries Breach",
+    "category": "climate",
+    "categoryLabel": "Endgame",
+    "brief": "FINAL CHALLENGE: Earth is exceeding safe operating limits. The future of civilisation is at stake.",
+    "primaryRoles": [
+      "scientist",
+      "planner"
+    ],
+    "secondaryRoles": [
+      "citizen",
+      "activist"
+    ],
+    "sequence": [
+      "Autonomous System Deployment",
+      "Efficiency-Only Optimisation",
+      "Ecological Blind Spots",
+      "Habitat Fragmentation",
+      "Pollinator Decline",
+      "Species Stress",
+      "Ecosystem Cascade",
+      "Autonomous Systems Ecological Blind Spots"
+    ],
+    "unlocks": [
+      "Ecosystem Collapse",
+      "Biodiversity Collapse",
+      "Species Decline"
+    ],
+    "linkedCrises": [
+      "Biodiversity Emergency",
+      "Ecosystem Failure",
+      "Regulatory Crisis"
+    ],
+    "linkedInterventions": [
+      "Ecological AI Audits",
+      "Nature-Inclusive Algorithm Design",
+      "AI Environmental Impact Assessment"
+    ],
+    "butterfly": [
+      "AI Blind Spots",
+      "Habitat Disruption",
+      "Species Stress",
+      "Ecosystem Cascade"
+    ],
     "aiConnection": "Most AI systems optimising logistics, agriculture and urban planning are trained on economic and efficiency data only, with no ecological constraints encoded. Autonomous decisions can systematically destroy pollinator habitat, fragment wildlife corridors or disrupt migration patterns at scale, faster than any human process and with no single point of accountability.",
-    "tier": 3
+    "tier": 4
   },
   {
     "code": "M65",
     "id": "m65",
     "title": "AI Climate Model Manipulation",
     "category": "climate",
-    "categoryLabel": "AI & Climate",
-    "brief": "Adversarial machine learning subtly corrupts the shared AI-driven climate models that feed IPCC reports and treaty negotiations, eroding scientific consensus.",
-    "primaryRoles": ["scientist", "policymaker"],
-    "secondaryRoles": ["activist"],
-    "sequence": ["Shared Climate Models","Adversarial Data Injection","Biased Inference","Consensus Erosion","Policy Paralysis","Delayed Mitigation","Tipping Point Activation","AI Climate Model Manipulation"],
-    "unlocks": ["Tipping Point Activation","Multi-Hazard Cascades","Planetary Boundaries Breach"],
-    "linkedCrises": ["Scientific Integrity Crisis","Policy Paralysis"],
-    "linkedInterventions": ["Open-Source Climate AI Verification","International AI Security Treaty","Federated Model Integrity Protocols"],
-    "butterfly": ["Model Manipulation","Consensus Collapse","Policy Paralysis","Tipping Point Activation"],
+    "categoryLabel": "Ai & Climate",
+    "brief": "State and corporate actors are using adversarial AI to inject systematic errors into shared climate models, corrupting the scientific consensus underpinning global climate agreements.",
+    "primaryRoles": [
+      "scientist",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "activist"
+    ],
+    "sequence": [
+      "Shared Climate Models",
+      "Adversarial Data Injection",
+      "Biased Inference",
+      "Consensus Erosion",
+      "Policy Paralysis",
+      "Delayed Mitigation",
+      "Tipping Point Activation",
+      "AI Climate Model Manipulation"
+    ],
+    "unlocks": [
+      "Tipping Point Activation",
+      "Multi-Hazard Cascades",
+      "Planetary Boundaries Breach"
+    ],
+    "linkedCrises": [
+      "Scientific Integrity Crisis",
+      "Policy Paralysis"
+    ],
+    "linkedInterventions": [
+      "Open-Source Climate AI Verification",
+      "International AI Security Treaty",
+      "Federated Model Integrity Protocols"
+    ],
+    "butterfly": [
+      "Model Manipulation",
+      "Consensus Collapse",
+      "Policy Paralysis",
+      "Tipping Point Activation"
+    ],
     "aiConnection": "Modern climate science depends on shared AI-driven models, CMIP6, weather prediction, carbon-cycle models, feeding directly into IPCC reports. Adversarial machine learning can introduce subtle, undetectable biases that make models systematically underestimate warming or overstate carbon sinks, one of the highest-stakes AI security threats on the planet.",
     "tier": 4
   },
@@ -2658,15 +2812,46 @@
     "id": "m66",
     "title": "AI-Accelerated Inequality in Climate Adaptation",
     "category": "society",
-    "categoryLabel": "AI & Society",
-    "brief": "Wealthy nations and corporations gain massive adaptation advantages from AI while the Global South is left behind, deepening the climate-justice gap to breaking point.",
-    "primaryRoles": ["citizen", "policymaker"],
-    "secondaryRoles": ["activist", "scientist"],
-    "sequence": ["AI Adaptation Advantage","North-South Divide","Data & Compute Gap","Uneven Resilience","Adaptation Failure","Displacement Surge","Justice Crisis","AI-Accelerated Inequality in Climate Adaptation"],
-    "unlocks": ["Climate Migration","Social Inequality","Planetary Boundaries Breach"],
-    "linkedCrises": ["Climate Justice Crisis","Migration Emergency"],
-    "linkedInterventions": ["Global AI Adaptation Fund","Open Climate AI Commons","South-Led AI Capacity Building"],
-    "butterfly": ["AI Adaptation Gap","Uneven Resilience","Adaptation Failure","Climate Justice Crisis"],
+    "categoryLabel": "Ai & Society",
+    "brief": "Wealthy nations and corporations are using AI to gain massive adaptation advantages — precision flood prediction, AI-optimised crop systems, smart city resilience — while the Global South is left entirely behind, deepening the climate justice gap to a breaking point.",
+    "primaryRoles": [
+      "citizen",
+      "policymaker"
+    ],
+    "secondaryRoles": [
+      "activist",
+      "scientist"
+    ],
+    "sequence": [
+      "AI Adaptation Advantage",
+      "North-South Divide",
+      "Data & Compute Gap",
+      "Uneven Resilience",
+      "Adaptation Failure",
+      "Displacement Surge",
+      "Justice Crisis",
+      "AI-Accelerated Inequality in Climate Adaptation"
+    ],
+    "unlocks": [
+      "Climate Migration",
+      "Social Inequality",
+      "Planetary Boundaries Breach"
+    ],
+    "linkedCrises": [
+      "Climate Justice Crisis",
+      "Migration Emergency"
+    ],
+    "linkedInterventions": [
+      "Global AI Adaptation Fund",
+      "Open Climate AI Commons",
+      "South-Led AI Capacity Building"
+    ],
+    "butterfly": [
+      "AI Adaptation Gap",
+      "Uneven Resilience",
+      "Adaptation Failure",
+      "Climate Justice Crisis"
+    ],
     "aiConnection": "Precision flood prediction, AI-optimised crop systems and smart-city resilience require data, compute, and talent concentrated in the Global North. Without deliberate transfer mechanisms, AI compounds existing climate injustice, those least responsible for emissions have the least access to the tools that reduce harm.",
     "tier": 4
   }
