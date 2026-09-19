@@ -41,15 +41,35 @@ function snapshot(): Record<string, unknown> {
   return JSON.parse(JSON.stringify(useGame.getState()));
 }
 
+// Does this state represent real, worth-keeping progress? A freshly `reset()`
+// store (which several "start over" / "try again" buttons produce) has none of
+// these. We refuse to push such an empty snapshot over the cloud save so a
+// signed-in player can never wipe their own progress by restarting locally.
+function hasProgress(state: Record<string, unknown>): boolean {
+  const len = (k: string) => (Array.isArray(state[k]) ? (state[k] as unknown[]).length : 0);
+  const roleProgress = state.roleProgress as Record<string, unknown> | undefined;
+  return (
+    len("solvedMysteries") > 0 ||
+    len("solveRecords") > 0 ||
+    len("purchasedInterventions") > 0 ||
+    len("resolvedCrises") > 0 ||
+    (!!roleProgress && Object.keys(roleProgress).length > 0)
+  );
+}
+
 // True while we're applying a remote state, so the store subscription doesn't
 // immediately echo it back to the server.
 let applyingRemote = false;
 
 export async function saveToCloud(userId: string): Promise<void> {
+  const state = snapshot();
+  // Never overwrite the cloud save with an empty, freshly-reset store. This is
+  // the guard that stops a local "restart" from nuking real cloud progress.
+  if (!hasProgress(state)) return;
   const now = Date.now();
   const { error } = await db.from(TABLE).upsert({
     id: userId,
-    state: snapshot(),
+    state,
     updated_at: new Date(now).toISOString(),
   });
   if (!error) setLocalTs(now);

@@ -65,8 +65,17 @@ function Landing() {
   }, []);
 
   const startGuest = () => {
-    reset();
-    setPlayer(name.trim() || signedIn?.display || signedIn?.email?.split("@")[0] || "Guest");
+    // Guests start a fresh local game. A signed-in player keeps the progress
+    // that was just hydrated from their cloud save — resetting here would blank
+    // their game (and, before the cloud-sync guard, wipe the cloud copy too).
+    if (!signedIn) {
+      reset();
+      setPlayer(name.trim() || "Guest");
+    } else if (!name.trim() && !useGame.getState().playerName) {
+      setPlayer(signedIn.display || signedIn.email?.split("@")[0] || "Guest");
+    } else if (name.trim()) {
+      setPlayer(name.trim());
+    }
     navigate({ to: "/mode-select" });
   };
 
