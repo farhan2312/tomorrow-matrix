@@ -42,7 +42,6 @@ export function CrisisModal({
   const role = useGame((s) => s.role);
   const mode = useGame((s) => s.mode);
   const lobbyId = useLobby((s) => s.lobbyId);
-  const lobbyMode = useLobby((s) => s.mode);
   const votes = useLobby((s) => s.votes);
   const players = useLobby((s) => s.players);
 
@@ -290,6 +289,7 @@ function RevealPanel({
   onClose: () => void;
 }) {
   const outcome = useGame((s) => s.crisisLog.find((o) => o.crisisId === crisis.id) ?? null);
+  const lobbyMode = useLobby((s) => s.mode);
 
   const statusLabel = outcome
     ? ({ excellent: "✅ Excellent Decision", good: "✅ Excellent Decision", neutral: "🟡 Acceptable Decision",
