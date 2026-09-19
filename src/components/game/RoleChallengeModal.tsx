@@ -22,6 +22,8 @@ export function RoleChallengeModal() {
   const advance = useGame((s) => s.advanceChallenge);
   const skip = useGame((s) => s.skipCurrentQuestion);
   const dismiss = useGame((s) => s.dismissChallenge);
+  const resultModalOpen = useGame((s) => s.resultModalOpen);
+  const pendingPromotion = useGame((s) => s.pendingPromotion);
 
   const roleData = ROLES.find((r) => r.id === role);
   const currentQ = useMemo(() => {
@@ -54,7 +56,11 @@ export function RoleChallengeModal() {
     }
   }, [pending?.cursor, pending?.kind]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (!pending || !currentQ) return null;
+  // Wait for the mystery-result recap AND any promotion to close before
+  // surfacing a bonus challenge. Otherwise the challenge modal opens on top of
+  // (or under) those and leaves the page inert — the same collision the
+  // promotion modal already guards against with resultModalOpen.
+  if (!pending || !currentQ || resultModalOpen || pendingPromotion) return null;
 
   const totalQs = pending.questionIds.length;
   const stepN = pending.cursor + 1;
