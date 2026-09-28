@@ -67,12 +67,19 @@ let currentUtterance: SpeechSynthesisUtterance | null = null;
 let fadeTimer: number | null = null;
 
 function interpolate(line: string, vars?: Record<string, string | number>): string {
-  if (!vars) return line;
-  return line.replace(/\[([A-Z0-9 %_-]+)\]/g, (m, key: string) => {
-    const norm = key.trim();
-    const v = vars[norm] ?? vars[norm.toLowerCase()];
-    return v !== undefined ? String(v) : m;
-  });
+  // Fill known [PLACEHOLDER] tokens; drop any that aren't supplied so the
+  // narrator never reads a literal "[BRACKET]" aloud, then tidy the spacing
+  // and punctuation left behind. This lets a line be wired before every
+  // variable for it is available.
+  return line
+    .replace(/\[([A-Z0-9 %_-]+)\]/g, (_m, key: string) => {
+      const norm = key.trim();
+      const v = vars ? (vars[norm] ?? vars[norm.toLowerCase()]) : undefined;
+      return v !== undefined ? String(v) : "";
+    })
+    .replace(/\s{2,}/g, " ")
+    .replace(/\s+([.,!?;:])/g, "$1")
+    .trim();
 }
 
 function pickVoice(): SpeechSynthesisVoice | null {

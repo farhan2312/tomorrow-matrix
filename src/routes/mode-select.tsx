@@ -2,6 +2,7 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { User, Bot, Users, ClipboardCheck, ArrowRight, ArrowLeft } from "lucide-react";
 import { useGame } from "@/lib/game/store";
+import { narrate } from "@/lib/voice/store";
 import { supabase } from "@/integrations/supabase/client";
 import type { GameMode } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
@@ -46,6 +47,9 @@ function ModeSelect() {
   const [name, setName] = useState("");
   const [display, setDisplay] = useState<string | null>(null);
 
+  // Narrate the mode-selection intro (OB-05) when this screen opens.
+  useEffect(() => { narrate("OB-05"); }, []);
+
   useEffect(() => {
     if (!needsName) return;
     let cancelled = false;
@@ -62,6 +66,11 @@ function ModeSelect() {
 
   const choose = (m: ModeOption["id"]) => {
     if (needsName) setPlayer(name.trim() || display || "Guest");
+    // Mode-specific narration (OB-06/07/09). Solo goes straight to role select,
+    // whose own narration takes over, so it has no separate line here.
+    if (m === "ai-team") narrate("OB-06");
+    else if (m === "multiplayer") narrate("OB-07");
+    else if (m === "facilitator") narrate("OB-09");
     if (m === "facilitator") {
       navigate({ to: "/lobby", search: { facilitator: true } });
       return;

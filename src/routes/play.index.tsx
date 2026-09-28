@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Sparkles, Activity, Coins, Trophy, ArrowRight } from "lucide-react";
 import { useGame } from "@/lib/game/store";
+import { narrate } from "@/lib/voice/store";
 import { MYSTERIES, isMysteryUnlocked } from "@/lib/game/data";
 import { mysteryCover } from "@/lib/game/media";
 import { WorldMap } from "@/components/game/WorldMap";
@@ -10,10 +12,20 @@ export const Route = createFileRoute("/play/")({
   component: WorldView,
 });
 
+// First world-map view this session gets the full intro (MAP-01); later
+// returns get the shorter "you're back" line (MAP-02).
+let mapIntroPlayed = false;
+
 function WorldView() {
   const { planetHealth, year, cap, solvedMysteries } = useGame();
   const total = MYSTERIES.length;
   const available = MYSTERIES.filter((m) => isMysteryUnlocked(m.id, solvedMysteries) && !solvedMysteries.includes(m.id));
+
+  useEffect(() => {
+    if (!mapIntroPlayed) { mapIntroPlayed = true; narrate("MAP-01"); }
+    else narrate("MAP-02", { X: solvedMysteries.length });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <main className="mx-auto max-w-[1400px] space-y-5 px-4 py-5 md:px-6">

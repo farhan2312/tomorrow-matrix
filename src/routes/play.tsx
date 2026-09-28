@@ -56,7 +56,7 @@ function PlayLayout() {
       setCrisisOpenedAt(Date.now());
       setShownCrisisId(pendingCrisisId);
       const c = CRISES.find((x) => x.id === pendingCrisisId);
-      if (c) narrate("CRISIS-ALERT", { "CRISIS NAME": c.title });
+      if (c) narrate("CRISIS-OPEN", { "CRISIS NAME": c.title });
     }
   }, [pendingCrisisId]);
 

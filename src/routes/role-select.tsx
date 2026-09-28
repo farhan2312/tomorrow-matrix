@@ -1,11 +1,18 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, ArrowLeft, Check } from "lucide-react";
 import { ROLES } from "@/lib/game/data";
 import { useGame } from "@/lib/game/store";
+import { narrate } from "@/lib/voice/store";
 import type { RoleId } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
 import { logEvent } from "@/lib/analytics";
+
+// Per-role narration lines (OB-11..OB-18).
+const ROLE_VOICE: Record<string, string> = {
+  scientist: "OB-11", farmer: "OB-12", policymaker: "OB-13", activist: "OB-14",
+  business: "OB-15", planner: "OB-16", citizen: "OB-17", student: "OB-18",
+};
 
 export const Route = createFileRoute("/role-select")({
   head: () => ({
@@ -22,6 +29,9 @@ function RoleSelect() {
   const setRole = useGame((s) => s.setRole);
   const [selected, setSelected] = useState<RoleId | null>(null);
   const current = ROLES.find((r) => r.id === selected) ?? null;
+
+  // Narrate the role-selection intro (OB-10) when this screen opens.
+  useEffect(() => { narrate("OB-10"); }, []);
 
   return (
     <main className="min-h-screen bg-background">
@@ -47,7 +57,7 @@ function RoleSelect() {
               return (
                 <button
                   key={r.id}
-                  onClick={() => setSelected(r.id)}
+                  onClick={() => { setSelected(r.id); narrate(ROLE_VOICE[r.id]); }}
                   className={cn(
                     "surface-card group relative overflow-hidden p-4 text-left transition-all",
                     isSel ? "ring-2 ring-[color:var(--terra)] glow-terra" : "card-hover",
