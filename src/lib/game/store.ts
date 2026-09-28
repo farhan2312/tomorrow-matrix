@@ -122,6 +122,7 @@ export interface PendingChallenge {
   earnedCap: number;             // CAP earned across this challenge so far
   correctMcq: number;
   totalMcq: number;
+  startXp: number;               // role XP when this challenge began (for promotion detection)
 }
 
 /** How a mystery's explanatory video became available. */
@@ -246,7 +247,7 @@ const initial = {
   year: 2025,
   planetHealth: 40,
   indicators: { climate: 42, food: 38, water: 35, bio: 44, economy: 41 } as Record<IndicatorKey, number>,
-  cap: 80,
+  cap: 0, // role-based starting CAP is applied in setRole (Scientist 20, others 0)
   solvedMysteries: [] as string[],
   solveRecords: [] as SolveRecord[],
   purchasedInterventions: [] as string[],
@@ -282,6 +283,11 @@ const initial = {
 };
 
 const clamp = (v: number, lo = 0, hi = 100) => Math.max(lo, Math.min(hi, v));
+
+/** Starting CAP by role (client spec): Scientist 20, all other roles 0. */
+function startingCapFor(role: RoleId | null): number {
+  return role === "scientist" ? 20 : 0;
+}
 
 function pickCrisis(state: GameState): string | null {
   const natureMisses = Math.max(
@@ -387,12 +393,17 @@ function applyMissionProgress(get: () => GameState, set: (p: Partial<GameState>)
 
 /* ----------------------- Promotion detection ---------------------- */
 
-function checkPromotion(get: () => GameState, set: (p: Partial<GameState>) => void, prevCap: number) {
+// Promotion is XP-driven (XP comes from the role questionnaires). `prevXp` is
+// the player's XP for this role before the change that may have crossed a rank
+// threshold; the current XP is read from roleProgress. The +bonusOnPromote CAP
+// award is progression CAP, kept as before.
+function checkPromotion(get: () => GameState, set: (p: Partial<GameState>) => void, prevXp: number) {
   const s = get();
   if (!s.role) return;
   const role = s.role;
-  const before = levelFor(role, prevCap);
-  const after = levelFor(role, s.cap);
+  const xp = s.roleProgress[role]?.xp ?? 0;
+  const before = levelFor(role, prevXp);
+  const after = levelFor(role, xp);
   if (after.level <= before.level) return;
   if (s.pendingPromotion) return; // don't overwrite an unseen banner
   const meta = ROLE_PROGRESSION_META[role];
@@ -473,6 +484,7 @@ function maybeActivateNextChallenge(get: () => GameState, set: (p: Partial<GameS
       earnedCap: 0,
       correctMcq: 0,
       totalMcq,
+      startXp: progress.xp,
     },
     challengeQueue: rest,
   });
@@ -486,7 +498,18 @@ export const useGame = create<GameState>()(
       setRole: (role) => {
         const s = get();
         const rp = s.roleProgress[role] ?? emptyProgress();
-        set({ role, roleProgress: { ...s.roleProgress, [role]: rp } });
+        // Starting CAP is role-based (client spec): Scientist 20, every other
+        // role 0. Only apply it while the game is still fresh, so switching or
+        // re-selecting a role after making progress never resets earned CAP.
+        const noProgress =
+          s.solvedMysteries.length === 0 &&
+          s.purchasedInterventions.length === 0 &&
+          !Object.values(s.roleProgress).some((p) => p.attempts.length > 0);
+        set({
+          role,
+          roleProgress: { ...s.roleProgress, [role]: rp },
+          ...(noProgress ? { cap: startingCapFor(role) } : {}),
+        });
         // Orientation challenge if no MCQ has been answered yet for this role
         const anyMcqAnswered = rp.attempts.some((a) => a.kind === "mcq");
         if (!anyMcqAnswered) {
@@ -501,7 +524,6 @@ export const useGame = create<GameState>()(
         if (!m || get().solvedMysteries.includes(id)) return null;
         const remote = !!opts?.remote;
         const s = get();
-        const prevCap = s.cap;
         const { base, total } = computePayout(attempts, hintsUsed);
         const roleBonus = bonusForRole(s.role, m);
         const grand = total + roleBonus;
@@ -580,13 +602,10 @@ export const useGame = create<GameState>()(
         // Solving the puzzle permanently unlocks the explanatory video.
         get().markExplainerUnlocked(id, "solve");
 
-        // Small role XP for any solve
-
+        // XP is earned through the role questionnaires (not raw solves), so no
+        // XP is granted here. Solving still drives the mission/assessment
+        // questionnaires below, which is where progression XP comes from.
         const role = get().role;
-        if (role) {
-          const rp = get().roleProgress[role] ?? emptyProgress();
-          set({ roleProgress: { ...get().roleProgress, [role]: { ...rp, xp: rp.xp + 15 } } });
-        }
         applyMissionProgress(get, set);
 
         // Trigger 2, Role Mission after every 2 mysteries
@@ -602,7 +621,8 @@ export const useGame = create<GameState>()(
           const allDone = allTier.every((x) => get().solvedMysteries.includes(x.id));
           if (allDone) get().queueChallenge("assessment");
         }
-        checkPromotion(get, set, prevCap);
+        // Promotion is XP-driven and fires when a questionnaire completes, not
+        // on a solve, so no promotion check here.
         return record;
       },
 
@@ -685,7 +705,6 @@ export const useGame = create<GameState>()(
         const i = INTERVENTIONS.find((x) => x.id === id);
         const s = get();
         const remote = !!opts?.remote;
-        const prevCap = s.cap;
         // A teammate's purchase syncs the shared board but costs this player nothing;
         // only a local purchase requires (and spends) this player's CAP.
         if (!i || s.purchasedInterventions.includes(id) || (!remote && s.cap < i.cost)) return;
@@ -732,7 +751,6 @@ export const useGame = create<GameState>()(
         });
         if (remote) return; // teammate's purchase: no personal mission/promotion effects
         applyMissionProgress(get, set);
-        checkPromotion(get, set, prevCap);
       },
 
       triggerCrisis: (id) => {
@@ -906,7 +924,8 @@ export const useGame = create<GameState>()(
           ].slice(0, 30),
         });
         applyMissionProgress(get, set);
-        checkPromotion(get, set, prevCap);
+        // Promotion is XP-driven (fires when a questionnaire completes), so the
+        // crisis's CAP change doesn't trigger a promotion here.
 
         // Trigger 3, Stakeholder Reflection after every crisis
         if (get().role) get().queueChallenge("reflection");
@@ -1064,7 +1083,13 @@ export const useGame = create<GameState>()(
           ].slice(0, 30),
         });
         applyMissionProgress(get, set);
-        // Process the next queued challenge if any
+        // XP just changed and the challenge modal is now closed, so this is the
+        // safe point to surface a rank promotion. Compare the level at the start
+        // of the questionnaire against the level now, catching any threshold the
+        // per-question XP or the completion bonus crossed.
+        checkPromotion(get, set, ch.startXp);
+        // Process the next queued challenge if any (it stays behind the
+        // promotion banner via the promotion gate until the banner is dismissed).
         setTimeout(() => maybeActivateNextChallenge(get, set), 250);
       },
 

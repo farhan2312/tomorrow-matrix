@@ -8,8 +8,10 @@ import type { RoleId } from "./types";
 export interface RoleLevel { level: number; title: string; minXp: number; }
 export interface RoleProgressionMeta { theme: string; bonusOnPromote: number; }
 
-/** CAP thresholds, used as `minXp` to keep call-sites unchanged. */
-const CAP = [0, 200, 500, 900, 1500, 2500];
+/** XP thresholds per rank (client spec: 0 / 25 / 50 / 100 / 200 / 300).
+ *  Named CAP only for historical call-site brevity; these are XP, and XP is
+ *  earned through the role questionnaires. Promotion is driven by XP. */
+const CAP = [0, 25, 50, 100, 200, 300];
 
 export const ROLE_LEVELS: Record<RoleId, RoleLevel[]> = {
   scientist: [
