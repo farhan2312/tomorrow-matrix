@@ -168,10 +168,13 @@ function MysteryDetail() {
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         <div className="space-y-5">
-          {/* Hero */}
+          {/* Hero. The mystery cover art is square, so it's shown contained
+              (never cropped or stretched) over a blurred fill of itself — the
+              same treatment for every mystery and role (SC-10). */}
           <div className="surface-lift relative overflow-hidden">
-            <div className="relative aspect-[16/9] w-full">
-              <img src={mysteryCover(mystery)} alt={mystery.title} className="absolute inset-0 h-full w-full object-cover" />
+            <div className="relative aspect-[16/9] w-full bg-black/5">
+              <img src={mysteryCover(mystery)} alt="" aria-hidden className="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-2xl" />
+              <img src={mysteryCover(mystery)} alt={mystery.title} className="absolute inset-0 h-full w-full object-contain" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
               <div className="absolute left-5 top-5 flex flex-wrap gap-1.5">
                 <span className="pill chip-warmth"><Sparkles className="h-3 w-3" />{mystery.rarity}</span>
