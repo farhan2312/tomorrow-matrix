@@ -67,6 +67,24 @@ export function CrisisModal({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [seconds, open, phase]);
 
+  // Lock body scroll while the crisis is open. The modal is a full-screen
+  // fixed overlay with its own scroll; without this the page behind it stays
+  // scrollable, so the browser scrollbar moves the background instead of the
+  // crisis option list (SC-22, "the list doesn't scroll until I scroll the
+  // browser").
+  useEffect(() => {
+    if (!open) return;
+    const bodyPrev = document.body.style.overflow;
+    const htmlPrev = document.documentElement.style.overflow;
+    // Lock both: depending on the browser the scroller is <html> or <body>.
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = bodyPrev;
+      document.documentElement.style.overflow = htmlPrev;
+    };
+  }, [open]);
+
   // Multiplayer vote tally for this crisis
   const myVotes = useMemo(
     () => (crisis ? votes.filter((v) => v.crisis_id === crisis.id) : []),
