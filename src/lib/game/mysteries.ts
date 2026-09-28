@@ -258,37 +258,83 @@ export function bonusForRole(role: RoleId | null, m: Mystery): number {
 }
 
 /**
- * Build region hotspots spread evenly across the world map.
- *
- * A phyllotaxis (sunflower / golden-angle) distribution fills the map area
- * with no clustering and no two pins overlapping. Mysteries are ordered by
- * tier first, so lower tiers sit nearer the centre and higher tiers spiral
- * outward — the "tier ring" feel is kept, but without the old ring layout's
- * over-wide radius that pushed pins past the edge and stacked them vertically.
+ * Approximate positions on the equirectangular world map (x%, y%), tuned to
+ * src/assets/world-map.jpg. Each is a plausible real-world region.
+ */
+const MAP_ANCHORS: Record<string, [number, number]> = {
+  arctic: [40, 8], alaskaN: [12, 24], canadaN: [26, 20], usWest: [13, 36], usPlains: [22, 35], usEast: [28, 34],
+  centralAm: [23, 51], amazon: [33, 62], brazil: [38, 63], andes: [30, 68], patagonia: [33, 84],
+  nAtlantic: [35, 42], nPacific: [8, 40], pacific: [96, 56],
+  wEurope: [46, 27], cEurope: [51, 28], scandinavia: [52, 19], medSea: [51, 40],
+  sahara: [50, 46], sahel: [47, 52], guineaCoast: [48, 58], congo: [54, 61], eAfrica: [60, 56], southAfrica: [55, 75],
+  middleEast: [59, 45], centralAsia: [63, 33], siberia: [73, 18],
+  india: [69, 51], bengal: [73, 54], himalaya: [70, 42], china: [79, 40], japan: [88, 35],
+  seAsia: [81, 61], philippines: [85, 53], ausOutback: [85, 77], ausReef: [90, 72],
+};
+
+/** Which anchor each mystery sits at, chosen for its theme (ice north, tropics
+ *  on the equator, ocean issues on water, deserts in arid zones, and the more
+ *  abstract economy/society/governance ones spread across populated regions). */
+const MYSTERY_PLACEMENT: Record<string, string> = {
+  M01: "arctic", M02: "medSea", M03: "centralAsia", M04: "seAsia", M05: "ausReef", M06: "nPacific",
+  M07: "india", M08: "southAfrica", M09: "china", M10: "bengal", M11: "wEurope", M12: "pacific",
+  M13: "congo", M14: "usEast", M15: "siberia", M16: "cEurope", M17: "andes", M18: "guineaCoast",
+  M19: "wEurope", M20: "usEast", M21: "middleEast", M22: "bengal", M23: "india", M24: "india",
+  M25: "scandinavia", M26: "usPlains", M27: "alaskaN", M28: "usPlains", M29: "amazon", M30: "china",
+  M31: "sahel", M32: "middleEast", M33: "patagonia", M34: "himalaya", M35: "usWest", M36: "china",
+  M37: "ausOutback", M38: "usPlains", M39: "bengal", M40: "japan", M41: "usWest", M42: "cEurope",
+  M43: "usEast", M44: "sahara", M45: "amazon", M46: "guineaCoast", M47: "medSea", M48: "philippines",
+  M49: "congo", M50: "sahel", M51: "nAtlantic", M52: "eAfrica", M53: "congo", M54: "seAsia",
+  M55: "wEurope", M56: "brazil", M57: "sahel", M58: "brazil", M59: "siberia", M60: "arctic",
+  M61: "amazon", M62: "nAtlantic", M63: "philippines", M64: "cEurope", M65: "usWest", M66: "seAsia",
+};
+
+// Deterministic 0..1 from a string, for a stable per-mystery jitter.
+function hash01(s: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0) / 4294967295;
+}
+
+/**
+ * Build region hotspots placed geographically by theme, then relaxed so no two
+ * pins overlap. Each mystery is anchored to a plausible real-world region
+ * (MAP_ANCHORS × MYSTERY_PLACEMENT), nudged by a small deterministic jitter,
+ * and a few relaxation passes push apart any pins that still sit too close.
  */
 export function buildRegions(): Region[] {
-  const cx = 50, cy = 50;
-  // Ellipse half-extents: keeps every pin inside the frame (x 7–93, y 16–84),
-  // wider than tall to suit a landscape world map.
-  const rxMax = 43, ryMax = 34;
-  const GOLDEN = Math.PI * (3 - Math.sqrt(5)); // ~2.39996 rad
-
-  const ordered = [...MYSTERIES].sort(
-    (a, b) => a.tier - b.tier || a.id.localeCompare(b.id),
-  );
-  const n = ordered.length;
-
-  return ordered.map((m, k) => {
-    const t = (k + 0.5) / n;          // 0..1 across the ordered set
-    const rad = Math.sqrt(t);          // sqrt → even areal density
-    const angle = k * GOLDEN;
+  const pts = MYSTERIES.map((m) => {
+    const a = MAP_ANCHORS[MYSTERY_PLACEMENT[m.code]] ?? [50, 50];
     return {
-      id: `r-${m.id}`, name: m.region,
-      x: Math.max(5, Math.min(95, cx + rad * rxMax * Math.cos(angle))),
-      y: Math.max(8, Math.min(92, cy + rad * ryMax * Math.sin(angle))),
-      mysteryId: m.id,
-      status: m.tier === 1 ? "critical" : m.tier === 2 ? "active" : "stable",
-      label: m.title,
+      m,
+      x: a[0] + (hash01(m.code + "x") - 0.5) * 5,
+      y: a[1] + (hash01(m.code + "y") - 0.5) * 5,
     };
   });
+
+  // Relaxation: separate any two pins closer than MIN over a few gentle passes.
+  const MIN = 4.2;
+  for (let iter = 0; iter < 60; iter++) {
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        let dx = pts[j].x - pts[i].x, dy = pts[j].y - pts[i].y;
+        const d = Math.hypot(dx, dy) || 0.01;
+        if (d < MIN) {
+          const push = (MIN - d) / 2;
+          dx /= d; dy /= d;
+          pts[i].x -= dx * push; pts[i].y -= dy * push;
+          pts[j].x += dx * push; pts[j].y += dy * push;
+        }
+      }
+    }
+  }
+
+  return pts.map(({ m, x, y }) => ({
+    id: `r-${m.id}`, name: m.region,
+    x: Math.max(4, Math.min(96, x)),
+    y: Math.max(7, Math.min(90, y)),
+    mysteryId: m.id,
+    status: m.tier === 1 ? "critical" : m.tier === 2 ? "active" : "stable",
+    label: m.title,
+  }));
 }

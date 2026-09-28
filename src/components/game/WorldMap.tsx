@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Lock, Check, AlertTriangle, Sparkles, Leaf } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import worldMap from "@/assets/world-map.jpg";
+import oceanMask from "@/assets/ocean-mask.webp";
 import {
   REGIONS, MYSTERIES, isMysteryUnlocked, isMysteryVisibleForRole,
 } from "@/lib/game/data";
@@ -80,6 +81,9 @@ export function WorldMap() {
   const healthReveal = Math.max(0, Math.min(0.36, ((planetHealth - 40) / 32) * 0.32 + restoredCount * 0.006));
   // Ashy (barren) at the start, alive (blue-green) as Terra comes back.
   const aliveT = Math.max(0, Math.min(1, (planetHealth - 40) / 32 + restoredCount * 0.02));
+  // Oceans start grey and turn blue as mysteries are solved. A sqrt curve makes
+  // the first solves visibly shift the water, deepening toward full blue.
+  const waterBlue = Math.min(0.82, Math.sqrt(restoredCount / Math.max(1, visibleRegions.length)) * 0.82);
   const revealLayers = [
     `linear-gradient(rgba(0,0,0,${healthReveal.toFixed(3)}), rgba(0,0,0,${healthReveal.toFixed(3)}))`,
     ...solvedRegions.map(
@@ -123,6 +127,21 @@ export function WorldMap() {
             style={{ filter: "saturate(1.35) brightness(1.05)" }}
           />
         </div>
+        {/* Oceans: grey at the start, filling in blue as mysteries are solved.
+            Masked to the water so the continents keep their own colouring. */}
+        <div
+          className="pointer-events-none absolute inset-0 transition-opacity duration-1000"
+          style={{
+            opacity: waterBlue,
+            background: "linear-gradient(180deg, #2f74b0 0%, #2d6ea8 55%, #285f92 100%)",
+            mixBlendMode: "multiply",
+            WebkitMaskImage: `url(${oceanMask})`,
+            maskImage: `url(${oceanMask})`,
+            WebkitMaskSize: "100% 100%",
+            maskSize: "100% 100%",
+            maskMode: "alpha",
+          }}
+        />
         {/* Ashy vignette that lifts as Terra recovers */}
         <div
           className="pointer-events-none absolute inset-0 transition-opacity duration-1000"
