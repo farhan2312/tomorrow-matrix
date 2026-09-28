@@ -65,6 +65,14 @@ function PlayLayout() {
     [shownCrisisId],
   );
 
+  // Mirror crisis-modal visibility into the store so tier-bookend cinematics
+  // wait for the whole crisis (including its reveal) instead of playing over it.
+  const setCrisisModalOpen = useGame((s) => s.setCrisisModalOpen);
+  useEffect(() => {
+    setCrisisModalOpen(!!activeCrisis);
+    return () => setCrisisModalOpen(false);
+  }, [activeCrisis, setCrisisModalOpen]);
+
   if (!ready) {
     return (
       <div className="grid min-h-screen place-items-center bg-background">

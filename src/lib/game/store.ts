@@ -177,6 +177,10 @@ export interface GameState {
    *  behind it instead of appearing on top and swallowing its own click. */
   resultModalOpen: boolean;
   setResultModalOpen: (open: boolean) => void;
+  /** True while the crisis modal is on screen (through its reveal phase), so
+   *  tier-bookend cinematics wait instead of auto-playing over the crisis. */
+  crisisModalOpen: boolean;
+  setCrisisModalOpen: (open: boolean) => void;
 
   /** History of every indicator/Terra change with a human reason (newest first). */
   indicatorLog: IndicatorChange[];
@@ -259,6 +263,7 @@ const initial = {
   crisisLog: [] as CrisisOutcome[],
   pendingPromotion: null as PendingPromotion | null,
   resultModalOpen: false,
+  crisisModalOpen: false,
   indicatorLog: [] as IndicatorChange[],
   lastMysteryDelta: null as MysteryDelta | null,
   roleProgress: {} as Partial<Record<RoleId, RoleProgress>>,
@@ -1101,6 +1106,7 @@ export const useGame = create<GameState>()(
 
       dismissPromotion: () => set({ pendingPromotion: null }),
       setResultModalOpen: (open) => set({ resultModalOpen: open }),
+      setCrisisModalOpen: (open) => set({ crisisModalOpen: open }),
     }),
     { name: "tomorrow-matrix-game" },
   ),

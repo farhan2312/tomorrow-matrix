@@ -39,6 +39,16 @@ function earned(solved: string[]): string[] {
  */
 export function TierBookends() {
   const solved = useGame((s) => s.solvedMysteries);
+  // A tier unlocks at the same solve count that triggers a crisis (T2 at 4),
+  // and a tier's outro is earned right after validating that tier's last
+  // mystery — so a bookend would otherwise auto-play on top of the crisis or
+  // the post-solve recap and read as an "unprompted" video (SC-16/28/40). Hold
+  // the cinematic until those flows are clear so it plays on its own, labelled.
+  const crisisModalOpen = useGame((s) => s.crisisModalOpen);
+  const resultModalOpen = useGame((s) => s.resultModalOpen);
+  const pendingChallenge = useGame((s) => s.pendingChallenge);
+  const pendingPromotion = useGame((s) => s.pendingPromotion);
+  const blocked = crisisModalOpen || resultModalOpen || !!pendingChallenge || !!pendingPromotion;
   const [queue, setQueue] = useState<string[]>([]);
   const [current, setCurrent] = useState<string | null>(null);
   const initialized = useRef(false);
@@ -68,7 +78,8 @@ export function TierBookends() {
     if (p && /^(intro|outro)-T[1-4]$/.test(p)) setCurrent(p);
   }, []);
 
-  if (!current) return null;
+  // Keep `current` queued but don't render while another flow owns the screen.
+  if (!current || blocked) return null;
 
   const isIntro = current.startsWith("intro");
   const tier = current.split("-T")[1];
