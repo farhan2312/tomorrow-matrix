@@ -115,11 +115,12 @@ export function RoleChallengeModal() {
       <DialogContent className="max-w-xl overflow-hidden border-border p-0 sm:rounded-2xl">
         {/* Header */}
         <div className="bg-[image:var(--gradient-terra)] px-6 py-4 text-white">
-          <div className="flex items-center justify-between">
+          {/* pr-8 keeps the meta text clear of the dialog's absolute close (×). */}
+          <div className="flex items-center justify-between gap-3 pr-8">
             <span className="pill border-transparent bg-white/20 text-white">
               {kindIcon} {pending.title}
             </span>
-            <span className="font-mono text-xs">
+            <span className="whitespace-nowrap font-mono text-xs">
               {stepN} / {totalQs} · +{pending.baseBonus} CAP bonus
             </span>
           </div>

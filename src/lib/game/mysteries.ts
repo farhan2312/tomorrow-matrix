@@ -257,27 +257,38 @@ export function bonusForRole(role: RoleId | null, m: Mystery): number {
   return roleRelationship(role, m) === "primary" ? 25 : 0;
 }
 
-/** Build region hotspots dynamically, distribute across the world map by tier ring. */
+/**
+ * Build region hotspots spread evenly across the world map.
+ *
+ * A phyllotaxis (sunflower / golden-angle) distribution fills the map area
+ * with no clustering and no two pins overlapping. Mysteries are ordered by
+ * tier first, so lower tiers sit nearer the centre and higher tiers spiral
+ * outward — the "tier ring" feel is kept, but without the old ring layout's
+ * over-wide radius that pushed pins past the edge and stacked them vertically.
+ */
 export function buildRegions(): Region[] {
-  const ringRadius = { 1: 0.32, 2: 0.40, 3: 0.46, 4: 0.50 } as const;
   const cx = 50, cy = 50;
-  const perTier: Record<number, Mystery[]> = { 1: [], 2: [], 3: [], 4: [] };
-  for (const m of MYSTERIES) perTier[m.tier].push(m);
-  const out: Region[] = [];
-  (Object.keys(perTier).map(Number) as (1|2|3|4)[]).forEach((tier) => {
-    const arr = perTier[tier];
-    const r = ringRadius[tier] * 100;
-    arr.forEach((m, i) => {
-      const angle = (i / arr.length) * Math.PI * 2 - Math.PI / 2;
-      out.push({
-        id: `r-${m.id}`, name: m.region,
-        x: Math.max(5, Math.min(95, cx + Math.cos(angle) * r * 1.5)),
-        y: Math.max(8, Math.min(92, cy + Math.sin(angle) * r * 0.85)),
-        mysteryId: m.id,
-        status: tier === 1 ? "critical" : tier === 2 ? "active" : "stable",
-        label: m.title,
-      });
-    });
+  // Ellipse half-extents: keeps every pin inside the frame (x 7–93, y 16–84),
+  // wider than tall to suit a landscape world map.
+  const rxMax = 43, ryMax = 34;
+  const GOLDEN = Math.PI * (3 - Math.sqrt(5)); // ~2.39996 rad
+
+  const ordered = [...MYSTERIES].sort(
+    (a, b) => a.tier - b.tier || a.id.localeCompare(b.id),
+  );
+  const n = ordered.length;
+
+  return ordered.map((m, k) => {
+    const t = (k + 0.5) / n;          // 0..1 across the ordered set
+    const rad = Math.sqrt(t);          // sqrt → even areal density
+    const angle = k * GOLDEN;
+    return {
+      id: `r-${m.id}`, name: m.region,
+      x: Math.max(5, Math.min(95, cx + rad * rxMax * Math.cos(angle))),
+      y: Math.max(8, Math.min(92, cy + rad * ryMax * Math.sin(angle))),
+      mysteryId: m.id,
+      status: m.tier === 1 ? "critical" : m.tier === 2 ? "active" : "stable",
+      label: m.title,
+    };
   });
-  return out;
 }

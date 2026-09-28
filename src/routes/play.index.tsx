@@ -23,7 +23,7 @@ function WorldView() {
 
   useEffect(() => {
     if (!mapIntroPlayed) { mapIntroPlayed = true; narrate("MAP-01"); }
-    else narrate("MAP-02", { X: solvedMysteries.length });
+    else narrate("MAP-02", { X: solvedMysteries.length, "TERRA HEALTH %": `${planetHealth}%` });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
