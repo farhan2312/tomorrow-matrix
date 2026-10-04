@@ -13,6 +13,7 @@ import { getClientId } from "@/lib/multiplayer/identity";
 import { pushEvent } from "@/lib/multiplayer/api.functions";
 import { CardSequencer } from "@/components/game/CardSequencer";
 import { runTourOnce } from "@/lib/tour";
+import { narrate } from "@/lib/voice/store";
 import { logEvent } from "@/lib/analytics";
 import { AiTeamPanel } from "@/components/game/AiTeamPanel";
 import { MysteryCompleteModal } from "@/components/game/MysteryCompleteModal";
@@ -58,6 +59,7 @@ function MysteryDetail() {
     }, 700);
     return () => clearTimeout(t);
   }, [unlocked]);
+  const narratedRef = useRef<string | null>(null);
   const visible = isMysteryVisibleForRole(role, mystery);
   const rel = roleRelationship(role, mystery);
   const bonus = bonusForRole(role, mystery);
@@ -84,6 +86,17 @@ function MysteryDetail() {
   const seenIntro = !!(mediaState?.introWatched || mediaState?.introSkipped);
   const [introOpen, setIntroOpen] = useState(false);
   const [explainerAuto, setExplainerAuto] = useState(false);
+
+  // Narrate this mystery's intro line (MYS-Mxx) once per mystery mount — but not
+  // when the intro VIDEO is about to auto-play, so its audio and the narration
+  // don't talk over each other. No-op when voice is off or there's no line.
+  useEffect(() => {
+    if (!unlocked || narratedRef.current === mystery.code) return;
+    const willPlayIntro = introExists && !alreadySolved && (autoplayIntro || !seenIntro);
+    if (willPlayIntro) return;
+    narratedRef.current = mystery.code;
+    narrate(`MYS-${mystery.code}`);
+  }, [unlocked, mystery.code, introExists, alreadySolved, autoplayIntro, seenIntro]);
 
   const emit = (kind: string, payload: Record<string, unknown>) => {
     if (mode !== "multiplayer" || !lobbyId) return;
