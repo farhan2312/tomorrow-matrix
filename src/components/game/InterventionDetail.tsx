@@ -267,17 +267,6 @@ export function InterventionDetail({
             </div>
           </section>
 
-          {/* Educational Insight */}
-          <section className="rounded-2xl border border-violet-400/20 bg-gradient-to-br from-violet-500/10 to-indigo-500/10 p-5 animate-[fade-in_0.8s_ease-out]">
-            <SectionTitle icon={<BookOpen className="h-3.5 w-3.5" />}>Educational Insight</SectionTitle>
-            <p className="mt-2 text-sm leading-relaxed text-white/85">
-              This intervention operates as a systems lever: its {intervention.ripples?.length ?? 0} ripple
-              connection{intervention.ripples?.length === 1 ? "" : "s"} across the Butterfly Network mean the
-              gains compound beyond its immediate indicator effects. Systems thinkers call this a{" "}
-              <em>leverage point</em>, a small, well-placed shift that reshapes many downstream outcomes.
-            </p>
-          </section>
-
           {/* Related Interventions */}
           {related.length > 0 && (
             <section className="animate-[fade-in_0.9s_ease-out]">

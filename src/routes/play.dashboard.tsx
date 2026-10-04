@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown, ChevronRight, Lock, Check, Sparkles, Globe2, Coins, Activity, Trophy, AlertTriangle, ShieldCheck, Clock } from "lucide-react";
 import { useGame } from "@/lib/game/store";
-import { MYSTERIES, CRISES, isMysteryUnlocked } from "@/lib/game/data";
+import { MYSTERIES, CRISES, isMysteryUnlocked, isMysteryVisibleForRole } from "@/lib/game/data";
 import { mysteryCover } from "@/lib/game/media";
 import { HealthGauge } from "@/components/game/HealthGauge";
 import { PlanetaryIndicatorsPanel } from "@/components/game/PlanetaryIndicatorsPanel";
@@ -13,14 +13,14 @@ export const Route = createFileRoute("/play/dashboard")({
 });
 
 function Dashboard() {
-  const { planetHealth, year, cap, solvedMysteries, crisisStats, resolvedCrises, crisisLog } = useGame();
+  const { planetHealth, year, cap, solvedMysteries, crisisStats, resolvedCrises, crisisLog, role } = useGame();
 
   const total = MYSTERIES.length;
   const solvedCount = solvedMysteries.length;
   const remaining = total - solvedCount;
 
-  const tierStats = [1, 2, 3].map((tier) => {
-    const all = MYSTERIES.filter((m) => m.tier === tier);
+  const tierStats = [1, 2, 3, 4].map((tier) => {
+    const all = MYSTERIES.filter((m) => m.tier === tier && isMysteryVisibleForRole(role, m));
     const done = all.filter((m) => solvedMysteries.includes(m.id)).length;
     return { tier, total: all.length, done, pct: all.length ? Math.round((done / all.length) * 100) : 0 };
   });
@@ -63,7 +63,7 @@ function Dashboard() {
                 <div key={t.tier}>
                   <div className="mb-1.5 flex items-center justify-between text-xs">
                     <span className="font-medium">Tier {t.tier}</span>
-                    <span className="font-mono text-muted-foreground">{t.done}/{t.total} · {t.pct}%</span>
+                    <span className="font-mono text-muted-foreground">{t.done} / {t.total} · {t.pct}%</span>
                   </div>
                   <div className="h-2 overflow-hidden rounded-full bg-muted">
                     <div className="h-full rounded-full bg-[image:var(--gradient-terra)] transition-all duration-700"
