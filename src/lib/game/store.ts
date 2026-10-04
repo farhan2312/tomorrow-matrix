@@ -548,10 +548,15 @@ export const useGame = create<GameState>()(
           : s.pendingCrisisId;
 
         // Capture before/after for the post-solve panel + indicator history.
+        // Solving restores Terra, scaled by tier so bigger problems give a
+        // bigger lift (t1 +3 … t4 +6). This keeps overall play trending upward:
+        // crises (the only thing that lowers Terra health) no longer outpace
+        // solving, so Terra recovers toward the goal instead of sinking (NT-05).
+        const restore = 2 + m.tier;
         const indicatorsBefore = { ...s.indicators };
         const planetBefore = s.planetHealth;
-        const indicatorsAfter = { ...s.indicators, [m.category]: clamp(s.indicators[m.category] + 2) };
-        const planetAfter = clamp(s.planetHealth + 2);
+        const indicatorsAfter = { ...s.indicators, [m.category]: clamp(s.indicators[m.category] + restore) };
+        const planetAfter = clamp(s.planetHealth + restore);
         const reason = `${m.title} solved`;
         const changes: IndicatorChange[] = [
           {

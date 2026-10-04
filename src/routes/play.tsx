@@ -31,6 +31,10 @@ function PlayLayout() {
   const pendingCrisisId = useGame((s) => s.pendingCrisisId);
   const dismissCrisis = useGame((s) => s.dismissCrisis);
   const resolveCrisis = useGame((s) => s.resolveCrisis);
+  // When a solve both earns a recap and triggers a crisis (every 4th solve),
+  // show the mystery result first and hold the crisis until it's closed, so the
+  // player always sees their score (NT-04).
+  const resultModalOpen = useGame((s) => s.resultModalOpen);
   const lobbyId = useLobby((s) => s.lobbyId);
   const navigate = useNavigate();
 
@@ -97,7 +101,7 @@ function PlayLayout() {
       <PromotionModal />
       <CrisisModal
         crisis={activeCrisis}
-        open={!!activeCrisis}
+        open={!!activeCrisis && !resultModalOpen}
         onClose={() => {
           dismissCrisis();
           setShownCrisisId(null);

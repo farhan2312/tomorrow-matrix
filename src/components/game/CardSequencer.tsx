@@ -193,21 +193,25 @@ export function CardSequencer({ canonical, hints = [], onSolved, onAttempt, alre
           >
             <RotateCcw className="h-3.5 w-3.5" /> Shuffle
           </button>
-          <button
-            onClick={useHint}
-            disabled={hintsUsed >= hints.length || hints.length === 0}
-            className={cn(
-              "inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium transition-colors",
-              hintsUsed >= hints.length || hints.length === 0
-                ? "cursor-not-allowed border-border bg-muted/40 text-muted-foreground/60"
-                : "border-[color:var(--warmth)]/40 bg-[color:var(--warmth-soft)] text-[color:var(--warmth)] hover:bg-[color:var(--warmth)]/15",
-            )}
-          >
-            <Lightbulb className="h-3.5 w-3.5" />
-            {hintsUsed >= hints.length
-              ? "All hints used"
-              : `Hint ${hintsUsed + 1}/${hints.length} (−10 CAP)`}
-          </button>
+          {/* Only show the hint control when this mystery actually has hints.
+              Otherwise a 0-hint mystery read "All hints used" at 0 used (NT-02). */}
+          {hints.length > 0 && (
+            <button
+              onClick={useHint}
+              disabled={hintsUsed >= hints.length}
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium transition-colors",
+                hintsUsed >= hints.length
+                  ? "cursor-not-allowed border-border bg-muted/40 text-muted-foreground/60"
+                  : "border-[color:var(--warmth)]/40 bg-[color:var(--warmth-soft)] text-[color:var(--warmth)] hover:bg-[color:var(--warmth)]/15",
+              )}
+            >
+              <Lightbulb className="h-3.5 w-3.5" />
+              {hintsUsed >= hints.length
+                ? "All hints used"
+                : `Hint ${hintsUsed + 1}/${hints.length} (−10 CAP)`}
+            </button>
+          )}
         </div>
 
         <div className={cn("text-xs", check?.correct === false ? "text-destructive" : "text-muted-foreground")}>

@@ -61,6 +61,21 @@ function hasProgress(state: Record<string, unknown>): boolean {
 // immediately echo it back to the server.
 let applyingRemote = false;
 
+/**
+ * Explicit "start a new game" — wipe the cloud save so a fresh start actually
+ * persists across re-login. This is the ONLY path allowed to clear the cloud
+ * copy; the automatic sync (saveToCloud) still refuses to overwrite progress
+ * with an empty snapshot. Caller resets the local store separately.
+ */
+export async function clearCloudSave(userId: string): Promise<void> {
+  try {
+    await db.from(TABLE).delete().eq("id", userId);
+  } catch {
+    /* best effort — if it fails the local reset still took effect */
+  }
+  setLocalTs(Date.now());
+}
+
 export async function saveToCloud(userId: string): Promise<void> {
   const state = snapshot();
   // Never overwrite the cloud save with an empty, freshly-reset store. This is

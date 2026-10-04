@@ -2,6 +2,7 @@ import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles, Network as NetIcon, Map as MapIcon, AlertTriangle, LogIn, UserCircle } from "lucide-react";
 import { useGame } from "@/lib/game/store";
+import { clearCloudSave } from "@/lib/game/cloud-sync";
 import { supabase } from "@/integrations/supabase/client";
 import { LandingBackdrop } from "@/components/LandingBackdrop";
 import terraGlobe from "@/assets/terra-globe.png";
@@ -79,6 +80,24 @@ function Landing() {
     navigate({ to: "/mode-select" });
   };
 
+  // Explicit "Start new game": a hard reset to zero. Confirmed, because it
+  // wipes current progress — and for a signed-in player it also clears the
+  // cloud save so the fresh start survives the next sign-in (the automatic
+  // sync won't do this; see clearCloudSave). Role-select then re-applies the
+  // role-based starting CAP, so this is also what makes CAP start correct.
+  const startFreshGame = async () => {
+    if (!window.confirm("Start a new game? This erases your current progress and can't be undone.")) return;
+    reset();
+    setPlayer(name.trim() || signedIn?.display || signedIn?.email?.split("@")[0] || "Guest");
+    if (signedIn) {
+      try {
+        const { data } = await supabase.auth.getUser();
+        if (data.user) await clearCloudSave(data.user.id);
+      } catch { /* best effort */ }
+    }
+    navigate({ to: "/mode-select" });
+  };
+
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-background">
       <LandingBackdrop />
@@ -130,7 +149,7 @@ function Landing() {
           )}
 
           <form
-            onSubmit={(e) => { e.preventDefault(); startGuest(); }}
+            onSubmit={(e) => { e.preventDefault(); if (signedIn && role) { void startFreshGame(); } else { startGuest(); } }}
             className={`${signedIn && role ? "mt-3" : "mt-7"} flex w-full max-w-md flex-col gap-2 sm:flex-row`}
           >
             <input
