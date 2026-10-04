@@ -7,6 +7,10 @@ import { narrate } from "@/lib/voice/store";
 import type { RoleId } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
 import { logEvent } from "@/lib/analytics";
+import { useServerFn } from "@tanstack/react-start";
+import { claimRole } from "@/lib/multiplayer/api.functions";
+import { getClientId } from "@/lib/multiplayer/identity";
+import { useLobby } from "@/lib/multiplayer/store";
 
 // Per-role narration lines (OB-11..OB-18).
 const ROLE_VOICE: Record<string, string> = {
@@ -27,7 +31,22 @@ export const Route = createFileRoute("/role-select")({
 function RoleSelect() {
   const navigate = useNavigate();
   const setRole = useGame((s) => s.setRole);
+  const gameMode = useGame((s) => s.mode);
+  const lobbyId = useLobby((s) => s.lobbyId);
+  const claim = useServerFn(claimRole);
   const [selected, setSelected] = useState<RoleId | null>(null);
+
+  // Solo: just set the role locally. Multiplayer (inside a lobby): this picker
+  // is also reachable mid-session, so store the pick on THIS player's lobby row
+  // too (any role allowed, duplicates fine) so it stays per-player and in sync.
+  const confirmRole = async (role: RoleId) => {
+    if (gameMode === "multiplayer" && lobbyId) {
+      try { await claim({ data: { lobbyId, clientId: getClientId(), role } }); } catch { /* keep local pick */ }
+    }
+    setRole(role);
+    logEvent("game_start", { role });
+    navigate({ to: "/play" });
+  };
   const current = ROLES.find((r) => r.id === selected) ?? null;
 
   // Narrate the role-selection intro (OB-10) when this screen opens.
@@ -110,7 +129,7 @@ function RoleSelect() {
                 </div>
 
                 <button
-                  onClick={() => { setRole(current.id); logEvent("game_start", { role: current.id }); navigate({ to: "/play" }); }}
+                  onClick={() => { void confirmRole(current.id); }}
                   className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-terra)] px-5 py-3 text-sm font-medium text-white shadow-sm transition-transform hover:scale-[1.02]"
                 >
                   Confirm role <ArrowRight className="h-4 w-4" />

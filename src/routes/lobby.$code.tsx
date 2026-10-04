@@ -29,45 +29,55 @@ function WaitingRoom() {
   const setMode = useGame((s) => s.setMode);
   const [copied, setCopied] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const [claiming, setClaiming] = useState<RoleId | null>(null);
+  const [roleError, setRoleError] = useState<string | null>(null);
   useEffect(() => { setHydrated(true); }, []);
 
-  // Ensure we're joined + subscribed on direct navigation / refresh.
+  // Ensure we're joined + subscribed on direct navigation / refresh. The join
+  // is an idempotent upsert keyed on (lobby, this tab's client id) and never
+  // touches an existing role, so it is always safe to run: it also covers
+  // players joining via QR / direct link and tabs that never saw the lobby page.
   useEffect(() => {
     if (!hydrated) return;
     const clientId = getClientId();
     const name = getGuestName();
     let cancelled = false;
     (async () => {
-      let id = lobby.lobbyId;
-      if (!id || lobby.code !== code) {
-        try {
-          const res = await join({ data: { code, clientId, name } });
-          if (cancelled) return;
-          id = res.lobbyId;
-          useLobby.getState().setLobby({ lobbyId: id, code: res.code });
-        } catch {
-          navigate({ to: "/lobby" });
-          return;
-        }
+      // Never carry players/status/roles over from a different lobby.
+      if (useLobby.getState().code !== code) useLobby.getState().clear();
+      let id: string | null = null;
+      try {
+        const res = await join({ data: { code, clientId, name } });
+        if (cancelled) return;
+        id = res.lobbyId;
+        useLobby.getState().setLobby({ lobbyId: id, code: res.code });
+      } catch {
+        if (!cancelled) navigate({ to: "/lobby" });
+        return;
       }
-      if (id) await useLobby.getState().subscribe(id, clientId);
+      if (id && !cancelled) await useLobby.getState().subscribe(id, clientId);
     })();
     return () => { cancelled = true; useLobby.getState().unsubscribe(); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated, code]);
 
   // When host starts, route everyone into /play. When facilitator ends, go to endgame.
+  // A player is only sent into the game once THEY have picked a role (the role
+  // on their own player row). Players who join an already-started session stay
+  // on this screen, pick a role, and then continue. There is no default role.
   useEffect(() => {
     if (lobby.status === "active") {
+      if (!hydrated) return;
       const me = lobby.players.find((p) => p.client_id === getClientId());
-      const myRole = (me?.role as RoleId | undefined) ?? "scientist";
+      const myRole = me?.role as RoleId | null | undefined;
+      if (!myRole || !ROLES.some((r) => r.id === myRole)) return;
       setMode("multiplayer");
       setRole(myRole);
       navigate({ to: "/play" });
     } else if (lobby.status === "ended") {
       navigate({ to: "/endgame" });
     }
-  }, [lobby.status, lobby.players, navigate, setMode, setRole]);
+  }, [hydrated, lobby.status, lobby.players, navigate, setMode, setRole]);
 
   const clientId = hydrated ? getClientId() : "";
   const me = lobby.players.find((p) => p.client_id === clientId);
@@ -78,9 +88,23 @@ function WaitingRoom() {
     try { await navigator.clipboard.writeText(code); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch {}
   };
 
+  // Every player picks their OWN role. Any role may be chosen, including one
+  // another player already holds (duplicates are allowed).
   const onClaim = async (roleId: RoleId) => {
-    if (!lobby.lobbyId) return;
-    await claim({ data: { lobbyId: lobby.lobbyId, clientId, role: roleId } });
+    if (!lobby.lobbyId || !clientId) return;
+    setRoleError(null);
+    setClaiming(roleId);
+    try {
+      await claim({ data: { lobbyId: lobby.lobbyId, clientId, role: roleId } });
+      // Optimistic local update; realtime will confirm.
+      useLobby.setState((st) => ({
+        players: st.players.map((p) => (p.client_id === clientId ? { ...p, role: roleId } : p)),
+      }));
+    } catch (e) {
+      setRoleError(e instanceof Error ? e.message : "Could not set your role. Try again.");
+    } finally {
+      setClaiming(null);
+    }
   };
 
   const onStart = async () => {
@@ -166,20 +190,30 @@ function WaitingRoom() {
           {/* Role picker */}
           <div className="surface-card p-5">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Pick your stakeholder</div>
-            <h2 className="mt-1 font-display text-xl font-semibold">Each player owns a perspective</h2>
+            <h2 className="mt-1 font-display text-xl font-semibold">Choose your role</h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Pick any role you like. Other players can choose the same one.
+            </p>
+            {me && !me.role && (
+              <div className="mt-3 rounded-xl border border-[color:var(--terra)]/30 bg-[color:var(--terra-soft)] p-3 text-sm">
+                {lobby.status === "active"
+                  ? "This session has already started. Choose your role to jump in."
+                  : "Choose your role to get ready."}
+              </div>
+            )}
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {ROLES.map((r) => {
-                const taken = lobby.players.find((p) => p.role === r.id && p.client_id !== clientId);
+                const others = lobby.players.filter((p) => p.role === r.id && p.client_id !== clientId);
                 const mine = me?.role === r.id;
                 return (
                   <button
                     key={r.id}
-                    disabled={!!taken}
+                    disabled={!me || claiming !== null}
                     onClick={() => onClaim(r.id)}
                     className={cn(
                       "rounded-xl border p-3 text-left transition-all",
                       mine ? "border-[color:var(--terra)] ring-2 ring-[color:var(--terra)]" : "border-border hover:border-[color:var(--terra)]",
-                      taken && "cursor-not-allowed opacity-40",
+                      (!me || claiming !== null) && "cursor-wait opacity-70",
                     )}
                   >
                     <div className="flex items-center justify-between">
@@ -192,12 +226,22 @@ function WaitingRoom() {
                     </div>
                     <div className="mt-2 font-display text-base font-semibold">{r.name}</div>
                     <div className="text-xs text-muted-foreground">{r.tagline}</div>
-                    {taken && <div className="mt-2 text-[10px] uppercase tracking-wider text-muted-foreground">Taken by {taken.name}</div>}
+                    {others.length > 0 && (
+                      <div className="mt-2 text-[10px] uppercase tracking-wider text-muted-foreground">
+                        Also: {others.map((o) => o.name).join(", ")}
+                      </div>
+                    )}
                   </button>
                 );
               })}
             </div>
-            {!isHost && <p className="mt-4 text-xs text-muted-foreground">Waiting for the host to start the session…</p>}
+            {roleError && <div className="mt-3 rounded-xl border border-[color:var(--warmth)]/30 bg-[color:var(--warmth-soft)] p-3 text-sm">{roleError}</div>}
+            {!isHost && lobby.status !== "active" && (
+              <p className="mt-4 text-xs text-muted-foreground">Waiting for the host to start the session…</p>
+            )}
+            {isHost && !canStart && lobby.status !== "active" && (
+              <p className="mt-4 text-xs text-muted-foreground">Everyone needs to pick a role before you can start.</p>
+            )}
           </div>
         </div>
       </section>

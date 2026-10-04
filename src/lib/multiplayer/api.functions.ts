@@ -119,13 +119,15 @@ export const claimRole = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    await supabaseAdmin.from("lobby_players")
-      .update({ role: null })
-      .eq("lobby_id", data.lobbyId).eq("role", data.role);
-    const { error } = await supabaseAdmin.from("lobby_players")
+    // Roles are chosen per player and are NOT exclusive: several players may
+    // hold the same role, so we never clear other players' roles here. We only
+    // write this player's own row.
+    const { data: updated, error } = await supabaseAdmin.from("lobby_players")
       .update({ role: data.role, last_seen: new Date().toISOString() })
-      .eq("lobby_id", data.lobbyId).eq("client_id", data.clientId);
+      .eq("lobby_id", data.lobbyId).eq("client_id", data.clientId)
+      .select("id");
     if (error) throw new Error(error.message);
+    if (!updated || updated.length === 0) throw new Error("You are not in this lobby. Rejoin and try again.");
     return { ok: true };
   });
 

@@ -45,6 +45,8 @@ function LobbyIndex() {
       const res = await create({
         data: { clientId: getClientId(), name, mode: "play" },
       });
+      // Drop any stale lobby state from a previous session in this tab.
+      useLobby.getState().clear();
       setLobby({ lobbyId: res.lobbyId, code: res.code, mode: res.mode as "play" | "workshop" });
       navigate({ to: "/lobby/$code", params: { code: res.code } });
     } catch (e) {
@@ -58,6 +60,9 @@ function LobbyIndex() {
       setGuestName(name);
       setMode("multiplayer");
       const res = await join({ data: { clientId: getClientId(), name, code: code.toUpperCase() } });
+      // Drop any stale lobby state (players/status/roles of an earlier session);
+      // the waiting room re-subscribes and the player then picks their OWN role.
+      useLobby.getState().clear();
       setLobby({ lobbyId: res.lobbyId, code: res.code, mode: res.mode as "play" | "workshop" });
       navigate({ to: "/lobby/$code", params: { code: res.code } });
     } catch (e) {

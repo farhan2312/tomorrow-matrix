@@ -1,7 +1,9 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 import { supabase } from "@/integrations/supabase/client";
 import { heartbeat } from "./api.functions";
+import { useGame } from "@/lib/game/store";
+import type { RoleId } from "@/lib/game/types";
 
 export interface LobbyPlayer {
   id: string;
@@ -45,6 +47,19 @@ export interface CrisisVote {
 }
 
 type EventListener = (e: LobbyEvent) => void;
+
+// Each player's role lives on THEIR lobby_players row. The game store is
+// persisted in localStorage, which is shared between tabs of the same browser,
+// so once a session is running we re-assert this tab's own role from the lobby
+// row (keyed by this tab's client id) instead of trusting whatever role another
+// tab last wrote to localStorage.
+function syncOwnRole(players: LobbyPlayer[], clientId: string, status: LobbyRow["status"] | null) {
+  if (status !== "active") return;
+  const game = useGame.getState();
+  if (game.mode !== "multiplayer") return;
+  const me = players.find((p) => p.client_id === clientId);
+  if (me?.role && me.role !== game.role) game.setRole(me.role as RoleId);
+}
 
 interface LobbyState {
   lobbyId: string | null;
@@ -124,6 +139,7 @@ export const useLobby = create<LobbyState>()(
           votes: (votes ?? []) as CrisisVote[],
           events: (events ?? []) as LobbyEvent[],
         });
+        syncOwnRole((players ?? []) as LobbyPlayer[], clientId, get().status);
 
         const channel = supabase.channel(`lobby:${lobbyId}`)
           .on("postgres_changes",
@@ -143,6 +159,7 @@ export const useLobby = create<LobbyState>()(
               const { data } = await supabase.from("lobby_players")
                 .select("id, client_id, name, role, is_host, last_seen").eq("lobby_id", lobbyId);
               set({ players: (data ?? []) as LobbyPlayer[] });
+              syncOwnRole((data ?? []) as LobbyPlayer[], clientId, get().status);
             })
           .on("postgres_changes",
             { event: "INSERT", schema: "public", table: "lobby_events", filter: `lobby_id=eq.${lobbyId}` },
@@ -181,6 +198,9 @@ export const useLobby = create<LobbyState>()(
     }),
     {
       name: "tomorrow-matrix-lobby",
+      // sessionStorage (per tab), not localStorage: two tabs of one browser must
+      // not share a lobby/player context.
+      storage: createJSONStorage(() => sessionStorage),
       partialize: (s) => ({ lobbyId: s.lobbyId, code: s.code, mode: s.mode }),
     },
   ),
