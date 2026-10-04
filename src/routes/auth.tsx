@@ -4,6 +4,21 @@ import { MailCheck, ArrowLeft, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
+/** Turn a raw auth error into a human message. Crucially, fetch() throws a
+ *  TypeError "Failed to fetch" when the request can't reach Supabase at all
+ *  (offline, or the free-tier database waking from sleep) — surface that as a
+ *  clear, retry-able message instead of the cryptic raw string. */
+function friendlyAuthError(err: unknown): string {
+  const msg = (err as { message?: string })?.message || "";
+  if (err instanceof TypeError || /failed to fetch|networkerror|load failed|network request failed/i.test(msg)) {
+    return "We couldn't reach the server. It may be waking up — please wait a few seconds and try again.";
+  }
+  if (/invalid login credentials/i.test(msg)) return "Incorrect email or password.";
+  if (/email not confirmed/i.test(msg)) return "Please confirm your email first — check your inbox for the link.";
+  if (/rate limit|too many requests/i.test(msg)) return "Too many attempts. Please wait a minute and try again.";
+  return msg || "Something went wrong. Please try again.";
+}
+
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
@@ -51,11 +66,11 @@ function AuthPage() {
         options: { redirectTo: window.location.origin + "/auth" },
       });
       if (error) {
-        toast.error(`Sign-in failed: ${error.message ?? provider}`);
+        toast.error(friendlyAuthError(error));
         setBusy(null);
       }
     } catch (err) {
-      toast.error((err as Error).message);
+      toast.error(friendlyAuthError(err));
       setBusy(null);
     }
   };
@@ -87,13 +102,7 @@ function AuthPage() {
         if (error) throw error;
       }
     } catch (err) {
-      const msg = (err as Error).message || "Something went wrong. Please try again.";
-      // Supabase returns a generic "Invalid login credentials" — make it human.
-      const friendly = /invalid login credentials/i.test(msg)
-        ? "Incorrect email or password."
-        : /email not confirmed/i.test(msg)
-        ? "Please confirm your email first — check your inbox for the link."
-        : msg;
+      const friendly = friendlyAuthError(err);
       setFormError(friendly);
       toast.error(friendly);
     } finally {
@@ -111,7 +120,7 @@ function AuthPage() {
       if (error) throw error;
       setSent({ kind: "reset", email });
     } catch (err) {
-      toast.error((err as Error).message);
+      toast.error(friendlyAuthError(err));
     } finally { setBusy(null); }
   };
 
@@ -130,7 +139,7 @@ function AuthPage() {
       }
       toast.success("Email resent.");
     } catch (err) {
-      toast.error((err as Error).message);
+      toast.error(friendlyAuthError(err));
     } finally { setBusy(null); }
   };
 
