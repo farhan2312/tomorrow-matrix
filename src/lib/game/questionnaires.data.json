@@ -103,7 +103,7 @@
           "An endangered species",
           "A species introduced from elsewhere"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 9,
         "id": "scientist-9"
@@ -159,7 +159,7 @@
           "A neutral process with no long-term effect",
           "A loop that always leads to cooling"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 13,
         "id": "scientist-13"
@@ -407,7 +407,7 @@
           "Say all weather events are now caused by climate change",
           "Avoid answering because it's too complex"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 29,
         "id": "scientist-29"
@@ -624,7 +624,7 @@
           "A seed that grows only in winter",
           "A seed that cannot be replanted"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 7,
         "id": "farmer-7"
@@ -1250,7 +1250,7 @@
           "A city with only 15 minutes of daylight",
           "A traffic rule limiting driving time"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 13,
         "id": "planner-13"
@@ -1442,7 +1442,7 @@
           "Flooding is unrelated to land use",
           "The new houses caused less rain to fall"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 25,
         "id": "planner-25"
@@ -1986,7 +1986,7 @@
           "Ignore the topic entirely",
           "Share the post further without checking it"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 25,
         "id": "student-25"
@@ -2000,7 +2000,7 @@
           "Give up on the idea",
           "Only rely on the school administration to act"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 26,
         "id": "student-26"
@@ -2014,7 +2014,7 @@
           "Avoid mentioning climate change entirely",
           "Teach only success stories with no context"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 27,
         "id": "student-27"
@@ -2028,7 +2028,7 @@
           "Waiting passively for change",
           "Avoiding any contact with policymakers"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 28,
         "id": "student-28"
@@ -2072,6 +2072,7 @@
           "A meme with no citation"
         ],
         "correctIndices": [
+          0,
           1,
           3
         ],
@@ -2090,6 +2091,9 @@
           "Peer-to-peer education"
         ],
         "correctIndices": [
+          0,
+          1,
+          3,
           4
         ],
         "phase": 3,
@@ -2107,6 +2111,8 @@
           "Makes sweeping claims with no attribution"
         ],
         "correctIndices": [
+          0,
+          2,
           3
         ],
         "phase": 3,
@@ -2220,7 +2226,7 @@
           "A subsidy for fossil fuel companies",
           "A tax exclusively on individuals, not businesses"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 5,
         "id": "policymaker-5"
@@ -2234,7 +2240,7 @@
           "A tax with no limit on emissions",
           "A voluntary system with no enforcement"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 6,
         "id": "policymaker-6"
@@ -2332,7 +2338,7 @@
           "Because it looks better in reports",
           "Because a single tool always works best"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 13,
         "id": "policymaker-13"
@@ -2346,7 +2352,7 @@
           "They guarantee immediate results",
           "They eliminate the need for any policy"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 14,
         "id": "policymaker-14"
@@ -2360,7 +2366,7 @@
           "They have no real influence",
           "They are only symbolic with no purpose"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 15,
         "id": "policymaker-15"
@@ -2388,7 +2394,7 @@
           "It is entirely unrelated to climate policy",
           "Only applies to unrelated legal matters"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 17,
         "id": "policymaker-17"
@@ -2524,7 +2530,7 @@
           "Abandon emissions reduction goals",
           "Only focus on job protection with no climate action"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 25,
         "id": "policymaker-25"
@@ -2566,7 +2572,7 @@
           "Ignoring the issue since it's not one region's fault alone",
           "Banning all water use upstream"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 28,
         "id": "policymaker-28"
@@ -2594,7 +2600,7 @@
           "Cancel the policy regardless of its environmental benefit",
           "Apply the policy only to lower-income households"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 30,
         "id": "policymaker-30"
@@ -2630,6 +2636,7 @@
         ],
         "correctIndices": [
           0,
+          2,
           3
         ],
         "phase": 3,
@@ -2647,6 +2654,7 @@
           "Stakeholder engagement"
         ],
         "correctIndices": [
+          0,
           1,
           3,
           4
@@ -2820,7 +2828,7 @@
           "A marketing slogan with no real data",
           "A tax paid instead of reporting"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 9,
         "id": "business-9"
@@ -2834,7 +2842,7 @@
           "A rule that only applies to consumers",
           "A tax exemption for manufacturers"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 10,
         "id": "business-10"
@@ -2862,7 +2870,7 @@
           "Firing all employees during sustainability transitions",
           "A transition with no planning"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 12,
         "id": "business-12"
@@ -3068,7 +3076,7 @@
           "Immediately deny any connection publicly",
           "Continue business as usual with no review"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 25,
         "id": "business-25"
@@ -3096,7 +3104,7 @@
           "This is a purely symbolic request with no real impact",
           "Only environmental regulators care about this data"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 27,
         "id": "business-27"
@@ -3124,7 +3132,7 @@
           "Ignore supply chain conditions entirely",
           "Only monitor practices in the company's home country"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 29,
         "id": "business-29"
@@ -3192,7 +3200,9 @@
           "Prioritizing lowest cost regardless of practices"
         ],
         "correctIndices": [
-          2
+          0,
+          2,
+          3
         ],
         "phase": 3,
         "num": 33,
@@ -3307,7 +3317,7 @@
           "A type of infrastructure material",
           "A government tax program"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 5,
         "id": "citizen-5"
@@ -3335,7 +3345,7 @@
           "A place with too much food",
           "A farming region with excess produce"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 7,
         "id": "citizen-7"
@@ -3349,7 +3359,7 @@
           "Heat only affects indoor workers",
           "Their vulnerability is unrelated to working conditions"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 8,
         "id": "citizen-8"
@@ -3377,7 +3387,7 @@
           "A garden owned solely by the government",
           "A garden used only for decoration"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 10,
         "id": "citizen-10"
@@ -3419,7 +3429,7 @@
           "All neighborhoods have identical tree cover",
           "Wealthier areas always have more heat"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 13,
         "id": "citizen-13"
@@ -3461,7 +3471,7 @@
           "Office air conditioning",
           "Working night shifts only"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 16,
         "id": "citizen-16"
@@ -3611,7 +3621,7 @@
           "Consultation always slows down necessary projects with no benefit",
           "Only engineers' opinions matter for such projects"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 25,
         "id": "citizen-25"
@@ -3718,7 +3728,8 @@
         "correctIndices": [
           0,
           1,
-          3
+          3,
+          4
         ],
         "phase": 3,
         "num": 32,
@@ -3735,7 +3746,9 @@
           "Deciding everything without any public input"
         ],
         "correctIndices": [
-          2
+          0,
+          2,
+          3
         ],
         "phase": 3,
         "num": 33,
@@ -3876,7 +3889,7 @@
           "A government agency",
           "A type of protest sign"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 7,
         "id": "activist-7"
@@ -3932,7 +3945,7 @@
           "A private diary entry",
           "A type of scientific study"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 11,
         "id": "activist-11"
@@ -3946,7 +3959,7 @@
           "Increasing industrial development without consultation",
           "A tax policy unrelated to land"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 1,
         "num": 12,
         "id": "activist-12"
@@ -3960,7 +3973,7 @@
           "It replaces the need for any factual evidence",
           "It only appeals to activists themselves"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 13,
         "id": "activist-13"
@@ -3988,7 +4001,7 @@
           "It has no strategic benefit",
           "It's illegal to collaborate across organizations"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 15,
         "id": "activist-15"
@@ -4016,7 +4029,7 @@
           "It should be dismissed entirely",
           "It only affects adults"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 2,
         "num": 17,
         "id": "activist-17"
@@ -4166,7 +4179,7 @@
           "Only rely on paid advertising",
           "Avoid engaging with any media"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 26,
         "id": "activist-26"
@@ -4208,7 +4221,7 @@
           "Avoiding any engagement with the topic",
           "Relying solely on one viral video"
         ],
-        "correctIndex": 0,
+        "correctIndex": 1,
         "phase": 3,
         "num": 29,
         "id": "activist-29"
@@ -4240,7 +4253,8 @@
         "correctIndices": [
           0,
           1,
-          3
+          3,
+          4
         ],
         "phase": 3,
         "num": 31,
@@ -4276,6 +4290,8 @@
           "Applying policies uniformly with no regard for differing vulnerability"
         ],
         "correctIndices": [
+          0,
+          2,
           3
         ],
         "phase": 3,
