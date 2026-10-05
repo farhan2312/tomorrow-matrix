@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { persist, createJSONStorage } from "zustand/middleware";
+import { gameStateStorage, setMultiplayerSession } from "./game-storage";
 import type { IndicatorKey, RoleId, NetworkNode, NetworkEdge, GameMode, AiTeammate } from "./types";
 import { INTERVENTIONS, MYSTERIES, CRISES, computePayout, bonusForRole, roleRelationship, pickCrisisForState, defaultChoiceFor } from "./data";
 import {
@@ -521,7 +522,32 @@ export const useGame = create<GameState>()(
           get().queueChallenge("orientation");
         }
       },
-      setMode: (mode) => set({ mode }),
+      setMode: (mode) => {
+        const prev = get().mode;
+        if (mode === "multiplayer" && prev !== "multiplayer") {
+          // Entering a multiplayer session: isolate this tab's game state
+          // (storage now routes to sessionStorage) and start the shared game
+          // fresh, so each player has their own board + stakeholder questions
+          // (MP-03 / MP-06) and solo progress isn't carried in. Keep the name
+          // and any role; the lobby's role picker sets the real role next.
+          setMultiplayerSession(true);
+          set({ ...initial, playerName: get().playerName, role: get().role, mode });
+          return;
+        }
+        if (mode !== "multiplayer" && prev === "multiplayer") {
+          // Leaving multiplayer: restore the solo game from localStorage.
+          setMultiplayerSession(false);
+          try {
+            const raw = localStorage.getItem("tomorrow-matrix-game");
+            const soloState = raw ? (JSON.parse(raw).state ?? null) : null;
+            set(soloState ? { ...soloState, mode } : { ...initial, mode });
+          } catch {
+            set({ mode });
+          }
+          return;
+        }
+        set({ mode });
+      },
       setAiTeam: (aiTeam) => set({ aiTeam }),
 
       solveMystery: (id, attempts = 1, hintsUsed = 0, opts) => {
@@ -1113,7 +1139,12 @@ export const useGame = create<GameState>()(
       setResultModalOpen: (open) => set({ resultModalOpen: open }),
       setCrisisModalOpen: (open) => set({ crisisModalOpen: open }),
     }),
-    { name: "tomorrow-matrix-game" },
+    {
+      name: "tomorrow-matrix-game",
+      // Per-tab storage in multiplayer (sessionStorage), shared localStorage in
+      // solo — so multiplayer players don't share one solved list / progress.
+      storage: createJSONStorage(() => gameStateStorage),
+    },
   ),
 );
 

@@ -11,6 +11,7 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { useGame } from "@/lib/game/store";
+import { isMultiplayerSession } from "@/lib/game/game-storage";
 
 const TABLE = "game_saves";
 const TS_KEY = "tomorrow-matrix-cloud-ts";
@@ -77,6 +78,9 @@ export async function clearCloudSave(userId: string): Promise<void> {
 }
 
 export async function saveToCloud(userId: string): Promise<void> {
+  // Multiplayer runs on a per-tab game state; it must not be written to the
+  // player's single-player cloud save.
+  if (isMultiplayerSession()) return;
   const state = snapshot();
   // Never overwrite the cloud save with an empty, freshly-reset store. This is
   // the guard that stops a local "restart" from nuking real cloud progress.
@@ -91,6 +95,8 @@ export async function saveToCloud(userId: string): Promise<void> {
 }
 
 export async function loadFromCloud(userId: string): Promise<void> {
+  // Don't pull the single-player cloud save over a per-tab multiplayer session.
+  if (isMultiplayerSession()) return;
   const { data, error } = await db
     .from(TABLE)
     .select("state, updated_at")
