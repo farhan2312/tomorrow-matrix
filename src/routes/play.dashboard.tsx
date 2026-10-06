@@ -2,10 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown, ChevronRight, Lock, Check, Sparkles, Globe2, Coins, Activity, Trophy, AlertTriangle, ShieldCheck, Clock } from "lucide-react";
 import { useGame } from "@/lib/game/store";
+import { useLobby } from "@/lib/multiplayer/store";
 import { MYSTERIES, CRISES, isMysteryUnlocked, isMysteryVisibleForRole } from "@/lib/game/data";
 import { mysteryCover } from "@/lib/game/media";
 import { HealthGauge } from "@/components/game/HealthGauge";
 import { PlanetaryIndicatorsPanel } from "@/components/game/PlanetaryIndicatorsPanel";
+import { MultiplayerDashboard } from "@/components/game/MultiplayerDashboard";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/play/dashboard")({
@@ -13,7 +15,11 @@ export const Route = createFileRoute("/play/dashboard")({
 });
 
 function Dashboard() {
-  const { planetHealth, year, cap, solvedMysteries, crisisStats, resolvedCrises, crisisLog, role } = useGame();
+  const { planetHealth, year, cap, solvedMysteries, crisisStats, resolvedCrises, crisisLog, role, mode } = useGame();
+  const lobbyId = useLobby((s) => s.lobbyId);
+
+  // In multiplayer the Dashboard tab is the shared team view, not the solo one.
+  if (mode === "multiplayer" && lobbyId) return <MultiplayerDashboard />;
 
   const total = MYSTERIES.length;
   const solvedCount = solvedMysteries.length;
