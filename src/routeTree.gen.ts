@@ -9,88 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SettingsRouteImport } from './routes/settings'
-import { Route as RoleSelectRouteImport } from './routes/role-select'
-import { Route as ResetPasswordRouteImport } from './routes/reset-password'
-import { Route as RecruitRouteImport } from './routes/recruit'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as PlayRouteImport } from './routes/play'
-import { Route as ModeSelectRouteImport } from './routes/mode-select'
-import { Route as HowToPlayRouteImport } from './routes/how-to-play'
-import { Route as EndgameRouteImport } from './routes/endgame'
-import { Route as AuthRouteImport } from './routes/auth'
-import { Route as AdminRouteImport } from './routes/admin'
-import { Route as AccountRouteImport } from './routes/account'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PlayIndexRouteImport } from './routes/play.index'
-import { Route as LobbyIndexRouteImport } from './routes/lobby.index'
-import { Route as PlayRoleRouteImport } from './routes/play.role'
-import { Route as PlayNetworkRouteImport } from './routes/play.network'
-import { Route as PlayMarketplaceRouteImport } from './routes/play.marketplace'
-import { Route as PlayMapRouteImport } from './routes/play.map'
-import { Route as PlayKnowledgeRouteImport } from './routes/play.knowledge'
-import { Route as PlayJournalRouteImport } from './routes/play.journal'
-import { Route as PlayDashboardRouteImport } from './routes/play.dashboard'
-import { Route as PlayArchiveRouteImport } from './routes/play.archive'
-import { Route as LobbyCodeRouteImport } from './routes/lobby.$code'
+import { Route as AccountRouteImport } from './routes/account'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as EndgameRouteImport } from './routes/endgame'
+import { Route as HowToPlayRouteImport } from './routes/how-to-play'
+import { Route as ModeSelectRouteImport } from './routes/mode-select'
+import { Route as PlayRouteImport } from './routes/play'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as RecruitRouteImport } from './routes/recruit'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as RoleSelectRouteImport } from './routes/role-select'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as FacilitatorCodeRouteImport } from './routes/facilitator.$code'
+import { Route as LobbyIndexRouteImport } from './routes/lobby.index'
+import { Route as LobbyCodeRouteImport } from './routes/lobby.$code'
+import { Route as PlayIndexRouteImport } from './routes/play.index'
+import { Route as PlayArchiveRouteImport } from './routes/play.archive'
+import { Route as PlayDashboardRouteImport } from './routes/play.dashboard'
+import { Route as PlayJournalRouteImport } from './routes/play.journal'
+import { Route as PlayKnowledgeRouteImport } from './routes/play.knowledge'
+import { Route as PlayMapRouteImport } from './routes/play.map'
+import { Route as PlayMarketplaceRouteImport } from './routes/play.marketplace'
+import { Route as PlayNetworkRouteImport } from './routes/play.network'
+import { Route as PlayRoleRouteImport } from './routes/play.role'
+import { Route as FacilitatorWorkshopCodeRouteImport } from './routes/facilitator.workshop.$code'
 import { Route as PlayMysteriesIndexRouteImport } from './routes/play.mysteries.index'
 import { Route as PlayMysteriesIdRouteImport } from './routes/play.mysteries.$id'
-import { Route as FacilitatorWorkshopCodeRouteImport } from './routes/facilitator.workshop.$code'
 
-const SettingsRoute = SettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RoleSelectRoute = RoleSelectRouteImport.update({
-  id: '/role-select',
-  path: '/role-select',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResetPasswordRoute = ResetPasswordRouteImport.update({
-  id: '/reset-password',
-  path: '/reset-password',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RecruitRoute = RecruitRouteImport.update({
-  id: '/recruit',
-  path: '/recruit',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlayRoute = PlayRouteImport.update({
-  id: '/play',
-  path: '/play',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ModeSelectRoute = ModeSelectRouteImport.update({
-  id: '/mode-select',
-  path: '/mode-select',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HowToPlayRoute = HowToPlayRouteImport.update({
-  id: '/how-to-play',
-  path: '/how-to-play',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EndgameRoute = EndgameRouteImport.update({
-  id: '/endgame',
-  path: '/endgame',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthRoute = AuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AdminRoute = AdminRouteImport.update({
-  id: '/admin',
-  path: '/admin',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AccountRoute = AccountRouteImport.update({
@@ -98,9 +48,74 @@ const AccountRoute = AccountRouteImport.update({
   path: '/account',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EndgameRoute = EndgameRouteImport.update({
+  id: '/endgame',
+  path: '/endgame',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowToPlayRoute = HowToPlayRouteImport.update({
+  id: '/how-to-play',
+  path: '/how-to-play',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModeSelectRoute = ModeSelectRouteImport.update({
+  id: '/mode-select',
+  path: '/mode-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayRoute = PlayRouteImport.update({
+  id: '/play',
+  path: '/play',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecruitRoute = RecruitRouteImport.update({
+  id: '/recruit',
+  path: '/recruit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoleSelectRoute = RoleSelectRouteImport.update({
+  id: '/role-select',
+  path: '/role-select',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FacilitatorCodeRoute = FacilitatorCodeRouteImport.update({
+  id: '/facilitator/$code',
+  path: '/facilitator/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LobbyIndexRoute = LobbyIndexRouteImport.update({
+  id: '/lobby/',
+  path: '/lobby/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LobbyCodeRoute = LobbyCodeRouteImport.update({
+  id: '/lobby/$code',
+  path: '/lobby/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlayIndexRoute = PlayIndexRouteImport.update({
@@ -108,39 +123,9 @@ const PlayIndexRoute = PlayIndexRouteImport.update({
   path: '/',
   getParentRoute: () => PlayRoute,
 } as any)
-const LobbyIndexRoute = LobbyIndexRouteImport.update({
-  id: '/lobby/',
-  path: '/lobby/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlayRoleRoute = PlayRoleRouteImport.update({
-  id: '/role',
-  path: '/role',
-  getParentRoute: () => PlayRoute,
-} as any)
-const PlayNetworkRoute = PlayNetworkRouteImport.update({
-  id: '/network',
-  path: '/network',
-  getParentRoute: () => PlayRoute,
-} as any)
-const PlayMarketplaceRoute = PlayMarketplaceRouteImport.update({
-  id: '/marketplace',
-  path: '/marketplace',
-  getParentRoute: () => PlayRoute,
-} as any)
-const PlayMapRoute = PlayMapRouteImport.update({
-  id: '/map',
-  path: '/map',
-  getParentRoute: () => PlayRoute,
-} as any)
-const PlayKnowledgeRoute = PlayKnowledgeRouteImport.update({
-  id: '/knowledge',
-  path: '/knowledge',
-  getParentRoute: () => PlayRoute,
-} as any)
-const PlayJournalRoute = PlayJournalRouteImport.update({
-  id: '/journal',
-  path: '/journal',
+const PlayArchiveRoute = PlayArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
   getParentRoute: () => PlayRoute,
 } as any)
 const PlayDashboardRoute = PlayDashboardRouteImport.update({
@@ -148,19 +133,39 @@ const PlayDashboardRoute = PlayDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => PlayRoute,
 } as any)
-const PlayArchiveRoute = PlayArchiveRouteImport.update({
-  id: '/archive',
-  path: '/archive',
+const PlayJournalRoute = PlayJournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
   getParentRoute: () => PlayRoute,
 } as any)
-const LobbyCodeRoute = LobbyCodeRouteImport.update({
-  id: '/lobby/$code',
-  path: '/lobby/$code',
-  getParentRoute: () => rootRouteImport,
+const PlayKnowledgeRoute = PlayKnowledgeRouteImport.update({
+  id: '/knowledge',
+  path: '/knowledge',
+  getParentRoute: () => PlayRoute,
 } as any)
-const FacilitatorCodeRoute = FacilitatorCodeRouteImport.update({
-  id: '/facilitator/$code',
-  path: '/facilitator/$code',
+const PlayMapRoute = PlayMapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayMarketplaceRoute = PlayMarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayNetworkRoute = PlayNetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => PlayRoute,
+} as any)
+const PlayRoleRoute = PlayRoleRouteImport.update({
+  id: '/role',
+  path: '/role',
+  getParentRoute: () => PlayRoute,
+} as any)
+const FacilitatorWorkshopCodeRoute = FacilitatorWorkshopCodeRouteImport.update({
+  id: '/facilitator/workshop/$code',
+  path: '/facilitator/workshop/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlayMysteriesIndexRoute = PlayMysteriesIndexRouteImport.update({
@@ -172,11 +177,6 @@ const PlayMysteriesIdRoute = PlayMysteriesIdRouteImport.update({
   id: '/mysteries/$id',
   path: '/mysteries/$id',
   getParentRoute: () => PlayRoute,
-} as any)
-const FacilitatorWorkshopCodeRoute = FacilitatorWorkshopCodeRouteImport.update({
-  id: '/facilitator/workshop/$code',
-  path: '/facilitator/workshop/$code',
-  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -383,81 +383,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/settings': {
-      id: '/settings'
-      path: '/settings'
-      fullPath: '/settings'
-      preLoaderRoute: typeof SettingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/role-select': {
-      id: '/role-select'
-      path: '/role-select'
-      fullPath: '/role-select'
-      preLoaderRoute: typeof RoleSelectRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reset-password': {
-      id: '/reset-password'
-      path: '/reset-password'
-      fullPath: '/reset-password'
-      preLoaderRoute: typeof ResetPasswordRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recruit': {
-      id: '/recruit'
-      path: '/recruit'
-      fullPath: '/recruit'
-      preLoaderRoute: typeof RecruitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/play': {
-      id: '/play'
-      path: '/play'
-      fullPath: '/play'
-      preLoaderRoute: typeof PlayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mode-select': {
-      id: '/mode-select'
-      path: '/mode-select'
-      fullPath: '/mode-select'
-      preLoaderRoute: typeof ModeSelectRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/how-to-play': {
-      id: '/how-to-play'
-      path: '/how-to-play'
-      fullPath: '/how-to-play'
-      preLoaderRoute: typeof HowToPlayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/endgame': {
-      id: '/endgame'
-      path: '/endgame'
-      fullPath: '/endgame'
-      preLoaderRoute: typeof EndgameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
-      preLoaderRoute: typeof AuthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/admin': {
-      id: '/admin'
-      path: '/admin'
-      fullPath: '/admin'
-      preLoaderRoute: typeof AdminRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/account': {
@@ -467,11 +397,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AccountRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/endgame': {
+      id: '/endgame'
+      path: '/endgame'
+      fullPath: '/endgame'
+      preLoaderRoute: typeof EndgameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-play': {
+      id: '/how-to-play'
+      path: '/how-to-play'
+      fullPath: '/how-to-play'
+      preLoaderRoute: typeof HowToPlayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mode-select': {
+      id: '/mode-select'
+      path: '/mode-select'
+      fullPath: '/mode-select'
+      preLoaderRoute: typeof ModeSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play': {
+      id: '/play'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recruit': {
+      id: '/recruit'
+      path: '/recruit'
+      fullPath: '/recruit'
+      preLoaderRoute: typeof RecruitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/role-select': {
+      id: '/role-select'
+      path: '/role-select'
+      fullPath: '/role-select'
+      preLoaderRoute: typeof RoleSelectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/facilitator/$code': {
+      id: '/facilitator/$code'
+      path: '/facilitator/$code'
+      fullPath: '/facilitator/$code'
+      preLoaderRoute: typeof FacilitatorCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lobby/': {
+      id: '/lobby/'
+      path: '/lobby'
+      fullPath: '/lobby/'
+      preLoaderRoute: typeof LobbyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lobby/$code': {
+      id: '/lobby/$code'
+      path: '/lobby/$code'
+      fullPath: '/lobby/$code'
+      preLoaderRoute: typeof LobbyCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/play/': {
@@ -481,53 +502,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayIndexRouteImport
       parentRoute: typeof PlayRoute
     }
-    '/lobby/': {
-      id: '/lobby/'
-      path: '/lobby'
-      fullPath: '/lobby/'
-      preLoaderRoute: typeof LobbyIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/play/role': {
-      id: '/play/role'
-      path: '/role'
-      fullPath: '/play/role'
-      preLoaderRoute: typeof PlayRoleRouteImport
-      parentRoute: typeof PlayRoute
-    }
-    '/play/network': {
-      id: '/play/network'
-      path: '/network'
-      fullPath: '/play/network'
-      preLoaderRoute: typeof PlayNetworkRouteImport
-      parentRoute: typeof PlayRoute
-    }
-    '/play/marketplace': {
-      id: '/play/marketplace'
-      path: '/marketplace'
-      fullPath: '/play/marketplace'
-      preLoaderRoute: typeof PlayMarketplaceRouteImport
-      parentRoute: typeof PlayRoute
-    }
-    '/play/map': {
-      id: '/play/map'
-      path: '/map'
-      fullPath: '/play/map'
-      preLoaderRoute: typeof PlayMapRouteImport
-      parentRoute: typeof PlayRoute
-    }
-    '/play/knowledge': {
-      id: '/play/knowledge'
-      path: '/knowledge'
-      fullPath: '/play/knowledge'
-      preLoaderRoute: typeof PlayKnowledgeRouteImport
-      parentRoute: typeof PlayRoute
-    }
-    '/play/journal': {
-      id: '/play/journal'
-      path: '/journal'
-      fullPath: '/play/journal'
-      preLoaderRoute: typeof PlayJournalRouteImport
+    '/play/archive': {
+      id: '/play/archive'
+      path: '/archive'
+      fullPath: '/play/archive'
+      preLoaderRoute: typeof PlayArchiveRouteImport
       parentRoute: typeof PlayRoute
     }
     '/play/dashboard': {
@@ -537,25 +516,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayDashboardRouteImport
       parentRoute: typeof PlayRoute
     }
-    '/play/archive': {
-      id: '/play/archive'
-      path: '/archive'
-      fullPath: '/play/archive'
-      preLoaderRoute: typeof PlayArchiveRouteImport
+    '/play/journal': {
+      id: '/play/journal'
+      path: '/journal'
+      fullPath: '/play/journal'
+      preLoaderRoute: typeof PlayJournalRouteImport
       parentRoute: typeof PlayRoute
     }
-    '/lobby/$code': {
-      id: '/lobby/$code'
-      path: '/lobby/$code'
-      fullPath: '/lobby/$code'
-      preLoaderRoute: typeof LobbyCodeRouteImport
-      parentRoute: typeof rootRouteImport
+    '/play/knowledge': {
+      id: '/play/knowledge'
+      path: '/knowledge'
+      fullPath: '/play/knowledge'
+      preLoaderRoute: typeof PlayKnowledgeRouteImport
+      parentRoute: typeof PlayRoute
     }
-    '/facilitator/$code': {
-      id: '/facilitator/$code'
-      path: '/facilitator/$code'
-      fullPath: '/facilitator/$code'
-      preLoaderRoute: typeof FacilitatorCodeRouteImport
+    '/play/map': {
+      id: '/play/map'
+      path: '/map'
+      fullPath: '/play/map'
+      preLoaderRoute: typeof PlayMapRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/marketplace': {
+      id: '/play/marketplace'
+      path: '/marketplace'
+      fullPath: '/play/marketplace'
+      preLoaderRoute: typeof PlayMarketplaceRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/network': {
+      id: '/play/network'
+      path: '/network'
+      fullPath: '/play/network'
+      preLoaderRoute: typeof PlayNetworkRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/play/role': {
+      id: '/play/role'
+      path: '/role'
+      fullPath: '/play/role'
+      preLoaderRoute: typeof PlayRoleRouteImport
+      parentRoute: typeof PlayRoute
+    }
+    '/facilitator/workshop/$code': {
+      id: '/facilitator/workshop/$code'
+      path: '/facilitator/workshop/$code'
+      fullPath: '/facilitator/workshop/$code'
+      preLoaderRoute: typeof FacilitatorWorkshopCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/play/mysteries/': {
@@ -571,13 +578,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/play/mysteries/$id'
       preLoaderRoute: typeof PlayMysteriesIdRouteImport
       parentRoute: typeof PlayRoute
-    }
-    '/facilitator/workshop/$code': {
-      id: '/facilitator/workshop/$code'
-      path: '/facilitator/workshop/$code'
-      fullPath: '/facilitator/workshop/$code'
-      preLoaderRoute: typeof FacilitatorWorkshopCodeRouteImport
-      parentRoute: typeof rootRouteImport
     }
   }
 }

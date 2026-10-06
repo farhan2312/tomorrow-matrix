@@ -1,21 +1,23 @@
 import { useMemo } from "react";
 import { Bot } from "lucide-react";
 import { useGame } from "@/lib/game/store";
-import { ROLES } from "@/lib/game/data";
-import { teammateLine } from "@/lib/game/ai-team";
-import type { IndicatorKey } from "@/lib/game/types";
+import { ROLES, influencesOf } from "@/lib/game/data";
+import { teammateLine, teamContext, downstreamTitles } from "@/lib/game/ai-team";
+import type { Mystery } from "@/lib/game/types";
 import { cn } from "@/lib/utils";
 
-export function AiTeamPanel({ context, contextKey }: { context: IndicatorKey | "default"; contextKey: string }) {
+export function AiTeamPanel({ mystery }: { mystery: Mystery }) {
   const team = useGame((s) => s.aiTeam);
   const mode = useGame((s) => s.mode);
 
-  // Reseed lines per contextKey (mystery id, crisis id, etc.)
-  const lines = useMemo(
-    () => team.map((t) => ({ ...t, line: teammateLine(t.role, context) })),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [contextKey, team.length],
-  );
+  // Each teammate's take is specific to this mystery (its own cause → impact
+  // chain, resolved from the mystery it influences), and stable per mystery, so
+  // the panel changes as you move between mysteries instead of repeating the
+  // same generic category line.
+  const lines = useMemo(() => {
+    const ctx = teamContext(mystery, downstreamTitles(mystery, influencesOf));
+    return team.map((t) => ({ ...t, line: teammateLine(t.role, ctx) }));
+  }, [mystery, team]);
 
   if (mode !== "ai-team" || team.length === 0) return null;
 

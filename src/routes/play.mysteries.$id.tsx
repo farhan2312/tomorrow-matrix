@@ -261,7 +261,7 @@ function MysteryDetail() {
 
 
         <aside className="space-y-4">
-          <AiTeamPanel context={mystery.category} contextKey={mystery.id} />
+          <AiTeamPanel mystery={mystery} />
           <div className="surface-card p-4">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Scoring</div>
             <ul className="mt-2 space-y-1 text-xs text-foreground/80">
