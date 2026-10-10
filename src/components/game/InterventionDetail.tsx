@@ -208,10 +208,10 @@ export function InterventionDetail({
                 How this intervention breaks each linked mystery's crisis chain.
               </p>
               <div className="mt-4 space-y-2">
-                {intervention.ripples.map((r) => {
-                  const mystery = linkedMysteries.find((m) => m.code === r.code);
+                {intervention.ripples.map((r, i) => {
+                  const mystery = r.code ? linkedMysteries.find((m) => m.code === r.code) : undefined;
                   return (
-                    <div key={r.code} className="overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur transition-colors hover:bg-white/10">
+                    <div key={`${r.code || "x"}-${i}`} className="overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur transition-colors hover:bg-white/10">
                       {mystery && (
                         <div className="flex items-center gap-3 border-b border-white/10 bg-black/30 p-3">
                           <img src={mysteryCover(mystery)} alt="" className="h-12 w-16 rounded-lg object-cover ring-1 ring-white/10" />
